@@ -1,0 +1,13 @@
+.godot/
+.DS_Store
+*.tmp
+*.log
+builds/
+exports/
+captures/
+.env
+.env.*
+
+# Riferimenti privati della conversazione
+references/topolino_anatomia.webp
+references/topolino_occhi.png
