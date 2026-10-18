@@ -1,0 +1,23 @@
+; Experimental laboratory. Baseline API: Godot 4.5.1; not editor-validated yet.
+config_version=5
+
+[application]
+config/name="Viaggio a Soffumbergo — laboratorio"
+run/main_scene="res://godot/scenes/lab.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[physics]
+common/physics_ticks_per_second=120
+common/physics_interpolation=true
+3d/physics_engine="Jolt Physics"
+3d/default_gravity=9.81
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.64, 0.81, 0.86, 1)

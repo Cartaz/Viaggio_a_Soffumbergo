@@ -1,0 +1,56 @@
+{
+  "recorded_utc": "2026-10-18T22:51:29.614224+00:00",
+  "python": "3.12.14",
+  "gdtoolkit": "4.5.0",
+  "checks": {
+    "python_unittest": {
+      "passed": 28,
+      "failed": 0
+    },
+    "python_syntax_including_blender": "passed_without_importing_bpy",
+    "resource_references": "passed",
+    "derived_reports_reproducible": "passed",
+    "gdscript_parse": "passed",
+    "gdscript_format": "passed",
+    "gdscript_lint": "passed",
+    "git_diff_check": "passed",
+    "survey_map_render_and_visual_inspection": "passed"
+  },
+  "not_executed": [
+    "Godot import/type/API checks",
+    "Godot reference checks",
+    "Godot static/dynamic benches",
+    "Blender generators and visual/rig checks",
+    "Linux/Windows export",
+    "performance measurement"
+  ],
+  "source_sha256": {
+    "data/config/asset_register.json": "1804139dca6e5ced9f15a09d63e0132554094623c4ce3709498bea4a05d4abe8",
+    "data/config/mouse_rig.json": "afbd702b6723e9846b114727c46056e810d352651c39b357cccf4aaa4a2537f6",
+    "data/config/vehicle_lab.json": "baa8848d48531cc812e7f14b126228fdb3d391d9835370b326602823a1571b44",
+    "godot/scripts/companion_follower.gd": "06678eeb1787207bd2fa84629e8b2e3cae14993aee2353859763c62879916fe1",
+    "godot/scripts/lab.gd": "8413a3e2c29440ec9557e85ca4a45badd7df2ef3aa8a77c5f26c5a3195d5c803",
+    "godot/scripts/mass_properties.gd": "2e753bda9b336dc0af5ad6c8148712c70b7f892e9c83ceb7b5e1a52aee44ffb3",
+    "godot/scripts/mouse_locomotion.gd": "0ea66a55155404f64b455ff1b711f41d0a34ec3293da0cfa83c8cffcd743471a",
+    "godot/scripts/route_preview.gd": "640fac56e08389f4bddb5f5abd9a737367ffe5e6ddd9a7e9731f8678e217c4e6",
+    "godot/scripts/vehicle_lab.gd": "1ed72dd8f3e3088db7fc16c42de2390e3bb1a56ec7140ad6b647981997b3c6fe",
+    "godot/scripts/wheel_forces.gd": "f5a2cd812cfec8f10c6961e2e1e0569d03d225211e15e0b7726d1ca74ae0af81",
+    "godot/tests/reference_checks.gd": "f2f82ba44a47670b3e580093bd7b8813ed4b1448cca20924cca17dca60ea568a",
+    "godot/tests/static_bench.gd": "530ed2c3ad3f07af9ef0a3e1ed58d8890f96fc17f54fe5d84bcc35e88909fe4b",
+    "project.godot": "5b9ff4b2692b395beab8f6ddba4679b40e6a9a372a7672a591723892231fdd61",
+    "tests/test_geography.py": "485a752255dbd6627a8983a66b5533f10a661384d7979a6baf587b374f86ce3a",
+    "tests/test_physics.py": "b3f7eb96f62e5969a017a16d53703e06cdc080ee2bc0c507bb51edc02aaa7e44",
+    "tests/test_session.py": "873d840686ae41a98fad5b43c78bece2d2ef6cc260ca0c8ed36aab10a3c23f2f",
+    "tools/blender/build_blockout.py": "e5f5e6e3e917a2eeeb34864e18754088cc155263c989c3194ca794b0f2eb8eb2",
+    "tools/blender/build_site_guides.py": "3791819646a35ca50640e631c4fd9fa1af1ad5390f2271a7488771ef6099f246",
+    "tools/check_project.py": "f6006060db6bbc0c0e2adabafeb4a208745105287321c2ded0dae591072576b8",
+    "tools/coffa/__init__.py": "b57056694ddc5645bfd53ad418d48e0b70a5a0c8153792e3fe204002a891677f",
+    "tools/coffa/geography.py": "3cda4566ac78a701dc5254880cd5ac6478655405839af3688ec57a12d48dde52",
+    "tools/coffa/physics.py": "60032c676e5bceb779b6a2cfb5b872b22321535435a2832bc4f9b1203b2d56b2",
+    "tools/coffa/session.py": "b45739d7395c05fcd37d3ef467c07eba8c1545c3b7cd670dc177fd55666ade62",
+    "tools/design_report.py": "0498d5abb07120df9967089e8aa456d2705498e0d66cc8b38302fd4bd01cbd68",
+    "tools/fetch_geography.py": "2c75a726bf1e45cfc0018e3801e9cec9a00ba826e109da21d1a7264824e21eed",
+    "tools/prepare_route.py": "fc603fc3ba9eef15b5cac88d27ab22278b27dc540034fb156969857ae622b61c",
+    "tools/survey_report.py": "b9cc90a0d8170c13cd0496095667f07589a0df47e7b0e91b7e335e432f906528"
+  }
+}

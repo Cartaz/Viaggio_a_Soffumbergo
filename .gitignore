@@ -7,6 +7,14 @@ exports/
 captures/
 .env
 .env.*
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+/data/geography/*.raw.json
+/data/geography/*.osm
+/art/source/generated/
+/art/export/
 
 # Riferimenti privati della conversazione
 references/topolino_anatomia.webp

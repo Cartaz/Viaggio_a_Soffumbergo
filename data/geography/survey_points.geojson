@@ -1,0 +1,8 @@
+{
+  "type": "FeatureCollection",
+  "name": "Observed survey anchors — approximate imagery positions",
+  "features": [
+    {"type": "Feature", "id": "PV-01", "properties": {"name": "Prato candidato PV-01", "status": "observed_not_user_confirmed", "source": "Google Street View, via Prestento, imagery March 2026", "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=46.1568696,13.3918124", "position_note": "Panorama viewpoint, not a measured lawn boundary or parking permission", "foot_connection": "not_verified_continuously"}, "geometry": {"type": "Point", "coordinates": [13.3918124, 46.1568696]}},
+    {"type": "Feature", "id": "SV-CH-01", "properties": {"name": "Punto osservato davanti alla chiesa", "status": "observed_exterior_partial", "source": "Google Street View, imagery May 2023", "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=46.1568367,13.3930177", "position_note": "Panorama viewpoint; dimensions not measured"}, "geometry": {"type": "Point", "coordinates": [13.3930177, 46.1568367]}}
+  ]
+}

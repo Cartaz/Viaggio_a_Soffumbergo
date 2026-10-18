@@ -22,5 +22,5 @@ Leggere README.md, docs/DECISIONI.md e la fase attiva di docs/ROADMAP.md prima d
 - Non introdurre una licenza di pubblicazione per gli asset di terzi o per i riferimenti dell’utente.
 - Non creare una build fittizia per far apparire il progetto più avanti di quanto sia.
 
-L’utente ha chiesto di creare la repository e sviluppare il progetto di pianificazione. Queste indicazioni non estendono l’autorizzazione a pubblicare una release o cambiare la visibilità della repository. Non richiedono lavoro con più agenti.
+L’utente ha autorizzato tutto lo sviluppo utile senza accesso a Godot e Blender; proseguire su codice, dati e strumenti e prepararne il collaudo sul PC. Non presentare controlli statici come esecuzioni nel motore. Queste indicazioni non estendono l’autorizzazione a pubblicare una release o cambiare la visibilità della repository. Non richiedono lavoro con più agenti.
 

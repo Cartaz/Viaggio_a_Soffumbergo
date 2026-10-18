@@ -29,7 +29,7 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 - Visita senza limite di tempo, con salvataggio alla sosta; i record riguardano i settori di guida.
 - I due personaggi mantengono una scala complessiva grande rispetto a topi reali; dimensioni metriche definitive da provare sul sedile con scala uniforme.
 - PV-01 è il prato candidato osservato lungo via Prestento, non il punto già confermato dall’utente.
-- Godot/Jolt, Blender e QGIS sono una proposta tecnica; versione del motore non ancora bloccata.
+- Sorgenti preparati sulla base API Godot 4.5.1/Jolt integrato e Blender 4.5 LTS; controllare le versioni installate e la compatibilità al primo collegamento. QGIS resta utile per dati geografici e datum.
 
 ## Questioni aperte che non bloccano il laboratorio
 
@@ -41,5 +41,5 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 
 ## Cose che non risultano completate
 
-Nessun gioco, modello 3D definitivo, terreno importato, censimento completo del borgo, rilievo integrale del circuito o benchmark reale. Non confondere un documento scritto con una funzione implementata.
+Nessuna build giocabile verificata, modello 3D definitivo, terreno importato, censimento completo del borgo, rilievo integrale del circuito o benchmark reale. Esistono ora sorgenti del laboratorio, generatori e 28 test indipendenti dagli editor. Le regole della visita sono un modello Python da collegare al 3D. Non confondere controlli statici e prove numeriche con un gioco collaudato.
 

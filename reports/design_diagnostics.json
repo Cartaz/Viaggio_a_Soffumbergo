@@ -1,0 +1,34 @@
+{
+  "status": "experimental_not_calibrated",
+  "warning": "Laboratory surrogates. Occupant scale, mass, mast structure and inertia are NOT production specifications.",
+  "mass_kg": 1605.0,
+  "com_m": [
+    -0.011651090342679127,
+    1.4817757009345793,
+    -0.018535825545171337
+  ],
+  "inertia_kg_m2": [
+    [
+      7313.119415109034,
+      -58.98920560747664,
+      -9.173380062305295
+    ],
+    [
+      -58.98920560747664,
+      1828.2130796339566,
+      -18.79532710280374
+    ],
+    [
+      -9.173380062305295,
+      -18.79532710280374,
+      6113.081709696262
+    ]
+  ],
+  "rigid_static_diagnostics": {
+    "ssf_centered": 0.5128981393882056,
+    "weak_side_a_over_g": 0.5050352149689898,
+    "weak_side_static_tilt_deg": 26.795383278458377
+  },
+  "godot_inertia_note": "Prototype uses tensor diagonal only. Off-diagonal terms below are retained for later principal-axis integration; not silently discarded from design data.",
+  "suspension_static_mean_compression_m": 0.123008203125
+}

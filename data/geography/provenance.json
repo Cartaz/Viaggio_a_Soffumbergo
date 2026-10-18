@@ -1,0 +1,10 @@
+{
+  "retrieved_utc": "2026-10-18T22:39:59.323188+00:00",
+  "source": "https://api.openstreetmap.org/api/0.6/map?bbox=13.3900,46.1550,13.3960,46.1590",
+  "source_payload_sha256": "bfe0727847051fda7fa859af4f949d41baffd82e9a99e89604aa25e57577fb24",
+  "scope": "Valle village bounding box only",
+  "license": "ODbL-1.0",
+  "copyright": "© OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "limitations": "Map only, not a complete village census. No terrain or verified heights. Ways can extend outside bounding box. Full road loop not extracted. Overpass failed HTTP 502/406; larger editing-API request failed HTTP 400; retained successful small extract."
+}

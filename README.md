@@ -4,7 +4,31 @@
 
 Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi.
 
-**Stato: progettazione. Non esiste ancora una build giocabile.** Il sopralluogo è parziale e non è stata misurata alcuna prestazione del gioco.
+**Stato: preparazione tecnica e sorgenti del laboratorio. Nessuna build giocabile o esecuzione in Godot/Blender ancora verificata.** Sono passati 28 test sui calcoli, sulle regole e sugli strumenti geografici; gli script GDScript superano parsing e lint. Il sopralluogo è parziale e non è stata misurata alcuna prestazione del gioco.
+
+## Base tecnica disponibile
+
+| Parte | Consegna | Limite della verifica |
+| --- | --- | --- |
+| Godot | Laboratorio con quattro sospensioni, pneumatici, trazione anteriore, carico alto, camera, HUD e CSV | Sorgenti controllati; esecuzione da collaudare |
+| Calcoli | Masse, baricentro, tensore completo, aderenza combinata | Test Python, non ancora dinamica motore |
+| Regole | Checkpoint ordinati, sosta, visita, ritorno e salvataggio atomico | Modello Python, da collegare alla scena 3D |
+| Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
+| Blender | Generatori delle sagome di prova e delle guide del borgo | Sintassi Python; nessun modello finale già prodotto |
+| Esplorazione | Controller di movimento e seguito della compagna | Richiedono rig, navmesh e integrazione nella scena |
+| Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | L’anello completo e il terreno non sono ancora acquisiti |
+
+Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. I cubi sono segnaposto, non la Yaris fedele e i protagonisti definitivi.
+
+## Verifiche senza editor
+
+Con Python 3.12, senza dipendenze per calcoli e regole:
+
+```bash
+python tools/check_project.py
+```
+
+Per GDScript installare `requirements-dev.txt` e lanciare `gdparse`, `gdformat --check` e `gdlint` sui file in `godot/scripts` e `godot/tests`. Il workflow GitHub replica i controlli; non pubblica release.
 
 ## Esperienza prevista
 
@@ -26,6 +50,10 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 
 | Documento | Contenuto |
 | --- | --- |
+| [Preparazione tecnica](docs/PREPARAZIONE_TECNICA.md) | Risultati verificati, approssimazioni e lacune |
+| [Collaudo sul PC](docs/COLLAUDO_PC.md) | Primo import Godot, prove e generatori Blender |
+| [Architettura](docs/ARCHITETTURA.md) | Responsabilità, coordinate e interfacce |
+| [Mappa del sopralluogo](reports/valle_survey_map.svg) | Base OSM planimetrica, senza quote |
 | [Progetto completo](docs/PROGETTO.md) | Direzione artistica, dinamica, animazioni, esplorazione, sviluppo e collaudi |
 | [Roadmap](docs/ROADMAP.md) | Fasi, criteri di accettazione e attività ancora aperte |
 | [Decisioni](docs/DECISIONI.md) | Richieste vincolanti e scelte progettuali da verificare |
@@ -34,11 +62,11 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 
 ## Stack proposto
 
-Godot 4 con versione stabile da fissare all’avvio dello sviluppo, Jolt, Blender e QGIS. La dinamica automobilistica sarà dedicata: non è già implementata. Il progetto non contiene ancora project.godot, scene o script eseguibili.
+Il progetto contiene ora `project.godot`, scene e sorgenti. Base API: **Godot 4.5.1 con Jolt integrato**, scelta riproducibile, non indicata come versione più recente né come compatibilità già provata. Generatori preparati per **Blender 4.5 LTS**. Prima verificheremo le versioni presenti sul PC. QGIS rimane utile per terreno e trasformazioni di datum.
 
 ## Primo risultato da costruire
 
-Laboratorio fisico con telaio, quattro ruote e carico alto; in parallelo logico, prova di sagoma dei topolini sul sedile senza stiramento degli arti. Nessuna necessità di assegnare il lavoro a più agenti. Il primo campione artistico completo sarà l’arrivo a Valle con prato, parcheggio e passaggio all’esplorazione.
+Il prossimo passaggio è importare il laboratorio nel motore, collaudare equilibrio e guida e generare le sagome in Blender. Il primo campione artistico completo rimane l’arrivo a Valle con prato, parcheggio e passaggio all’esplorazione. Fonti e attribuzioni della cartografia sono in [NOTICE.md](NOTICE.md).
 
 ## Provenienza e distribuzione
 

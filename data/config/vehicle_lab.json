@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "experimental_not_calibrated",
+  "units": "SI: m, kg, s, N, rad",
+  "axes": "+X right, +Y up, -Z forward; origin at road under chassis centre at nominal loaded ride height",
+  "warning": "Laboratory surrogates. Occupant scale, mass, mast structure and inertia are NOT production specifications.",
+  "body": {"length_m": 3.94, "width_m": 1.745, "height_m": 1.50, "wheelbase_m": 2.56, "track_m": 1.52},
+  "components": [
+    {"id": "car", "mass_kg": 1150, "position_m": [0, 0.55, 0], "box_m": [1.745, 0.8, 3.94], "owner": "vehicle"},
+    {"id": "driver", "mass_kg": 85, "position_m": [-0.32, 0.85, -0.35], "box_m": [0.32, 0.45, 0.60], "owner": "vehicle"},
+    {"id": "mast", "mass_kg": 180, "position_m": [0, 3.0, 0], "box_m": [0.18, 5.4, 0.18], "owner": "vehicle"},
+    {"id": "nest", "mass_kg": 90, "position_m": [0, 5.6, 0], "box_m": [1.2, 0.3, 1.2], "owner": "vehicle"},
+    {"id": "passenger", "mass_kg": 85, "position_m": [0.10, 6.4, 0], "box_m": [0.32, 0.45, 0.60], "owner": "vehicle"},
+    {"id": "picnic", "mass_kg": 15, "position_m": [0, 5.7, 0], "box_m": [0.4, 0.3, 0.4], "owner": "vehicle"}
+  ],
+  "suspension": {"hardpoint_y_m": 0.62, "rest_length_m": 0.43, "droop_m": 0.15, "spring_n_m": 32000, "damping_ns_m": 3600, "bump_length_m": 0.08, "bump_spring_n_m": 160000},
+  "tire": {"radius_m": 0.31045, "mu": 0.9, "corner_stiffness_n_rad": 42000, "low_speed_regularization_m_s": 1.0, "longitudinal_relaxation_s": 0.16},
+  "powertrain": {"drive_force_limit_n": 5200, "power_limit_w": 85000, "power_regularization_m_s": 2.0, "brake_force_total_n": 16000, "steering_max_rad": 0.52, "steering_rate_rad_s": 0.9},
+  "aero": {"drag_coefficient_area_m2": 0.85, "air_density_kg_m3": 1.225, "rolling_coefficient": 0.013}
+}

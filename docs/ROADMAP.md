@@ -1,6 +1,20 @@
 # Roadmap verificabile
 
-Stato iniziale: progettazione. Una casella completata richiede una consegna o una prova ispezionabile.
+Stato attuale: preparazione tecnica e sorgenti del laboratorio, non ancora eseguiti negli editor. Una casella completata richiede una consegna o una prova ispezionabile.
+
+## Consegna preparatoria senza Godot/Blender
+
+- [x] Calcoli di massa, baricentro e tensore con test analitici.
+- [x] Modello Python delle regole della gita, proprietà unica della massa e salvataggio atomico.
+- [x] Ventotto test numerici/logici/geografici eseguiti.
+- [x] Sorgenti del laboratorio Godot, telemetria e prove motore predisposte.
+- [x] Sorgenti dei controller di movimento e seguito, da integrare.
+- [x] Generatori Blender per ingombri e guide, controllati sintatticamente.
+- [x] Copia OSM del borgo, inventario di 91 sagome e mappa planimetrica.
+- [x] Pipeline di trasformazione e preparazione di una strada con quote verificate.
+- [x] Parsing/lint GDScript e istruzioni di collaudo sul PC.
+
+Queste consegne non chiudono automaticamente le prove P1–P4. Venti cicli logici Python non equivalgono a venti cicli animati in gioco.
 
 ## P0 — Fondamenti e riferimenti
 

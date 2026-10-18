@@ -1,0 +1,2 @@
+# Development parser/linter only. Game and numerical tests do not need pip packages.
+gdtoolkit==4.5.0

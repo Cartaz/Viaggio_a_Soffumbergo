@@ -31,7 +31,7 @@ Foto esaminate come fonti, non incluse nel gioco. Le condizioni di licenza resta
 
 - [Comune di Faedis, cartina informativa](https://faedisnicefaedisgood.com/wp-content/uploads/2023/03/cartina_comune_faedis.pdf): orientamento generale, carta dichiaratamente indicativa.
 - [Regione FVG, catalogo altimetrico](https://irdat.regione.fvg.it/consultatore-dati-ambientali-territoriali/detail/irdat/dataset/11826): metadati reperiti; tessere non ancora scaricate o validate.
-- [OpenStreetMap, condizioni dei dati](https://www.openstreetmap.org/copyright): base candidata per geometria riutilizzabile; attribuzione da conservare.
+- [OpenStreetMap, condizioni dei dati](https://www.openstreetmap.org/copyright): acquisita una base del borgo in `data/geography/osm_survey.geojson`, con 91 sagome di edifici, 35 tratti stradali/pedonali e un punto abitato. Non comprende il rilievo completo dell’anello. Attribuzione e fonte in `NOTICE.md` e `data/geography/provenance.json`.
 - [Pro Loco Valle di Soffumbergo](https://www.prolocovalledisoffumbergo.it/): sito individuato; apertura diretta in questa sessione non riuscita, quindi nessuna affermazione specifica derivata dal suo contenuto.
 - [PromoTurismoFVG, Anello di Soffumbergo](https://www.turismofvg.it/en/active/ring-of-soffumbergo): contesto paesaggistico; è un itinerario escursionistico e non sostituisce l’anello stradale dell’utente.
 
@@ -45,4 +45,6 @@ Foto esaminate come fonti, non incluse nel gioco. Le condizioni di licenza resta
 - Confrontare il modello in gioco con più prospettive e registrare parti osservate, stimate e ignote.
 
 L’obiettivo è la fedeltà degli elementi documentati. Una parte non vista non deve essere presentata come ricostruita con precisione.
+
+La [mappa del sopralluogo](../reports/valle_survey_map.svg) e l’[inventario OSM](../reports/valle_building_inventory.csv) organizzano il lavoro. La mappa è planimetrica, senza quote; le sagome mappate non sono facciate già verificate. PV-01 indica un punto di osservazione vicino al prato candidato, non i confini della zona di parcheggio. Le guide Blender derivate rimangono piatte e non certificano l’altimetria.
 
