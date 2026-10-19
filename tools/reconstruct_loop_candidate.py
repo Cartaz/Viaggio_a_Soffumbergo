@@ -9,7 +9,10 @@ import json
 import math
 from pathlib import Path
 
-from extract_sector_b import highway_graph, nearest_node, shortest_path
+try:
+    from tools.extract_sector_b import highway_graph, nearest_node, shortest_path
+except ModuleNotFoundError:
+    from extract_sector_b import highway_graph, nearest_node, shortest_path
 
 ROOT = Path(__file__).resolve().parents[1]
 ANCHORS = {
