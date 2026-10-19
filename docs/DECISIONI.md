@@ -42,5 +42,7 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 
 ## Cose che non risultano completate
 
-Nessuna build giocabile verificata, modello 3D definitivo, terreno importato, censimento completo del borgo, rilievo integrale del circuito o benchmark reale. Esistono ora sorgenti del laboratorio, generatori e 28 test indipendenti dagli editor. Le regole della visita sono un modello Python da collegare al 3D. Non confondere controlli statici e prove numeriche con un gioco collaudato.
+Il modello auto corrente è denominato **0.1**, su richiesta dell'utente. Il riscontro conferma che l'idea è leggibile ma richiede ancora molta scultura: la versione è una base di lavoro, non un modello realistico definitivo. L'utente ha autorizzato il caricamento di modello, sorgenti, riferimenti collegati e prove su GitHub come questa versione.
+
+Nessun giro giocabile verificato, modello 3D approvato come definitivo, terreno importato, censimento completo del borgo, rilievo integrale del circuito o benchmark reale. La Yaris dispone ora di una ricostruzione di esterni e abitacolo, generata/renderizzata in Blender e importata in Godot, con prove delle articolazioni e avvio del laboratorio. Fonti, stime e limiti sono in `docs/YARIS_MODELLO.md`. La richiesta corrente privilegia una riproduzione realistica dell'auto; il modello da foto resta da rifinire artisticamente. Le regole della visita sono ancora un modello Python da collegare al 3D.
 

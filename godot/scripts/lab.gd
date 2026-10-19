@@ -84,7 +84,7 @@ func _process(delta: float) -> void:
 			+ "Frecce/WASD: guida · Spazio: freno · R: ripristino (prova invalidata)\n"
 			+ "Velocità %.1f km/h · Contatti %d/4 · Passo %d Hz\n"
 			+ "Carichi FL/FR/RL/RR: %.0f / %.0f / %.0f / %.0f N\n"
-			+ "Proxy geometrici e masse provvisorie; tenere separata la verifica del motore.\n"
+			+ "Yaris da foto; albero, occupanti e masse ancora provvisori.\n"
 			+ "CSV: user://telemetry · Ripristino usato: %s"
 		)
 		% [

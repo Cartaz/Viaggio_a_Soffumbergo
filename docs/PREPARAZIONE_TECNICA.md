@@ -1,6 +1,6 @@
 # Preparazione senza editor 3D
 
-La consegna contiene codice, dati e prove ripetibili. Godot e Blender non sono stati eseguiti. Non sono state create build, prodotti modelli finali o misurati FPS.
+Questa pagina conserva il quadro della preparazione iniziale. Con l'incremento Yaris sono stati eseguiti Blender 4.5.3 e Godot 4.5.1: sorgente, GLB e render dell'auto, importazione, articolazioni, confronto numerico e avvio del laboratorio. Il banco statico passa a 120/240 Hz e non passa a 60 Hz. Evidenze in `reports/yaris_2022/VERIFICA.md`; uso dell'asset in `docs/YARIS_MODELLO.md`. Non sono state prodotte build del giro completo, approvati modelli come qualità finale o misurati FPS rappresentativi.
 
 ## Prove effettive
 

@@ -1,6 +1,6 @@
 # Primo collegamento al PC
 
-Obiettivo: rendere il laboratorio realmente verificato. Nessuna prova motore di questa pagina risulta già passata.
+Obiettivo: rendere il laboratorio realmente verificato. Importazione, confronto numerico, avvio delle scene e banco statico a 120/240 Hz sono ora eseguiti; il banco a 60 Hz non passa la soglia di velocità residua. Evidenze e limiti in `reports/yaris_2022/VERIFICA.md`. Le prove dinamiche/visive sotto elencate restano da completare.
 
 ## Importazione
 
