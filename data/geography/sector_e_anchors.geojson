@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "name": "Sector E, Costalunga and Mont Joanes: three isolated panorama anchors",
+  "coordinate_reference": "EPSG:4326 lon/lat panorama viewpoint (no elevation)",
+  "source_document": "docs/CIRCUITO_SOPRALLUOGO.md",
+  "road_geometry_available": false,
+  "continuous_survey_completed": false,
+  "terrain_elevation_available": false,
+  "features": [
+    {
+      "type": "Feature",
+      "id": "CIR-12",
+      "properties": {
+        "sector": "E",
+        "route_step": 16,
+        "imagery_date": "2023-05",
+        "place": "Strada per Valle / strada per Costalunga",
+        "heading_deg": 295.07,
+        "observation": "Bivio nel bosco, parete/muro in pietra presso la diramazione, margini erbosi, asfalto senza mezzeria e piccolo contenitore presso l'incrocio.",
+        "limitation": "Non attestata permanenza degli oggetti mobili; gli interni dei 4,2 km non sono stati percorsi.",
+        "evidence": "source_report_2026_10_19_not_reobserved",
+        "coverage": "isolated_panorama_only",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=PxnOlMmQDxYQPw0_-VBuEg&viewpoint=46.1580732%2C13.379205&heading=295.07&pitch=0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.379205,
+          46.1580732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-13",
+      "properties": {
+        "sector": "E",
+        "route_step": 17,
+        "imagery_date": "2024-08",
+        "place": "Strada per Costalunga verso via Mont Joanes",
+        "heading_deg": 287.48,
+        "observation": "Avvicinamento a nodo con STOP, guardrail a destra, pendio vegetato a sinistra, edifici e protezioni in pietra al nodo.",
+        "limitation": "Mini-mappa mostra anche il nome via Juretigh: riconciliare denominazioni con base geografica prima della modellazione.",
+        "evidence": "source_report_2026_10_19_not_reobserved",
+        "coverage": "isolated_panorama_only",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=nKp_t4HfrINTwSQXEBpzvQ&viewpoint=46.1676159%2C13.3623302&heading=287.48&pitch=0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3623302,
+          46.1676159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-14",
+      "properties": {
+        "sector": "E",
+        "route_step": 18,
+        "imagery_date": "2024-08",
+        "place": "Via Mont Joanes, deviazione al segnaposto Canal di Grivò",
+        "heading_deg": 225.6,
+        "observation": "Attraversamento con parapetti metallici su pilastrini e edificio in pietra a sinistra; cavi aerei.",
+        "limitation": "La deviazione e la successiva inversione dipendono dal segnaposto; non costituiscono un tornante della discesa. Il link originale mantiene questo passaggio: non è stato eliminato dal riferimento.",
+        "evidence": "source_report_2026_10_19_not_reobserved",
+        "coverage": "isolated_panorama_only",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=zSGMyb-MOznlSdQY-vlV_g&viewpoint=46.1659437%2C13.3596292&heading=225.6&pitch=0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3596292,
+          46.1659437
+        ]
+      }
+    }
+  ]
+}
