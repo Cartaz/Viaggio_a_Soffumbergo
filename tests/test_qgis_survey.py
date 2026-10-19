@@ -53,6 +53,16 @@ class QGISSopralluogoTests(unittest.TestCase):
                     self.assertIn("origin_file", f["properties"])
                     self.assertEqual(f["properties"]["height_status"], "NOT_AVAILABLE")
 
+    def test_export_from_repository_sources(self):
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as directory:
+            manifest = build(root, directory)
+            self.assertGreater(manifest["layer_feature_counts"]["observation_anchors.geojson"], 10)
+            self.assertGreater(manifest["layer_feature_counts"]["road_centerlines_partial.geojson"], 0)
+            self.assertGreater(manifest["layer_feature_counts"]["valle_footprints.geojson"], 0)
+            self.assertFalse(manifest["continuous_loop_centerline"])
+            self.assertEqual(manifest["height_samples"], 0)
+
     def test_rejects_z_and_invalid_geometry(self):
         with self.assertRaises(ValueError):
             _coordinates({"type": "Point", "coordinates": [13.39, 46.15, 100]})
