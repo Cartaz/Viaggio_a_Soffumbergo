@@ -1,0 +1,81 @@
+{
+  "type": "FeatureCollection",
+  "name": "sector_d_survey_viewpoints_not_road_centerline",
+  "properties": {
+    "crs": "EPSG:4326",
+    "coordinate_order": "longitude, latitude",
+    "source": "docs/CIRCUITO_SOPRALLUOGO.md",
+    "warning": "These are panorama viewpoints, NOT road geometry or route endpoints surveyed on the ground; the 1.4 km D sector centerline remains unavailable."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "CIR-11",
+      "properties": {
+        "id": "CIR-11",
+        "sector": "D",
+        "role": "junction_context_previsit_and_return",
+        "source": "CIRCUITO_SOPRALLUOGO.md, 19 ottobre 2026",
+        "image_month": "2026-03",
+        "pano_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=VG6N0zxqJ7PLJ6BbJX5OWA&viewpoint=46.1588292%2C13.3922833&heading=2.49&pitch=0",
+        "heading_deg": 2.49,
+        "geometry_kind": "panorama_viewpoint_not_road_centerline",
+        "survey_status": "observation_from_previous_session",
+        "limitation": "Rilievo del nodo nel tratto di avvicinamento, non censimento della strada D; al primo passaggio l'itinerario segue il settore V"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3922833,
+          46.1588292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-VAL-15",
+      "properties": {
+        "id": "CIR-VAL-15",
+        "sector": "D",
+        "role": "sector_start",
+        "source": "CIRCUITO_SOPRALLUOGO.md, 19 ottobre 2026",
+        "image_month": "2023-05",
+        "pano_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=KAzz8xQ3_0RkMdu4rPLCNA&viewpoint=46.1588137%2C13.3926044&heading=321.61&pitch=0",
+        "heading_deg": 321.61,
+        "geometry_kind": "panorama_viewpoint_not_road_centerline",
+        "survey_status": "observation_from_previous_session",
+        "limitation": "Solo nodo iniziale; non prova la continuità della copertura, raggi delle curve o quote"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3926044,
+          46.1588137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-12",
+      "properties": {
+        "id": "CIR-12",
+        "sector": "D",
+        "role": "sector_end_next_sector_transition",
+        "source": "CIRCUITO_SOPRALLUOGO.md, 19 ottobre 2026",
+        "image_month": "2023-05",
+        "pano_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=PxnOlMmQDxYQPw0_-VBuEg&viewpoint=46.1580732%2C13.379205&heading=295.07&pitch=0",
+        "heading_deg": 295.07,
+        "geometry_kind": "panorama_viewpoint_not_road_centerline",
+        "survey_status": "observation_from_previous_session",
+        "limitation": "Solo nodo finale / ingresso E; oggetti mobili non permanenti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.379205,
+          46.1580732
+        ]
+      }
+    }
+  ]
+}
