@@ -2,12 +2,12 @@
   "date": "2026-10-19",
   "blender": "4.5.9 LTS",
   "godot": "4.5.1 stable",
-  "blender_generation_and_render": "passed: six views inspected, including simplified faces",
-  "fit_generator": "passed: build_blockout.py completed",
-  "godot_import": "passed",
+  "blender_generation_and_render": "passed: six rigged-model views",
   "godot_character_checks": "passed",
-  "godot_lab_smoke": "passed: three frames only",
+  "godot_lab_smoke": "passed: 180 frames",
   "python_checks": "passed: 28 tests",
-  "gdscript_lint_and_format": "passed",
-  "animation_and_seated_fit": "not implemented or verified"
+  "gdscript_lint_and_format": "passed: 15 files",
+  "animation_and_seated_fit": "passed in synthetic laboratory: 540 contact/length cases and actual vehicle trace; final cabin fit still pending",
+  "in_game_visual_review": "passed: cabin and crow nest screenshots and eight-second rendered laboratory movie",
+  "detailed_metrics": "animation_validation.json"
 }

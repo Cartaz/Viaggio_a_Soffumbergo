@@ -1,6 +1,6 @@
 # Preparazione senza editor 3D
 
-> Aggiornamento personaggi del 19/10/2026: l’utente ha autorizzato corporature adattate agli studi e locomozione bipede, con Bianca più affusolata e Bernie compatto. Questa scelta supera i precedenti riferimenti all’esclusività quadrupede e ai soli occhi deformati. Due modelli vestiti sono ora generati e renderizzati; rig, animazioni e fitting dei comandi restano da realizzare. Vedere [PERSONAGGI.md](PERSONAGGI.md).
+> Aggiornamento personaggi del 19/10/2026: l’utente ha autorizzato corporature adattate agli studi e locomozione bipede, con Bianca più affusolata e Bernie compatto. Questa scelta supera i precedenti riferimenti all’esclusività quadrupede e ai soli occhi deformati. Due modelli vestiti hanno ora rig, guida/tenuta animate e reazioni verificate nel laboratorio. Cammino, scalata e fitting finale restano aperti; vedere anche ANIMAZIONI.md. Vedere [PERSONAGGI.md](PERSONAGGI.md).
 
 La consegna contiene codice, dati e prove ripetibili. Godot e Blender non sono stati eseguiti. Non sono state create build, prodotti modelli finali o misurati FPS.
 

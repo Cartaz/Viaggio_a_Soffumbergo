@@ -1,7 +1,7 @@
 class_name LaboratoryVehicle
 extends RigidBody3D
 ## Four single-ray contacts, rigid mast and locked passenger proxies.
-## No final Yaris model, wheel angular dynamics, ESC, elastic mast or character rig.
+## No final Yaris model, wheel angular dynamics, ESC or elastic mast.
 
 const BERNIE_MODEL = preload("res://godot/assets/characters/bernie.glb")
 const BIANCA_MODEL = preload("res://godot/assets/characters/bianca.glb")
@@ -23,6 +23,17 @@ var telemetry: FileAccess
 var elapsed := 0.0
 var sample_clock := 0.0
 var physics_frames := 0
+var driver: PhysicsOccupant
+var lookout: PhysicsOccupant
+var steering_wheel: Node3D
+var driver_grips: Array[Node3D] = []
+var pedal_pivots: Array[Node3D] = []
+var lookout_grips: Array[Node3D] = []
+var driver_acceleration := Vector3.UP * 9.81
+var lookout_acceleration := Vector3.UP * 9.81
+var previous_linear := Vector3.ZERO
+var previous_angular := Vector3.ZERO
+var motion_initialized := false
 
 
 func _ready() -> void:
@@ -101,6 +112,9 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		state.angular_velocity = Vector3.ZERO
 		reset_requested = false
 		invalidated = true
+		motion_initialized = false
+		driver.reset_motion()
+		lookout.reset_motion()
 		reset_physics_interpolation()
 		return
 	var dt := state.step
@@ -113,6 +127,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	)
 	var basis := state.transform.basis.orthonormalized()
 	var up := basis.y
+	_capture_support_motion(state, dt)
 	var speed_forward := state.linear_velocity.dot(-basis.z)
 	var drive_total := (
 		minf(
@@ -234,7 +249,7 @@ func _sample(state: PhysicsDirectBodyState3D) -> void:
 
 
 func _build_proxies() -> void:
-	_box(Vector3(1.745, 0.65, 3.94), Vector3(0, 0.72, 0), Color("bb333b"))
+	_box(Vector3(1.745, 0.36, 3.94), Vector3(0, 0.55, 0), Color("bb333b"))
 	# Open window envelope keeps the driver visible. Bodywork remains a proxy.
 	_box(Vector3(1.45, 0.06, 1.9), Vector3(0, 1.5, 0.1), Color("bb333b"))
 	for side in [-1.0, 1.0]:
@@ -242,16 +257,19 @@ func _build_proxies() -> void:
 		_box(Vector3(0.06, 0.5, 0.06), Vector3(side * 0.69, 1.25, 1.02), Color("bb333b"))
 	_box(Vector3(0.18, 5.3, 0.18), Vector3(0, 3.9, 0), Color("aa7e46"))
 	_box(Vector3(1.2, 0.3, 1.2), Vector3(0, 5.6, 0), Color("c49c64"))
-	# Visual design models only: no extra physics body or duplicated occupant mass.
-	# Neutral standing pose pending seated rig, steering and pedal contact fitting.
-	var driver := BERNIE_MODEL.instantiate() as Node3D
-	driver.name = "BernieDriverDesign"
+	# Occupant mass remains in the aggregate; deformation rigs add no rigid bodies.
+	driver = PhysicsOccupant.new()
+	driver.name = "BernieDriver"
+	driver.role = "driver"
 	driver.position = Vector3(-0.32, 0.63, -0.35)
+	driver.add_child(BERNIE_MODEL.instantiate())
 	add_child(driver)
-	var lookout := BIANCA_MODEL.instantiate() as Node3D
-	lookout.name = "BiancaLookoutDesign"
-	lookout.position = Vector3(0.1, 5.75, -0.1)
+	lookout = PhysicsOccupant.new()
+	lookout.name = "BiancaLookout"
+	lookout.position = Vector3(0.22, 5.756, -0.23)
+	lookout.add_child(BIANCA_MODEL.instantiate())
 	add_child(lookout)
+	_build_contact_supports()
 	for anchor in wheel_anchors:
 		var wheel := Node3D.new()
 		add_child(wheel)
@@ -283,3 +301,140 @@ func _material(color: Color) -> StandardMaterial3D:
 	material.albedo_color = color
 	material.roughness = 0.85
 	return material
+
+
+func _capture_support_motion(state: PhysicsDirectBodyState3D, dt: float) -> void:
+	var acceleration := Vector3.ZERO
+	var angular_acceleration := Vector3.ZERO
+	if motion_initialized:
+		acceleration = (state.linear_velocity - previous_linear) / dt
+		angular_acceleration = (state.angular_velocity - previous_angular) / dt
+	previous_linear = state.linear_velocity
+	previous_angular = state.angular_velocity
+	motion_initialized = true
+	var basis := state.transform.basis.orthonormalized()
+	var gravity := state.total_gravity
+	var driver_offset: Vector3 = basis * (driver.position + Vector3(0, 0.35, 0) - properties.com)
+	var lookout_offset: Vector3 = basis * (lookout.position + Vector3(0, 0.45, 0) - properties.com)
+	driver_acceleration = point_specific_force(
+		acceleration, angular_acceleration, state.angular_velocity, driver_offset, basis, gravity
+	)
+	lookout_acceleration = point_specific_force(
+		acceleration, angular_acceleration, state.angular_velocity, lookout_offset, basis, gravity
+	)
+
+
+static func point_specific_force(
+	acceleration: Vector3,
+	alpha: Vector3,
+	omega: Vector3,
+	offset: Vector3,
+	basis: Basis,
+	gravity: Vector3
+) -> Vector3:
+	return (
+		basis.inverse()
+		* (acceleration + alpha.cross(offset) + omega.cross(omega.cross(offset)) - gravity)
+	)
+
+
+func _physics_process(delta: float) -> void:
+	if driver == null:
+		return
+	steering_wheel.rotation.y = -steering * 0.30
+	driver.pedal_inputs = Vector2(absf(throttle), braking)
+	pedal_pivots[0].rotation.x = -0.12 * braking
+	pedal_pivots[1].rotation.x = -0.12 * absf(throttle)
+	var axis := driver.skeleton.global_basis.inverse() * steering_wheel.global_basis.y
+	var turn := Basis(axis.normalized(), -steering * 0.30)
+	driver.animate_support(
+		delta, driver_acceleration, _contact_frames(driver, driver_grips, turn), steering
+	)
+	lookout.animate_support(
+		delta, lookout_acceleration, _contact_frames(lookout, lookout_grips, Basis.IDENTITY), 0.0
+	)
+
+
+func _contact_frames(
+	actor: PhysicsOccupant, nodes: Array[Node3D], hand_basis: Basis
+) -> Array[Transform3D]:
+	var frames: Array[Transform3D] = []
+	for node in nodes:
+		var frame := actor.skeleton.global_transform.affine_inverse() * node.global_transform
+		frame.origin += hand_basis * Vector3(0, 0.040, 0)
+		frame.basis = hand_basis
+		frames.append(frame)
+	return frames
+
+
+func _build_contact_supports() -> void:
+	_box(Vector3(0.29, 0.04, 0.25), driver.position + Vector3(0, 0.135, 0.04), Color("303738"))
+	_box(Vector3(0.29, 0.28, 0.04), driver.position + Vector3(0, 0.27, 0.13), Color("303738"))
+	var mount := Node3D.new()
+	mount.name = "SteeringMount"
+	mount.position = driver.position + Vector3(0, 0.385, -0.13)
+	mount.rotation.x = deg_to_rad(90)
+	add_child(mount)
+	steering_wheel = Node3D.new()
+	steering_wheel.name = "SteeringWheel"
+	mount.add_child(steering_wheel)
+	var mesh := MeshInstance3D.new()
+	var ring := TorusMesh.new()
+	ring.inner_radius = 0.067
+	ring.outer_radius = 0.083
+	mesh.mesh = ring
+	mesh.material_override = _material(Color("292c31"))
+	steering_wheel.add_child(mesh)
+	for spoke in range(3):
+		var angle := float(spoke) * TAU / 3.0
+		_rod(
+			Vector3.ZERO, Vector3(cos(angle) * 0.067, 0, sin(angle) * 0.067), 0.004, steering_wheel
+		)
+	for side in [-1, 1]:
+		var grip := Node3D.new()
+		grip.position = Vector3(side * 0.075, 0, 0)
+		steering_wheel.add_child(grip)
+		driver_grips.append(grip)
+		var pedal := Node3D.new()
+		pedal.position = driver.position + Vector3(side * 0.082, 0.023, -0.15)
+		add_child(pedal)
+		pedal_pivots.append(pedal)
+		var pad := MeshInstance3D.new()
+		var pad_mesh := BoxMesh.new()
+		pad_mesh.size = Vector3(0.065, 0.025, 0.10)
+		pad.mesh = pad_mesh
+		pad.material_override = _material(Color("53595c"))
+		pad.position = Vector3(0, -0.0105, -0.05)
+		pedal.add_child(pad)
+		_rod(Vector3(side * 0.56, 5.75, -0.56), Vector3(side * 0.56, 6.21, -0.56), 0.018)
+		var handhold := Node3D.new()
+		handhold.position = lookout.position + Vector3(side * 0.11, 0.480, -0.14)
+		add_child(handhold)
+		lookout_grips.append(handhold)
+		_rod(
+			Vector3(lookout.position.x + side * 0.18, 6.21, -0.56),
+			lookout.position + Vector3(side * 0.18, 0.480, -0.14),
+			0.009
+		)
+	_rod(Vector3(-0.56, 6.21, -0.56), Vector3(0.56, 6.21, -0.56), 0.018)
+	_rod(
+		lookout.position + Vector3(-0.18, 0.480, -0.14),
+		lookout.position + Vector3(0.18, 0.480, -0.14),
+		0.009
+	)
+
+
+func _rod(a: Vector3, b: Vector3, radius: float, parent: Node3D = null) -> void:
+	var mesh := MeshInstance3D.new()
+	var cylinder := CylinderMesh.new()
+	cylinder.top_radius = radius
+	cylinder.bottom_radius = radius
+	cylinder.height = a.distance_to(b)
+	mesh.mesh = cylinder
+	mesh.material_override = _material(Color("8d6c43") if parent == null else Color("292c31"))
+	mesh.position = (a + b) * 0.5
+	mesh.quaternion = Quaternion(Vector3.UP, (b - a).normalized())
+	if parent == null:
+		add_child(mesh)
+	else:
+		parent.add_child(mesh)

@@ -1,6 +1,6 @@
 # Roadmap verificabile
 
-Stato attuale: laboratorio e modelli di studio vestiti. I personaggi sono stati generati e renderizzati in Blender 4.5.9 LTS; la guida e le animazioni richiedono ancora i rispettivi collaudi. Una casella completata richiede una consegna o una prova ispezionabile.
+Stato attuale: laboratorio e modelli di studio vestiti. I personaggi sono stati generati e renderizzati in Blender 4.5.9 LTS; guida/tenuta, IK e mantellina hanno un primo collaudo motore; percorso completo, esplorazione e accettazione finale restano aperti. Una casella completata richiede una consegna o una prova ispezionabile.
 
 ## Consegna preparatoria senza Godot/Blender
 
@@ -34,7 +34,10 @@ Uscita: dossier del percorso e del borgo con copertura esplicita, riferimenti de
 ## P1 — Anatomia, abitacolo e laboratorio fisico
 
 - [x] Generare e renderizzare due modelli di studio vestiti: Bernie compatto e Bianca affusolata, bipedi secondo la nuova direzione utente.
-- [ ] Approvare silhouette, scala e fitting sui comandi.
+- [x] Prima approvazione visiva dell’utente per i personaggi e gli occhi ridimensionati.
+- [x] Rig, posa di guida, presa sulla coffa e reazioni alle accelerazioni reali, verificati nel laboratorio.
+- [x] Cappelli ridotti con tasche per le orecchie; mantellina animata con braccia e collisioni conservative.
+- [ ] Approvare scala e fitting finale sull’abitacolo fedele.
 - [ ] Progettare seduta e prolunghe dei pedali con arti a lunghezza fissa.
 - [ ] Provare sterzata, frenata ed uscita dalla porta sullo stesso rig.
 - [ ] Implementare telaio, sospensioni, pneumatici e trazione anteriore.

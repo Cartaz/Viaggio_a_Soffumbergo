@@ -4,6 +4,7 @@ extends Node3D
 var vehicle: LaboratoryVehicle
 var camera: Camera3D
 var hud: Label
+var camera_view := 0
 
 
 func _ready() -> void:
@@ -41,6 +42,7 @@ func _ready() -> void:
 	vehicle.position = Vector3(0, 0.2, 8)
 	add_child(vehicle)
 	camera = Camera3D.new()
+	camera.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
 	camera.fov = 62
 	camera.position = Vector3(10, 8, 21)
 	add_child(camera)
@@ -62,6 +64,8 @@ func _physics_process(_delta: float) -> void:
 	)
 	vehicle.braking = Input.get_action_strength("brake")
 	vehicle.steering_target = Input.get_axis("left", "right")
+	if Input.is_action_just_pressed("camera_view"):
+		camera_view = (camera_view + 1) % 3
 	if Input.is_action_just_pressed("reset_lab"):
 		vehicle.reset_requested = true
 
@@ -75,13 +79,20 @@ func _process(delta: float) -> void:
 		heading = Vector3.FORWARD
 	heading = heading.normalized()
 	var desired := vehicle.global_position - heading * 12 + Vector3(5, 7, 0)
+	var focus := vehicle.global_position + Vector3.UP * 2.8
+	if camera_view == 1:
+		focus = vehicle.driver.global_position + vehicle.global_basis * Vector3(0, 0.38, 0)
+		desired = focus + vehicle.global_basis * Vector3(-0.58, 0.20, -0.46)
+	elif camera_view == 2:
+		focus = vehicle.lookout.global_position + vehicle.global_basis * Vector3(0, 0.40, 0)
+		desired = focus + vehicle.global_basis * Vector3(1.1, 0.35, -1.2)
 	camera.global_position = camera.global_position.lerp(desired, 1.0 - exp(-3.0 * delta))
-	camera.look_at(vehicle.global_position + Vector3.UP * 2.8, Vector3.UP)
+	camera.look_at(focus, Vector3.UP)
 	var loads := vehicle.wheel_loads
 	hud.text = (
 		(
 			"VIAGGIO A SOFFUMBERGO — LABORATORIO, NON CIRCUITO REALE\n"
-			+ "Frecce/WASD: guida · Spazio: freno · R: ripristino (prova invalidata)\n"
+			+ "Frecce/WASD: guida · Spazio: freno · R: ripristino · V: auto / Bernie / Bianca\n"
 			+ "Velocità %.1f km/h · Contatti %d/4 · Passo %d Hz\n"
 			+ "Carichi FL/FR/RL/RR: %.0f / %.0f / %.0f / %.0f N\n"
 			+ "Proxy geometrici e masse provvisorie; tenere separata la verifica del motore.\n"
@@ -128,7 +139,8 @@ func _setup_inputs() -> void:
 		"left": [KEY_A, KEY_LEFT],
 		"right": [KEY_D, KEY_RIGHT],
 		"brake": [KEY_SPACE],
-		"reset_lab": [KEY_R]
+		"reset_lab": [KEY_R],
+		"camera_view": [KEY_V]
 	}
 	for action in bindings:
 		if not InputMap.has_action(action):

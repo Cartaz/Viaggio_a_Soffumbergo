@@ -2,7 +2,7 @@
 
 Blender 4.5 LTS. X right, Y forward, Z up; GLB converts to Godot axes.
 New user direction 2026-10-19: biped silhouettes, Bianca more slender.
-These are editable design models, not skinned or production animation rigs.
+Skinned rigs for physics-driven driving/bracing; exploration gait remains pending.
 No external images/textures are embedded. Palette is an artistic approximation.
 """
 import argparse
@@ -13,6 +13,9 @@ import sys
 
 import bpy
 from mathutils import Vector
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from character_rig import rig_character
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -38,6 +41,8 @@ class Character:
         self.root["status"] = "DESIGN_MODEL_NOT_SKINNED"
         self.root["locomotion_direction"] = "biped"
         self.objects = []
+        self.limb_joints = {}
+        self.finger_joints = {}
         self.mats = {k: material(key + "_" + k, v)
                      for k, v in config["palette"].items()}
 
@@ -104,7 +109,15 @@ class Character:
 
     def garment(self, name, rings, mat, opening=0):
         # rings = (z, x radius, y radius, y offset). Separate open garment mesh.
-        verts, faces, count = [], [], 64
+        if name == "purple_cape":
+            dense = []
+            for a, b in zip(rings, rings[1:]):
+                steps = math.ceil(abs(b[0] - a[0]) / .010)
+                for step in range(steps):
+                    t = step / steps
+                    dense.append(tuple(x * (1-t) + y * t for x, y in zip(a, b)))
+            rings = dense + [rings[-1]]
+        verts, faces, count = [], [], 48 if name == "purple_cape" else 64
         stride = count + 1 if opening else count
         for z, rx, ry, cy in rings:
             for i in range(stride):
@@ -127,6 +140,7 @@ class Character:
             base = palm + Vector((side * spread, .002, -.014))
             knuckle = base + Vector((side * spread * .17, .006, -length * .48))
             tip = knuckle + Vector((side * spread * .13, .007, -length * .52))
+            self.finger_joints[(side, digit)] = (base, knuckle, tip)
             self.segment(f"finger_proximal_{side}_{digit}", base, knuckle, .0040 * size, "paw")
             self.ell(f"finger_knuckle_{side}_{digit}", knuckle, (.0042, .0045, .0045), "paw")
             self.segment(f"finger_distal_{side}_{digit}", knuckle, tip, .0032 * size, "paw")
@@ -253,6 +267,7 @@ class Character:
             hip = Vector((side * width * .49, -.012, .255))
             knee = hip + Vector((side * .10, .27, -.9576)).normalized() * self.rig["segments_m"]["upper_hindlimb"]
             foot = knee + Vector((0, -.19, -.9818)).normalized() * self.rig["segments_m"]["lower_hindlimb"]
+            self.limb_joints[side] = (shoulder, elbow, paw, hip, knee, foot)
             for name, a, b, r in (("upper_arm", shoulder, elbow, .024 if slender else .031),
                                   ("forearm", elbow, paw, .020 if slender else .026),
                                   ("thigh", hip, knee, .034 if slender else .048),
@@ -321,6 +336,7 @@ class Character:
                 world = obj.matrix_basis.copy()
                 obj.parent = pivot
                 obj.matrix_basis = pivot.matrix_basis.inverted() @ world
+        rig_character(self)
         return self
 
     def export(self, path):
@@ -331,7 +347,7 @@ class Character:
         bpy.context.view_layer.objects.active = self.root
         bpy.ops.export_scene.gltf(filepath=str(path.resolve()), export_format="GLB",
                                   use_selection=True, export_apply=True, export_yup=True,
-                                  export_extras=True, export_animations=False)
+                                  export_extras=True, export_animations=True)
 
 
 def aim(obj, at):
@@ -399,15 +415,16 @@ def main():
     views = {"three_quarter": (1.45, 3.1, 1.40), "front": (0, 3.2, .55),
              "side": (3.2, .3, .70), "back": (.8, -3.2, 1.05),
              "paws_detail": (1.2, 3.2, 1.3), "faces_detail": (.7, 3.2, 1.05)}
-    manifest = {"blender": bpy.app.version_string, "status": "design_review",
+    manifest = {"blender": bpy.app.version_string, "status": "skinned_attachment_rigs",
                 "palette": "artistic approximation; not sampled from production cels",
                 "characters": {}, "views": list(views),
-                "limitations": ["not skinned", "no locomotion animation", "no seated driving pose",
-                                "no game engine animation or contact-fit verification"]}
+                "limitations": ["exploration/climbing animations pending", "final cabin and clothing art review pending",
+                                "runtime cape uses arm-following skin and capsule projection, not a full cloth solver"]}
     for c in characters:
         manifest["characters"][c.key] = {"role": c.config["role"], "mesh_objects": len(c.objects),
                                             "body_radii": c.config["body_radii"],
-                                            "glb": f"{c.key.lower()}.glb"}
+                                            "glb": f"{c.key.lower()}.glb", "bones": len(c.armature.data.bones),
+                                            "hat_ear_intersections": int(c.root["hat_ear_intersections"])}
     for name, at in views.items():
         if name == "side":
             # Separate the silhouettes across the camera plane for inspection.

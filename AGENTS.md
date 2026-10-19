@@ -22,5 +22,5 @@ Leggere README.md, docs/DECISIONI.md e la fase attiva di docs/ROADMAP.md prima d
 - Non introdurre una licenza di pubblicazione per gli asset di terzi o per i riferimenti dell’utente.
 - Non creare una build fittizia per far apparire il progetto più avanti di quanto sia.
 
-L’utente ha autorizzato tutto lo sviluppo utile. Blender 4.5.9 LTS è stato eseguito per generare e renderizzare i modelli di studio; distinguere questi risultati dal collaudo delle animazioni e della guida. Non presentare controlli statici come esecuzioni nel motore. Queste indicazioni non estendono l’autorizzazione a pubblicare una release o cambiare la visibilità della repository. Non richiedono lavoro con più agenti.
+L’utente ha autorizzato tutto lo sviluppo utile. Blender 4.5.9 LTS e Godot 4.5.1 sono stati eseguiti per rig, reazioni alle accelerazioni, prese IK e mantellina. Distinguere i test del laboratorio da percorso, locomozione e collaudo del viaggio completo. Vedere docs/ANIMAZIONI.md. Non presentare controlli statici come esecuzioni nel motore. Queste indicazioni non estendono l’autorizzazione a pubblicare una release o cambiare la visibilità della repository. Non richiedono lavoro con più agenti.
 

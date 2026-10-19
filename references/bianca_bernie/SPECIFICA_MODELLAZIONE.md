@@ -28,4 +28,4 @@ Palette qualitativa di lavoro, senza pretendere valori cromatici esatti dai cel.
 
 Generatore: `tools/blender/build_characters.py`. Configurazione: `data/config/characters.json`. GLB: `godot/assets/characters/bernie.glb` e `bianca.glb`. Scena di confronto: `godot/scenes/characters.tscn`. Viste e istruzioni: [Personaggi](../../docs/PERSONAGGI.md).
 
-I modelli sono **studi 3D vestiti**, generati e renderizzati in Blender 4.5.9 LTS. Non hanno skinning o animazioni: posa seduta con contatti sul volante/pedali, cammino, salita e discesa devono ancora essere realizzati. Il laboratorio usa i modelli come visuali statiche, senza introdurre corpi fisici o masse aggiuntive. Non marcare come complete le fasi artistiche/animate della roadmap.
+I modelli hanno ora rig e animazioni reattive nel laboratorio: vedere [ANIMAZIONI.md](../../docs/ANIMAZIONI.md). Cappelli ridotti con controllo delle orecchie; mantellina deformata con braccia e correzione delle collisioni. Cammino, salita, ingresso/uscita e fitting finale restano aperti.

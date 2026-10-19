@@ -1,6 +1,6 @@
 class_name MouseLocomotion
 extends CharacterBody3D
-## Navigation/collision controller only. Biped rig and foot IK are still required.
+## Navigation/collision controller only. Exploration gait and terrain foot IK are still required.
 ## This never scales bones. Motion intent can come from player input or follower.
 
 @export var speed_m_s := 1.8

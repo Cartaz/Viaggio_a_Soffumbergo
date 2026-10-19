@@ -1,6 +1,6 @@
 {
   "blender": "4.5.9 LTS",
-  "status": "design_review",
+  "status": "skinned_attachment_rigs",
   "palette": "artistic approximation; not sampled from production cels",
   "characters": {
     "Bernie": {
@@ -11,7 +11,9 @@
         0.128,
         0.215
       ],
-      "glb": "bernie.glb"
+      "glb": "bernie.glb",
+      "bones": 35,
+      "hat_ear_intersections": 0
     },
     "Bianca": {
       "role": "lookout",
@@ -21,7 +23,9 @@
         0.105,
         0.238
       ],
-      "glb": "bianca.glb"
+      "glb": "bianca.glb",
+      "bones": 35,
+      "hat_ear_intersections": 0
     }
   },
   "views": [
@@ -33,9 +37,8 @@
     "faces_detail"
   ],
   "limitations": [
-    "not skinned",
-    "no locomotion animation",
-    "no seated driving pose",
-    "no game engine animation or contact-fit verification"
+    "exploration/climbing animations pending",
+    "final cabin and clothing art review pending",
+    "runtime cape uses arm-following skin and capsule projection, not a full cloth solver"
   ]
 }
