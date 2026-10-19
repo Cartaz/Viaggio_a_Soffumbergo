@@ -1,0 +1,87 @@
+{
+  "type": "FeatureCollection",
+  "name": "Settore_B_panorami_verificati_2026-10-19",
+  "coordinate_reference_system": "WGS84 EPSG:4326, longitude then latitude; no elevations",
+  "description": "Tre soli punti di osservazione; NON rappresentano la linea centrale della strada o una ricostruzione continua.",
+  "source_document": "docs/CIRCUITO_SOPRALLUOGO.md",
+  "observed_as_of": "2026-10-19",
+  "source_type": "transcription_of_user_provided_survey; Google Street View URLs as references only; no copyrighted visual media reproduced",
+  "linework_status": "not_acquired",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "CIR-06",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3666683,
+          46.1271692
+        ]
+      },
+      "properties": {
+        "id": "CIR-06",
+        "order": 7,
+        "name": "Bivio SR356 / via Monte San Lorenzo",
+        "heading": 110.04,
+        "pano": "apdNekWQ0-mRaBBCzONB1A",
+        "imagery_month": "2026-04",
+        "description": "Svolta a sinistra accanto a casa chiara con balcone; strada principale con mezzeria e marciapiedi.",
+        "limitations": "Solo imbocco verificato; nessuna copertura delle curve interne.",
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=apdNekWQ0-mRaBBCzONB1A&viewpoint=46.1271692%2C13.3666683&heading=110.04&pitch=0",
+        "evidence": "recorded_in_uploaded_project_file",
+        "geometry_role": "observation_anchor_only",
+        "measurement_status": "approximate_viewpoint_not_topography"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-07",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3820732,
+          46.1331275
+        ]
+      },
+      "properties": {
+        "id": "CIR-07",
+        "order": 8,
+        "name": "Via Monte San Lorenzo presso Colloredo",
+        "heading": 36.16,
+        "pano": "N4dZ5v3ba82LlKJo6Fyiog",
+        "imagery_month": "2026-03",
+        "description": "Strada senza mezzeria, muro in pietra a destra, margine a monte vegetato a sinistra, abitazioni e vigneto.",
+        "limitations": "La lieve svolta a destra proviene dalle istruzioni Maps; non equivale a un tornante verificato.",
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=N4dZ5v3ba82LlKJo6Fyiog&viewpoint=46.1331275%2C13.3820732&heading=36.16&pitch=0",
+        "evidence": "recorded_in_uploaded_project_file",
+        "geometry_role": "observation_anchor_only",
+        "measurement_status": "approximate_viewpoint_not_topography"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-08",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3838913,
+          46.1345686
+        ]
+      },
+      "properties": {
+        "id": "CIR-08",
+        "order": 9,
+        "name": "Bivio di Colloredo / ingresso settore C",
+        "heading": 6.16,
+        "pano": "sUkLbqb6kVahRI6qFIMwjA",
+        "imagery_month": "2026-03",
+        "description": "Bivio presso case, muro e bacheca a sinistra; margini erbosi, strada senza mezzeria.",
+        "limitations": "Solo nodo finale, nessuna misura né continuità certificata.",
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=sUkLbqb6kVahRI6qFIMwjA&viewpoint=46.1345686%2C13.3838913&heading=6.16&pitch=0",
+        "evidence": "recorded_in_uploaded_project_file",
+        "geometry_role": "observation_anchor_only",
+        "measurement_status": "approximate_viewpoint_not_topography"
+      }
+    }
+  ]
+}
