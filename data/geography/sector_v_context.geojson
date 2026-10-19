@@ -1,0 +1,3629 @@
+{
+  "type": "FeatureCollection",
+  "name": "sector_V_context_OSM_buildings_walkways",
+  "coordinate_reference": "EPSG:4326 — WGS84 lon,lat (no elevations)",
+  "rights": "© OpenStreetMap contributors — ODbL 1.0 — https://www.openstreetmap.org/copyright",
+  "provenance": {
+    "input": "data/geography/osm_survey.geojson",
+    "input_blob_sha": "8a245f3bba6b25a06b2ed0f9fc627d0a4e347718",
+    "input_source": "https://api.openstreetmap.org/api/0.6/map?bbox=13.3900,46.1550,13.3960,46.1590",
+    "retrieved_utc": "2026-10-18T22:39:59.323188+00:00",
+    "selection_rule": "Every OSM building whose arithmetic open-ring vertex mean is at most 60 m from the selected driving centerline, estimated by a local tangent-plane projection. Includes footprints not necessarily visible from road.",
+    "building_count": 53,
+    "pedestrian_candidates": [
+      "way/136494655",
+      "way/243981581",
+      "way/604025792",
+      "way/1096222973",
+      "way/604025801",
+      "way/1096222972",
+      "way/142107810"
+    ],
+    "adjacent_road_ways": [
+      "way/1107817253",
+      "way/547054233",
+      "way/1108507498",
+      "way/358101684",
+      "way/1107817255"
+    ],
+    "limitations": "Footprints are map geometry only; never evidence of facade details, accessibility, heights, right-of-way, walkable connection to PV-01, clearances or traversability."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/358101690",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 358101690,
+        "building": "yes",
+        "sector": "V",
+        "source_id": "way/358101690",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 28.321
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3934722,
+              46.1576162
+            ],
+            [
+              13.3934777,
+              46.1576703
+            ],
+            [
+              13.3936436,
+              46.1576622
+            ],
+            [
+              13.3936381,
+              46.1576081
+            ],
+            [
+              13.3934722,
+              46.1576162
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158042",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158042,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158042",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 44.722
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3936167,
+              46.156725
+            ],
+            [
+              13.3936855,
+              46.156659
+            ],
+            [
+              13.3937075,
+              46.1566378
+            ],
+            [
+              13.3937179,
+              46.156643
+            ],
+            [
+              13.3937928,
+              46.1565712
+            ],
+            [
+              13.3936218,
+              46.1564858
+            ],
+            [
+              13.3935689,
+              46.1565366
+            ],
+            [
+              13.3936239,
+              46.1565642
+            ],
+            [
+              13.3936601,
+              46.1565823
+            ],
+            [
+              13.3936409,
+              46.1566007
+            ],
+            [
+              13.3936161,
+              46.1565883
+            ],
+            [
+              13.3935226,
+              46.156678
+            ],
+            [
+              13.3936167,
+              46.156725
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158047",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158047,
+        "building": "yes",
+        "height": "8 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158047",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 53.869
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3939483,
+              46.1567395
+            ],
+            [
+              13.3939617,
+              46.1566734
+            ],
+            [
+              13.393926,
+              46.15667
+            ],
+            [
+              13.3939358,
+              46.1566216
+            ],
+            [
+              13.393844,
+              46.1566126
+            ],
+            [
+              13.393834,
+              46.1566618
+            ],
+            [
+              13.3938208,
+              46.1567272
+            ],
+            [
+              13.3939483,
+              46.1567395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158048",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158048,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158048",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 31.229
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3938041,
+              46.1569164
+            ],
+            [
+              13.3938133,
+              46.1568366
+            ],
+            [
+              13.3936999,
+              46.1568303
+            ],
+            [
+              13.3936952,
+              46.1568706
+            ],
+            [
+              13.3937007,
+              46.1568709
+            ],
+            [
+              13.3936961,
+              46.1569105
+            ],
+            [
+              13.3938041,
+              46.1569164
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158050",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158050,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158050",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 8.695
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3935671,
+              46.157144
+            ],
+            [
+              13.3935818,
+              46.1571012
+            ],
+            [
+              13.3936111,
+              46.1570158
+            ],
+            [
+              13.3934761,
+              46.1569944
+            ],
+            [
+              13.3934478,
+              46.1570805
+            ],
+            [
+              13.393434,
+              46.1571229
+            ],
+            [
+              13.3935671,
+              46.157144
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158051",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158051,
+        "building": "yes",
+        "height": "8 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158051",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 13.837
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3934775,
+              46.1569618
+            ],
+            [
+              13.3935336,
+              46.1568358
+            ],
+            [
+              13.3935105,
+              46.1568309
+            ],
+            [
+              13.3934516,
+              46.1568183
+            ],
+            [
+              13.3934426,
+              46.1568383
+            ],
+            [
+              13.393429,
+              46.1568689
+            ],
+            [
+              13.3933954,
+              46.1569442
+            ],
+            [
+              13.3934775,
+              46.1569618
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158052",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158052,
+        "building": "yes",
+        "height": "10 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158052",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 24.179
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3933654,
+              46.1568288
+            ],
+            [
+              13.393435,
+              46.1567152
+            ],
+            [
+              13.3933513,
+              46.1566863
+            ],
+            [
+              13.3933159,
+              46.1567356
+            ],
+            [
+              13.3932776,
+              46.156709
+            ],
+            [
+              13.3932399,
+              46.1566827
+            ],
+            [
+              13.3932608,
+              46.1566676
+            ],
+            [
+              13.3932194,
+              46.1566209
+            ],
+            [
+              13.3931749,
+              46.1565841
+            ],
+            [
+              13.3931313,
+              46.1566223
+            ],
+            [
+              13.3931584,
+              46.1566431
+            ],
+            [
+              13.393117,
+              46.1566721
+            ],
+            [
+              13.3930248,
+              46.1567541
+            ],
+            [
+              13.392993,
+              46.1567821
+            ],
+            [
+              13.3930668,
+              46.1568287
+            ],
+            [
+              13.3930803,
+              46.1568179
+            ],
+            [
+              13.3931223,
+              46.156785
+            ],
+            [
+              13.3931536,
+              46.1567595
+            ],
+            [
+              13.3931906,
+              46.1567299
+            ],
+            [
+              13.3932208,
+              46.1567515
+            ],
+            [
+              13.3932822,
+              46.1567952
+            ],
+            [
+              13.3933654,
+              46.1568288
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158053",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158053,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158053",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 42.765
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3932771,
+              46.1565894
+            ],
+            [
+              13.3933321,
+              46.156542
+            ],
+            [
+              13.393256,
+              46.1564996
+            ],
+            [
+              13.393201,
+              46.1565469
+            ],
+            [
+              13.3932771,
+              46.1565894
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158054",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158054,
+        "building": "yes",
+        "height": "8 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158054",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 44.235
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3930963,
+              46.1564065
+            ],
+            [
+              13.393094,
+              46.1564771
+            ],
+            [
+              13.3930249,
+              46.1565415
+            ],
+            [
+              13.3929767,
+              46.1565782
+            ],
+            [
+              13.3929808,
+              46.1565813
+            ],
+            [
+              13.3929165,
+              46.1566518
+            ],
+            [
+              13.3928981,
+              46.1566436
+            ],
+            [
+              13.3928369,
+              46.156703
+            ],
+            [
+              13.392918,
+              46.1567454
+            ],
+            [
+              13.3929832,
+              46.1566863
+            ],
+            [
+              13.3930609,
+              46.156626
+            ],
+            [
+              13.393142,
+              46.156574
+            ],
+            [
+              13.3931869,
+              46.1565276
+            ],
+            [
+              13.3932025,
+              46.1564809
+            ],
+            [
+              13.3932125,
+              46.1564119
+            ],
+            [
+              13.3930963,
+              46.1564065
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158061",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158061,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158061",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 56.578
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3925187,
+              46.1568573
+            ],
+            [
+              13.3926231,
+              46.1568707
+            ],
+            [
+              13.3926419,
+              46.1568075
+            ],
+            [
+              13.3925382,
+              46.1567905
+            ],
+            [
+              13.3925187,
+              46.1568573
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158062",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158062,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158062",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 46.819
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.392615,
+              46.1569308
+            ],
+            [
+              13.3927243,
+              46.1569655
+            ],
+            [
+              13.3927531,
+              46.156922
+            ],
+            [
+              13.3927264,
+              46.1569136
+            ],
+            [
+              13.3927662,
+              46.1568536
+            ],
+            [
+              13.3926872,
+              46.1568285
+            ],
+            [
+              13.3926463,
+              46.1568902
+            ],
+            [
+              13.3926426,
+              46.1568891
+            ],
+            [
+              13.392615,
+              46.1569308
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158063",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158063,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "name": "Soggiorno Don Bosco",
+        "sector": "V",
+        "source_id": "way/36158063",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 45.313
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3939645,
+              46.1574297
+            ],
+            [
+              13.3940372,
+              46.1573805
+            ],
+            [
+              13.3940934,
+              46.1573425
+            ],
+            [
+              13.3941011,
+              46.1573372
+            ],
+            [
+              13.3941436,
+              46.1573084
+            ],
+            [
+              13.3941487,
+              46.1573049
+            ],
+            [
+              13.3940669,
+              46.1572472
+            ],
+            [
+              13.3939011,
+              46.1573665
+            ],
+            [
+              13.3939487,
+              46.1573995
+            ],
+            [
+              13.3939357,
+              46.1574089
+            ],
+            [
+              13.3939645,
+              46.1574297
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158064",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158064,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158064",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 35.054
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3937531,
+              46.157526
+            ],
+            [
+              13.3938572,
+              46.15758
+            ],
+            [
+              13.3939408,
+              46.1575019
+            ],
+            [
+              13.3938326,
+              46.1574481
+            ],
+            [
+              13.3937847,
+              46.1574846
+            ],
+            [
+              13.3937921,
+              46.1574901
+            ],
+            [
+              13.3937531,
+              46.157526
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158065",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158065,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158065",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 7.557
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3928658,
+              46.1576653
+            ],
+            [
+              13.3929291,
+              46.1577194
+            ],
+            [
+              13.39303,
+              46.1576576
+            ],
+            [
+              13.3929683,
+              46.1576042
+            ],
+            [
+              13.3928658,
+              46.1576653
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158066",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158066,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158066",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 6.828
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3926924,
+              46.1579271
+            ],
+            [
+              13.3927532,
+              46.15789
+            ],
+            [
+              13.3927775,
+              46.1578595
+            ],
+            [
+              13.3927415,
+              46.1577978
+            ],
+            [
+              13.3926618,
+              46.1578298
+            ],
+            [
+              13.3926336,
+              46.1578411
+            ],
+            [
+              13.3926356,
+              46.1578432
+            ],
+            [
+              13.3926651,
+              46.1578751
+            ],
+            [
+              13.3926518,
+              46.1578834
+            ],
+            [
+              13.3926472,
+              46.1578863
+            ],
+            [
+              13.3926567,
+              46.1578948
+            ],
+            [
+              13.3926924,
+              46.1579271
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158067",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158067,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158067",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 47.728
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3935142,
+              46.1580568
+            ],
+            [
+              13.39353,
+              46.1579507
+            ],
+            [
+              13.3934226,
+              46.1579483
+            ],
+            [
+              13.3934164,
+              46.158051
+            ],
+            [
+              13.3935142,
+              46.1580568
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158068",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158068,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158068",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 33.587
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3932128,
+              46.1580826
+            ],
+            [
+              13.3933096,
+              46.158009
+            ],
+            [
+              13.3932381,
+              46.1579644
+            ],
+            [
+              13.3931762,
+              46.1580139
+            ],
+            [
+              13.3931351,
+              46.157993
+            ],
+            [
+              13.3930886,
+              46.1580414
+            ],
+            [
+              13.3931381,
+              46.1580702
+            ],
+            [
+              13.3931598,
+              46.158055
+            ],
+            [
+              13.3932128,
+              46.1580826
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158069",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158069,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158069",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 41.94
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3931333,
+              46.1582576
+            ],
+            [
+              13.393221,
+              46.1581826
+            ],
+            [
+              13.3931761,
+              46.1581578
+            ],
+            [
+              13.3932197,
+              46.1581146
+            ],
+            [
+              13.3931453,
+              46.1580786
+            ],
+            [
+              13.3930751,
+              46.1581385
+            ],
+            [
+              13.392952,
+              46.158244
+            ],
+            [
+              13.3930273,
+              46.1582817
+            ],
+            [
+              13.3930863,
+              46.1582329
+            ],
+            [
+              13.3931333,
+              46.1582576
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158070",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158070,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158070",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 24.058
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3928904,
+              46.1582511
+            ],
+            [
+              13.3930385,
+              46.158089
+            ],
+            [
+              13.3929596,
+              46.1580537
+            ],
+            [
+              13.3929101,
+              46.158106
+            ],
+            [
+              13.3928829,
+              46.158094
+            ],
+            [
+              13.3928759,
+              46.1580909
+            ],
+            [
+              13.3928666,
+              46.1580868
+            ],
+            [
+              13.3928489,
+              46.158079
+            ],
+            [
+              13.3928252,
+              46.158106
+            ],
+            [
+              13.3928558,
+              46.1581246
+            ],
+            [
+              13.3928516,
+              46.1581289
+            ],
+            [
+              13.3928672,
+              46.158138
+            ],
+            [
+              13.3928226,
+              46.1581874
+            ],
+            [
+              13.3928338,
+              46.1581937
+            ],
+            [
+              13.3928578,
+              46.158227
+            ],
+            [
+              13.3928904,
+              46.1582511
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158071",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158071,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158071",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 19.293
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3926934,
+              46.1582606
+            ],
+            [
+              13.3928018,
+              46.1582847
+            ],
+            [
+              13.3928294,
+              46.1582238
+            ],
+            [
+              13.3928168,
+              46.1581773
+            ],
+            [
+              13.3927373,
+              46.158154
+            ],
+            [
+              13.3926934,
+              46.1582606
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158072",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158072,
+        "building": "yes",
+        "height": "8 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36158072",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 11.416
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3926734,
+              46.1581794
+            ],
+            [
+              13.3927747,
+              46.1581201
+            ],
+            [
+              13.3927144,
+              46.1580642
+            ],
+            [
+              13.3926107,
+              46.1581211
+            ],
+            [
+              13.3926734,
+              46.1581794
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158121",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158121,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36158121",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 10.505
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3926567,
+              46.1578948
+            ],
+            [
+              13.3926472,
+              46.1578863
+            ],
+            [
+              13.3926518,
+              46.1578834
+            ],
+            [
+              13.3925772,
+              46.1578121
+            ],
+            [
+              13.3925106,
+              46.1578455
+            ],
+            [
+              13.392594,
+              46.1579261
+            ],
+            [
+              13.3926567,
+              46.1578948
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158122",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158122,
+        "building": "yes",
+        "height": "7 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36158122",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 30.561
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3928462,
+              46.1571147
+            ],
+            [
+              13.392929,
+              46.1571095
+            ],
+            [
+              13.3929287,
+              46.1571068
+            ],
+            [
+              13.3930109,
+              46.1571017
+            ],
+            [
+              13.392998,
+              46.1570022
+            ],
+            [
+              13.392991,
+              46.1569481
+            ],
+            [
+              13.3929776,
+              46.1568448
+            ],
+            [
+              13.3928709,
+              46.1568515
+            ],
+            [
+              13.3928847,
+              46.1569576
+            ],
+            [
+              13.3928839,
+              46.1569576
+            ],
+            [
+              13.3928942,
+              46.1570375
+            ],
+            [
+              13.3928367,
+              46.1570411
+            ],
+            [
+              13.3928462,
+              46.1571147
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158125",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158125,
+        "building": "yes",
+        "height": "8 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36158125",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 31.049
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.393388,
+              46.1579943
+            ],
+            [
+              13.3933895,
+              46.1579046
+            ],
+            [
+              13.3933968,
+              46.1578277
+            ],
+            [
+              13.3933773,
+              46.1578273
+            ],
+            [
+              13.3932815,
+              46.1578255
+            ],
+            [
+              13.3932633,
+              46.1578252
+            ],
+            [
+              13.3932565,
+              46.1579007
+            ],
+            [
+              13.3932542,
+              46.157927
+            ],
+            [
+              13.3932872,
+              46.157929
+            ],
+            [
+              13.3932886,
+              46.157992
+            ],
+            [
+              13.393388,
+              46.1579943
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158126",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158126,
+        "building": "yes",
+        "height": "3 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36158126",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 25.8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3932815,
+              46.1578255
+            ],
+            [
+              13.3933773,
+              46.1578273
+            ],
+            [
+              13.3933805,
+              46.1578091
+            ],
+            [
+              13.3932845,
+              46.1578059
+            ],
+            [
+              13.3932815,
+              46.1578255
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158127",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158127,
+        "building": "yes",
+        "height": "9 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36158127",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 14.9
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3927012,
+              46.1580169
+            ],
+            [
+              13.3927566,
+              46.1580164
+            ],
+            [
+              13.3927565,
+              46.158021
+            ],
+            [
+              13.3928263,
+              46.1580205
+            ],
+            [
+              13.3929023,
+              46.1580263
+            ],
+            [
+              13.3929023,
+              46.1580245
+            ],
+            [
+              13.392965,
+              46.1580158
+            ],
+            [
+              13.3930105,
+              46.1580103
+            ],
+            [
+              13.3930614,
+              46.1580045
+            ],
+            [
+              13.3931177,
+              46.157986
+            ],
+            [
+              13.3931286,
+              46.1579689
+            ],
+            [
+              13.3931186,
+              46.1579388
+            ],
+            [
+              13.3931347,
+              46.157936
+            ],
+            [
+              13.3931366,
+              46.1578798
+            ],
+            [
+              13.3930484,
+              46.157886
+            ],
+            [
+              13.3930527,
+              46.1579272
+            ],
+            [
+              13.3930262,
+              46.1579362
+            ],
+            [
+              13.3930251,
+              46.1579322
+            ],
+            [
+              13.3929574,
+              46.1579388
+            ],
+            [
+              13.392956,
+              46.157926
+            ],
+            [
+              13.392904,
+              46.1579262
+            ],
+            [
+              13.3928167,
+              46.1579267
+            ],
+            [
+              13.3928179,
+              46.1579509
+            ],
+            [
+              13.3927497,
+              46.1579566
+            ],
+            [
+              13.3927503,
+              46.1579618
+            ],
+            [
+              13.3927012,
+              46.1579648
+            ],
+            [
+              13.3927012,
+              46.1580169
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36158128",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36158128,
+        "building": "yes",
+        "height": "4 m",
+        "it:fvg:ctrn:code": "4AED",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36158128",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 10.48
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3929913,
+              46.1578955
+            ],
+            [
+              13.3930214,
+              46.1578852
+            ],
+            [
+              13.392985,
+              46.1578448
+            ],
+            [
+              13.3929817,
+              46.1578461
+            ],
+            [
+              13.3929571,
+              46.1578562
+            ],
+            [
+              13.3929859,
+              46.1578892
+            ],
+            [
+              13.3929913,
+              46.1578955
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36427963",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36427963,
+        "building": "yes",
+        "height": "17 m",
+        "it:fvg:ctrn:code": "4ATO",
+        "it:fvg:ctrn:revision": "1A0",
+        "man_made": "tower",
+        "tower:type": "bell",
+        "sector": "V",
+        "source_id": "way/36427963",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 16.64
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3930835,
+              46.1569937
+            ],
+            [
+              13.3930984,
+              46.1570318
+            ],
+            [
+              13.3931532,
+              46.1570216
+            ],
+            [
+              13.3931383,
+              46.1569834
+            ],
+            [
+              13.3930835,
+              46.1569937
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36439372",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36439372,
+        "building": "yes",
+        "height": "6 m",
+        "it:fvg:ctrn:code": "4ASI",
+        "it:fvg:ctrn:revision": "1A0",
+        "man_made": "reservoir_covered",
+        "sector": "V",
+        "source_id": "way/36439372",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 25.155
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3937262,
+              46.1570913
+            ],
+            [
+              13.3937512,
+              46.1570985
+            ],
+            [
+              13.3937527,
+              46.157091
+            ],
+            [
+              13.393729,
+              46.1570844
+            ],
+            [
+              13.3937262,
+              46.1570913
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36439373",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36439373,
+        "building": "yes",
+        "height": "0 m",
+        "it:fvg:ctrn:code": "4ASI",
+        "it:fvg:ctrn:revision": "1A0",
+        "man_made": "reservoir_covered",
+        "sector": "V",
+        "source_id": "way/36439373",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 13.75
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3923404,
+              46.158193
+            ],
+            [
+              13.3923489,
+              46.1581933
+            ],
+            [
+              13.3923491,
+              46.1581741
+            ],
+            [
+              13.3923407,
+              46.1581736
+            ],
+            [
+              13.3923404,
+              46.158193
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572074",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572074,
+        "building": "hut",
+        "height": "1 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572074",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 43.37
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.393497,
+              46.1565756
+            ],
+            [
+              13.3935094,
+              46.1565569
+            ],
+            [
+              13.3934868,
+              46.1565471
+            ],
+            [
+              13.3934732,
+              46.1565659
+            ],
+            [
+              13.393497,
+              46.1565756
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572075",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572075,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572075",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 59.012
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3935888,
+              46.1564626
+            ],
+            [
+              13.3936256,
+              46.1564274
+            ],
+            [
+              13.3936087,
+              46.1564155
+            ],
+            [
+              13.3935656,
+              46.156451
+            ],
+            [
+              13.3935888,
+              46.1564626
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572080",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572080,
+        "building": "hut",
+        "height": "3 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572080",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 31.163
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3937473,
+              46.156964
+            ],
+            [
+              13.3937938,
+              46.1569677
+            ],
+            [
+              13.3937986,
+              46.1569321
+            ],
+            [
+              13.3937513,
+              46.1569293
+            ],
+            [
+              13.3937473,
+              46.156964
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572081",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572081,
+        "building": "hut",
+        "height": "4 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572081",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 47.582
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3927445,
+              46.1567178
+            ],
+            [
+              13.3927742,
+              46.1567297
+            ],
+            [
+              13.3928153,
+              46.1566797
+            ],
+            [
+              13.3927855,
+              46.1566683
+            ],
+            [
+              13.3927445,
+              46.1567178
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572082",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572082,
+        "building": "hut",
+        "height": "4 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572082",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 47.696
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3928686,
+              46.1566462
+            ],
+            [
+              13.3928968,
+              46.1566207
+            ],
+            [
+              13.3928611,
+              46.1566028
+            ],
+            [
+              13.3928311,
+              46.1566276
+            ],
+            [
+              13.3928686,
+              46.1566462
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572086",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572086,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572086",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 54.824
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.392637,
+              46.157029
+            ],
+            [
+              13.3926042,
+              46.1570216
+            ],
+            [
+              13.3925853,
+              46.1570641
+            ],
+            [
+              13.3926181,
+              46.1570749
+            ],
+            [
+              13.392637,
+              46.157029
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572087",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572087,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572087",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 52.795
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3941633,
+              46.1573209
+            ],
+            [
+              13.3941436,
+              46.1573084
+            ],
+            [
+              13.3941011,
+              46.1573372
+            ],
+            [
+              13.3941195,
+              46.1573508
+            ],
+            [
+              13.3941633,
+              46.1573209
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572088",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572088,
+        "building": "hut",
+        "height": "3 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572088",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 17.493
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3934927,
+              46.157487
+            ],
+            [
+              13.3935795,
+              46.1575327
+            ],
+            [
+              13.3937175,
+              46.1574023
+            ],
+            [
+              13.3936312,
+              46.1573562
+            ],
+            [
+              13.3934927,
+              46.157487
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572089",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572089,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572089",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 11.462
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3926289,
+              46.1578353
+            ],
+            [
+              13.3926356,
+              46.1578432
+            ],
+            [
+              13.3926618,
+              46.1578298
+            ],
+            [
+              13.3926561,
+              46.1578245
+            ],
+            [
+              13.3926289,
+              46.1578353
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572090",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572090,
+        "building": "hut",
+        "height": "3 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572090",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 9.34
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.39306,
+              46.1577865
+            ],
+            [
+              13.393086,
+              46.1578012
+            ],
+            [
+              13.3931047,
+              46.1577811
+            ],
+            [
+              13.3930786,
+              46.157769
+            ],
+            [
+              13.39306,
+              46.1577865
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572091",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572091,
+        "building": "hut",
+        "height": "3 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572091",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 7.46
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3930576,
+              46.1578252
+            ],
+            [
+              13.3930762,
+              46.1578101
+            ],
+            [
+              13.3930396,
+              46.1577883
+            ],
+            [
+              13.3930486,
+              46.1577772
+            ],
+            [
+              13.3930219,
+              46.1577614
+            ],
+            [
+              13.3929891,
+              46.1577887
+            ],
+            [
+              13.3930576,
+              46.1578252
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572092",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572092,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572092",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 4.494
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3928893,
+              46.1578387
+            ],
+            [
+              13.3928724,
+              46.1578497
+            ],
+            [
+              13.3928912,
+              46.1578816
+            ],
+            [
+              13.3929129,
+              46.1578756
+            ],
+            [
+              13.3928893,
+              46.1578387
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572093",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572093,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1A0",
+        "sector": "V",
+        "source_id": "way/36572093",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 43.971
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3932913,
+              46.1581129
+            ],
+            [
+              13.3932534,
+              46.1580793
+            ],
+            [
+              13.3932284,
+              46.1580959
+            ],
+            [
+              13.3932563,
+              46.1581172
+            ],
+            [
+              13.3932526,
+              46.158119
+            ],
+            [
+              13.3932671,
+              46.1581293
+            ],
+            [
+              13.3932913,
+              46.1581129
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572154",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572154,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AN",
+        "sector": "V",
+        "source_id": "way/36572154",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 8.825
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3923919,
+              46.1582252
+            ],
+            [
+              13.3924295,
+              46.1582242
+            ],
+            [
+              13.3924269,
+              46.1581784
+            ],
+            [
+              13.3923893,
+              46.1581794
+            ],
+            [
+              13.3923919,
+              46.1582252
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572155",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572155,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AN",
+        "sector": "V",
+        "source_id": "way/36572155",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 16.041
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3930183,
+              46.1575116
+            ],
+            [
+              13.3930074,
+              46.1574929
+            ],
+            [
+              13.3929464,
+              46.15751
+            ],
+            [
+              13.3929573,
+              46.1575286
+            ],
+            [
+              13.3930183,
+              46.1575116
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572157",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572157,
+        "building": "hut",
+        "height": "1 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36572157",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 47.392
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3927046,
+              46.1567189
+            ],
+            [
+              13.3926843,
+              46.1567589
+            ],
+            [
+              13.3927823,
+              46.1567767
+            ],
+            [
+              13.3927992,
+              46.156745
+            ],
+            [
+              13.3927046,
+              46.1567189
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572161",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572161,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AN",
+        "sector": "V",
+        "source_id": "way/36572161",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 56
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.393435,
+              46.1581271
+            ],
+            [
+              13.3934681,
+              46.1581352
+            ],
+            [
+              13.3934792,
+              46.1581133
+            ],
+            [
+              13.3934461,
+              46.1581052
+            ],
+            [
+              13.393435,
+              46.1581271
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572163",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572163,
+        "building": "hut",
+        "height": "3 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AN",
+        "sector": "V",
+        "source_id": "way/36572163",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 30.095
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3929721,
+              46.158272
+            ],
+            [
+              13.3929002,
+              46.1582901
+            ],
+            [
+              13.3929152,
+              46.1583192
+            ],
+            [
+              13.3929873,
+              46.1583012
+            ],
+            [
+              13.3929721,
+              46.158272
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572164",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572164,
+        "building": "hut",
+        "height": "2 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36572164",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 18.733
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3928759,
+              46.1580909
+            ],
+            [
+              13.3929217,
+              46.1580496
+            ],
+            [
+              13.3928647,
+              46.1580321
+            ],
+            [
+              13.3928268,
+              46.1580551
+            ],
+            [
+              13.3928538,
+              46.1580761
+            ],
+            [
+              13.3928666,
+              46.1580868
+            ],
+            [
+              13.3928759,
+              46.1580909
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572167",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572167,
+        "building": "hut",
+        "height": "1 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36572167",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 8.042
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3929817,
+              46.1578461
+            ],
+            [
+              13.3929682,
+              46.1578308
+            ],
+            [
+              13.3929239,
+              46.1578515
+            ],
+            [
+              13.3929294,
+              46.1578598
+            ],
+            [
+              13.3929255,
+              46.1578613
+            ],
+            [
+              13.3929605,
+              46.1579
+            ],
+            [
+              13.3929859,
+              46.1578892
+            ],
+            [
+              13.3929571,
+              46.1578562
+            ],
+            [
+              13.3929817,
+              46.1578461
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36572168",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36572168,
+        "building": "hut",
+        "height": "3 m",
+        "it:fvg:ctrn:code": "4ABA",
+        "it:fvg:ctrn:revision": "1AM",
+        "sector": "V",
+        "source_id": "way/36572168",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 11.561
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3930396,
+              46.1578617
+            ],
+            [
+              13.3930582,
+              46.1578488
+            ],
+            [
+              13.3930521,
+              46.1578461
+            ],
+            [
+              13.3930632,
+              46.1578366
+            ],
+            [
+              13.393036,
+              46.1578207
+            ],
+            [
+              13.3930082,
+              46.1578416
+            ],
+            [
+              13.3930396,
+              46.1578617
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36659330",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36659330,
+        "building": "yes",
+        "it:fvg:ctrn:code": "4AEC",
+        "it:fvg:ctrn:revision": "1AN",
+        "landuse": "construction",
+        "sector": "V",
+        "source_id": "way/36659330",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 28.459
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3936296,
+              46.1576583
+            ],
+            [
+              13.3936257,
+              46.157618
+            ],
+            [
+              13.3934852,
+              46.1576257
+            ],
+            [
+              13.3934888,
+              46.1576655
+            ],
+            [
+              13.3936296,
+              46.1576583
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36686356",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 36686356,
+        "amenity": "place_of_worship",
+        "building": "yes",
+        "check_date": "2025-03-26",
+        "denomination": "catholic",
+        "it:fvg:ctrn:code": "4ACU",
+        "it:fvg:ctrn:revision": "1A0",
+        "name": "Chiesa dei Santi Pietro e Lorenzo",
+        "religion": "christian",
+        "wikidata": "Q100255699",
+        "wikipedia": "it:Chiesa dei Santi Pietro e Lorenzo",
+        "sector": "V",
+        "source_id": "way/36686356",
+        "map_use": "cartographic_footprint_not_verified_facade",
+        "approximated_centroid_distance_to_driving_axis_m": 9.843
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.3931855,
+              46.1569768
+            ],
+            [
+              13.3932249,
+              46.157077
+            ],
+            [
+              13.3932174,
+              46.1570784
+            ],
+            [
+              13.3931733,
+              46.1570869
+            ],
+            [
+              13.3931916,
+              46.1571267
+            ],
+            [
+              13.3932091,
+              46.1571234
+            ],
+            [
+              13.3932226,
+              46.1571565
+            ],
+            [
+              13.3932265,
+              46.1571559
+            ],
+            [
+              13.393257,
+              46.1571506
+            ],
+            [
+              13.3932645,
+              46.1571595
+            ],
+            [
+              13.3932739,
+              46.1571668
+            ],
+            [
+              13.3932876,
+              46.1571736
+            ],
+            [
+              13.3933008,
+              46.1571747
+            ],
+            [
+              13.3933133,
+              46.1571737
+            ],
+            [
+              13.3933247,
+              46.1571716
+            ],
+            [
+              13.3933372,
+              46.157167
+            ],
+            [
+              13.3933433,
+              46.1571628
+            ],
+            [
+              13.3933497,
+              46.1571549
+            ],
+            [
+              13.3933514,
+              46.1571494
+            ],
+            [
+              13.393353,
+              46.1571438
+            ],
+            [
+              13.3933523,
+              46.1571369
+            ],
+            [
+              13.3933534,
+              46.1571314
+            ],
+            [
+              13.3933859,
+              46.1571248
+            ],
+            [
+              13.3933509,
+              46.1570394
+            ],
+            [
+              13.3933212,
+              46.1570447
+            ],
+            [
+              13.3932876,
+              46.1569569
+            ],
+            [
+              13.3931855,
+              46.1569768
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/136494655",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 136494655,
+        "highway": "footway",
+        "sector": "V",
+        "map_use": "existing_osm_pedestrian_or_track_candidate_no_continuity_or_right_of_way_verified"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3926613,
+            46.158624
+          ],
+          [
+            13.3927475,
+            46.1585168
+          ],
+          [
+            13.3928623,
+            46.1582944
+          ],
+          [
+            13.3929922,
+            46.1581778
+          ],
+          [
+            13.393066,
+            46.158052
+          ],
+          [
+            13.3931163,
+            46.1579917
+          ],
+          [
+            13.3931399,
+            46.1579753
+          ],
+          [
+            13.3931547,
+            46.1579303
+          ],
+          [
+            13.3931827,
+            46.1578198
+          ],
+          [
+            13.3932639,
+            46.1577083
+          ],
+          [
+            13.3933245,
+            46.1575589
+          ],
+          [
+            13.3935593,
+            46.1573164
+          ],
+          [
+            13.3935446,
+            46.1572929
+          ],
+          [
+            13.3935435,
+            46.1572913
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/243981581",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 243981581,
+        "highway": "steps",
+        "sector": "V",
+        "map_use": "existing_osm_pedestrian_or_track_candidate_no_continuity_or_right_of_way_verified"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3933245,
+            46.1575589
+          ],
+          [
+            13.3932373,
+            46.1575122
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/604025792",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 604025792,
+        "highway": "path",
+        "sector": "V",
+        "map_use": "existing_osm_pedestrian_or_track_candidate_no_continuity_or_right_of_way_verified"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3903089,
+            46.1582992
+          ],
+          [
+            13.3902955,
+            46.1582683
+          ],
+          [
+            13.3902844,
+            46.1582384
+          ],
+          [
+            13.3902747,
+            46.1582184
+          ],
+          [
+            13.390267,
+            46.1582003
+          ],
+          [
+            13.3902653,
+            46.1581747
+          ],
+          [
+            13.3902683,
+            46.1581316
+          ],
+          [
+            13.3902637,
+            46.1580923
+          ],
+          [
+            13.3902486,
+            46.1580554
+          ],
+          [
+            13.3902445,
+            46.1580126
+          ],
+          [
+            13.3902529,
+            46.1579829
+          ],
+          [
+            13.3902757,
+            46.1579523
+          ],
+          [
+            13.3903126,
+            46.1579307
+          ],
+          [
+            13.3903743,
+            46.1578847
+          ],
+          [
+            13.3904202,
+            46.1578517
+          ],
+          [
+            13.390499,
+            46.1578025
+          ],
+          [
+            13.390554,
+            46.1577839
+          ],
+          [
+            13.3906174,
+            46.1577767
+          ],
+          [
+            13.3906972,
+            46.1577751
+          ],
+          [
+            13.3907364,
+            46.1577618
+          ],
+          [
+            13.3907951,
+            46.157753
+          ],
+          [
+            13.3908444,
+            46.157747
+          ],
+          [
+            13.3909121,
+            46.157737
+          ],
+          [
+            13.3909882,
+            46.1577121
+          ],
+          [
+            13.3910573,
+            46.157697
+          ],
+          [
+            13.3911367,
+            46.1576866
+          ],
+          [
+            13.3912135,
+            46.1576722
+          ],
+          [
+            13.3912883,
+            46.1576596
+          ],
+          [
+            13.3913915,
+            46.157636
+          ],
+          [
+            13.3914945,
+            46.1575949
+          ],
+          [
+            13.3916366,
+            46.1575698
+          ],
+          [
+            13.3917855,
+            46.1575308
+          ],
+          [
+            13.3918619,
+            46.1574852
+          ],
+          [
+            13.3919135,
+            46.1574722
+          ],
+          [
+            13.3919886,
+            46.1574568
+          ],
+          [
+            13.3920497,
+            46.1574467
+          ],
+          [
+            13.3921053,
+            46.1574249
+          ],
+          [
+            13.3921503,
+            46.1574174
+          ],
+          [
+            13.3922508,
+            46.1574202
+          ],
+          [
+            13.3923199,
+            46.1574012
+          ],
+          [
+            13.3923917,
+            46.1573928
+          ],
+          [
+            13.3924735,
+            46.1573789
+          ],
+          [
+            13.3925378,
+            46.1573547
+          ],
+          [
+            13.3926049,
+            46.1573217
+          ],
+          [
+            13.392627,
+            46.1572706
+          ],
+          [
+            13.3926545,
+            46.1572219
+          ],
+          [
+            13.392684,
+            46.1571573
+          ],
+          [
+            13.392686,
+            46.1570909
+          ],
+          [
+            13.3926961,
+            46.1570189
+          ],
+          [
+            13.3927665,
+            46.1569154
+          ],
+          [
+            13.3928651,
+            46.1568322
+          ],
+          [
+            13.392918,
+            46.1568212
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1096222973",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1096222973,
+        "highway": "path",
+        "sector": "V",
+        "map_use": "existing_osm_pedestrian_or_track_candidate_no_continuity_or_right_of_way_verified"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3930839,
+            46.1568591
+          ],
+          [
+            13.3932208,
+            46.1567515
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/604025801",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 604025801,
+        "highway": "path",
+        "tunnel": "building_passage",
+        "sector": "V",
+        "map_use": "existing_osm_pedestrian_or_track_candidate_no_continuity_or_right_of_way_verified"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3932208,
+            46.1567515
+          ],
+          [
+            13.3932776,
+            46.156709
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1096222972",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1096222972,
+        "highway": "path",
+        "sector": "V",
+        "map_use": "existing_osm_pedestrian_or_track_candidate_no_continuity_or_right_of_way_verified"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3935178,
+            46.1566069
+          ],
+          [
+            13.3934212,
+            46.1566007
+          ],
+          [
+            13.393369,
+            46.1566414
+          ],
+          [
+            13.3932942,
+            46.1566977
+          ],
+          [
+            13.3932776,
+            46.156709
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/142107810",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 142107810,
+        "highway": "track",
+        "tracktype": "grade3",
+        "sector": "V",
+        "map_use": "existing_osm_pedestrian_or_track_candidate_no_continuity_or_right_of_way_verified"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3902853,
+            46.157107
+          ],
+          [
+            13.3905101,
+            46.1570711
+          ],
+          [
+            13.390765,
+            46.1570591
+          ],
+          [
+            13.3909249,
+            46.1570441
+          ],
+          [
+            13.3912144,
+            46.1570441
+          ],
+          [
+            13.3913378,
+            46.156991
+          ],
+          [
+            13.3914996,
+            46.1569214
+          ],
+          [
+            13.3915947,
+            46.1568615
+          ],
+          [
+            13.3917071,
+            46.1568406
+          ],
+          [
+            13.3918138,
+            46.1568378
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1107817253",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1107817253,
+        "highway": "residential",
+        "name": "Via Monte Piccat",
+        "sector": "V",
+        "map_use": "osm_adjacent_road_not_part_of_driving_trace"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3934472,
+            46.1573318
+          ],
+          [
+            13.3935435,
+            46.1572913
+          ],
+          [
+            13.3936057,
+            46.1572654
+          ],
+          [
+            13.3936308,
+            46.1571557
+          ],
+          [
+            13.3936402,
+            46.1570948
+          ],
+          [
+            13.3936411,
+            46.1570371
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/547054233",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 547054233,
+        "highway": "residential",
+        "name": "Via Monte Piccat",
+        "sector": "V",
+        "map_use": "osm_adjacent_road_not_part_of_driving_trace"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3936411,
+            46.1570371
+          ],
+          [
+            13.3936288,
+            46.1569966
+          ],
+          [
+            13.3936055,
+            46.1569566
+          ],
+          [
+            13.3935826,
+            46.1569241
+          ],
+          [
+            13.3935707,
+            46.1568877
+          ],
+          [
+            13.3935651,
+            46.1568113
+          ],
+          [
+            13.3935427,
+            46.156763
+          ],
+          [
+            13.3935016,
+            46.1567137
+          ],
+          [
+            13.393494,
+            46.1567012
+          ],
+          [
+            13.3934923,
+            46.1566733
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1108507498",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1108507498,
+        "highway": "residential",
+        "name": "Piazza don Antonio Clemencig",
+        "sector": "V",
+        "map_use": "osm_adjacent_road_not_part_of_driving_trace"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3933009,
+            46.1569279
+          ],
+          [
+            13.3934009,
+            46.1568392
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/358101684",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 358101684,
+        "highway": "residential",
+        "lane_markings": "no",
+        "name": "Piazza don Antonio Clemencig",
+        "surface": "concrete",
+        "sector": "V",
+        "map_use": "osm_adjacent_road_not_part_of_driving_trace"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3933009,
+            46.1569279
+          ],
+          [
+            13.3930839,
+            46.1568591
+          ],
+          [
+            13.392918,
+            46.1568212
+          ],
+          [
+            13.3928532,
+            46.1568064
+          ],
+          [
+            13.3926959,
+            46.1567854
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1107817255",
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1107817255,
+        "highway": "track",
+        "name": "Piazza don Antonio Clemencig",
+        "sector": "V",
+        "map_use": "osm_adjacent_road_not_part_of_driving_trace"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3934009,
+            46.1568392
+          ],
+          [
+            13.3934746,
+            46.1566952
+          ],
+          [
+            13.3934923,
+            46.1566733
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PV-01",
+      "properties": {
+        "role": "parking_candidate_only",
+        "note": "Street View position from existing project; neither parking permission nor pedestrian continuity verified",
+        "source": "data/geography/survey_points.geojson"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3918124,
+          46.1568696
+        ]
+      }
+    }
+  ]
+}
