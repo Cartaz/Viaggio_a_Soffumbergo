@@ -1,0 +1,276 @@
+{
+  "type": "FeatureCollection",
+  "name": "sector_V_Valle_Monte_Piccat_Piazza_Clemencig",
+  "coordinate_reference": "EPSG:4326 — WGS84 longitude, latitude; 2D only",
+  "rights": "© OpenStreetMap contributors — ODbL 1.0 — https://www.openstreetmap.org/copyright",
+  "provenance": {
+    "input": "data/geography/osm_survey.geojson",
+    "input_blob_sha": "8a245f3bba6b25a06b2ed0f9fc627d0a4e347718",
+    "input_source": "https://api.openstreetmap.org/api/0.6/map?bbox=13.3900,46.1550,13.3960,46.1590",
+    "retrieved_utc": "2026-10-18T22:39:59.323188+00:00",
+    "method": "Exact ordered concatenation of four connected OSM way geometries; return is precisely reversed. No tracing from Google imagery.",
+    "limitations": "2D geographic axes only; no surveyed road width, access permission, altitude, terrain, trafficability, crossfall, bends/collision radii or parking rights."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "V-OUTBOUND",
+      "properties": {
+        "sector": "V",
+        "role": "driving_reference_centerline",
+        "direction": "bivio_to_piazza",
+        "osm_way_ids": [
+          "way/1041538032",
+          "way/136283440",
+          "way/136494659",
+          "way/1107817252"
+        ],
+        "geographic_length_m_approx": 266.83,
+        "status": "connected_planimetric_osm_not_tested_in_godot"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3924178,
+            46.1590017
+          ],
+          [
+            13.3924647,
+            46.1589887
+          ],
+          [
+            13.392503,
+            46.1589697
+          ],
+          [
+            13.3926052,
+            46.1588511
+          ],
+          [
+            13.3926777,
+            46.1587257
+          ],
+          [
+            13.3926613,
+            46.158624
+          ],
+          [
+            13.392528,
+            46.15826
+          ],
+          [
+            13.392523,
+            46.1581876
+          ],
+          [
+            13.3925345,
+            46.1581276
+          ],
+          [
+            13.392562,
+            46.1580694
+          ],
+          [
+            13.392647,
+            46.1579824
+          ],
+          [
+            13.3930783,
+            46.157665
+          ],
+          [
+            13.3932373,
+            46.1575122
+          ],
+          [
+            13.3933783,
+            46.1573767
+          ],
+          [
+            13.3934472,
+            46.1573318
+          ],
+          [
+            13.3934314,
+            46.1571833
+          ],
+          [
+            13.3934038,
+            46.1570704
+          ],
+          [
+            13.3933717,
+            46.1569967
+          ],
+          [
+            13.3933009,
+            46.1569279
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "V-RETURN",
+      "properties": {
+        "sector": "V",
+        "role": "driving_reference_centerline",
+        "direction": "piazza_to_bivio",
+        "osm_way_ids": [
+          "way/1107817252",
+          "way/136494659",
+          "way/136283440",
+          "way/1041538032"
+        ],
+        "geographic_length_m_approx": 266.83,
+        "status": "connected_planimetric_osm_not_tested_in_godot"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.3933009,
+            46.1569279
+          ],
+          [
+            13.3933717,
+            46.1569967
+          ],
+          [
+            13.3934038,
+            46.1570704
+          ],
+          [
+            13.3934314,
+            46.1571833
+          ],
+          [
+            13.3934472,
+            46.1573318
+          ],
+          [
+            13.3933783,
+            46.1573767
+          ],
+          [
+            13.3932373,
+            46.1575122
+          ],
+          [
+            13.3930783,
+            46.157665
+          ],
+          [
+            13.392647,
+            46.1579824
+          ],
+          [
+            13.392562,
+            46.1580694
+          ],
+          [
+            13.3925345,
+            46.1581276
+          ],
+          [
+            13.392523,
+            46.1581876
+          ],
+          [
+            13.392528,
+            46.15826
+          ],
+          [
+            13.3926613,
+            46.158624
+          ],
+          [
+            13.3926777,
+            46.1587257
+          ],
+          [
+            13.3926052,
+            46.1588511
+          ],
+          [
+            13.392503,
+            46.1589697
+          ],
+          [
+            13.3924647,
+            46.1589887
+          ],
+          [
+            13.3924178,
+            46.1590017
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "V-NORTH-JUNCTION",
+      "properties": {
+        "role": "anchor",
+        "note": "confine C/V e V/D cartografico; il punto panoramico CIR-11 si trova nelle vicinanze",
+        "not_surveyed": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3924178,
+          46.1590017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "V-TURN-PICCAT",
+      "properties": {
+        "role": "anchor",
+        "note": "raccordo via Monte Piccat — passaggi 11/12",
+        "not_surveyed": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3934472,
+          46.1573318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "V-PIAZZA-ROAD",
+      "properties": {
+        "role": "anchor",
+        "note": "punto OSM sulla strada di piazza don Antonio Clemencig; non area di inversione certificata",
+        "not_surveyed": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3933009,
+          46.1569279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "V-GOOGLE-WAYPOINT",
+      "properties": {
+        "role": "anchor",
+        "note": "segnaposto dell'itinerario originale; non coincidenza millimetrica OSM",
+        "not_surveyed": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3933096,
+          46.1569587
+        ]
+      }
+    }
+  ]
+}
