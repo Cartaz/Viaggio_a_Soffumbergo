@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "source_url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:45];\n(\n way[\"highway\"](46.120,13.325,46.180,13.415);\n way[\"building\"](46.1550,13.3900,46.1590,13.3960);\n node[\"place\"](46.120,13.325,46.180,13.415);\n);\nout body; >; out skel qt;\n",
+  "source_response_sha256": "95b742820c9ae5013d21ee032ee7796dfa7085f0782c1bc996a8b648dfdf81c3",
+  "downloaded_utc": "2026-10-19T22:45:00.256615+00:00",
+  "osm_base_timestamp": "2026-10-19T22:43:51Z",
+  "feature_count": 1149,
+  "possible_motor_road_candidates": 821,
+  "road_surface_height_status": "absent",
+  "route_verified": false,
+  "streetview_continuous_coverage": false,
+  "license": "ODbL-1.0",
+  "not_covered": [
+    "a continuous circuit",
+    "turn restrictions",
+    "road widths",
+    "grades",
+    "physical viability of one-way and private roads",
+    "complete hairpin survey",
+    "bridges/overhead obstacles"
+  ]
+}
