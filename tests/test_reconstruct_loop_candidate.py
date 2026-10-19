@@ -1,5 +1,7 @@
 """Route candidate graph tests: never assert that connected OSM equals real drivable road."""
 import unittest
+import json
+from pathlib import Path
 
 from tools.reconstruct_loop_candidate import build
 
@@ -36,6 +38,17 @@ class LoopCandidateTests(unittest.TestCase):
                             for pt in feature["geometry"]["coordinates"]))
         self.assertTrue(all(feature["properties"]["elevation_status"] == "unknown"
                             for feature in result["features"]))
+
+    def test_replay_real_source_exactly(self):
+        base = Path(__file__).resolve().parents[1] / "data/geography"
+        network = json.loads((base / "osm_regional_roads_20261020.geojson").read_text(encoding="utf-8"))
+        provenance = json.loads((base / "osm_regional_roads_20261020_provenance.json").read_text(encoding="utf-8"))
+        stored = json.loads((base / "circuito_osm_candidate_20261020.geojson").read_text(encoding="utf-8"))
+        self.assertEqual(build(network, provenance), stored)
+        self.assertEqual([f["properties"]["sector"] for f in stored["features"]], list("ABCVDEF"))
+        self.assertTrue(all(f["properties"]["length_similar_not_alignment_verified"] for f in stored["features"]))
+        self.assertFalse(stored["usable_as_game_road"])
+        self.assertIsNone(stored["vertical_datum"])
 
     def test_reject_bad_snap_and_untrusted_metadata(self):
         network, prov, anchors, sectors = sample()
