@@ -1,0 +1,27 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: references__circuito__itinerario_originale.csv>
+index,passaggio,settore,indicazione,distanza_app
+0,1,A,Esci dal parcheggio verso SR356,9 m
+1,2,A,Sinistra su SR356,44 m
+2,3,A,Sinistra su via Divisione Julia/SR356,"3,4 km"
+3,4,A,Sinistra in via Paolo Diacono,78 m
+4,5,A,Riparti da Campeglio verso via Soffumbergo/SR356,78 m
+5,6,A,Sinistra su via Soffumbergo/SR356,400 m
+6,7,B,Sinistra in via Monte San Lorenzo,"1,8 km"
+7,8,B,"Leggera curva a destra, località Colloredo",220 m
+8,9,C,Continua su Valle Soffumbergo,"1,0 km"
+9,10,C,Continua su via Prestento,"3,3 km"
+10,11,V,Destra in via Monte Piccat,230 m
+11,12,V,Leggermente a destra verso la tappa in piazza,45 m
+12,13,V,Riparti dalla tappa verso via Monte Piccat,45 m
+13,14,V,Leggermente a sinistra in via Monte Piccat,210 m
+14,15,D,Leggermente a sinistra in strada per Valle,"1,4 km"
+15,16,E,Continua su strada per Costalunga,"4,2 km"
+16,17,E,Continua su via Mont Joanes,350 m
+17,18,E,Destra verso il segnaposto Canal di Grivò,13 m
+18,19,F,Riparti da Canal di Grivò verso via Mont Joanes,13 m
+19,20,F,Tutto a destra su via Mont Joanes,350 m
+20,21,F,Leggermente a sinistra in Borgo Scubla,650 m
+21,22,F,Continua su via dei Castelli,850 m
+22,23,F,"Sinistra, ingresso Bar Al Telefono",9 m
+23,24,F,Arrivo Bar Al Telefono,—
