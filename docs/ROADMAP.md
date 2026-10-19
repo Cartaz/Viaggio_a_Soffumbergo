@@ -43,7 +43,7 @@ Queste consegne non chiudono automaticamente le prove P1–P4. Venti cicli logic
 - [ ] Ricavare una polilinea stradale riutilizzabile e verificare quota e sistema di riferimento del terreno.
 - [ ] Completare il censimento dei tornanti di salita e discesa.
 
-**Incremento GIS del 20/10/2026:** predisposti generatore di livelli QGIS 2D, catalogazione di grigliati DTM ASCII, acquisizione separata della rete regionale OSM e test automatici. L'acquisizione reale, le quote, la connessione dell'intero circuito e i tornanti rimangono **aperti**; vedere `docs/ACQUISIZIONE_FONTI_GIS.md`.
+**Incremento GIS del 20/10/2026:** pipeline QGIS e catalogatore DTM; **acquisizione reale di 1.149 ways OSM e realizzazione di un candidato planimetrico chiuso A/B/C/V/D/E/F di 18.867,6 m**, derivato con grafo e test di regressione contro i dati versionati. **Ancora aperti**: conferma della geometria scelta ai bivi, censimento dei tornanti e rilievo continuo, quote e DTM, larghezze e verifica guidabilità. [Rapporto con prove e limiti](TRACCIATO_OSM_CANDIDATO_20261020.md).
 
 Uscita: dossier del percorso e del borgo con copertura esplicita, riferimenti del veicolo e prova di scala dei protagonisti.
 
