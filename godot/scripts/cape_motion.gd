@@ -1,6 +1,8 @@
 class_name CapeMotion
 extends RefCounted
-## Weighted arm-following cloth with collision projection after deformation.
+## Persistent GPU-deformed cloth. CPU reference is used by headless contact tests.
+
+const CLOTH_SHADER = preload("res://godot/shaders/cape_motion.gdshader")
 
 var mesh_node: MeshInstance3D
 var rest_arrays: Array
@@ -10,6 +12,8 @@ var material: Material
 var vertices := PackedVector3Array()
 var minimum_clearance := 0.0
 var corrections := 0
+var shader_material: ShaderMaterial
+var cpu_validation := DisplayServer.get_name() == "headless"
 
 
 func setup(node: MeshInstance3D, skeleton: Skeleton3D) -> void:
@@ -21,6 +25,28 @@ func setup(node: MeshInstance3D, skeleton: Skeleton3D) -> void:
 		bind_poses.append(node.skin.get_bind_pose(i))
 	node.skin = null
 	node.skeleton = NodePath()
+	var arrays: Array = rest_arrays.duplicate()
+	var joint_indices := PackedFloat32Array()
+	for index in rest_arrays[Mesh.ARRAY_BONES]:
+		joint_indices.append(float(index))
+	arrays[Mesh.ARRAY_CUSTOM0] = joint_indices
+	arrays[Mesh.ARRAY_CUSTOM1] = rest_arrays[Mesh.ARRAY_WEIGHTS]
+	arrays[Mesh.ARRAY_BONES] = null
+	arrays[Mesh.ARRAY_WEIGHTS] = null
+	var flags := (
+		(Mesh.ARRAY_CUSTOM_RGBA_FLOAT << Mesh.ARRAY_FORMAT_CUSTOM0_SHIFT)
+		| (Mesh.ARRAY_CUSTOM_RGBA_FLOAT << Mesh.ARRAY_FORMAT_CUSTOM1_SHIFT)
+	)
+	var persistent := ArrayMesh.new()
+	persistent.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays, [], {}, flags)
+	shader_material = ShaderMaterial.new()
+	shader_material.shader = CLOTH_SHADER
+	shader_material.set_shader_parameter(
+		"cape_color", (material as StandardMaterial3D).albedo_color
+	)
+	persistent.surface_set_material(0, shader_material)
+	node.mesh = persistent
+	node.custom_aabb = AABB(Vector3(-0.4, 0.1, -0.35), Vector3(0.8, 0.65, 0.7))
 
 
 func update(skeleton: Skeleton3D, capsules: Array, torso: Transform3D) -> void:
@@ -29,10 +55,23 @@ func update(skeleton: Skeleton3D, capsules: Array, torso: Transform3D) -> void:
 	var rest: PackedVector3Array = rest_arrays[Mesh.ARRAY_VERTEX]
 	var bones: PackedInt32Array = rest_arrays[Mesh.ARRAY_BONES]
 	var weights: PackedFloat32Array = rest_arrays[Mesh.ARRAY_WEIGHTS]
-	var indices: PackedInt32Array = rest_arrays[Mesh.ARRAY_INDEX]
 	var skin_matrices: Array[Transform3D] = []
 	for i in range(bind_bones.size()):
 		skin_matrices.append(skeleton.get_bone_global_pose(bind_bones[i]) * bind_poses[i])
+	shader_material.set_shader_parameter("skin_matrices", skin_matrices)
+	shader_material.set_shader_parameter("torso", torso)
+	shader_material.set_shader_parameter("torso_inverse", torso.affine_inverse())
+	var starts := PackedVector4Array()
+	var ends := PackedVector4Array()
+	for capsule in capsules:
+		var a: Vector3 = capsule.a
+		var b: Vector3 = capsule.b
+		starts.append(Vector4(a.x, a.y, a.z, capsule.radius))
+		ends.append(Vector4(b.x, b.y, b.z, 0))
+	shader_material.set_shader_parameter("capsule_a", starts)
+	shader_material.set_shader_parameter("capsule_b", ends)
+	if not cpu_validation:
+		return
 	vertices.resize(rest.size())
 	corrections = 0
 	var torso_inverse := torso.affine_inverse()
@@ -65,30 +104,32 @@ func update(skeleton: Skeleton3D, capsules: Array, torso: Transform3D) -> void:
 					changed = true
 			if not changed:
 				break
+		# Overlapping elbow/torso capsules can alternate projections. Escape their
+		# union monotonically away from the torso rather than oscillating in it.
+		var radial := torso_inverse * p - Vector3(0, 0.42, 0)
+		radial.y = 0.0
+		var escape := torso.basis * radial.normalized()
+		for iteration in range(4):
+			var escaped := false
+			for capsule in capsules:
+				var q := Geometry3D.get_closest_point_to_segment(p, capsule.a, capsule.b)
+				if p.distance_squared_to(q) >= float(capsule.radius) * float(capsule.radius):
+					continue
+				var center: Vector3 = (capsule.a + capsule.b) * 0.5
+				var radius: float = capsule.a.distance_to(capsule.b) * 0.5 + capsule.radius
+				var offset := p - center
+				var along := offset.dot(escape)
+				var exit := (
+					-along
+					+ sqrt(maxf(0, along * along - offset.length_squared() + radius * radius))
+				)
+				p += escape * (exit + 0.001)
+				escaped = true
+			if not escaped:
+				break
 		vertices[i] = p
 	minimum_clearance = 100.0
 	for p in vertices:
 		for capsule in capsules:
 			var q := Geometry3D.get_closest_point_to_segment(p, capsule.a, capsule.b)
 			minimum_clearance = minf(minimum_clearance, p.distance_to(q) - float(capsule.radius))
-	var normals := PackedVector3Array()
-	normals.resize(vertices.size())
-	for i in range(0, indices.size(), 3):
-		var a := indices[i]
-		var b := indices[i + 1]
-		var c := indices[i + 2]
-		var normal := (vertices[b] - vertices[a]).cross(vertices[c] - vertices[a])
-		normals[a] += normal
-		normals[b] += normal
-		normals[c] += normal
-	for i in range(normals.size()):
-		normals[i] = normals[i].normalized()
-	var arrays: Array = []
-	arrays.resize(Mesh.ARRAY_MAX)
-	arrays[Mesh.ARRAY_VERTEX] = vertices
-	arrays[Mesh.ARRAY_NORMAL] = normals
-	arrays[Mesh.ARRAY_INDEX] = indices
-	var dynamic := ArrayMesh.new()
-	dynamic.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
-	dynamic.surface_set_material(0, material)
-	mesh_node.mesh = dynamic

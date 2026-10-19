@@ -19,6 +19,8 @@ var length_error := 0.0
 var cape: CapeMotion
 var torso_deformation := Transform3D.IDENTITY
 var capsules: Array = []
+var pose_freedom := 1.0
+var applied_lean := Vector3.ZERO
 
 
 func _ready() -> void:
@@ -46,16 +48,17 @@ func animate_support(
 	dt: float, acceleration: Vector3, grips: Array[Transform3D], steering: float
 ) -> void:
 	effective_acceleration = acceleration
-	var target := Vector3(-acceleration.z, 0, acceleration.x) * 0.018
-	var limit := 0.075 if role == "driver" else 0.14
-	target.x = clampf(target.x, -limit, limit)
+	var target := Vector3(-acceleration.z, 0, acceleration.x) * 0.040
+	var limit := 0.18 if role == "driver" else 0.30
+	var pitch_limit := 0.10 if role == "driver" else limit
+	target.x = clampf(target.x, -pitch_limit, pitch_limit)
 	target.z = clampf(target.z, -limit, limit)
 	var steps := maxi(1, ceili(dt * 240.0))
 	var step := dt / float(steps)
 	for i in range(steps):
 		lean_velocity += ((target - lean) * 81.0 - lean_velocity * 16.2) * step
 		lean += lean_velocity * step
-		var heave_target := clampf(-(acceleration.y - 9.81) * 0.0015, -0.012, 0.010)
+		var heave_target := clampf(-(acceleration.y - 9.81) * 0.003, -0.020, 0.016)
 		heave_velocity += ((heave_target - heave) * 144.0 - heave_velocity * 21.6) * step
 		heave += heave_velocity * step
 		var cloth_target := Vector3(-acceleration.z, 0, acceleration.x) * 0.024
@@ -67,17 +70,28 @@ func animate_support(
 
 func _pose(grips: Array[Transform3D], steering: float) -> void:
 	skeleton.reset_bone_poses()
-	var pelvis := Transform3D.IDENTITY
-	if role == "driver":
-		pelvis.origin = Vector3(0, -0.105, 0.015)
-	pelvis.origin.y += heave
+	# Seat and hand contacts constrain torso travel, never the lengths of limbs.
+	pose_freedom = 1.0
+	var body := _body_pose(pose_freedom)
+	if not _contacts_reachable(body, grips):
+		var low := 0.0
+		var high := 1.0
+		for iteration in range(9):
+			var middle := (low + high) * 0.5
+			if _contacts_reachable(_body_pose(middle), grips):
+				low = middle
+			else:
+				high = middle
+		pose_freedom = low
+		body = _body_pose(pose_freedom)
+	applied_lean = lean * pose_freedom
+	var pelvis: Transform3D = body[0]
+	torso_deformation = body[1]
 	_set_global("pelvis", pelvis * rest.pelvis)
-	var pivot: Vector3 = pelvis * (rest.spine as Transform3D).origin
-	torso_deformation = _around(pivot, Basis.from_euler(lean)) * pelvis
 	_set_global("spine", torso_deformation * rest.spine)
 	var head_rest: Transform3D = rest.head
 	var head_pivot: Vector3 = torso_deformation * head_rest.origin
-	var head_rotation := Basis.from_euler(-lean * 0.35 + Vector3(0, steering * 0.10, 0))
+	var head_rotation := Basis.from_euler(-applied_lean * 0.35 + Vector3(0, steering * 0.10, 0))
 	_set_global("head", _around(head_pivot, head_rotation) * torso_deformation * head_rest)
 	_set_global(
 		"tail",
@@ -155,6 +169,36 @@ func _pose(grips: Array[Transform3D], steering: float) -> void:
 		cape.update(skeleton, capsules, torso_deformation)
 
 
+func _body_pose(amount: float) -> Array[Transform3D]:
+	var pelvis := Transform3D.IDENTITY
+	if role == "driver":
+		pelvis.origin = Vector3(-lean.z * 0.10 * amount, -0.105, 0.015 + lean.x * 0.05 * amount)
+	pelvis.origin.y += heave * amount * (0.5 if role == "driver" else 1.0)
+	var pivot: Vector3 = pelvis * (rest.spine as Transform3D).origin
+	return [pelvis, _around(pivot, Basis.from_euler(lean * amount)) * pelvis]
+
+
+func _contacts_reachable(body: Array[Transform3D], grips: Array[Transform3D]) -> bool:
+	for side in [-1, 1]:
+		var suffix := str(side)
+		var index := 0 if side == -1 else 1
+		var shoulder: Vector3 = body[1] * (rest["upper_arm_" + suffix] as Transform3D).origin
+		var elbow: Vector3 = (rest["forearm_" + suffix] as Transform3D).origin
+		var hand: Vector3 = (rest["hand_" + suffix] as Transform3D).origin
+		var arm: float = (rest["upper_arm_" + suffix] as Transform3D).origin.distance_to(elbow)
+		arm += elbow.distance_to(hand)
+		if shoulder.distance_to(grips[index].origin) > arm - 0.001:
+			return false
+		var hip: Vector3 = (rest["thigh_" + suffix] as Transform3D).origin
+		var knee: Vector3 = (rest["shin_" + suffix] as Transform3D).origin
+		var foot: Vector3 = (rest["foot_" + suffix] as Transform3D).origin
+		var leg := hip.distance_to(knee) + knee.distance_to(foot)
+		var target := Vector3(side * 0.082, 0.023, -0.15) if role == "driver" else foot
+		if (body[0] * hip).distance_to(target) > leg - 0.001:
+			return false
+	return true
+
+
 func _solve_chain(
 	upper: String, lower: String, end: String, a: Vector3, target: Vector3, pole: Vector3
 ) -> Array[Vector3]:
@@ -223,6 +267,8 @@ func snapshot() -> Dictionary:
 		"cape_vertices": cape_vertices,
 		"lean": [lean.x, lean.y, lean.z],
 		"heave": heave,
+		"pose_freedom": pose_freedom,
+		"applied_lean": [applied_lean.x, applied_lean.y, applied_lean.z],
 		"grip_error": grip_error,
 		"length_error": length_error,
 		"cape_clearance": cape.minimum_clearance if cape != null else 0.0

@@ -116,24 +116,24 @@ def main():
             press = sample['pedals'][1 if side == -1 else 0]
             pedal.rotation_euler.x = -.12*press
             pedal.keyframe_insert('rotation_euler', frame=frame)
-        rod('Coffa appiglio', (side*.18, .31, .454), (side*.18, .14, .480), .009, wood, characters['Bianca'])
+        rod('Coffa appiglio', (side*.18, .31, .454), (side*.18, .10, .470), .009, wood, characters['Bianca'])
         rod('Coffa montante', (side*.30, .31, .01), (side*.30, .31, .454), .012, wood, characters['Bianca'])
-    rod('Coffa presa', (-.18, .14, .480), (.18, .14, .480), .009, wood, characters['Bianca'])
+    rod('Coffa presa', (-.18, .10, .470), (.18, .10, .470), .009, wood, characters['Bianca'])
     rod('Coffa parapetto', (-.30, .31, .454), (.30, .31, .454), .018, wood, characters['Bianca'])
     mount = bpy.data.objects.new('Steering mount', None)
     scene.collection.objects.link(mount)
     mount.parent = characters['Bernie']
-    mount.location, mount.rotation_euler.x = (0, .13, .385), math.radians(90)
-    bpy.ops.mesh.primitive_torus_add(major_radius=.075, minor_radius=.008,
+    mount.location, mount.rotation_euler.x = (0, .13, .360), math.radians(90)
+    bpy.ops.mesh.primitive_torus_add(major_radius=.095, minor_radius=.008,
                                     major_segments=48, minor_segments=12)
     wheel = bpy.context.object
     wheel.name, wheel.parent, wheel.location = 'Steering wheel', mount, (0, 0, 0)
     wheel.data.materials.append(dark)
     for spoke in range(3):
         angle = spoke*math.tau/3
-        rod('Wheel spoke', (0,0,0), (.067*math.cos(angle), .067*math.sin(angle), 0), .004, dark, wheel)
+        rod('Wheel spoke', (0,0,0), (.087*math.cos(angle), .087*math.sin(angle), 0), .004, dark, wheel)
     for frame, sample in enumerate(trace['samples'], 1):
-        wheel.rotation_euler.z = -sample['steering']*.30
+        wheel.rotation_euler.z = -sample['steering']*.50
         wheel.keyframe_insert('rotation_euler', frame=frame)
     camera = scene.camera
     camera.location = (1.20, 3.2, 1.30)

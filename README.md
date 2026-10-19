@@ -1,5 +1,6 @@
 # Viaggio a Soffumbergo
 
+**Correzione animazioni/prestazioni:** Bernie ora sposta il peso sul sedile in curva; mantellina deformata sulla GPU. Laboratorio verificato sulla RX 6800 a 4K/60 FPS nelle tre viste. [Prove e limiti](docs/ANIMAZIONI.md).
 ## Coffa e tornanti
 
 Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini ispirati a Bianca e Bernie Disney. La direzione aggiornata comprende corporatura, volti e costumi: Bernie compatto al volante, Bianca più affusolata come vedetta. La postura bipede è ora autorizzata dall’utente.

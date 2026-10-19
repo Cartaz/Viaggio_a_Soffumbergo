@@ -3,6 +3,7 @@ extends SceneTree
 
 var movie_lab: Node3D
 var movie_frame := 0
+var reaction_review := false
 
 
 func _initialize() -> void:
@@ -18,13 +19,20 @@ func capture_run() -> void:
 	lab.set_process(false)
 	lab.set_physics_process(false)
 	lab.hud.visible = false
+	if lab.get("exercise") != null:
+		lab.exercise.set_physics_process(false)
+	for node in lab.get_children():
+		if node is CanvasLayer:
+			node.visible = false
 	var vehicle: LaboratoryVehicle = lab.vehicle
 	var movie := "--movie" in OS.get_cmdline_user_args()
+	reaction_review = "--reaction-review" in OS.get_cmdline_user_args()
 	if movie:
 		movie_lab = lab
 		process_frame.connect(follow_movie)
 	DirAccess.make_dir_recursive_absolute("res://art/source/generated/ingame")
-	for frame in range(1, 961 if movie else 721):
+	var end := 1921 if reaction_review else (961 if movie else 721)
+	for frame in range(1, end):
 		await physics_frame
 		movie_frame = frame
 		var t := float(frame) / 120.0
@@ -32,7 +40,17 @@ func capture_run() -> void:
 		vehicle.braking = 0.4 if t >= 4.8 else 0.0
 		vehicle.steering_target = 0.18 if t > 2.0 and t < 4.0 else -0.12
 		if t > 2.7 and t < 3.3:
-			vehicle.apply_force(vehicle.global_basis.x * 900.0, vehicle.global_basis.y * 5.7)
+			if not reaction_review:
+				vehicle.apply_force(vehicle.global_basis.x * 900.0, vehicle.global_basis.y * 5.7)
+		if reaction_review:
+			var cycle := fmod(t, 8.0)
+			vehicle.throttle = 0.55 if cycle > 1.0 and cycle < 6.0 else 0.0
+			vehicle.braking = 0.65 if cycle >= 6.0 else 0.0
+			vehicle.steering_target = 0.35 if cycle > 2.0 and cycle < 4.0 else -0.35
+			if cycle < 2.0 or cycle >= 6.0:
+				vehicle.steering_target = 0.0
+			if frame == 960:
+				vehicle.reset_requested = true
 		if movie:
 			continue
 		if frame == 240:
@@ -49,6 +67,9 @@ func capture_run() -> void:
 
 
 func follow_movie() -> void:
+	if reaction_review:
+		frame_camera(movie_lab, 1 if movie_frame < 960 else 2)
+		return
 	var view := 0
 	if movie_frame >= 150:
 		view = 1

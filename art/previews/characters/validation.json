@@ -6,8 +6,9 @@
   "godot_character_checks": "passed",
   "godot_lab_smoke": "passed: 180 frames",
   "python_checks": "passed: 28 tests",
-  "gdscript_lint_and_format": "passed: 15 files",
-  "animation_and_seated_fit": "passed in synthetic laboratory: 540 contact/length cases and actual vehicle trace; final cabin fit still pending",
-  "in_game_visual_review": "passed: cabin and crow nest screenshots and eight-second rendered laboratory movie",
-  "detailed_metrics": "animation_validation.json"
+  "gdscript_lint_and_format": "passed: source scripts including GPU cloth and performance bench",
+  "animation_and_seated_fit": "passed: 1260 contact/length cases, constrained seat sway and actual vehicle motion; final cabin fit pending",
+  "in_game_visual_review": "GPU cloth and physical body reactions reviewed in actual laboratory renderer",
+  "detailed_metrics": "animation_validation.json",
+  "performance": "4K/60 target passed on RX 6800 in three laboratory camera views; see reports/occupant_performance_validation.json"
 }

@@ -1,0 +1,14 @@
+{
+  "driver_grip": 0.00000000745058059692383,
+  "failures": [],
+  "lookout_grip": 0.00000000745058059692383,
+  "minimum_cape_arm_clearance_m": 0.000000108510255815431,
+  "physics_steps_hz": [
+    60,
+    120,
+    240
+  ],
+  "samples": 1260,
+  "worst_grip_error_m": 0.00000000745058059692383,
+  "worst_limb_length_error_m": 0.0000000298023223876953
+}

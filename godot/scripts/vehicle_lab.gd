@@ -341,12 +341,12 @@ static func point_specific_force(
 func _physics_process(delta: float) -> void:
 	if driver == null:
 		return
-	steering_wheel.rotation.y = -steering * 0.30
+	steering_wheel.rotation.y = -steering * 0.50
 	driver.pedal_inputs = Vector2(absf(throttle), braking)
 	pedal_pivots[0].rotation.x = -0.12 * braking
 	pedal_pivots[1].rotation.x = -0.12 * absf(throttle)
 	var axis := driver.skeleton.global_basis.inverse() * steering_wheel.global_basis.y
-	var turn := Basis(axis.normalized(), -steering * 0.30)
+	var turn := Basis(axis.normalized(), -steering * 0.50)
 	driver.animate_support(
 		delta, driver_acceleration, _contact_frames(driver, driver_grips, turn), steering
 	)
@@ -372,7 +372,7 @@ func _build_contact_supports() -> void:
 	_box(Vector3(0.29, 0.28, 0.04), driver.position + Vector3(0, 0.27, 0.13), Color("303738"))
 	var mount := Node3D.new()
 	mount.name = "SteeringMount"
-	mount.position = driver.position + Vector3(0, 0.385, -0.13)
+	mount.position = driver.position + Vector3(0, 0.360, -0.13)
 	mount.rotation.x = deg_to_rad(90)
 	add_child(mount)
 	steering_wheel = Node3D.new()
@@ -380,19 +380,19 @@ func _build_contact_supports() -> void:
 	mount.add_child(steering_wheel)
 	var mesh := MeshInstance3D.new()
 	var ring := TorusMesh.new()
-	ring.inner_radius = 0.067
-	ring.outer_radius = 0.083
+	ring.inner_radius = 0.087
+	ring.outer_radius = 0.103
 	mesh.mesh = ring
 	mesh.material_override = _material(Color("292c31"))
 	steering_wheel.add_child(mesh)
 	for spoke in range(3):
 		var angle := float(spoke) * TAU / 3.0
 		_rod(
-			Vector3.ZERO, Vector3(cos(angle) * 0.067, 0, sin(angle) * 0.067), 0.004, steering_wheel
+			Vector3.ZERO, Vector3(cos(angle) * 0.087, 0, sin(angle) * 0.087), 0.004, steering_wheel
 		)
 	for side in [-1, 1]:
 		var grip := Node3D.new()
-		grip.position = Vector3(side * 0.075, 0, 0)
+		grip.position = Vector3(side * 0.095, 0, 0)
 		steering_wheel.add_child(grip)
 		driver_grips.append(grip)
 		var pedal := Node3D.new()
@@ -408,18 +408,18 @@ func _build_contact_supports() -> void:
 		pedal.add_child(pad)
 		_rod(Vector3(side * 0.56, 5.75, -0.56), Vector3(side * 0.56, 6.21, -0.56), 0.018)
 		var handhold := Node3D.new()
-		handhold.position = lookout.position + Vector3(side * 0.11, 0.480, -0.14)
+		handhold.position = lookout.position + Vector3(side * 0.11, 0.470, -0.10)
 		add_child(handhold)
 		lookout_grips.append(handhold)
 		_rod(
 			Vector3(lookout.position.x + side * 0.18, 6.21, -0.56),
-			lookout.position + Vector3(side * 0.18, 0.480, -0.14),
+			lookout.position + Vector3(side * 0.18, 0.470, -0.10),
 			0.009
 		)
 	_rod(Vector3(-0.56, 6.21, -0.56), Vector3(0.56, 6.21, -0.56), 0.018)
 	_rod(
-		lookout.position + Vector3(-0.18, 0.480, -0.14),
-		lookout.position + Vector3(0.18, 0.480, -0.14),
+		lookout.position + Vector3(-0.18, 0.470, -0.10),
+		lookout.position + Vector3(0.18, 0.470, -0.10),
 		0.009
 	)
 

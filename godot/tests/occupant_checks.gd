@@ -28,7 +28,15 @@ func run_checks() -> void:
 	check(absf(high.x / low.x - 6.0) < 0.00001, "Point acceleration must reflect attachment height")
 	for steering in [-0.52, 0.0, 0.52]:
 		vehicle.steering = steering
-		for force in [Vector3(0, 9.81, 0), Vector3(8, 14, -8), Vector3(-8, 5, 8)]:
+		for force in [
+			Vector3(0, 9.81, 0),
+			Vector3(8, 14, -8),
+			Vector3(-8, 5, 8),
+			Vector3(8, 5, 8),
+			Vector3(-8, 14, -8),
+			Vector3(8, 14, 8),
+			Vector3(-8, 5, 8)
+		]:
 			vehicle.driver.reset_motion()
 			vehicle.lookout.reset_motion()
 			vehicle.driver_acceleration = force
@@ -39,6 +47,9 @@ func run_checks() -> void:
 	check(worst_grip < 0.0001, "Hands lost contact: " + str(worst_grip))
 	check(worst_length < 0.00001, "IK stretched a limb: " + str(worst_length))
 	check(least_cloth_clearance >= -0.0001, "Cape/arm penetration: " + str(least_cloth_clearance))
+	check(vehicle.driver.applied_lean.z < -0.10, "Driver did not visibly lean under lateral force")
+	var seat := vehicle.driver.skeleton.get_bone_global_pose(vehicle.driver.bones.pelvis).origin
+	check(seat.x > 0.01, "Driver did not shift weight across the seat")
 	var pitch := vehicle.lookout.lean.x
 	check(pitch < 0.0, "Braking must move the upper body toward the front")
 	check(vehicle.lookout.heave > 0.003, "Reduced vertical support must unload the knees")
@@ -64,7 +75,7 @@ func run_checks() -> void:
 		"failures": failures,
 		"driver_grip": driver_grip,
 		"lookout_grip": lookout_grip,
-		"samples": 540,
+		"samples": 1260,
 		"physics_steps_hz": [60, 120, 240]
 	}
 	DirAccess.make_dir_recursive_absolute("res://art/source/generated/characters")
