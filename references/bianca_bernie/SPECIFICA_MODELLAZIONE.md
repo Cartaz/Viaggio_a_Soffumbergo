@@ -6,6 +6,8 @@ Revisione **19 ottobre 2026**, aggiornata alle indicazioni successive dell’ute
 
 Adattare anche corporature, volti e abiti ai disegni e studi di animazione catalogati nella repo. **Bianca più affusolata**, Bernie più compatto. Postura e locomozione **bipedi autorizzate**: questa decisione supera i precedenti vincoli di esclusività quadrupede e di ingrandimento dei soli occhi.
 
+Su ulteriore richiesta dell’utente, gli occhi del prototipo sono ridotti di circa un terzo e integrati maggiormente nel volto, con palpebre, pupille e ciglia proporzionate.
+
 Conservare il carattere da topo: zampe, orecchie, vibrisse e coda sottile. Gli arti mantengono le lunghezze definite in `data/config/mouse_rig.json`; seduta, prolunghe e comandi devono adattarsi ai personaggi. Le dimensioni sono scelte di lavoro, non misure ricavate dai disegni.
 
 ## Bernie — guidatore

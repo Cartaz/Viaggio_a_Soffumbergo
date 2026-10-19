@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "biped_design_models_generated_not_skinned",
   "uniform_scale": 1,
-  "eye_scale": 1.35,
+  "eye_scale": 1.0,
   "warning": "Biped design models based on animation studies; Bianca slender, Bernie compact. Uniform overall fit scale; never stretch limbs to reach controls.",
   "segments_m": {
     "upper_forelimb": 0.1,
@@ -32,6 +32,7 @@
     "passenger_inspiration": "Miss Bianca (The Rescuers, 1977)",
     "constraint": "User revised 2026-10-19: adapt body, face and clothes to animation studies; Bianca slender, Bernie compact; bipedia allowed; fixed limb lengths",
     "source_images_embedded": false,
-    "character_config": "data/config/characters.json"
+    "character_config": "data/config/characters.json",
+    "eye_dimensions": "data/config/characters.json: eye_design_scale; oversized prototype eyes superseded by user request"
   }
 }

@@ -197,33 +197,42 @@ class Character:
                       [(ear_x, .034, ear_z - .032),
                        (ear_x - side * .018, .035, ear_z - .013),
                        (ear_x + side * .022, .033, ear_z + .020)], .0025, "muzzle")
-            # White/iris construction from the production studies; eyes look forward.
-            eye = Vector((side * (.069 if slender else .077), .101, head_z + .021))
+            # Smaller, inset eyes; eyelids, pupils and glints share one proportion.
+            eye_scale = float(cfg["eye_design_scale"])
+            eye_x = side * (.055 if slender else .062)
+            def face_surface(x, z, lift=.002):
+                rx, ry, rz = cfg["head_radii"]
+                rest = max(.01, 1 - (x / rx) ** 2 - ((z - head_z) / rz) ** 2)
+                return .015 + ry * math.sqrt(rest) + lift
+            eye = Vector((eye_x, face_surface(eye_x, head_z + .021, .001), head_z + .021))
             normal = Vector((side * .40, .9165, 0))
             tangent = Vector((side * .9165, -.40, 0))
-            self.ell(f"eye_white_{side}", eye, (.030, .022, .038), "white")
-            pupil = eye + normal * .020
-            self.ell(f"pupil_{side}", pupil, (.015, .009, .023), "eyes")
-            self.ell(f"eye_glint_{side}", pupil + Vector((-.005, .008, .009)),
-                     (.004, .003, .006), "white")
+            self.ell(f"eye_white_{side}", eye,
+                     (.030 * eye_scale, .0165 * eye_scale, .038 * eye_scale), "white")
+            pupil = eye + normal * (.016 * eye_scale)
+            self.ell(f"pupil_{side}", pupil,
+                     (.015 * eye_scale, .007 * eye_scale, .023 * eye_scale), "eyes")
+            self.ell(f"eye_glint_{side}", pupil + Vector((-.005, .006, .009)) * eye_scale,
+                     (.004 * eye_scale, .002 * eye_scale, .006 * eye_scale), "white")
             lid = []
             for i in range(13):
                 t = math.pi * i / 12
-                lid.append(eye + tangent * (.030 * math.cos(t))
-                           + Vector((0, 0, .038 * math.sin(t))) + normal * .013)
-            self.line(f"upper_lid_{side}", lid, .003 if slender else .0035, "eyes")
+                lid.append(eye + tangent * (.030 * eye_scale * math.cos(t))
+                           + Vector((0, 0, .038 * eye_scale * math.sin(t)))
+                           + normal * (.009 * eye_scale))
+            self.line(f"upper_lid_{side}", lid, (.003 if slender else .0035) * eye_scale, "eyes")
             if slender:
                 for i in range(3):
                     base = Vector(lid[1 + i])
                     self.line(f"lash_{side}_{i}",
-                              [base, base + Vector((side * .012, .002, .009 + i * .002))],
-                              .0018, "eyes")
-            brow_z = head_z + .071
+                              [base, base + Vector((side * .012, .002, .009 + i * .002)) * eye_scale],
+                              .0018 * eye_scale, "eyes")
+            brow_z = head_z + .057
+            brow_xz = [(eye_x - side * .019, brow_z + (.009 if not slender else -.004)),
+                       (eye_x, brow_z + .006), (eye_x + side * .020, brow_z - .003)]
             self.line(f"brow_{side}",
-                      [(side * .043, .117, brow_z + (.009 if not slender else -.004)),
-                       (side * .069, .118, brow_z + .010),
-                       (side * .098, .095, brow_z - .003)],
-                      .0045 if not slender else .0028, "brow")
+                      [(x, face_surface(x, z), z) for x, z in brow_xz],
+                      .0035 if not slender else .0022, "brow")
             mouth_y = .114 if slender else .124
             self.line(f"smile_{side}",
                       [(0, mouth_y, head_z - .046),

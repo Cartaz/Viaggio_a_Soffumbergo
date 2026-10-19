@@ -17,7 +17,7 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 | Protagonisti | Lui guida; lei viaggia sulla coffa in abiti da picnic |
 | Anatomia | Aggiornamento utente 19/10/2026: corporatura dagli studi, Bianca più affusolata e Bernie compatto; bipedia autorizzata. Mai stirare gli arti per raggiungere i comandi |
 | Identità visiva | Adattare i modelli ai disegni e studi di animazione di Bianca e Bernie (Disney, 1977), comprese silhouette, volti e abiti |
-| Espressività | Occhi grandi, palpebre, sopracciglia e muso adattati agli studi; corporeità bipede autorizzata |
+| Espressività | Occhi ridimensionati e meno sporgenti, con palpebre, sopracciglia e muso adattati agli studi; corporeità bipede autorizzata |
 | Comandi | Prolunghe meccaniche e appoggi adatti alle zampe |
 | Obiettivo originario | Completare l’anello senza ribaltarsi |
 | Repository | Repository creata dall’utente: Cartaz/Viaggio_a_Soffumbergo, pubblica; nessuna modifica alla visibilità |

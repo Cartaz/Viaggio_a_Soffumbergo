@@ -93,7 +93,8 @@
           0.12,
           0.07
         ]
-      }
+      },
+      "eye_design_scale": 0.7
     },
     "Bianca": {
       "role": "lookout",
@@ -175,8 +176,10 @@
           0.4,
           0.65
         ]
-      }
+      },
+      "eye_design_scale": 0.68
     }
   },
-  "face_revision": "Short continuous muzzle, no paired protruding cheek lobes; smaller nose and simpler lines, especially Bianca. User feedback 2026-10-19."
+  "face_revision": "Short continuous muzzle, no paired protruding cheek lobes; smaller nose and simpler lines, especially Bianca. User feedback 2026-10-19.",
+  "eye_revision": "Eyes reduced about one third; shallower and inset, with proportionate pupils, eyelids, lashes and brows, 2026-10-19 user feedback."
 }

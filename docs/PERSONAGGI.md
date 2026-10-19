@@ -1,6 +1,6 @@
 # Bianca e Bernie — modelli 3D di studio
 
-Aggiornamento del **19 ottobre 2026**. Bernie è il guidatore; Bianca è la vedetta. L’utente ha richiesto anche l’adattamento delle corporature agli studi di animazione, con Bianca più affusolata, consentendo la locomozione bipede. Le mani e i piedi hanno ora dita distinte, articolazioni, talloni e piccole unghie al posto delle precedenti forme ovali.
+Aggiornamento del **19 ottobre 2026**. Bernie è il guidatore; Bianca è la vedetta. L’utente ha richiesto anche l’adattamento delle corporature agli studi di animazione, con Bianca più affusolata, consentendo la locomozione bipede. Gli occhi sono ridotti di circa un terzo rispetto al primo modello, meno sporgenti e più vicini al volto; pupille, palpebre, ciglia e sopracciglia sono adattate in proporzione. Le mani e i piedi hanno ora dita distinte, articolazioni, talloni e piccole unghie al posto delle precedenti forme ovali.
 
 ![Bianca e Bernie — render delle mesh](../art/previews/characters/three_quarter.jpg)
 
