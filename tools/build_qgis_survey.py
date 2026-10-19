@@ -103,19 +103,25 @@ def build(root=ROOT, output=None):
                     raise ValueError(f"Unexpected footprint: {relative}")
                 buildings.append(obj)
     # Sector D has only boundary references; NEVER fabricate a connector LineString.
+    # The actual V->D handoff is the first vertex of the mapped V outbound OSM
+    # line, not the position of the nearby Street View panorama CIR-VAL-15.
+    outbound = next((f for f in reference_lines
+                     if f["properties"]["ref_id"] == "V-OUTBOUND"), None)
     byid = {f["properties"]["ref_id"]: f for f in points}
-    boundaries = []
-    for bid, point_id in (("D-START", "CIR-VAL-15"), ("D-END", "CIR-12")):
-        if point_id not in byid:
-            raise ValueError(f"Sector D boundary anchor unavailable: {point_id}")
-        anchor = byid[point_id]
-        f = json.loads(json.dumps(anchor))
-        f["id"] = "boundary:" + bid
-        f["properties"].update({"ref_id": bid, "sector": "D",
-                                "name": "Settore D: limite approssimativo da " + point_id,
-                                "evidence_role": "sector_boundary_reference_not_centerline"})
-        boundaries.append(f)
-    points.extend(boundaries)
+    if outbound is None or "CIR-12" not in byid:
+        raise ValueError("Sector D requires OSM V-OUTBOUND start and E panorama CIR-12")
+    start = json.loads(json.dumps(outbound))
+    start["id"] = "boundary:D-START"
+    start["geometry"] = {"type": "Point", "coordinates": outbound["geometry"]["coordinates"][0]}
+    start["properties"].update({"ref_id": "D-START", "sector": "D",
+                                "name": "Settore D: ingresso dal nodo OSM del settore V",
+                                "evidence_role": "sector_boundary_osm_2d_not_survey_control"})
+    end = json.loads(json.dumps(byid["CIR-12"]))
+    end["id"] = "boundary:D-END"
+    end["properties"].update({"ref_id": "D-END", "sector": "D",
+                              "name": "Settore D: uscita approssimata dal panorama CIR-12",
+                              "evidence_role": "sector_boundary_viewpoint_not_survey_control"})
+    points.extend([start, end])
     layers = {
         "observation_anchors.geojson": points,
         "road_centerlines_partial.geojson": reference_lines,
