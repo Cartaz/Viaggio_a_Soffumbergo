@@ -15,6 +15,8 @@ Fonti verificabili:
 
 **CRS e quote:** le sorgenti GeoJSON sono EPSG:4326 **[longitudine, latitudine]** senza Z. Per misure in metri usare in QGIS **EPSG:7792**, RDN2008/UTM 33N con assi Est-Nord; alcuni prodotti regionali usano **EPSG:6708**, assi Nord-Est. Non scambiare gli assi e non ridefinire il CRS senza trasformazione. Quote **ortometriche ≠ ellissoidiche**. Il programma `tools/prepare_route.py` richiede quote ellissoidiche WGS84 verificate: campionare semplicemente un DTM non rende la quota della *superficie stradale* certificata; annotare anche incertezze e trasformazione orizzontale.
 
+**Aggiornamento:** la guida operativa per **registrare grigliati regionali originali** e **acquisire la rete OSM separatamente dal borgo** è in [ACQUISIZIONE_FONTI_GIS.md](ACQUISIZIONE_FONTI_GIS.md). Un workflow opzionale produce solo un artefatto temporaneo con la rete OSM regionale, senza trasformarla in tracciato certificato.
+
 ## Prima estrazione riproducibile (senza QGIS)
 
 Dalla radice del repository:
