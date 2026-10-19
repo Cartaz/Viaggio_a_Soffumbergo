@@ -2,7 +2,7 @@
 
 ## Coffa e tornanti
 
-Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi.
+Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
 
 **Stato: preparazione tecnica e sorgenti del laboratorio. Nessuna build giocabile o esecuzione in Godot/Blender ancora verificata.** Sono passati 28 test sui calcoli, sulle regole e sugli strumenti geografici; gli script GDScript superano parsing e lint. Il sopralluogo è parziale e non è stata misurata alcuna prestazione del gioco.
 
@@ -59,6 +59,8 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 | [Decisioni](docs/DECISIONI.md) | Richieste vincolanti e scelte progettuali da verificare |
 | [Riferimenti e sopralluogo](docs/RIFERIMENTI_E_SOPRALLUOGO.md) | Riscontri del borgo, fonti, date e lacune |
 | [Riferimenti dei topolini](references/README.md) | Anatomia e occhi, con provenienza dei due allegati |
+| [Bianca e Bernie: catalogo](references/bianca_bernie/README.md) | 20 fonti originali/archivistiche e risorse secondarie, con link e priorità |
+| [Specifica di modellazione](references/bianca_bernie/SPECIFICA_MODELLAZIONE.md) | Vincoli per Blender/Godot, rig, accessori e verifica del design |
 
 ## Stack proposto
 
@@ -70,5 +72,5 @@ Il prossimo passaggio è importare il laboratorio nel motore, collaudare equilib
 
 ## Provenienza e distribuzione
 
-Le fotografie esterne sono collegate nella documentazione, non incluse come texture o asset del gioco. Gli allegati dell’utente restano riferimenti esterni alla repository pubblica; nella documentazione sono descritti i vincoli che fissano. Non è stata scelta una licenza di pubblicazione per il progetto.
+Le fotografie esterne e i disegni Disney di Bianca e Bernie sono collegati nella documentazione, non inclusi come texture o asset del gioco. Gli allegati dell’utente restano riferimenti esterni alla repository pubblica; nella documentazione sono descritti i vincoli che fissano. Non è stata scelta una licenza di pubblicazione per il progetto.
 

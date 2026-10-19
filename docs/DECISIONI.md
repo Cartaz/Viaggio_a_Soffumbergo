@@ -16,6 +16,7 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 | Modifica | Foro nel tetto, albero maestro e coffa |
 | Protagonisti | Lui guida; lei viaggia sulla coffa in abiti da picnic |
 | Anatomia | Corpo e arti come il topo fotografato; mai adattare le lunghezze per raggiungere pedali o volante |
+| Identità visiva | I due protagonisti devono ricordare Bianca e Bernie (Disney, 1977), soprattutto per colori del pelo, espressioni e accessori; base corporea da topo reale, non bipede Disney |
 | Espressività | Occhi ingranditi come sola deformazione anatomica |
 | Comandi | Prolunghe meccaniche e appoggi adatti alle zampe |
 | Obiettivo originario | Completare l’anello senza ribaltarsi |
@@ -36,7 +37,7 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 - Punto preciso e confini della zona verde scelta.
 - Collegamento continuo e documentato fra prato e borgo.
 - Scala metrica, massa e baricentro definitivi dei topolini.
-- Aspetto finale degli abiti e colori del pelo; i riferimenti anatomici e gli occhi sono già fissati.
+- Palette esatta e disegno finale degli abiti da picnic/guida rispetto alle fonti Disney, da approvare nei render e con verifica dei diritti. La direzione cromatica e di personalità è documentata in `references/bianca_bernie/`.
 - Portata dei vincoli elastici della struttura e parametri di aderenza.
 
 ## Cose che non risultano completate

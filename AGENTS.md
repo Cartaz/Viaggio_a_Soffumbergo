@@ -4,7 +4,7 @@ Leggere README.md, docs/DECISIONI.md e la fase attiva di docs/ROADMAP.md prima d
 
 ## Vincoli del prodotto
 
-- Anatomia naturale dei topolini, occhi grandi come unica deformazione anatomica.
+- Anatomia naturale dei topolini, occhi grandi come unica deformazione anatomica. Bianca e Bernie sono riferimenti per palette, volti, costumi e personalità, non per modificare la base anatomica quadrupede; consultare `references/bianca_bernie/`.
 - Non allungare le ossa o stirare il rig tramite IK. Adattare seduta, prolunghe meccaniche e appoggi.
 - Yaris Hybrid MY22 Trend italiana rossa senza optional aggiuntivi.
 - Valle è la meta e ha priorità di fedeltà; le località secondarie possono essere generiche.

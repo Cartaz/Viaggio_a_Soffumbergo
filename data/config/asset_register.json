@@ -2,12 +2,149 @@
   "schema_version": 1,
   "status": "production_queue_not_finished_assets",
   "assets": [
-    {"id": "CAR-YARIS-TREND22", "priority": "P1", "status": "envelope_generator_only", "requirements": ["3940x1745x1500 mm envelope; verify against MY22 body", "16 inch alloy 195/55 R16", "single-colour red roof", "body-colour handles and mirrors", "standard glass, no rear privacy option", "MY22 Trend LED lamps; exact shapes from Toyota references", "black cloth interior", "actual roof passage and structural mast anchorage"], "missing": ["faithful bodywork", "interior measurements", "UV and final materials", "door hinges and pedal mechanism fit"]},
-    {"id": "MOUSE-DRIVER", "priority": "P1", "status": "unapproved_parametric_proxy", "requirements": ["reference-photo anatomy", "uniform scale", "larger eyes only", "fixed-length limbs", "quadruped locomotion", "paws and thin tail"], "missing": ["silhouette approval", "metric scale", "final mass", "skinning and rig", "seat, steering and pedal reach tests"]},
-    {"id": "MOUSE-PASSENGER", "priority": "P1", "status": "unapproved_parametric_proxy", "requirements": ["same anatomy rules", "picnic outfit", "travel on crow's nest", "climb by reachable ladder supports"], "missing": ["outfit", "rig", "climb/contact animations", "dynamic response with reciprocal forces"]},
-    {"id": "VAL-CHURCH", "priority": "P3", "status": "partial_exterior_observed_not_modeled", "osm_way": 36686356, "requirements": ["stone facade with three arches", "semicircular upper window", "central portal and two low barred windows", "adjacent balcony house and relative layout"], "sources": ["https://commons.wikimedia.org/wiki/File:Faedis_-_Valle_-_Chiesa_1.jpg", "https://commons.wikimedia.org/wiki/File:Faedis_-_Valle_-_Chiesa_-_2.jpg"], "missing": ["metric dimensions", "rear and occluded sides", "verified terrain fit"]},
-    {"id": "VAL-BELLTOWER", "priority": "P3", "status": "partial_exterior_observed_not_modeled", "requirements": ["freestanding stone tower", "clock", "paired bell openings", "octagonal dome and cross", "position relative to church"], "sources": ["https://commons.wikimedia.org/wiki/File:Faedis_-_Valle_-_Chiesa_-_2.jpg"], "missing": ["height and footprint match", "all sides"]},
-    {"id": "VAL-PIAZZA", "priority": "P3", "status": "partial_exterior_observed_not_modeled", "requirements": ["paved forecourt", "steps, retaining walls and railings where verified", "no permanent festival tables copied from old photos"], "missing": ["continuous pedestrian route", "steps dimensions", "facade census"]},
-    {"id": "PV-01", "priority": "P3", "status": "observed_candidate_not_confirmed", "requirements": ["grass area below village near via Prestento", "parking maneuver", "road verge and pedestrian access"], "missing": ["user's exact preferred grass area", "boundaries and grade", "continuous foot access verification"]}
+    {
+      "id": "CAR-YARIS-TREND22",
+      "priority": "P1",
+      "status": "envelope_generator_only",
+      "requirements": [
+        "3940x1745x1500 mm envelope; verify against MY22 body",
+        "16 inch alloy 195/55 R16",
+        "single-colour red roof",
+        "body-colour handles and mirrors",
+        "standard glass, no rear privacy option",
+        "MY22 Trend LED lamps; exact shapes from Toyota references",
+        "black cloth interior",
+        "actual roof passage and structural mast anchorage"
+      ],
+      "missing": [
+        "faithful bodywork",
+        "interior measurements",
+        "UV and final materials",
+        "door hinges and pedal mechanism fit"
+      ]
+    },
+    {
+      "id": "MOUSE-DRIVER",
+      "priority": "P1",
+      "status": "unapproved_parametric_proxy",
+      "requirements": [
+        "reference-photo anatomy",
+        "uniform scale",
+        "larger eyes only",
+        "fixed-length limbs",
+        "quadruped locomotion",
+        "paws and thin tail",
+        "Bernard/Bernie-inspired visual identity (warm brown-grey fur; cautious eye/brow expression; practical cap and red-orange garment), natural mouse body retained"
+      ],
+      "missing": [
+        "silhouette approval",
+        "metric scale",
+        "final mass",
+        "skinning and rig",
+        "seat, steering and pedal reach tests",
+        "approved Bernard-inspired head/color/outfit design"
+      ],
+      "sources": [
+        "references/bianca_bernie/sources.json#BB-01",
+        "references/bianca_bernie/sources.json#BB-03",
+        "references/bianca_bernie/sources.json#BB-06",
+        "references/bianca_bernie/sources.json#BB-13"
+      ]
+    },
+    {
+      "id": "MOUSE-PASSENGER",
+      "priority": "P1",
+      "status": "unapproved_parametric_proxy",
+      "requirements": [
+        "same anatomy rules",
+        "picnic outfit",
+        "travel on crow's nest",
+        "climb by reachable ladder supports",
+        "Miss Bianca-inspired visual identity (cream fur; pink nose/ears; elegant eyelids; purple/pink headwear and bow), natural mouse body retained"
+      ],
+      "missing": [
+        "outfit",
+        "rig",
+        "climb/contact animations",
+        "dynamic response with reciprocal forces",
+        "approved Bianca-inspired head/color/picnic outfit design"
+      ],
+      "sources": [
+        "references/bianca_bernie/sources.json#BB-02",
+        "references/bianca_bernie/sources.json#BB-03",
+        "references/bianca_bernie/sources.json#BB-09",
+        "references/bianca_bernie/sources.json#BB-13"
+      ]
+    },
+    {
+      "id": "VAL-CHURCH",
+      "priority": "P3",
+      "status": "partial_exterior_observed_not_modeled",
+      "osm_way": 36686356,
+      "requirements": [
+        "stone facade with three arches",
+        "semicircular upper window",
+        "central portal and two low barred windows",
+        "adjacent balcony house and relative layout"
+      ],
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Faedis_-_Valle_-_Chiesa_1.jpg",
+        "https://commons.wikimedia.org/wiki/File:Faedis_-_Valle_-_Chiesa_-_2.jpg"
+      ],
+      "missing": [
+        "metric dimensions",
+        "rear and occluded sides",
+        "verified terrain fit"
+      ]
+    },
+    {
+      "id": "VAL-BELLTOWER",
+      "priority": "P3",
+      "status": "partial_exterior_observed_not_modeled",
+      "requirements": [
+        "freestanding stone tower",
+        "clock",
+        "paired bell openings",
+        "octagonal dome and cross",
+        "position relative to church"
+      ],
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Faedis_-_Valle_-_Chiesa_-_2.jpg"
+      ],
+      "missing": [
+        "height and footprint match",
+        "all sides"
+      ]
+    },
+    {
+      "id": "VAL-PIAZZA",
+      "priority": "P3",
+      "status": "partial_exterior_observed_not_modeled",
+      "requirements": [
+        "paved forecourt",
+        "steps, retaining walls and railings where verified",
+        "no permanent festival tables copied from old photos"
+      ],
+      "missing": [
+        "continuous pedestrian route",
+        "steps dimensions",
+        "facade census"
+      ]
+    },
+    {
+      "id": "PV-01",
+      "priority": "P3",
+      "status": "observed_candidate_not_confirmed",
+      "requirements": [
+        "grass area below village near via Prestento",
+        "parking maneuver",
+        "road verge and pedestrian access"
+      ],
+      "missing": [
+        "user's exact preferred grass area",
+        "boundaries and grade",
+        "continuous foot access verification"
+      ]
+    }
   ]
 }

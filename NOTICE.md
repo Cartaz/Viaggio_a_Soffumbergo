@@ -10,3 +10,5 @@ La base geografica in `data/geography/osm_survey.geojson`, l’inventario che ne
 La mappa è una rappresentazione planimetrica della base OSM; non contiene immagini Google. I punti di sopralluogo riportano posizioni approssimate dei panorami osservati e collegamenti alla fonte; non sono confini catastali o un’autorizzazione al parcheggio.
 
 Fotografie Wikimedia, viste Google e documenti Toyota sono riferimenti collegati. Non sono distribuiti come texture o asset. Le licenze delle fotografie indicate nel dossier rimangono proprie delle fotografie. I marchi Toyota/Yaris appartengono ai rispettivi titolari; il progetto è indipendente.
+
+I riferimenti ai personaggi Bianca e Bernie (*The Rescuers*, Disney 1977/1990) sono catalogati in `references/bianca_bernie/`: i collegamenti a model sheet, concept, cel, maquette e schede d'asta non costituiscono autorizzazione a ridistribuire immagini o personaggi. In questa repository pubblica si registrano soltanto URL, note di analisi e requisiti originali. Qualsiasi distribuzione futura di personaggi riconoscibili deve essere valutata rispetto ai diritti dei titolari.

@@ -1,10 +1,36 @@
 {
   "schema_version": 1,
   "status": "anatomy_blockout_requires_reference_matching",
-  "uniform_scale": 1.0,
+  "uniform_scale": 1,
   "eye_scale": 1.35,
   "warning": "Parametric placeholders, not traced or approved anatomy. Adjust whole body uniformly to cabin; never elongate limbs to reach controls.",
-  "segments_m": {"upper_forelimb": 0.10, "lower_forelimb": 0.09, "upper_hindlimb": 0.14, "lower_hindlimb": 0.12},
-  "mechanics": {"pedal_extension_travel_m": 0.04, "pedal_lever_ratio": 2.0, "seat_raise_range_m": [0.0, 0.20]},
-  "rules": {"stretch_ik": false, "locomotion": "quadruped", "hands": "paws", "pose_fit_required_before_final_scale": true}
+  "segments_m": {
+    "upper_forelimb": 0.1,
+    "lower_forelimb": 0.09,
+    "upper_hindlimb": 0.14,
+    "lower_hindlimb": 0.12
+  },
+  "mechanics": {
+    "pedal_extension_travel_m": 0.04,
+    "pedal_lever_ratio": 2,
+    "seat_raise_range_m": [
+      0,
+      0.2
+    ]
+  },
+  "rules": {
+    "stretch_ik": false,
+    "locomotion": "quadruped",
+    "hands": "paws",
+    "pose_fit_required_before_final_scale": true
+  },
+  "art_direction": {
+    "status": "reference_selected_not_modeled",
+    "catalog": "references/bianca_bernie/sources.json",
+    "modeling_spec": "references/bianca_bernie/SPECIFICA_MODELLAZIONE.md",
+    "driver_inspiration": "Bernard (The Rescuers, 1977)",
+    "passenger_inspiration": "Miss Bianca (The Rescuers, 1977)",
+    "constraint": "Original natural-mouse anatomy + enlarged eyes only; resemblance from colors, features, expression and clothes",
+    "source_images_embedded": false
+  }
 }

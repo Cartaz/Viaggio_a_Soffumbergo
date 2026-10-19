@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "curated_on": "2026-10-19",
+  "scope": "The Rescuers (1977) e The Rescuers Down Under (1990)",
+  "external_assets_only": true,
+  "repository_is_public": true,
+  "rights": "Immagini e personaggi Disney: copyright dei titolari. Link documentali; nessuna licenza di redistribuzione conferita.",
+  "sources": [
+    {
+      "id": "BB-01",
+      "personaggi": [
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "model_sheet",
+      "priorita": "A",
+      "titolo": "Bernard model sheet — disegni di Ollie Johnston",
+      "url": "https://disney.fandom.com/wiki/The_Rescuers/Gallery",
+      "uso": "Costruzione di muso, orecchie, frontale/tre quarti e coerenza delle pose",
+      "attendibilita": "catalogazione della tavola nella sezione Character designs; visione da verificare"
+    },
+    {
+      "id": "BB-02",
+      "personaggi": [
+        "Bianca"
+      ],
+      "anno": 1977,
+      "classe": "model_sheet",
+      "priorita": "A",
+      "titolo": "Miss Bianca model sheet — disegni di Ollie Johnston",
+      "url": "https://disney.fandom.com/wiki/The_Rescuers/Gallery",
+      "uso": "Volto, orecchie, occhi e espressività; non ricavarne misure metriche",
+      "attendibilita": "catalogazione della tavola nella sezione Character designs; visione da verificare"
+    },
+    {
+      "id": "BB-03",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "character_study",
+      "priorita": "A",
+      "titolo": "Coppia di studi firmati Ollie Johnston — tre pose intere per ciascuno",
+      "url": "https://comics.ha.com/itm/animation-art/model-sheet/the-rescuers-bernard-and-bianca-pair-of-character-study-drawing-signed-by-ollie-johnston-walt-disney-1977-/a/40293-84428.s",
+      "uso": "Pose, gestualità, linee di forza, differenze espressive",
+      "attendibilita": "scheda d'asta con provenienza Ollie Johnston"
+    },
+    {
+      "id": "BB-04",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "model_sheet",
+      "priorita": "A",
+      "titolo": "Otto model sheet studio; uno include Bianca e due pose di Bernard",
+      "url": "https://comics.ha.com/itm/animation-art/model-sheet/the-rescuers-studio-model-sheet-print-group-of-8-walt-disney-1977-total-8-items-/a/7196-97236.s",
+      "uso": "Confronto silhouette sullo stesso foglio; eventuale riscontro scala relativa",
+      "attendibilita": "lotto d'asta dagli archivi Joe Hale"
+    },
+    {
+      "id": "BB-05",
+      "personaggi": [
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "model_sheet",
+      "priorita": "A",
+      "titolo": "Bernard production model sheet, fotostampa 11 × 14 pollici",
+      "url": "https://www.untitledartgallery.com/the-rescuers",
+      "uso": "Linee e caratteristiche del personaggio 1977 (voce SOLD - Bernard Model Sheet)",
+      "attendibilita": "galleria commerciale di materiale di produzione"
+    },
+    {
+      "id": "BB-06",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "concept_studies",
+      "priorita": "A",
+      "titolo": "Art of the Rescuers — vasta galleria studi preparatori",
+      "url": "https://characterdesignreferences.com/art-of-animation-9/art-of-the-rescuers",
+      "uso": "Costruzione del muso, viste laterali/tre quarti, cappelli, stoffe, espressioni",
+      "attendibilita": "raccolta secondaria; attribuzione per singola immagine non sempre verificata"
+    },
+    {
+      "id": "BB-07",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "concept_study",
+      "priorita": "B",
+      "titolo": "Schizzo firmato Dale Baer dei due topolini",
+      "url": "https://www.storiedipaperi.com/2021/01/17/si-e-spento-dale-baer-storico-animatore-della-disney/",
+      "uso": "Confronto leggibilità della coppia, cappello/giacca, abiti",
+      "attendibilita": "riproduzione in articolo commemorativo"
+    },
+    {
+      "id": "BB-08",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "concept_study",
+      "priorita": "B",
+      "titolo": "Ken Anderson — Bianca e Bernard alla Rescue Aid Society",
+      "url": "https://comics.ha.com/itm/animation-art/concept-art/the-rescuers-bianca-and-bernard-at-rescue-aid-society-concept-drawing-by-ken-anderson-walt-disney-1977-/a/7482-18564.s",
+      "uso": "Costumi, personalità e gesti in interazione",
+      "attendibilita": "scheda d'asta attribuita alla collezione Andreas Deja"
+    },
+    {
+      "id": "BB-09",
+      "personaggi": [
+        "Bianca"
+      ],
+      "anno": 1977,
+      "classe": "maquette_3d",
+      "priorita": "A",
+      "titolo": "Miss Bianca Animator's Maquette (1977)",
+      "url": "https://www.artnet.com/artists/walt-disney-studios/the-rescuers-miss-bianca-animators-maquette-walt-lwZU6lAp-t6UrrYYQhFldg2",
+      "uso": "Traduzione di forme da disegno a volume; fotografie visibili da verificare",
+      "attendibilita": "scheda ArtNet dell'oggetto; non necessariamente viste multiple"
+    },
+    {
+      "id": "BB-10",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1990,
+      "classe": "maquette_3d",
+      "priorita": "A",
+      "titolo": "Tre director's maquettes di Bianca, Bernard e Jake (1990)",
+      "url": "https://www.ha.com/c/search/results.zx?archive_state=5327&mode=archive&sb=1&si=2&sold_status=1526&term=The+Rescuers",
+      "uso": "Relazione volumetrica testa/torace, orecchie e muso; trovare lotto #16038",
+      "attendibilita": "archivio d'asta, 11 dicembre 2023, lotto 16038; link alla ricerca"
+    },
+    {
+      "id": "BB-11",
+      "personaggi": [
+        "Bianca"
+      ],
+      "anno": 1990,
+      "classe": "character_design",
+      "priorita": "A",
+      "titolo": "Quattro studi di Miss Bianca di Alvaro Arce",
+      "url": "https://comics.ha.com/itm/animation-art/concept-art/the-rescuers-down-under-miss-bianca-character-design-art-group-of-4-walt-disney-1990-total-4-original-art-/a/7207-97264.s",
+      "uso": "Espressioni, evoluzione silhouette, costume da viaggio; include sette figure su model sheet",
+      "attendibilita": "scheda d'asta e provenienza collezione Alvaro Arce"
+    },
+    {
+      "id": "BB-12",
+      "personaggi": [
+        "Bernie"
+      ],
+      "anno": 1990,
+      "classe": "model_sheet",
+      "priorita": "B",
+      "titolo": "Bernard model sheet 1990, production #0505, più viste",
+      "url": "https://www.pinterest.com/pin/bernard-model-sheet-the-rescuers-disney--359865826445937043/",
+      "uso": "Viste anteriori, posteriori e pose; verifica con altro documento prima di considerarlo canonico",
+      "attendibilita": "ripubblicazione Pinterest; provenienza della scansione non verificata"
+    },
+    {
+      "id": "BB-13",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "production_cel",
+      "priorita": "A",
+      "titolo": "Production cel: Bianca con mantellina viola e Bernard in impermeabile giallo",
+      "url": "https://vegalleries.com/art/walt-disney/148/the-rescuers-1977/rescuers-production-cel-id-mayrescuers17535",
+      "uso": "Colori qualitativi di pelo, naso, orecchie e stoffe sotto luci della scena",
+      "attendibilita": "galleria specializzata in cel originali"
+    },
+    {
+      "id": "BB-14",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "production_cels",
+      "priorita": "A",
+      "titolo": "Cels originali, inclusi Bianca, Bernie e un model sheet Bernard",
+      "url": "https://www.untitledartgallery.com/the-rescuers",
+      "uso": "Palette, lineart, consistenza nelle pose; campioni di scene multiple",
+      "attendibilita": "galleria specializzata di opere originali"
+    },
+    {
+      "id": "BB-15",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "production_cel",
+      "priorita": "A",
+      "titolo": "Tre cel di produzione — gruppo Bernard/Bianca/Medusa",
+      "url": "https://comics.ha.com/itm/animation-art/production-cel/the-rescuers-bernard-bianca-and-madame-medusa-group-of-3-animation-production-cels-walt-disney-1977-/a/40274-81002.s",
+      "uso": "Verifica del colore reale dipinto, senza ricavare hex assoluti",
+      "attendibilita": "scheda d'asta di cel Disney originali"
+    },
+    {
+      "id": "BB-16",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1990,
+      "classe": "production_cel",
+      "priorita": "B",
+      "titolo": "CAPS color test print — personaggi in ambiente roccioso",
+      "url": "https://vegalleries.com/art/walt-disney/578/the-rescuers-down-under-1990/rescuers-down-under-caps-color-test-print-id-aprrescuers18258",
+      "uso": "Riflessi del pelo e dei costumi 1990; immagine d'ambiente non color chart",
+      "attendibilita": "galleria di opera di produzione"
+    },
+    {
+      "id": "BB-17",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1990,
+      "classe": "production_cel",
+      "priorita": "B",
+      "titolo": "CAPS test print — coppia seduta nella scatola di sardine",
+      "url": "https://vegalleries.com/art/walt-disney/578/the-rescuers-down-under-1990/rescuers-down-under-caps-test-print-id-octrescuers19318",
+      "uso": "Riferimento a postura seduta insieme e dimensioni relative, non misure assolute",
+      "attendibilita": "galleria di opera di produzione"
+    },
+    {
+      "id": "BB-18",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "storyboard",
+      "priorita": "B",
+      "titolo": "Storyboard dei due in volo (nove riquadri, archivio Johnston)",
+      "url": "https://comics.ha.com/itm/animation-art/production-drawing/the-rescuers-storyboard-featuring-bianca-and-bernard-walt-disney-1977-/a/342618-91031.s",
+      "uso": "Relazione tra personaggi e micro-espressioni; non è una tavola ortografica",
+      "attendibilita": "scheda d'asta con provenienza Ollie Johnston"
+    },
+    {
+      "id": "BB-19",
+      "personaggi": [
+        "Bianca"
+      ],
+      "anno": 1977,
+      "classe": "concept_study",
+      "priorita": "B",
+      "titolo": "Bianca alla Rescue Aid Society, storyboard/concept originale",
+      "url": "https://comics.ha.com/itm/animation-art/concept-art/the-rescuers-bianca-at-rescue-aid-society-and-evinrude-story-concept-drawing-group-of-2-walt-disney-1977-/a/7398-20239.s",
+      "uso": "Entrata in scena e portamento di Bianca",
+      "attendibilita": "scheda d'asta di disegno di produzione"
+    },
+    {
+      "id": "BB-20",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1990,
+      "classe": "concept_studies",
+      "priorita": "B",
+      "titolo": "Alvaro Arce — concept study Bianca/Bernard gruppo di 3",
+      "url": "https://comics.ha.com/itm/animation-art/concept-art/the-rescuers-down-under-miss-bianca-and-bernard-character-design-art-group-of-3-walt-disney-1990-total-3/a/7207-97265.s",
+      "uso": "Studi preliminari, possibili variazioni/non canonici; confrontare con produzione",
+      "attendibilita": "titolo della scheda, descrizione ambigua: verifica manuale necessaria"
+    }
+  ]
+}
