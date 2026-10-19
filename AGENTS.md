@@ -1,26 +1,28 @@
-# Indicazioni per lavorare su Coffa e tornanti
+# AGENTS.md — Viaggio a Soffumbergo / Coffa e tornanti
 
-Leggere README.md, docs/DECISIONI.md e la fase attiva di docs/ROADMAP.md prima di modificare il progetto. Il documento completo è docs/PROGETTO.md.
+## Mandato operativo
+Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere conferme per ogni attività ordinaria. Prima di intervenire leggi `README.md`, `docs/DECISIONI.md`, la fase pertinente di `docs/ROADMAP.md` e questo file; consulta `docs/PROGETTO.md` per le specifiche complete. Lavora per piccoli incrementi verificabili: ispeziona, implementa, prova, correggi, documenta e registra le modifiche. Non dichiarare completato ciò che è soltanto progettato.
 
-## Vincoli del prodotto
+## Vincoli inderogabili
+- Esperienza: da Faedis verso Valle di Soffumbergo tramite l'anello indicato dall'utente (circa 20 km), sosta nel prato sotto il borgo, discesa dall'auto, visita libera a quattro zampe e ritorno completando l'anello senza ribaltarsi. La passeggera segue il giocatore nel borgo e deve tornare sulla coffa prima della ripartenza.
+- Massima fedeltà documentata a **Valle di Soffumbergo** (chiesa, campanile, piazzetta, accessi, panorami); Faedis e località intermedie possono essere più generiche. Non inventare facciate, scorciatoie o quote presentandole come osservate. Il prato PV-01 è **solo candidato**.
+- Veicolo: **Toyota Yaris Hybrid Trend italiana MY 2022 rossa, senza optional**, con foro nel tetto, albero maestro e coffa. Dinamica coerente con massa alta, sospensioni e carichi; nessun ribaltamento pilotato da soglie arbitrarie.
+- Personaggi: lui guidatore, lei passeggera. Anatomia da topo naturale secondo `IMG_8548.webp`, **solo occhi più grandi** secondo `IMG_8549.png`. Bianca e Bernie sono riferimenti per palette, volti, carattere e accessori, non un invito a modificare l'anatomia in bipede. Non allungare ossa o arti: adattare seduta, volante, appoggi e prolunghe meccaniche. Riferimenti privati dell'utente non presenti nella repo pubblica.
+- Non copiare nella repository immagini Disney, screenshot non autorizzati o asset di terzi senza diritti di riuso; non scegliere unilateralmente una licenza o pubblicare release.
 
-- Anatomia naturale dei topolini, occhi grandi come unica deformazione anatomica. Bianca e Bernie sono riferimenti per palette, volti, costumi e personalità, non per modificare la base anatomica quadrupede; consultare `references/bianca_bernie/`.
-- Non allungare le ossa o stirare il rig tramite IK. Adattare seduta, prolunghe meccaniche e appoggi.
-- Yaris Hybrid MY22 Trend italiana rossa senza optional aggiuntivi.
-- Valle è la meta e ha priorità di fedeltà; le località secondarie possono essere generiche.
-- La visita a piedi fa parte del perimetro principale. Preservare parcheggio, discesa dalla coffa e ritorno alla guida.
-- Conservare il giro completo, distinguendo la sosta a Valle dal completamento dell’anello.
+## Mappa dei contenuti (percorsi verificati)
+- **Vincoli e piano:** `docs/DECISIONI.md`, `docs/PROGETTO.md`, `docs/ROADMAP.md`; architettura e coordinate in `docs/ARCHITETTURA.md`.
+- **Personaggi:** `references/README.md`; catalogo di 20 fonti in `references/bianca_bernie/sources.json`, guida in `references/bianca_bernie/README.md` e `SPECIFICA_MODELLAZIONE.md` nella stessa cartella.
+- **Sopralluogo e territorio:** `docs/RIFERIMENTI_E_SOPRALLUOGO.md`; OSM in `data/geography/osm_survey.geojson`, provenienza in `data/geography/provenance.json`; mappa e inventario in `reports/valle_survey_map.svg` e `reports/valle_building_inventory.csv`. Sono dati planimetrici del borgo, non terreno quotato né anello completo.
+- **Parametri:** `data/config/vehicle_lab.json`, `mouse_rig.json`, `asset_register.json` (nella stessa cartella); valori sperimentali, non dimensioni definitive.
+- **Logica testabile senza editor:** `tools/coffa/physics.py`, `session.py`, `geography.py` e `tests/`. Il modello di visita Python non è ancora collegato a Godot.
+- **Godot:** `project.godot` nella radice; scena iniziale `godot/scenes/lab.tscn`; logica in `godot/scripts/` (in particolare `vehicle_lab.gd`, `mouse_locomotion.gd`, `companion_follower.gd`); test preparati in `godot/tests/`.
+- **Blender:** generatori `tools/blender/build_blockout.py` e `build_site_guides.py`; gli output generati sono esclusi dal versionamento.
+- **Collaudi:** `docs/PREPARAZIONE_TECNICA.md` per evidenze/limiti reali, `docs/COLLAUDO_PC.md` per comandi Godot/Blender e criteri di accettazione; diritti e attribuzioni in `NOTICE.md`.
 
-## Metodo e prove
-
-- Non presentare come implementati elementi soltanto pianificati.
-- Distinguere osservazioni dirette, stime e lacune del sopralluogo; citare fonti e date.
-- Non inventare dimensioni metriche da una prospettiva Street View.
-- La dinamica deve derivare da forze, masse, inerzie e contatti; niente ribaltamenti attivati da soglie arbitrarie di velocità.
-- Evitare duplicazioni delle masse durante ingresso/uscita dei personaggi.
-- Ogni fase richiede le verifiche previste nella roadmap prima di essere segnata completa.
-- Non introdurre una licenza di pubblicazione per gli asset di terzi o per i riferimenti dell’utente.
-- Non creare una build fittizia per far apparire il progetto più avanti di quanto sia.
-
-L’utente ha autorizzato tutto lo sviluppo utile senza accesso a Godot e Blender; proseguire su codice, dati e strumenti e prepararne il collaudo sul PC. Non presentare controlli statici come esecuzioni nel motore. Queste indicazioni non estendono l’autorizzazione a pubblicare una release o cambiare la visibilità della repository. Non richiedono lavoro con più agenti.
-
+## Procedura di sviluppo autonomo
+1. Scegli la prima attività non completata della fase attiva in `docs/ROADMAP.md`, rispettando le dipendenze. Se manca una decisione non bloccante, usa un segnaposto dichiarato e continua su un sottocompito verificabile. Chiedi all'utente solo per decisioni irreversibili, scelte estetiche finali, prato preciso, diritti o modifiche sostanziali al perimetro.
+2. Prima di aggiungere file o dipendenze, cerca quanto esiste; conserva interfacce, coordinate e attribuzioni. Per dati geografici registra fonte, data, datum e limiti; distingui osservazione, stima e invenzione artistica.
+3. Dopo ogni modifica al codice esegui `python tools/check_project.py` (test Python, integrità e report). Per GDScript usa anche `requirements-dev.txt` / gdtoolkit. Quando sono disponibili Godot/Blender, **esegui davvero** le prove indicate in `docs/COLLAUDO_PC.md`; conserva log, telemetrie e risultati.
+4. Aggiorna checklist e documentazione con **prove verificabili**. Riporta nei resoconti: file toccati, comandi eseguiti, esiti, limiti, prossima azione. Esegui commit piccoli e descrittivi, senza alterare la visibilità della repository.
+5. Non confondere i 28 test preparatori con test del motore. **Stato al 19/10/2026: nessuna build giocabile né prova reale in Godot/Blender verificata.** Il laboratorio è sintetico; i modelli 3D finali, l'intero circuito e la ricostruzione completa di Valle restano da realizzare.
