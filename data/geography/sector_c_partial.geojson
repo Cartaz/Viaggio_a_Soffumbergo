@@ -1,0 +1,523 @@
+{
+  "type": "FeatureCollection",
+  "name": "sector_C_partial",
+  "coordinate_reference": "EPSG:4326 WGS84 longitude latitude; NO elevations",
+  "attribution": "© OpenStreetMap contributors, ODbL 1.0",
+  "properties": {
+    "sector": "C",
+    "boundaries": "Colloredo / CIR-08 → via Prestento / CIR-09 → bivio Monte Piccat / CIR-11",
+    "app_indicated_distance_km": 4.3,
+    "app_distance_warning": "Rounded routing instructions: 1.0 km + 3.3 km; not a measured geodesic",
+    "osm_source": "data/geography/osm_survey.geojson",
+    "osm_source_way": 547054266,
+    "osm_source_blob_sha": "8a245f3bba6b25a06b2ed0f9fc627d0a4e347718",
+    "osm_length_m": 1736.65,
+    "coverage": "PARTIAL: CIR-08 to CIR-09 to OSM first vertex untraced; OSM last vertex to CIR-11 unverified",
+    "elevation_status": "UNKNOWN",
+    "streetview_status": "three historic spot observations, NOT continuous",
+    "geometry_status": "NOT ready for 3D roads"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "C-OSM-547054266",
+      "properties": {
+        "kind": "road_centerline",
+        "source": "OSM",
+        "source_way": 547054266,
+        "highway": "unclassified",
+        "length_m": 1736.65,
+        "status": "mapped_2d_only",
+        "vertical_profile": "unknown"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.388935,
+            46.1463267
+          ],
+          [
+            13.3890549,
+            46.1465529
+          ],
+          [
+            13.3890631,
+            46.1465992
+          ],
+          [
+            13.3890367,
+            46.1466554
+          ],
+          [
+            13.3889738,
+            46.1468381
+          ],
+          [
+            13.3889475,
+            46.1470475
+          ],
+          [
+            13.389005,
+            46.1472433
+          ],
+          [
+            13.3891016,
+            46.1473439
+          ],
+          [
+            13.3893003,
+            46.1476025
+          ],
+          [
+            13.3893683,
+            46.1476566
+          ],
+          [
+            13.3894139,
+            46.1476825
+          ],
+          [
+            13.3894595,
+            46.147691
+          ],
+          [
+            13.3895224,
+            46.1476889
+          ],
+          [
+            13.3895741,
+            46.1476615
+          ],
+          [
+            13.3896319,
+            46.1475814
+          ],
+          [
+            13.389634,
+            46.1474591
+          ],
+          [
+            13.3896127,
+            46.1473327
+          ],
+          [
+            13.3895802,
+            46.1472456
+          ],
+          [
+            13.3895102,
+            46.1471662
+          ],
+          [
+            13.389421,
+            46.1470657
+          ],
+          [
+            13.3893977,
+            46.1470187
+          ],
+          [
+            13.3894139,
+            46.1469786
+          ],
+          [
+            13.3894332,
+            46.1469646
+          ],
+          [
+            13.3894971,
+            46.146973
+          ],
+          [
+            13.3895366,
+            46.1469997
+          ],
+          [
+            13.3895924,
+            46.1470503
+          ],
+          [
+            13.3897617,
+            46.1472357
+          ],
+          [
+            13.3898246,
+            46.1473088
+          ],
+          [
+            13.3898804,
+            46.1473882
+          ],
+          [
+            13.3898986,
+            46.1474669
+          ],
+          [
+            13.3898946,
+            46.1475491
+          ],
+          [
+            13.3898824,
+            46.1478441
+          ],
+          [
+            13.3898702,
+            46.1480057
+          ],
+          [
+            13.3898469,
+            46.1480753
+          ],
+          [
+            13.3897739,
+            46.1481701
+          ],
+          [
+            13.3897627,
+            46.1482874
+          ],
+          [
+            13.3897739,
+            46.1483844
+          ],
+          [
+            13.3898226,
+            46.148475
+          ],
+          [
+            13.3899138,
+            46.148574
+          ],
+          [
+            13.3900911,
+            46.148762
+          ],
+          [
+            13.3901623,
+            46.1488375
+          ],
+          [
+            13.3901805,
+            46.1488684
+          ],
+          [
+            13.3902446,
+            46.1488996
+          ],
+          [
+            13.3903529,
+            46.1489443
+          ],
+          [
+            13.3904361,
+            46.1490075
+          ],
+          [
+            13.3904746,
+            46.1490791
+          ],
+          [
+            13.3905131,
+            46.1491691
+          ],
+          [
+            13.3904989,
+            46.1493011
+          ],
+          [
+            13.3904563,
+            46.1494416
+          ],
+          [
+            13.3903854,
+            46.1495526
+          ],
+          [
+            13.3903448,
+            46.1497845
+          ],
+          [
+            13.3902515,
+            46.1499179
+          ],
+          [
+            13.3902373,
+            46.1500598
+          ],
+          [
+            13.3902483,
+            46.150345
+          ],
+          [
+            13.3902133,
+            46.15065
+          ],
+          [
+            13.3902474,
+            46.1507904
+          ],
+          [
+            13.3903093,
+            46.1508642
+          ],
+          [
+            13.3903914,
+            46.1509408
+          ],
+          [
+            13.3905811,
+            46.1510468
+          ],
+          [
+            13.3910643,
+            46.1512271
+          ],
+          [
+            13.3912736,
+            46.1513243
+          ],
+          [
+            13.3913669,
+            46.1513658
+          ],
+          [
+            13.3914318,
+            46.151422
+          ],
+          [
+            13.3914906,
+            46.1515091
+          ],
+          [
+            13.3915302,
+            46.1516383
+          ],
+          [
+            13.391585,
+            46.151724
+          ],
+          [
+            13.391677,
+            46.1518165
+          ],
+          [
+            13.3917239,
+            46.1519088
+          ],
+          [
+            13.3917573,
+            46.1519881
+          ],
+          [
+            13.3917373,
+            46.1521416
+          ],
+          [
+            13.3917083,
+            46.1523847
+          ],
+          [
+            13.391547,
+            46.1528768
+          ],
+          [
+            13.3914643,
+            46.1530257
+          ],
+          [
+            13.391441,
+            46.1531911
+          ],
+          [
+            13.3914116,
+            46.1533685
+          ],
+          [
+            13.3914217,
+            46.153679
+          ],
+          [
+            13.3912883,
+            46.1538933
+          ],
+          [
+            13.39117,
+            46.15419
+          ],
+          [
+            13.3911459,
+            46.1542957
+          ],
+          [
+            13.3911767,
+            46.1544067
+          ],
+          [
+            13.3913067,
+            46.1551983
+          ],
+          [
+            13.39168,
+            46.1556517
+          ],
+          [
+            13.3920688,
+            46.1559781
+          ],
+          [
+            13.3921462,
+            46.15606
+          ],
+          [
+            13.3921857,
+            46.1561322
+          ],
+          [
+            13.3921712,
+            46.156257
+          ],
+          [
+            13.392106,
+            46.1563435
+          ],
+          [
+            13.3917811,
+            46.1565853
+          ],
+          [
+            13.3917699,
+            46.1566926
+          ],
+          [
+            13.3918138,
+            46.1568378
+          ],
+          [
+            13.3918635,
+            46.1570288
+          ],
+          [
+            13.3919886,
+            46.1574568
+          ],
+          [
+            13.3922759,
+            46.1584393
+          ],
+          [
+            13.3923063,
+            46.1589161
+          ],
+          [
+            13.3923165,
+            46.158953
+          ],
+          [
+            13.3923393,
+            46.1589734
+          ],
+          [
+            13.3924178,
+            46.1590017
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-08",
+      "properties": {
+        "kind": "panorama_reference",
+        "source": "Street View links from user's 2026-10-19 dossier; not re-observed",
+        "image_date": "2026-03",
+        "original_step": 9,
+        "observation": "Colloredo: bivio presso case, muro, bacheca, margini erbosi; strada senza mezzeria",
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=sUkLbqb6kVahRI6qFIMwjA&viewpoint=46.1345686%2C13.3838913"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3838913,
+          46.1345686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-09",
+      "properties": {
+        "kind": "panorama_reference",
+        "source": "Street View links from user's 2026-10-19 dossier; not re-observed",
+        "image_date": "2026-03",
+        "original_step": 10,
+        "observation": "Via Prestento: asfalto senza mezzeria, bosco e margine sterrato a destra",
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=4JvmsXRN5WUW20jnlf6hnA&viewpoint=46.1369502%2C13.3913328"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3913328,
+          46.1369502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-11",
+      "properties": {
+        "kind": "panorama_reference",
+        "source": "Street View links from user's 2026-10-19 dossier; not re-observed",
+        "image_date": "2026-03",
+        "original_step": 11,
+        "observation": "Bivio superiore: ringhiera su pilastrini, muretto e segnaletica; svolta successiva a destra verso Monte Piccat",
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=VG6N0zxqJ7PLJ6BbJX5OWA&viewpoint=46.1588292%2C13.3922833"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3922833,
+          46.1588292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "C-MAP-01",
+      "properties": {
+        "kind": "unverified_curve_candidate",
+        "source_way": 547054266,
+        "progress_from_osm_start_m": 172,
+        "vertex_index": 12,
+        "status": "requires visual entrance/apex/exit verification",
+        "not_confirmed_hairpin": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3895224,
+          46.1476889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "C-MAP-02",
+      "properties": {
+        "kind": "unverified_curve_candidate",
+        "source_way": 547054266,
+        "progress_from_osm_start_m": 260.5,
+        "vertex_index": 22,
+        "status": "requires visual entrance/apex/exit verification",
+        "not_confirmed_hairpin": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3894332,
+          46.1469646
+        ]
+      }
+    }
+  ]
+}
