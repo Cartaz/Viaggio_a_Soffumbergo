@@ -1,8 +1,12 @@
 # Ingestione delle fonti geografiche — 20 ottobre 2026
 
-**Stato verificabile:** strumenti di acquisizione e controllo predisposti; **nessun DTM locale acquisito, nessuna rete stradale OSM regionale scaricata in questa sessione**, perché il runtime non ha connettività diretta verso i server cartografici. I test di importazione usano piccoli dataset artificiali.
+**Stato verificabile:** **nessun DTM regionale acquisito**. La rete OSM regionale è stata **scaricata realmente tramite GitHub Actions**; il candidato chiuso 2D per tutti i sette settori è stato salvato e testato. I dati persistenti sono in `data/geography/osm_regional_roads_20261020.geojson` e `data/geography/circuito_osm_candidate_20261020.geojson`. Vedere [rapporto con metriche e limiti](TRACCIATO_OSM_CANDIDATO_20261020.md). Il runtime locale continua a non avere connettività GIS diretta, ma il job GitHub sì. I test comprendono fixture sintetiche **e riproduzione del dataset reale**.
 
 Il tracciato dell'utente rimane quello fissato in `docs/CIRCUITO_SOPRALLUOGO.md`; nessuna scorciatoia o percorso turistico alternativo lo sostituisce.
+
+## Risultato OSM già disponibile
+
+Il job [GitHub Actions](https://github.com/Cartaz/Viaggio_a_Soffumbergo/actions/runs/39337016363) ha acquisito 1.149 ways stradali (821 candidati automobilistici preliminari). Un secondo job ha salvato la rete e la polilinea candidata OSM (18.867,6 m) nella repository; non serve riscaricare l'estratto per aprirla in QGIS. I comandi di download descritti più sotto restano disponibili per futuri aggiornamenti, mantenendo sempre i vecchi dati e la provenienza. **Nessuna quota disponibile.**
 
 ## Dati ufficiali FVG
 
