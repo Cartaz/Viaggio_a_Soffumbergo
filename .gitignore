@@ -3,6 +3,7 @@
 *.tmp
 *.log
 builds/
+/build/
 exports/
 captures/
 .env
