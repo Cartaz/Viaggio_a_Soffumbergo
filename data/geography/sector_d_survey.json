@@ -3,7 +3,6 @@
   "survey_sector": "D",
   "sector_label": "Borgo alto — Valle di Soffumbergo",
   "mapping_status": "preliminary_planimetric_inventory_not_complete_field_survey",
-  "built_utc": "2026-10-19T22:15:00Z",
   "scope_note": "Entire current Valle OSM extract inventoried. This is NOT a verified formal boundary of sector D; CIRCUITO_SOPRALLUOGO.md from ChatGPT Project was not accessible at generation time.",
   "sources": {
     "osm_dataset": "data/geography/osm_survey.geojson",
@@ -2502,5 +2501,6 @@
     "No verified facade inventory for 91 building footprints",
     "No verified continuous walking path from PV-01",
     "No Godot/Blender sector D integration or tests"
-  ]
+  ],
+  "prepared_local_date": "2026-10-20"
 }
