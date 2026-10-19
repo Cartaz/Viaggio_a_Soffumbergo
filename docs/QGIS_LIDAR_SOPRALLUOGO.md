@@ -28,13 +28,13 @@ Il generatore, senza dipendenze esterne, crea sotto `build/qgis/`:
 
 | File | Contenuto | Limite |
 | --- | --- | --- |
-| `observation_anchors.geojson` | Panorami e segnaposto già censiti; in D, due estremi di riferimento | Non sono punti topografici |
+| `observation_anchors.geojson` | Panorami e segnaposto già censiti; in D, due estremi di riferimento (origine OSM V e panorama CIR-12) | Non sono punti topografici |
 | `road_centerlines_partial.geojson` | Sole polilinee OSM 2D già documentate nei settori C e V | Non è un anello percorribile |
 | `valle_context_roads.geojson` | Tratti OSM del borgo | Non copre le strade di tutto il giro |
 | `valle_footprints.geojson` | Sagome OSM degli edifici | Nessuna facciata o quota verificata |
 | `manifest.json` | Sorgenti, conteggi e limiti | Nessuna pendenza, larghezza o raggio |
 
-Ogni feature conserva `origin_file`, `ref_id`, `evidence_role` e `metric_status`. **Nel settore D non esiste ancora la geometria stradale:** il generatore produce solo i riferimenti CIR-VAL-15 e CIR-12, senza inventare una linea fra loro.
+Ogni feature conserva `origin_file`, `ref_id`, `evidence_role` e `metric_status`. **Nel settore D non esiste ancora la geometria stradale:** il generatore produce solo il vertice iniziale OSM di V-OUTBOUND e il panorama CIR-12, senza inventare una linea fra loro.
 
 ## Operazioni in QGIS
 
