@@ -52,3 +52,13 @@ Fonti di riscontro addizionali: [fotografia della chiesa, YukioSanjo, 2020](http
 ## Provenienza, diritti e riproducibilità
 
 Fonte: `data/geography/provenance.json`; OSM 18/10/2026, EPSG:4326 lon/lat, coordinate senza quote. © OpenStreetMap contributors, [ODbL 1.0](https://www.openstreetmap.org/copyright). Le osservazioni Street View sono riportate come testi e URL dall'allegato del 19 ottobre; nessuna immagine, screenshot o spline stradale è stata copiata da Google. Le sagome degli edifici sono cartografiche, non rilevamenti di facciate. I dati dei settori A, B, C, D, E, F non vengono modificati.
+
+
+## Output ispezionabili della mappatura V
+
+- [Pianta SVG del settore](../reports/sector_v_planimetry.svg): i tratti di andata e ritorno coincidono nella pianta, perché la tappa in piazza richiede di ripercorrere lo stesso asse.
+- [Checklist degli edifici entro 60 m](../reports/sector_v_building_checklist.csv): 53 sagome con gli stessi `VAL-B...` dell'inventario generale; nessuna facciata è segnata come verificata.
+- [Centrolinea GeoJSON](../data/geography/sector_v_route.geojson), [contesto con sagome e accessi](../data/geography/sector_v_context.geojson) e [registro JSON](../data/geography/sector_v_survey.json).
+- [Test di integrità](../tests/test_sector_v.py): verificano l'esatta concatenazione delle way OSM, la geometria del ritorno, i quattro passaggi originali, la conservazione delle geometrie sorgenti e la distinzione tra osservato e ignoto.
+
+La pianta SVG usa spessori grafici puramente simbolici per strada e sentieri: **non equivale a una rappresentazione in scala della larghezza della carreggiata**, che resta ignota. L'esistenza dei sentieri OSM non certifica libertà di accesso, gradini superabili o percorso a piedi continuo dal prato.
