@@ -1,6 +1,6 @@
 # Tracciato di Valle di Soffumbergo — QGIS e LiDAR
 
-Avvio: **20 ottobre 2026**. Stato: **livelli GIS 2D preparabili**, senza DTM acquisito né quote/pendenze verificate. Il sopralluogo virtuale resta parziale; cfr. `docs/CIRCUITO_SOPRALLUOGO.md`.
+Avvio: **20 ottobre 2026**. Stato: **rete e candidato OSM 2D completi topologicamente**, ma da verificare sul percorso reale, **senza DTM acquisito né quote/pendenze verificate**. Il sopralluogo virtuale resta parziale; cfr. `docs/CIRCUITO_SOPRALLUOGO.md`.
 
 ## Fonte e ambito
 
@@ -14,6 +14,10 @@ Fonti verificabili:
 - [QGIS: DEM nella vista 3D, esportazione OBJ](https://docs.qgis.org/3.44/en/docs/user_manual/map_views/3d_map_view.html).
 
 **CRS e quote:** le sorgenti GeoJSON sono EPSG:4326 **[longitudine, latitudine]** senza Z. Per misure in metri usare in QGIS **EPSG:7792**, RDN2008/UTM 33N con assi Est-Nord; alcuni prodotti regionali usano **EPSG:6708**, assi Nord-Est. Non scambiare gli assi e non ridefinire il CRS senza trasformazione. Quote **ortometriche ≠ ellissoidiche**. Il programma `tools/prepare_route.py` richiede quote ellissoidiche WGS84 verificate: campionare semplicemente un DTM non rende la quota della *superficie stradale* certificata; annotare anche incertezze e trasformazione orizzontale.
+
+**Risultato reale:** [rapporto sul circuito candidato di 18.867,6 m](TRACCIATO_OSM_CANDIDATO_20261020.md); `data/geography/circuito_osm_candidate_20261020.geojson` contiene tutte le sezioni A/B/C/V/D/E/F in EPSG:4326 senza altezze. Non è la mesh stradale definitiva.
+
+**Aggiornamento:** la guida operativa per **registrare grigliati regionali originali** e **acquisire la rete OSM separatamente dal borgo** è in [ACQUISIZIONE_FONTI_GIS.md](ACQUISIZIONE_FONTI_GIS.md). Un workflow opzionale produce solo un artefatto temporaneo con la rete OSM regionale, senza trasformarla in tracciato certificato.
 
 ## Prima estrazione riproducibile (senza QGIS)
 
