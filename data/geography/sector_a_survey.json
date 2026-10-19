@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "sector_id": "A",
+  "title": "Bar Al Telefono (Faedis) - SR356 - Campeglio - bivio Monte San Lorenzo",
+  "created_date": "2026-10-20",
+  "source_dossier": {
+    "title": "CIRCUITO_SOPRALLUOGO.md",
+    "session_date": "2026-10-19",
+    "location": "File di progetto ChatGPT; non presente sulla main GitHub al momento della verifica",
+    "original_itinerary_url": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/@46.1487995,13.3345871,13.29z/data=!4m32!4m31!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!1m5!1m1!1s0x477a494d96dac4a9:0x36d43bba7acc9a1a!2m2!1d13.3624124!2d46.1292376!1m5!1m1!1s0x477a4ff4c7df2479:0x1f7cd445ad9b2a26!2m2!1d13.3933096!2d46.1569587!1m5!1m1!1s0x477a48c2e522a62d:0x260709882e6e9861!2m2!1d13.3592542!2d46.1657647!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!3e0?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  "status": "instruction_inventory_complete_visual_continuity_unverified",
+  "horizontal_datum": "WGS84 (EPSG:4326)",
+  "route_polyline": null,
+  "vertical_datum": null,
+  "terrain_model": null,
+  "road_width_m": null,
+  "turn_radii_m": null,
+  "geometric_accuracy": "no_metrologic_survey",
+  "map_reported_full_loop_distance_km": 18.7,
+  "map_reported_full_loop_duration_min": 36,
+  "maneuvers": [
+    {
+      "step": 1,
+      "id": "A-01",
+      "instruction": "Esci dal parcheggio verso SR356",
+      "distance_m_app_rounded": 9,
+      "approx_cumulative_m_from_app_rounded": 9,
+      "verification": "maps_instruction_transcribed_not_field_survey"
+    },
+    {
+      "step": 2,
+      "id": "A-02",
+      "instruction": "Sinistra su SR356",
+      "distance_m_app_rounded": 44,
+      "approx_cumulative_m_from_app_rounded": 53,
+      "verification": "maps_instruction_transcribed_not_field_survey"
+    },
+    {
+      "step": 3,
+      "id": "A-03",
+      "instruction": "Sinistra su via Divisione Julia/SR356",
+      "distance_m_app_rounded": 3400,
+      "approx_cumulative_m_from_app_rounded": 3453,
+      "verification": "maps_instruction_transcribed_not_field_survey"
+    },
+    {
+      "step": 4,
+      "id": "A-04",
+      "instruction": "Sinistra in via Paolo Diacono",
+      "distance_m_app_rounded": 78,
+      "approx_cumulative_m_from_app_rounded": 3531,
+      "verification": "maps_instruction_transcribed_not_field_survey"
+    },
+    {
+      "step": 5,
+      "id": "A-05",
+      "instruction": "Riparti da Campeglio verso via Soffumbergo/SR356",
+      "distance_m_app_rounded": 78,
+      "approx_cumulative_m_from_app_rounded": 3609,
+      "verification": "maps_instruction_transcribed_not_field_survey"
+    },
+    {
+      "step": 6,
+      "id": "A-06",
+      "instruction": "Sinistra su via Soffumbergo/SR356",
+      "distance_m_app_rounded": 400,
+      "approx_cumulative_m_from_app_rounded": 4009,
+      "verification": "maps_instruction_transcribed_not_field_survey"
+    }
+  ],
+  "distance_sum_m_app_rounded": 4009,
+  "anchors_geojson": "data/geography/sector_a_observations.geojson",
+  "anchor_ids": [
+    "A-START",
+    "CIR-02",
+    "CIR-03",
+    "CIR-04",
+    "CIR-05",
+    "CIR-06"
+  ],
+  "gaps": [
+    {
+      "id": "A-GAP-01",
+      "scope": "Bar Al Telefono - uscita sulla SR356 e raccordo a CIR-02 (passaggi 1-2)",
+      "missing": "Sequenza continua di panorami, uscita fisica e ingombro per auto/coffa; la posizione bar proviene dalla tappa Maps.",
+      "step_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "A-GAP-02",
+      "scope": "CIR-02 - CIR-03 sulla SR356 (passaggio 3, 3.4 km arrotondati)",
+      "missing": "Ricognizione panoramica continuativa di incroci intermedi, curve, margini, restringimenti e ingombri alti.",
+      "step_ids": [
+        3
+      ]
+    },
+    {
+      "id": "A-GAP-03",
+      "scope": "Campeglio: tratto andata/ritorno su via Paolo Diacono (passaggi 4-5, 78 m ciascuno)",
+      "missing": "Verifica della percorrenza effettiva fra i campioni CIR-03, CIR-04 e CIR-05 e spazio per manovra.",
+      "step_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "A-GAP-04",
+      "scope": "CIR-05 - CIR-06 sulla SR356 (passaggio 6, 400 m arrotondati)",
+      "missing": "Percorso panoramico continuo fino al bivio con via Monte San Lorenzo.",
+      "step_ids": [
+        6
+      ]
+    }
+  ],
+  "handoff_to_sector_b": {
+    "boundary_panorama_id": "CIR-06",
+    "next_instruction_step": 7,
+    "next_street": "Via Monte San Lorenzo",
+    "next_step_not_part_of_sector_a": true
+  },
+  "design_notes": {
+    "tutorial_start": "Zona presso la partenza da scegliere e misurare prima di definire area sicura e collisioni",
+    "driving": "Partenza, frenata dolce e sterzata progressiva; nessuna difficoltà artificiale o ribaltamento scriptato",
+    "art_style": "Faedis e Campeglio genericamente fedeli ai riferimenti documentati; architetture inventate contrassegnate come interpretazioni, non facciate osservate"
+  },
+  "rights": "Solo dati descrittivi e URL; nessuna immagine Google incorporata. Nessuna geometria stradale ricalcata da Street View.",
+  "sources": [
+    {
+      "name": "CIRCUITO_SOPRALLUOGO.md, progetto ChatGPT",
+      "date": "2026-10-19",
+      "type": "primary_user_project_file"
+    },
+    {
+      "name": "Friuli Venezia Giulia Strade - S.R. 356 di Cividale",
+      "url": "https://www.fvgstrade.it/it/21735/s-r-356-di-cividale",
+      "type": "official_context"
+    }
+  ]
+}
