@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "name": "Settore A - punti di riferimento e campioni Street View, senza polilinea",
+  "description": "Posizioni approssimate riportate nel dossier di progetto; non rappresentano strada continua, quote, limiti o parcheggi misurati.",
+  "coordinate_reference": "EPSG:4326 WGS84 longitude,latitude (no elevation)",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "A-START",
+      "properties": {
+        "name": "Bar Al Telefono, Piazza I Maggio 23 (punto itinerario Maps)",
+        "status": "route_waypoint_only",
+        "source": "Google Maps itinerary waypoint",
+        "imagery_date": null,
+        "source_url": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/@46.1487995,13.3345871,13.29z/data=!4m32!4m31!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!1m5!1m1!1s0x477a494d96dac4a9:0x36d43bba7acc9a1a!2m2!1d13.3624124!2d46.1292376!1m5!1m1!1s0x477a4ff4c7df2479:0x1f7cd445ad9b2a26!2m2!1d13.3933096!2d46.1569587!1m5!1m1!1s0x477a48c2e522a62d:0x260709882e6e9861!2m2!1d13.3592542!2d46.1657647!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!3e0?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+        "notes": "Originario Maps; non è un panorama verificato. Non attesta sagoma o disponibilità di un parcheggio.",
+        "coordinate_quality": "routing_or_panorama_position_only_not_survey_control"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3465502,
+          46.1527301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-02",
+      "properties": {
+        "name": "Faedis: nodo SP15 / via Divisione Julia/SR356",
+        "status": "sampled_panorama",
+        "source": "Google Street View panorama sampled in the 2026-10-19 source dossier",
+        "imagery_date": "2022-07",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=4sUygydoDPHoH_dbPJvPwA&viewpoint=46.1524578,13.3456331",
+        "notes": "Edifici porticati, marciapiedi, imbocco tra edifici e segnaletica orizzontale. Non prova l'intero raccordo dal bar.",
+        "coordinate_quality": "routing_or_panorama_position_only_not_survey_control"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3456331,
+          46.1524578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-03",
+      "properties": {
+        "name": "Campeglio: SR356 / via Paolo Diacono",
+        "status": "sampled_panorama",
+        "source": "Google Street View panorama sampled in the 2026-10-19 source dossier",
+        "imagery_date": "2026-04",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=N239lPyW-lj2m9dKP8b4KQ&viewpoint=46.1285473,13.3621382",
+        "notes": "Incrocio urbano; parapetti gialli presso gradini, edifici laterali, piccola edicola; campione isolato.",
+        "coordinate_quality": "routing_or_panorama_position_only_not_survey_control"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3621382,
+          46.1285473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-04",
+      "properties": {
+        "name": "Campeglio: via Paolo Diacono verso SR356",
+        "status": "sampled_panorama",
+        "source": "Google Street View panorama sampled in the 2026-10-19 source dossier",
+        "imagery_date": "2026-03",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=Aqp-T-SmFdMBgTUmA18V7w&viewpoint=46.1294583,13.3624209",
+        "notes": "Tratto residenziale senza mezzeria, marciapiedi stretti, muro in pietra e recinzioni.",
+        "coordinate_quality": "routing_or_panorama_position_only_not_survey_control"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3624209,
+          46.1294583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-05",
+      "properties": {
+        "name": "Campeglio: via Paolo Diacono / via Soffumbergo",
+        "status": "sampled_panorama",
+        "source": "Google Street View panorama sampled in the 2026-10-19 source dossier",
+        "imagery_date": "2026-03",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=b60bpfSwNiN1Bt-U7ulaBw&viewpoint=46.1287162,13.3623277",
+        "notes": "Innesto a T con STOP, parapetti gialli, fabbricati presso la carreggiata.",
+        "coordinate_quality": "routing_or_panorama_position_only_not_survey_control"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3623277,
+          46.1287162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-06",
+      "properties": {
+        "name": "SR356 / via Monte San Lorenzo, confine A/B",
+        "status": "sampled_panorama",
+        "source": "Google Street View panorama sampled in the 2026-10-19 source dossier",
+        "imagery_date": "2026-04",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=apdNekWQ0-mRaBBCzONB1A&viewpoint=46.1271692,13.3666683",
+        "notes": "Bivio presso casa chiara con balcone; strada principale con mezzeria e marciapiedi; imbocco settore B.",
+        "coordinate_quality": "routing_or_panorama_position_only_not_survey_control"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3666683,
+          46.1271692
+        ]
+      }
+    }
+  ]
+}
