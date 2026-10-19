@@ -15,9 +15,9 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 | Auto | Yaris Hybrid MY 2022 Trend italiana, rossa, senza optional aggiuntivi |
 | Modifica | Foro nel tetto, albero maestro e coffa |
 | Protagonisti | Lui guida; lei viaggia sulla coffa in abiti da picnic |
-| Anatomia | Corpo e arti come il topo fotografato; mai adattare le lunghezze per raggiungere pedali o volante |
-| Identità visiva | I due protagonisti devono ricordare Bianca e Bernie (Disney, 1977), soprattutto per colori del pelo, espressioni e accessori; base corporea da topo reale, non bipede Disney |
-| Espressività | Occhi ingranditi come sola deformazione anatomica |
+| Anatomia | Aggiornamento utente 19/10/2026: corporatura dagli studi, Bianca più affusolata e Bernie compatto; bipedia autorizzata. Mai stirare gli arti per raggiungere i comandi |
+| Identità visiva | Adattare i modelli ai disegni e studi di animazione di Bianca e Bernie (Disney, 1977), comprese silhouette, volti e abiti |
+| Espressività | Occhi ridimensionati e meno sporgenti, con palpebre, sopracciglia e muso adattati agli studi; corporeità bipede autorizzata |
 | Comandi | Prolunghe meccaniche e appoggi adatti alle zampe |
 | Obiettivo originario | Completare l’anello senza ribaltarsi |
 | Repository | Repository creata dall’utente: Cartaz/Viaggio_a_Soffumbergo, pubblica; nessuna modifica alla visibilità |
@@ -42,5 +42,5 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 
 ## Cose che non risultano completate
 
-Nessuna build giocabile verificata, modello 3D definitivo, terreno importato, censimento completo del borgo, rilievo integrale del circuito o benchmark reale. Esistono ora sorgenti del laboratorio, generatori e 28 test indipendenti dagli editor. Le regole della visita sono un modello Python da collegare al 3D. Non confondere controlli statici e prove numeriche con un gioco collaudato.
+Due modelli di studio vestiti generati e renderizzati in Blender; nessuna build giocabile completa verificata, modello 3D definitivo animato, terreno importato, censimento completo del borgo, rilievo integrale del circuito o benchmark reale. Esistono ora sorgenti del laboratorio, generatori e 28 test indipendenti dagli editor. Le regole della visita sono un modello Python da collegare al 3D. Non confondere controlli statici e prove numeriche con un gioco collaudato.
 

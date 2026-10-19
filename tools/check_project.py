@@ -21,6 +21,10 @@ def main():
         ET.parse(p)
     for p in list((ROOT / "godot").rglob("*.gd")) + list((ROOT / "godot").rglob("*.tscn")) + [ROOT / "project.godot"]:
         for resource in re.findall(r'"res://([^"\n]+)"', p.read_text(encoding="utf-8")):
+            # Engine tests create these ignored capture/report outputs on demand.
+            # They are not committed input assets and are absent in a fresh clone.
+            if p.parent == ROOT / "godot" / "tests" and resource.startswith("art/source/generated/"):
+                continue
             if not (ROOT / resource).exists():
                 raise ValueError(f"Missing resource {resource} in {p.relative_to(ROOT)}")
     before = {p: p.read_bytes() for p in (ROOT / "reports").iterdir() if p.suffix in (".json", ".svg", ".csv")}

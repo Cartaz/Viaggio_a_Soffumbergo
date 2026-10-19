@@ -26,55 +26,59 @@
     {
       "id": "MOUSE-DRIVER",
       "priority": "P1",
-      "status": "unapproved_parametric_proxy",
+      "status": "skinned_driving_bracing_lab_animation_verified",
       "requirements": [
-        "reference-photo anatomy",
+        "animation-study silhouette; Bernie compact, Bianca slender",
         "uniform scale",
-        "larger eyes only",
+        "expressive eyes and face adapted to animation studies",
         "fixed-length limbs",
-        "quadruped locomotion",
+        "biped locomotion authorized; animation pending",
         "paws and thin tail",
-        "Bernard/Bernie-inspired visual identity (warm brown-grey fur; cautious eye/brow expression; practical cap and red-orange garment), natural mouse body retained"
+        "Bernard/Bernie-inspired visual identity (warm brown-grey fur; cautious eye/brow expression; practical cap and red-orange garment), biped design authorized by user"
       ],
       "missing": [
         "silhouette approval",
         "metric scale",
         "final mass",
-        "skinning and rig",
-        "seat, steering and pedal reach tests",
-        "approved Bernard-inspired head/color/outfit design"
+        "approved Bernard-inspired head/color/outfit design",
+        "exploration gait and climb animation",
+        "final cabin/ladder contact fit beyond laboratory supports"
       ],
       "sources": [
         "references/bianca_bernie/sources.json#BB-01",
         "references/bianca_bernie/sources.json#BB-03",
         "references/bianca_bernie/sources.json#BB-06",
         "references/bianca_bernie/sources.json#BB-13"
-      ]
+      ],
+      "source_generator": "tools/blender/build_characters.py",
+      "model": "godot/assets/characters/bernie.glb"
     },
     {
       "id": "MOUSE-PASSENGER",
       "priority": "P1",
-      "status": "unapproved_parametric_proxy",
+      "status": "skinned_driving_bracing_lab_animation_verified",
       "requirements": [
         "same anatomy rules",
         "picnic outfit",
         "travel on crow's nest",
         "climb by reachable ladder supports",
-        "Miss Bianca-inspired visual identity (cream fur; pink nose/ears; elegant eyelids; purple/pink headwear and bow), natural mouse body retained"
+        "Miss Bianca-inspired visual identity (cream fur; pink nose/ears; elegant eyelids; purple/pink headwear and bow), biped design authorized by user"
       ],
       "missing": [
-        "outfit",
-        "rig",
         "climb/contact animations",
         "dynamic response with reciprocal forces",
-        "approved Bianca-inspired head/color/picnic outfit design"
+        "approved Bianca-inspired head/color/picnic outfit design",
+        "exploration gait and climb animation",
+        "final cabin/ladder contact fit beyond laboratory supports"
       ],
       "sources": [
         "references/bianca_bernie/sources.json#BB-02",
         "references/bianca_bernie/sources.json#BB-03",
         "references/bianca_bernie/sources.json#BB-09",
         "references/bianca_bernie/sources.json#BB-13"
-      ]
+      ],
+      "source_generator": "tools/blender/build_characters.py",
+      "model": "godot/assets/characters/bianca.glb"
     },
     {
       "id": "VAL-CHURCH",

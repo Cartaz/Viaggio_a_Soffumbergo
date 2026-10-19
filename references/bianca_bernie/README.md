@@ -2,7 +2,7 @@
 
 Ultima ricerca: **19 ottobre 2026**. Personaggi Disney: *The Rescuers* (1977), *The Rescuers Down Under* (1990).
 
-**Obiettivo confermato:** i due topolini del progetto devono ricordare Bianca e Bernie nella palette, nei tratti del volto, negli accessori e nel carattere, conservando le proporzioni corporee da topo naturale delle foto dell'utente. L'unica amplificazione anatomica resta quella degli occhi. Il modello non deve diventare una trasposizione identica del corpo bipede Disney.
+**Obiettivo aggiornato dall’utente il 19 ottobre 2026:** adattare i modelli anche ai disegni e studi di animazione, con abiti compresi. Bernie guida e ha corporatura compatta; Bianca è la vedetta, più affusolata. Postura e locomozione bipedi sono autorizzate. I vecchi vincoli di esclusività quadrupede e di modifica dei soli occhi sono superati; resta il divieto di stirare gli arti per raggiungere i comandi. Vedere [modelli realizzati e limiti](../../docs/PERSONAGGI.md).
 
 ## Dove trovare le immagini
 
@@ -43,7 +43,7 @@ Non ogni studio è un *turnaround* ortografico, e alcune opere raffigurano pose
 
 ## Brief operativo
 
-- [SPECIFICA_MODELLAZIONE.md](SPECIFICA_MODELLAZIONE.md) — interpretazione originale adatta al rig quadrupede, priorità e controlli di accettazione.
+- [SPECIFICA_MODELLAZIONE.md](SPECIFICA_MODELLAZIONE.md) — interpretazione originale adatta al design bipede aggiornato, priorità e controlli di accettazione.
 - [sources.json](sources.json) — manifest elaborabile di tutte le fonti.
 - [../README.md](../README.md) — vincoli dei due riferimenti forniti dall'utente.
 
@@ -52,3 +52,7 @@ Non ogni studio è un *turnaround* ortografico, e alcune opere raffigurano pose
 Disney conserva i diritti sui propri personaggi e disegni; l'accessibilità online, la vendita di un originale o la licenza del testo di una wiki **non trasferiscono** licenze sui disegni. Questa repository pubblica registra URL e note tecniche senza archiviare immagini di produzione Disney. L'eventuale pubblicazione di personaggi troppo riconoscibili richiede una valutazione dei diritti prima della distribuzione. Non usare materiale di terzi come texture, decal o modellazione 1:1 distribuita senza titolo idoneo.
 
 Stato: **catalogo e specifica disponibili; mesh e materiali finali NON ancora prodotti o testati in Blender/Godot**.
+
+## Fonte visualizzata durante la modellazione
+
+[BB-21 — Bernard & Bianca, Andreas Deja](https://andreasdeja.blogspot.com/2013/05/bernard-bianca.html): studi e disegni di Kahl, Thomas e Johnston, consultati il 19 ottobre 2026. Le varianti preliminari sono distinte dalle forme finali.

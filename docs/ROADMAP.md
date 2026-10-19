@@ -1,6 +1,6 @@
 # Roadmap verificabile
 
-Stato attuale: preparazione tecnica e sorgenti del laboratorio, non ancora eseguiti negli editor. Una casella completata richiede una consegna o una prova ispezionabile.
+Stato attuale: laboratorio e modelli di studio vestiti. I personaggi sono stati generati e renderizzati in Blender 4.5.9 LTS; guida/tenuta, IK e mantellina hanno un primo collaudo motore; percorso completo, esplorazione e accettazione finale restano aperti. Una casella completata richiede una consegna o una prova ispezionabile.
 
 ## Consegna preparatoria senza Godot/Blender
 
@@ -33,7 +33,11 @@ Uscita: dossier del percorso e del borgo con copertura esplicita, riferimenti de
 
 ## P1 — Anatomia, abitacolo e laboratorio fisico
 
-- [ ] Bloccare silhouette naturale e dimensioni con scala uniforme.
+- [x] Generare e renderizzare due modelli di studio vestiti: Bernie compatto e Bianca affusolata, bipedi secondo la nuova direzione utente.
+- [x] Prima approvazione visiva dell’utente per i personaggi e gli occhi ridimensionati.
+- [x] Rig, posa di guida, presa sulla coffa e reazioni alle accelerazioni reali, verificati nel laboratorio.
+- [x] Cappelli ridotti con tasche per le orecchie; mantellina animata con braccia e collisioni conservative.
+- [ ] Approvare scala e fitting finale sull’abitacolo fedele.
 - [ ] Progettare seduta e prolunghe dei pedali con arti a lunghezza fissa.
 - [ ] Provare sterzata, frenata ed uscita dalla porta sullo stesso rig.
 - [ ] Implementare telaio, sospensioni, pneumatici e trazione anteriore.
@@ -67,7 +71,7 @@ Uscita: campione giocabile che dimostri insieme stile, guida e passaggio a piedi
 
 - [ ] Ricostruire chiesa, campanile, piazzetta e facciate adiacenti documentate.
 - [ ] Costruire i vicoli e percorsi esterni effettivamente verificati.
-- [ ] Implementare camminata/trotto a quattro zampe, pendenze e gradini.
+- [ ] Implementare camminata/trotto bipedi, pendenze e gradini.
 - [ ] Implementare seguito della compagna e recupero dai blocchi.
 - [ ] Collegare punti panoramici e sosta da picnic.
 - [ ] Gestire salvataggi di visita e ritorno alla guida.

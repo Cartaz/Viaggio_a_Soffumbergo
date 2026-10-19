@@ -278,6 +278,20 @@
       "url": "https://comics.ha.com/itm/animation-art/concept-art/the-rescuers-down-under-miss-bianca-and-bernard-character-design-art-group-of-3-walt-disney-1990-total-3/a/7207-97265.s",
       "uso": "Studi preliminari, possibili variazioni/non canonici; confrontare con produzione",
       "attendibilita": "titolo della scheda, descrizione ambigua: verifica manuale necessaria"
+    },
+    {
+      "id": "BB-21",
+      "personaggi": [
+        "Bianca",
+        "Bernie"
+      ],
+      "anno": 1977,
+      "classe": "animation_design_studies",
+      "priorita": "A",
+      "titolo": "Bernard & Bianca — studi pubblicati da Andreas Deja (16 maggio 2013)",
+      "url": "https://andreasdeja.blogspot.com/2013/05/bernard-bianca.html",
+      "uso": "Tavole visualizzate il 19 ottobre 2026: contrasto fra corporature, occhi, guance, cappelli, linee dei costumi; distinguere concept iniziali e produzione",
+      "attendibilita": "Commento di un animatore Disney; l’articolo distingue Kahl, Thomas e Johnston e le successive varianti. Nessuna misura metrica o palette esatta derivata."
     }
   ]
 }

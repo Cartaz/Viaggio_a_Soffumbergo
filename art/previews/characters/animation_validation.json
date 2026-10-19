@@ -1,0 +1,77 @@
+{
+  "pose_tests": {
+    "driver_grip": 0.0,
+    "failures": [],
+    "lookout_grip": 1.49011611938477e-08,
+    "minimum_cape_arm_clearance_m": 2.42620706560059e-07,
+    "physics_steps_hz": [
+      60,
+      120,
+      240
+    ],
+    "samples": 540,
+    "worst_grip_error_m": 1.49011611938477e-08,
+    "worst_limb_length_error_m": 2.98023223876953e-08
+  },
+  "live_vehicle": {
+    "fps": 15,
+    "minimum_cape_clearance_m": 2.31444835664674e-07,
+    "peak_driver_horizontal_specific_force": 5.10677862167358,
+    "peak_grip_error_m": 0.0,
+    "peak_limb_error_m": 2.98023223876953e-08,
+    "peak_lookout_horizontal_specific_force": 6.84829044342041,
+    "source": "Godot 4.5.1 Jolt, actual vehicle simulation",
+    "sample_count": 106
+  },
+  "model": {
+    "blender": "4.5.9 LTS",
+    "status": "skinned_attachment_rigs",
+    "palette": "artistic approximation; not sampled from production cels",
+    "characters": {
+      "Bernie": {
+        "role": "driver",
+        "mesh_objects": 157,
+        "body_radii": [
+          0.168,
+          0.128,
+          0.215
+        ],
+        "glb": "bernie.glb",
+        "bones": 35,
+        "hat_ear_intersections": 0
+      },
+      "Bianca": {
+        "role": "lookout",
+        "mesh_objects": 135,
+        "body_radii": [
+          0.118,
+          0.105,
+          0.238
+        ],
+        "glb": "bianca.glb",
+        "bones": 35,
+        "hat_ear_intersections": 0
+      }
+    },
+    "views": [
+      "three_quarter",
+      "front",
+      "side",
+      "back",
+      "paws_detail",
+      "faces_detail"
+    ],
+    "limitations": [
+      "exploration/climbing animations pending",
+      "final cabin and clothing art review pending",
+      "runtime cape uses arm-following skin and capsule projection, not a full cloth solver"
+    ]
+  },
+  "in_game_render": {
+    "engine": "Godot 4.5.1, OpenGL, actual laboratory scene",
+    "frames": 241,
+    "fps": 30,
+    "duration_s": 8.033333333333333,
+    "scope": "Synthetic laboratory with proxy vehicle; no final route or hardware performance benchmark"
+  }
+}

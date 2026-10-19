@@ -2,23 +2,23 @@
 
 ## Coffa e tornanti
 
-Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
+Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini ispirati a Bianca e Bernie Disney. La direzione aggiornata comprende corporatura, volti e costumi: Bernie compatto al volante, Bianca più affusolata come vedetta. La postura bipede è ora autorizzata dall’utente.
 
-**Stato: preparazione tecnica e sorgenti del laboratorio. Nessuna build giocabile o esecuzione in Godot/Blender ancora verificata.** Sono passati 28 test sui calcoli, sulle regole e sugli strumenti geografici; gli script GDScript superano parsing e lint. Il sopralluogo è parziale e non è stata misurata alcuna prestazione del gioco.
+**Stato: laboratorio con personaggi riggati e reazioni animate al movimento fisico. Bernie guida e Bianca si tiene agli appigli della coffa; test delle prese, degli arti e della mantellina eseguiti in Godot 4.5.1. Nessuna build giocabile completa del viaggio.** Sono passati 28 test sui calcoli, sulle regole e sugli strumenti geografici; gli script GDScript superano parsing e lint. Il sopralluogo è parziale e non è stata misurata alcuna prestazione del gioco.
 
 ## Base tecnica disponibile
 
 | Parte | Consegna | Limite della verifica |
 | --- | --- | --- |
-| Godot | Laboratorio con quattro sospensioni, pneumatici, trazione anteriore, carico alto, camera, HUD e CSV | Sorgenti controllati; esecuzione da collaudare |
+| Godot | Laboratorio con quattro sospensioni, pneumatici, trazione anteriore, carico alto, camera, HUD e CSV | Eseguito con Jolt e renderer per le animazioni; dinamica completa da collaudare |
 | Calcoli | Masse, baricentro, tensore completo, aderenza combinata | Test Python, non ancora dinamica motore |
 | Regole | Checkpoint ordinati, sosta, visita, ritorno e salvataggio atomico | Modello Python, da collegare alla scena 3D |
 | Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
-| Blender | Generatori delle sagome di prova e delle guide del borgo | Sintassi Python; nessun modello finale già prodotto |
+| Blender | Due modelli vestiti, GLB e generatore riproducibile; guide del borgo | Rig con 35 ossa per personaggio e anteprima animata; cammino ed esplorazione ancora da realizzare |
 | Esplorazione | Controller di movimento e seguito della compagna | Richiedono rig, navmesh e integrazione nella scena |
 | Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | L’anello completo e il terreno non sono ancora acquisiti |
 
-Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. I cubi sono segnaposto, non la Yaris fedele e i protagonisti definitivi.
+Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. La vettura resta un segnaposto; i protagonisti hanno rig e animazioni di guida/tenuta, con fitting finale dell’abitacolo e locomozione ancora aperti.
 
 ## Verifiche senza editor
 
@@ -41,9 +41,9 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 - PC Linux e Windows, gioco nativo offline e singolo giocatore.
 - Stile cartoonesco curato e fisica coerente per guida, carico alto e occupanti.
 - Yaris Hybrid MY 2022 Trend italiana senza optional aggiuntivi; rosso mantenuto come richiesto.
-- Topolini con proporzioni naturali della foto di riferimento: occhi grandi come unica deformazione anatomica.
+- Topolini con corporature distinte dagli studi di animazione: Bianca affusolata e Bernie compatto; occhi espressivi, zampe e coda da topo.
 - Mai allungare zampe o arti per raggiungere i comandi: seduta, appoggi e prolunghe meccaniche devono adattarsi ai personaggi.
-- Locomozione a quattro zampe nella visita; la compagna segue il giocatore.
+- Locomozione bipede autorizzata; le animazioni di cammino restano da realizzare. La compagna segue il giocatore.
 - Parcheggio candidato PV-01 osservato in via Prestento; punto esatto ancora da confermare.
 
 ## Documentazione
@@ -68,9 +68,13 @@ Il progetto contiene ora `project.godot`, scene e sorgenti. Base API: **Godot 4.
 
 ## Primo risultato da costruire
 
-Il prossimo passaggio è importare il laboratorio nel motore, collaudare equilibrio e guida e generare le sagome in Blender. Il primo campione artistico completo rimane l’arrivo a Valle con prato, parcheggio e passaggio all’esplorazione. Fonti e attribuzioni della cartografia sono in [NOTICE.md](NOTICE.md).
+I modelli sono in `godot/assets/characters/`; viste e istruzioni sono in [Personaggi](docs/PERSONAGGI.md). Guida e tenuta della coffa sono animate; cammino, salita e fitting finale dell’abitacolo restano aperti; equilibrio e guida richiedono ancora il collaudo previsto. Il primo campione artistico completo rimane l’arrivo a Valle con prato, parcheggio e passaggio all’esplorazione. Fonti e attribuzioni della cartografia sono in [NOTICE.md](NOTICE.md).
 
 ## Provenienza e distribuzione
 
 Le fotografie esterne e i disegni Disney di Bianca e Bernie sono collegati nella documentazione, non inclusi come texture o asset del gioco. Gli allegati dell’utente restano riferimenti esterni alla repository pubblica; nella documentazione sono descritti i vincoli che fissano. Non è stata scelta una licenza di pubblicazione per il progetto.
 
+
+## Animazioni collegate alla fisica
+
+Vedere [ANIMAZIONI.md](docs/ANIMAZIONI.md) per pose, supporti adattati, mantellina, test e riproduzione dell’anteprima. Le reazioni usano accelerazioni lineari e angolari reali, non oscillazioni periodiche.

@@ -1,5 +1,7 @@
 # Architettura della preparazione
 
+> Aggiornamento personaggi del 19/10/2026: l’utente ha autorizzato corporature adattate agli studi e locomozione bipede, con Bianca più affusolata e Bernie compatto. Questa scelta supera i precedenti riferimenti all’esclusività quadrupede e ai soli occhi deformati. Due modelli vestiti hanno ora rig, guida/tenuta animate e reazioni verificate nel laboratorio. Cammino, scalata e fitting finale restano aperti; vedere anche ANIMAZIONI.md. Vedere [PERSONAGGI.md](PERSONAGGI.md).
+
 | Percorso | Responsabilità |
 | --- | --- |
 | `data/config` | Parametri SI, provvisorietà, rig e coda degli asset |
