@@ -1,5 +1,7 @@
 # Coffa e tornanti
 
+> Aggiornamento personaggi del 19/10/2026: l’utente ha autorizzato corporature adattate agli studi e locomozione bipede, con Bianca più affusolata e Bernie compatto. Questa scelta supera i precedenti riferimenti all’esclusività quadrupede e ai soli occhi deformati. Due modelli vestiti sono ora generati e renderizzati; rig, animazioni e fitting dei comandi restano da realizzare. Vedere [PERSONAGGI.md](PERSONAGGI.md).
+
 ## Progetto di un’esperienza di guida ed esplorazione 3D fra Faedis e Soffumbergo
 
 Versione 2.0 — 19 ottobre 2026. Documento di progettazione, non prototipo già implementato. Integra la Trend senza optional, anatomia naturale dei topolini con soli occhi ingranditi, prolunghe meccaniche, fedeltà concentrata su Valle, parcheggio nel prato ed esplorazione a piedi.

@@ -1,6 +1,6 @@
 # Primo collegamento al PC
 
-Obiettivo: rendere il laboratorio realmente verificato. Nessuna prova motore di questa pagina risulta già passata.
+Obiettivo: rendere il laboratorio realmente verificato. Il nuovo controllo dei personaggi verifica importazione e istanziazione dei GLB; non certifica guida o animazioni.
 
 ## Importazione
 
@@ -60,3 +60,16 @@ Portare le regole Python nel gestore Godot con test equivalenti. Collegare check
 Implementare portiera/pedana e scaletta con animazioni e conferme di contatto. La proprietà della massa deve corrispondere ai corpi fisici: mantenere posa e quantità di moto al cambio di rappresentazione e continuare a trasmettere le reazioni all’auto. Attivare poi locomozione, seguito e rientro.
 
 Ripetere venti cicli **nella scena reale**: quelli Python verificano solo le regole. Esportare Linux e Windows e misurare FPS dopo un campione grafico rappresentativo. Il target 1080p/60 FPS rimane non misurato.
+
+## Personaggi vestiti
+
+```bash
+blender --background --factory-startup --python tools/blender/build_characters.py -- --render
+godot --headless --editor --path . --quit
+godot --headless --path . --script res://godot/tests/character_checks.gd
+godot --path . res://godot/scenes/characters.tscn
+```
+
+Il generatore rifiuta output esistenti senza `--overwrite`. Aprire `art/source/generated/characters/characters.blend` per modificare i modelli; i GLB sono salvati direttamente nella cartella Godot. La cartella `art/` è esclusa dall’importazione del motore: non serve configurare l’importatore Blender di Godot.
+
+Controllare fronte, lato, retro, tre quarti e dettaglio delle zampe. Bianca deve avere il busto più stretto; verificare dita separate, unghiette, costumi, cappelli e assenza di compenetrazioni importanti nella posa neutra. Il laboratorio mostra Bernie al posto guida e Bianca sulla coffa come modelli statici: la posa seduta e i contatti con i comandi sono ancora aperti.

@@ -26,15 +26,15 @@
     {
       "id": "MOUSE-DRIVER",
       "priority": "P1",
-      "status": "unapproved_parametric_proxy",
+      "status": "design_mesh_generated_rendered_not_skinned",
       "requirements": [
-        "reference-photo anatomy",
+        "animation-study silhouette; Bernie compact, Bianca slender",
         "uniform scale",
-        "larger eyes only",
+        "expressive eyes and face adapted to animation studies",
         "fixed-length limbs",
-        "quadruped locomotion",
+        "biped locomotion authorized; animation pending",
         "paws and thin tail",
-        "Bernard/Bernie-inspired visual identity (warm brown-grey fur; cautious eye/brow expression; practical cap and red-orange garment), natural mouse body retained"
+        "Bernard/Bernie-inspired visual identity (warm brown-grey fur; cautious eye/brow expression; practical cap and red-orange garment), biped design authorized by user"
       ],
       "missing": [
         "silhouette approval",
@@ -49,21 +49,22 @@
         "references/bianca_bernie/sources.json#BB-03",
         "references/bianca_bernie/sources.json#BB-06",
         "references/bianca_bernie/sources.json#BB-13"
-      ]
+      ],
+      "source_generator": "tools/blender/build_characters.py",
+      "model": "godot/assets/characters/bernie.glb"
     },
     {
       "id": "MOUSE-PASSENGER",
       "priority": "P1",
-      "status": "unapproved_parametric_proxy",
+      "status": "design_mesh_generated_rendered_not_skinned",
       "requirements": [
         "same anatomy rules",
         "picnic outfit",
         "travel on crow's nest",
         "climb by reachable ladder supports",
-        "Miss Bianca-inspired visual identity (cream fur; pink nose/ears; elegant eyelids; purple/pink headwear and bow), natural mouse body retained"
+        "Miss Bianca-inspired visual identity (cream fur; pink nose/ears; elegant eyelids; purple/pink headwear and bow), biped design authorized by user"
       ],
       "missing": [
-        "outfit",
         "rig",
         "climb/contact animations",
         "dynamic response with reciprocal forces",
@@ -74,7 +75,9 @@
         "references/bianca_bernie/sources.json#BB-03",
         "references/bianca_bernie/sources.json#BB-09",
         "references/bianca_bernie/sources.json#BB-13"
-      ]
+      ],
+      "source_generator": "tools/blender/build_characters.py",
+      "model": "godot/assets/characters/bianca.glb"
     },
     {
       "id": "VAL-CHURCH",

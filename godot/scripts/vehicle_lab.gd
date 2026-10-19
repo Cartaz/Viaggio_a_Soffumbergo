@@ -3,6 +3,9 @@ extends RigidBody3D
 ## Four single-ray contacts, rigid mast and locked passenger proxies.
 ## No final Yaris model, wheel angular dynamics, ESC, elastic mast or character rig.
 
+const BERNIE_MODEL = preload("res://godot/assets/characters/bernie.glb")
+const BIANCA_MODEL = preload("res://godot/assets/characters/bianca.glb")
+
 var config: Dictionary
 var properties: Dictionary
 var throttle := 0.0
@@ -232,10 +235,23 @@ func _sample(state: PhysicsDirectBodyState3D) -> void:
 
 func _build_proxies() -> void:
 	_box(Vector3(1.745, 0.65, 3.94), Vector3(0, 0.72, 0), Color("bb333b"))
-	_box(Vector3(1.45, 0.5, 1.9), Vector3(0, 1.28, 0.1), Color("608c91"))
+	# Open window envelope keeps the driver visible. Bodywork remains a proxy.
+	_box(Vector3(1.45, 0.06, 1.9), Vector3(0, 1.5, 0.1), Color("bb333b"))
+	for side in [-1.0, 1.0]:
+		_box(Vector3(0.06, 0.5, 0.06), Vector3(side * 0.69, 1.25, -0.82), Color("bb333b"))
+		_box(Vector3(0.06, 0.5, 0.06), Vector3(side * 0.69, 1.25, 1.02), Color("bb333b"))
 	_box(Vector3(0.18, 5.3, 0.18), Vector3(0, 3.9, 0), Color("aa7e46"))
 	_box(Vector3(1.2, 0.3, 1.2), Vector3(0, 5.6, 0), Color("c49c64"))
-	_box(Vector3(0.32, 0.45, 0.6), Vector3(0.1, 6.4, 0), Color("cda5a0"))
+	# Visual design models only: no extra physics body or duplicated occupant mass.
+	# Neutral standing pose pending seated rig, steering and pedal contact fitting.
+	var driver := BERNIE_MODEL.instantiate() as Node3D
+	driver.name = "BernieDriverDesign"
+	driver.position = Vector3(-0.32, 0.63, -0.35)
+	add_child(driver)
+	var lookout := BIANCA_MODEL.instantiate() as Node3D
+	lookout.name = "BiancaLookoutDesign"
+	lookout.position = Vector3(0.1, 5.75, -0.1)
+	add_child(lookout)
 	for anchor in wheel_anchors:
 		var wheel := Node3D.new()
 		add_child(wheel)

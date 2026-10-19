@@ -1,50 +1,29 @@
-# Specifica di modellazione — coppia ispirata a Bianca e Bernie
+# Specifica di modellazione — Bianca e Bernie
 
-Revisione **2026-10-19**. Questa scheda integra [l'elenco dei riferimenti](README.md) e i vincoli di [../README.md](../README.md). Nessuna mesh finale è già stata modificata o verificata.
+Revisione **19 ottobre 2026**, aggiornata alle indicazioni successive dell’utente.
 
-## Gerarchia dei vincoli
+## Direzione approvata dall’utente
 
-1. **Anatomia:** fotografia utente IMG_8548.webp; cranio, tronco compatto, zampe corte, coda sottile e vibrisse da topo reale. Scala uniforme a livello personaggio. Il rig non stira gli arti.
-2. **Occhi:** soli elementi anatomici ingranditi, come IMG_8549.png; preservare sporgenza, orbite e movimento palpebre senza sostituire il muso con un volto umano.
-3. **Identità narrativa:** prendere spunto dalla coppia Bianca/Bernie (1977 come riferimento primario, 1990 secondario) per *palette qualitativa*, asimmetrie espressive, accessori, costumi e comportamento.
-4. **Funzione:** Bernie guida Yaris da seduto con appoggi, adattatori meccanici e pedali prolungati; Bianca viaggia sulla coffa e scende/risale da appoggi raggiungibili; entrambi si muovono a quattro zampe durante l'esplorazione.
+Adattare anche corporature, volti e abiti ai disegni e studi di animazione catalogati nella repo. **Bianca più affusolata**, Bernie più compatto. Postura e locomozione **bipedi autorizzate**: questa decisione supera i precedenti vincoli di esclusività quadrupede e di ingrandimento dei soli occhi.
 
-### Guidatore — Bernie (Bernard)
+Conservare il carattere da topo: zampe, orecchie, vibrisse e coda sottile. Gli arti mantengono le lunghezze definite in `data/config/mouse_rig.json`; seduta, prolunghe e comandi devono adattarsi ai personaggi. Le dimensioni sono scelte di lavoro, non misure ricavate dai disegni.
 
-- **Aspetto:** mantello marrone/grigio caldo, tono moderato; naso e zona del muso distinguibili; orecchie rotonde e membrana più rosata. Non fissare HEX senza un color reference affidabile.
-- **Volto:** sopracciglia e palpebre trasmettono prudenza, attenzione e lieve apprensione. Occhi grandi ma non caricaturalmente sporgenti; sguardo concentrato sul percorso.
-- **Accessori riconoscibili:** cappellino e capo/scialle rosso-aranciato come suggestione dal film, adattati alla seduta e al movimento quadrupede. Non devono coprire campo visivo o agganci del volante.
-- **Forma:** corpo topo naturale; caratterizzazione ottenuta con materiali, accessori, comportamento e sfumature del muso, *non* mediante proporzioni umane o postura bipede obbligatoria.
-- **Animazioni target:** vigilanza, sorpresa, controllo volante, uso delle prolunghe, discesa, trotto, sguardo alla compagna.
+## Bernie — guidatore
 
-### Passeggera — Bianca (Miss Bianca)
+Tronco raccolto e rotondo, guance continue senza lobi sporgenti, muso corto, sopracciglia con lieve apprensione. Pelo bruno caldo; coppola con visiera, maglione rosso con collo e orlo a coste. Palmi stretti, dita separate e unghiette discrete; piedi con tallone, collo e dita distinguibili.
 
-- **Aspetto:** mantello chiaro tendente a crema/avorio, naso rosato, interne orecchie rosate; separazione qualitativa forte dal guidatore, senza imporre bianco piatto.
-- **Volto:** occhi grandi, ciglia e pose palpebrali più eleganti, espressione curiosa e sicura. Differenze della testa sottili e compatibili con cranio di topo.
-- **Accessori riconoscibili:** berretto/cappellino viola o rosa, fiocco/foulard morbido, **tenuta da picnic** prevista dal progetto. Accessori devono rimanere agganciati durante salto e salita alla coffa.
-- **Forma:** stessa base anatomica quadrupede; distinzione ottenuta con stoffa, carattere, tinta e shape keys dei soli tratti non anatomici (palpebre/sorriso).
-- **Animazioni target:** osservazione panoramica dalla coffa, reazione ai trasferimenti di carico, discesa con appoggi, camminata/trotto, sguardo al guidatore e picnic.
+## Bianca — vedetta
 
-## Piano di lavoro Blender/Godot
+Busto più stretto e slanciato, testa meno larga, musetto corto e semplice senza guance a rilievo, nasino piccolo, palpebre e ciglia espressive. Pelo avorio, naso rosato; berretto viola inclinato, mantellina viola aperta sul davanti, fiocco/foulard e abito lilla da picnic. Zampe più sottili, con dita separate e piccole unghie.
 
-| Fase | Artefatto | Verifica |
-| --- | --- | --- |
-| A | Raccolta locale privata dei riferimenti visualizzati dai link, nome fonte/anno e screenshot di confronto | Tracciabilità, nessun file Disney committato |
-| B | Due silhouette quadrupedi A-pose derivanti dalle foto utente, non dai corpi bipedi Disney | Vista frontale, laterale, posteriore, 3/4, scala uniforme |
-| C | Prove materiali + accessori **originali**, ispirati alla palette dei cel 1977 | Leggibilità dei due a distanze di gioco; niente campioni cromatici inventati |
-| D | Rig con arti invariabili, eye rig, coda, vibrisse; costumi separati | Nessuna deformazione su seduta, quadrupedia, salita |
-| E | Integrazione abitacolo (guidatore) e coffa (passeggera) | Pedali prolungati, seduta, appigli e collisioni coerenti |
-| F | Revisione estetica con approvazione; controllo diritti prima di qualsiasi distribuzione | Checklist screenshot e licenze, test reale in editor |
+## Fonti e uso
 
-**Pose di controllo minime:** riposo quadrupede, camminata/trotto, seduta guida, controllo dei pedali, frenata, arrampicata/discesa dalla coffa, postura nel prato, sguardi reciproci. Controllare le compenetrazioni di tessuti e corpo.
+BB-01/02/03 guidano il confronto di costruzione e carattere; BB-06 contiene studi con varianti preliminari. Le tavole pubblicate da Andreas Deja (BB-21) sono state visualizzate direttamente: distinguere i concept di cappelli e costumi dalle forme di produzione. Non mescolare tutte le varianti come se fossero un unico model sheet ortografico.
 
-## Da evitare
+Palette qualitativa di lavoro, senza pretendere valori cromatici esatti dai cel. Le mesh sono costruite nel progetto; nessuna immagine esterna è usata come texture o incorporata nei file.
 
-- Allungare ossa, moltiplicare scala del solo busto, aggiungere mani antropomorfe, sostituire locomozione quadrupede con bipede esclusiva.
-- Calcare un model sheet bidimensionale per ottenere un modello 3D Disney fedele; le prospettive non sono necessariamente ortografiche.
-- Considerare la maquette d'asta una scansione 3D con misure: è una fotografia di oggetto.
-- Trattare collegamenti a immagini come licenze per redistribuirle.
+## Consegna verificabile
 
-## Questioni da validare davanti agli editor
+Generatore: `tools/blender/build_characters.py`. Configurazione: `data/config/characters.json`. GLB: `godot/assets/characters/bernie.glb` e `bianca.glb`. Scena di confronto: `godot/scenes/characters.tscn`. Viste e istruzioni: [Personaggi](../../docs/PERSONAGGI.md).
 
-Silhouette finale rispetto alle due foto dell'utente, valori materiali sotto luci della scena, colori esatti, ingombri cappelli, fitting abiti, distanza dalla faccia al volante, cinematica scaletta-coffa, proprietà e licenze degli asset finali. Non marcare alcuna fase come completata fino a prova in Godot/Blender.
+I modelli sono **studi 3D vestiti**, generati e renderizzati in Blender 4.5.9 LTS. Non hanno skinning o animazioni: posa seduta con contatti sul volante/pedali, cammino, salita e discesa devono ancora essere realizzati. Il laboratorio usa i modelli come visuali statiche, senza introdurre corpi fisici o masse aggiuntive. Non marcare come complete le fasi artistiche/animate della roadmap.

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "status": "anatomy_blockout_requires_reference_matching",
+  "status": "biped_design_models_generated_not_skinned",
   "uniform_scale": 1,
   "eye_scale": 1.35,
-  "warning": "Parametric placeholders, not traced or approved anatomy. Adjust whole body uniformly to cabin; never elongate limbs to reach controls.",
+  "warning": "Biped design models based on animation studies; Bianca slender, Bernie compact. Uniform overall fit scale; never stretch limbs to reach controls.",
   "segments_m": {
     "upper_forelimb": 0.1,
     "lower_forelimb": 0.09,
@@ -20,17 +20,18 @@
   },
   "rules": {
     "stretch_ik": false,
-    "locomotion": "quadruped",
+    "locomotion": "biped_authorized_animation_pending",
     "hands": "paws",
     "pose_fit_required_before_final_scale": true
   },
   "art_direction": {
-    "status": "reference_selected_not_modeled",
+    "status": "models_generated_rendered_design_review",
     "catalog": "references/bianca_bernie/sources.json",
     "modeling_spec": "references/bianca_bernie/SPECIFICA_MODELLAZIONE.md",
     "driver_inspiration": "Bernard (The Rescuers, 1977)",
     "passenger_inspiration": "Miss Bianca (The Rescuers, 1977)",
-    "constraint": "Original natural-mouse anatomy + enlarged eyes only; resemblance from colors, features, expression and clothes",
-    "source_images_embedded": false
+    "constraint": "User revised 2026-10-19: adapt body, face and clothes to animation studies; Bianca slender, Bernie compact; bipedia allowed; fixed limb lengths",
+    "source_images_embedded": false,
+    "character_config": "data/config/characters.json"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "blender": "4.5.9 LTS",
+  "godot": "4.5.1 stable",
+  "blender_generation_and_render": "passed: six views inspected, including simplified faces",
+  "fit_generator": "passed: build_blockout.py completed",
+  "godot_import": "passed",
+  "godot_character_checks": "passed",
+  "godot_lab_smoke": "passed: three frames only",
+  "python_checks": "passed: 28 tests",
+  "gdscript_lint_and_format": "passed",
+  "animation_and_seated_fit": "not implemented or verified"
+}

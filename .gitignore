@@ -13,6 +13,8 @@ __pycache__/
 *.blend2
 /data/geography/*.raw.json
 /data/geography/*.osm
+/reports/*.import
+/reports/*.translation
 /art/source/generated/
 /art/export/
 

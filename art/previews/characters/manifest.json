@@ -1,0 +1,41 @@
+{
+  "blender": "4.5.9 LTS",
+  "status": "design_review",
+  "palette": "artistic approximation; not sampled from production cels",
+  "characters": {
+    "Bernie": {
+      "role": "driver",
+      "mesh_objects": 157,
+      "body_radii": [
+        0.168,
+        0.128,
+        0.215
+      ],
+      "glb": "bernie.glb"
+    },
+    "Bianca": {
+      "role": "lookout",
+      "mesh_objects": 135,
+      "body_radii": [
+        0.118,
+        0.105,
+        0.238
+      ],
+      "glb": "bianca.glb"
+    }
+  },
+  "views": [
+    "three_quarter",
+    "front",
+    "side",
+    "back",
+    "paws_detail",
+    "faces_detail"
+  ],
+  "limitations": [
+    "not skinned",
+    "no locomotion animation",
+    "no seated driving pose",
+    "no game engine animation or contact-fit verification"
+  ]
+}

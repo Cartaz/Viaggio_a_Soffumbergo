@@ -13,4 +13,4 @@ Le copie originali restano nel materiale di riferimento fornito in conversazione
 
 ## Nuova direzione artistica (19 ottobre 2026)
 
-L'utente richiede maggiore somiglianza visiva con **Bianca e Bernie** dei film Disney, senza perdere la regola anatomica precedente. Per i 20 riferimenti online individuati, uso previsto e limiti dei diritti, vedere [catalogo Bianca/Bernie](bianca_bernie/README.md) e [specifica per Blender](bianca_bernie/SPECIFICA_MODELLAZIONE.md). I file originali Disney **non sono incorporati** nella repository pubblica.
+Aggiornamento utente del 19 ottobre 2026: adattare anche corporatura e abiti agli studi di **Bianca e Bernie**, con Bianca più affusolata e locomozione bipede ammessa. Questa indicazione supera la precedente esclusività quadrupede; restano zampe e coda da topo e nessuno stiramento degli arti. Per i 20 riferimenti online individuati, uso previsto e limiti dei diritti, vedere [catalogo Bianca/Bernie](bianca_bernie/README.md) e [specifica per Blender](bianca_bernie/SPECIFICA_MODELLAZIONE.md). I file originali Disney **non sono incorporati** nella repository pubblica.

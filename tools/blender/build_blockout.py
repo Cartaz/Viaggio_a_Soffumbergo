@@ -6,7 +6,6 @@ Blender axes: X right, Y forward, Z up. glTF export converts to Godot X/Y/-Z.
 """
 import argparse
 import json
-import math
 from pathlib import Path
 import sys
 
@@ -14,6 +13,8 @@ import bpy
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_characters import Character  # noqa: E402
 
 
 def material(name, color, metallic=0):
@@ -90,9 +91,6 @@ def main():
     glass = material("Standard non-privacy glass proxy", (0.25, 0.43, 0.46))
     alloy = material("16 inch alloy proxy", (0.46, 0.5, 0.53), 0.6)
     wood = material("Mast and nest", (0.46, 0.29, 0.13))
-    fur = material("Natural fur proxy", (0.26, 0.20, 0.15))
-    pink = material("Ears paws tail", (0.60, 0.40, 0.39))
-    eyes = material("Expressive eyes", (0.012, 0.016, 0.014))
     metal = material("Pedal linkage", (0.28, 0.31, 0.32), 0.5)
     trim = material("Black cloth", (0.07, 0.075, 0.075))
 
@@ -141,39 +139,13 @@ def main():
         z = height / 10
         rod("Climbing rung", (-0.19, -0.14, z), (0.19, -0.14, z), 0.018, metal)
 
-    def mouse(prefix, centre):
-        offset = Vector(centre)
-        scale = float(rig["uniform_scale"])
-        def at(p):
-            return offset + Vector(p) * scale
-        def ell(name, radius, position, mat):
-            return ellipsoid(prefix + name, [r * scale for r in radius], at(position), mat)
-        ell(" collected body", (0.17, 0.29, 0.17), (0, 0, 0), fur)
-        ell(" natural head", (0.12, 0.15, 0.115), (0, 0.25, 0.08), fur)
-        ell(" tapered muzzle proxy", (0.075, 0.11, 0.06), (0, 0.37, 0.045), fur)
-        ell(" nose", (0.025, 0.022, 0.018), (0, 0.465, 0.045), pink)
-        for side in (-1, 1):
-            ell(f" ear {side}", (0.064, 0.022, 0.08), (side * 0.10, 0.21, 0.19), pink)
-            eye = 0.024 * float(rig["eye_scale"])
-            ell(f" enlarged eye {side}", (eye, eye, eye), (side * 0.104, 0.32, 0.11), eyes)
-            shoulder = Vector((side * 0.12, 0.11, 0.03))
-            elbow = shoulder + Vector((0, 0.6, -0.8)) * rig["segments_m"]["upper_forelimb"]
-            paw = elbow + Vector((0, 0.8, -0.6)) * rig["segments_m"]["lower_forelimb"]
-            hip = Vector((side * 0.13, -0.16, 0))
-            knee = hip + Vector((0, 0.4, -math.sqrt(0.84))) * rig["segments_m"]["upper_hindlimb"]
-            foot = knee + Vector((0, 0.9, -math.sqrt(0.19))) * rig["segments_m"]["lower_hindlimb"]
-            for name, a, b in (("fore upper", shoulder, elbow), ("fore lower", elbow, paw),
-                               ("hind upper", hip, knee), ("hind lower", knee, foot)):
-                rod(f"{prefix} {name} {side}", at(a), at(b), 0.025 * scale, fur)
-            ell(f" fore paw {side}", (0.025, 0.045, 0.018), paw, pink)
-            ell(f" hind paw {side}", (0.035, 0.060, 0.022), foot, pink)
-        # A thin segmented tail, avoiding human anatomy or an oversized furry tail.
-        points = [(0, -0.25, 0), (0.05, -0.43, -0.08), (0.12, -0.60, -0.12), (0.18, -0.75, -0.10)]
-        for index, (a, b) in enumerate(zip(points, points[1:])):
-            rod(prefix + " tail", at(a), at(b), (0.012 - index * 0.003) * scale, pink)
-
-    mouse("Driver", (-0.32, 0.35, 0.85))
-    mouse("Passenger", (0.10, 0.10, 6.1))
+    characters = json.loads((ROOT / "data/config/characters.json").read_text(encoding="utf-8"))
+    for key, centre in (("Bernie", (-0.32, 0.35, 0.63)), ("Bianca", (0.10, 0.10, 5.66))):
+        character = Character(key, characters["characters"][key], rig).build()
+        character.root.location = centre
+        character.root.scale = (float(rig["uniform_scale"]),) * 3
+        generated.extend(character.collection.objects)
+    # Neutral design poses: seated rig, wheel/pedal contact and climbing remain pending.
     box("Raised black cloth fit seat", (0.45, 0.60, 0.12), (-0.32, 0.22, 0.61), trim)
     # Mechanical concept: reachable small pads connect to original pedal locations.
     # Rod geometry is a layout, not a solved/animated four-bar mechanism.
