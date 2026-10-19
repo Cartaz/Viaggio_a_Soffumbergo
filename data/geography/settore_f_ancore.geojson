@@ -1,0 +1,129 @@
+{
+  "type": "FeatureCollection",
+  "name": "Settore F – ancore documentate",
+  "coordinate_reference": "WGS84, [longitude, latitude], senza quote",
+  "status": "discrete_anchors_not_road_geometry",
+  "source_file": "CIRCUITO_SOPRALLUOGO.md (file del progetto ChatGPT; 19/10/2026)",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "F-00",
+      "properties": {
+        "sector": "F",
+        "name": "Canal di Grivò, tappa di ripartenza",
+        "source_kind": "maps_stop_marker",
+        "source_url": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/",
+        "linked_step": 19,
+        "imagery_date": null,
+        "observation": "Coordinata del segnaposto di tappa, non punto misurato sulla carreggiata.",
+        "coordinate_role": "app_waypoint_not_measured",
+        "horizontal_datum": "WGS84",
+        "elevation_status": "unknown",
+        "road_width_status": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3592542,
+          46.1657647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-17",
+      "properties": {
+        "sector": "F",
+        "name": "Via Mont Joanes / Borgo Scubla",
+        "source_kind": "previously_observed_panorama",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=LSR3L4NSfxs4O_60YjAl0w&viewpoint=46.1632064%2C13.3578603&heading=233.93&pitch=0",
+        "linked_step": 21,
+        "imagery_date": "2024-08",
+        "observation": "STOP e linea trasversale, muretti, giardini e case vicine; sezione stradale non misurata.",
+        "coordinate_role": "panorama_viewpoint_not_surveyed",
+        "horizontal_datum": "WGS84",
+        "elevation_status": "unknown",
+        "road_width_status": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3578603,
+          46.1632064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-18",
+      "properties": {
+        "sector": "F",
+        "name": "Borgo Scubla verso via dei Castelli",
+        "source_kind": "previously_observed_panorama",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=13wcbhtdW3YwbDG8paz2fg&viewpoint=46.1588268%2C13.3528119&heading=225.99&pitch=0",
+        "linked_step": 22,
+        "imagery_date": "2024-08",
+        "observation": "Asfalto senza mezzeria, abitazioni, muro e recinzione a destra, accesso laterale a sinistra.",
+        "coordinate_role": "panorama_viewpoint_not_surveyed",
+        "horizontal_datum": "WGS84",
+        "elevation_status": "unknown",
+        "road_width_status": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3528119,
+          46.1588268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CIR-19",
+      "properties": {
+        "sector": "F",
+        "name": "Rientro urbano a Faedis",
+        "source_kind": "previously_observed_panorama",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=A7-gKW2wYZwHHMCg9VZUfg&viewpoint=46.1527672%2C13.346199&heading=223.84&pitch=0",
+        "linked_step": 23,
+        "imagery_date": "2022-07",
+        "observation": "Marciapiedi, case ravvicinate, chiesa e spazio aperto; denominazione SR356/SP15 non riconciliata.",
+        "coordinate_role": "panorama_viewpoint_not_surveyed",
+        "horizontal_datum": "WGS84",
+        "elevation_status": "unknown",
+        "road_width_status": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.346199,
+          46.1527672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "F-ARRIVO",
+      "properties": {
+        "sector": "F",
+        "name": "Bar Al Telefono, Piazza I Maggio 23",
+        "source_kind": "maps_stop_marker",
+        "source_url": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/",
+        "linked_step": 24,
+        "imagery_date": null,
+        "observation": "Coordinata del segnaposto del bar, non imbocco carrabile misurato.",
+        "coordinate_role": "app_waypoint_not_measured",
+        "horizontal_datum": "WGS84",
+        "elevation_status": "unknown",
+        "road_width_status": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3465502,
+          46.1527301
+        ]
+      }
+    }
+  ]
+}
