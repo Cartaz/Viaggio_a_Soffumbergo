@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "sector": "B",
+  "title": "Via Monte San Lorenzo → località Colloredo",
+  "purpose": "evidence based street-survey register, not drivable route",
+  "circuit_reference": "original user Google Maps route, 18.7 km / 36 min at 2026-10-19 (app estimate)",
+  "survey_date": "2026-10-19",
+  "documentation_reference": "docs/CIRCUITO_SOPRALLUOGO.md",
+  "geometry_reference": "data/geography/sector_b_observations.geojson",
+  "start_anchor": "CIR-06",
+  "transition_anchor": "CIR-07",
+  "end_anchor": "CIR-08",
+  "app_total_rounded_m": 2020,
+  "map_length_m": null,
+  "road_centerline": null,
+  "elevations": null,
+  "elevation_datum": null,
+  "lane_width_m": null,
+  "crossfall": null,
+  "curve_count": null,
+  "verified_hairpin_count": null,
+  "continuous_visual_coverage_m": null,
+  "drivable_mesh_ready": false,
+  "segments": [
+    {
+      "id": "B-07",
+      "from_id": "CIR-06",
+      "to_id": "CIR-07",
+      "google_instruction_order": 7,
+      "street": "Via Monte San Lorenzo",
+      "app_rounded_m": 1800,
+      "instruction": "Svolta a sinistra in via Monte San Lorenzo",
+      "contiguous_panoramas_verified": false,
+      "shape_available": false,
+      "observed_curve_count": null,
+      "verified_hairpins": null,
+      "turn_info": "solo imbocco osservato",
+      "state": "not_surveyed_continuously"
+    },
+    {
+      "id": "B-08",
+      "from_id": "CIR-07",
+      "to_id": "CIR-08",
+      "google_instruction_order": 8,
+      "street": "Località Colloredo",
+      "app_rounded_m": 220,
+      "instruction": "Leggera curva a destra verso località Colloredo",
+      "contiguous_panoramas_verified": false,
+      "shape_available": false,
+      "observed_curve_count": null,
+      "verified_hairpins": null,
+      "turn_info": "indicazione della app, non geometria verificata",
+      "state": "not_surveyed_continuously"
+    }
+  ],
+  "risk_register": [
+    {
+      "id": "B-R01",
+      "type": "rollover",
+      "basis": "game_design_only",
+      "description": "Valutare trasferimenti di carico su curve ampie una volta misurata la geometria; non aggiungere ribaltamento forzato."
+    },
+    {
+      "id": "B-R02",
+      "type": "visibility",
+      "basis": "CIR-07",
+      "description": "Muro in pietra sul lato destro e vegetazione sul lato sinistro nel panorama; estensione ignota."
+    },
+    {
+      "id": "B-R03",
+      "type": "clearance",
+      "basis": "not_verified",
+      "description": "Rami, cavi, parapetti e altezza libera della coffa non censiti in modo continuo."
+    },
+    {
+      "id": "B-R04",
+      "type": "road_narrowing",
+      "basis": "CIR-07 and CIR-08",
+      "description": "Mancanza di mezzeria visibile nei soli due campioni; larghezze non misurate."
+    }
+  ],
+  "open_actions": [
+    "Acquisire una polilinea OSM continua e verificare corrispondenza all’itinerario Google, senza ricalcare la geometria da Google.",
+    "Seguire Street View progressivamente fra CIR-06, CIR-07 e CIR-08; registrare entrata/apice/uscita di ogni curva e eventuali tornanti.",
+    "Misurare pendenze e quote da DTM con datum dichiarato, larghezze e crossfall da basi idonee.",
+    "Verificare margini e ingombri verticali per il veicolo con coffa.",
+    "Solo dopo i passaggi precedenti: trasferire spline, collisioni e terreno in Godot; eseguire guida e test ribaltamento."
+  ],
+  "source_links": {
+    "source_map": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/@46.1487995,13.3345871,13.29z/data=!4m32!4m31!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!1m5!1m1!1s0x477a494d96dac4a9:0x36d43bba7acc9a1a!2m2!1d13.3624124!2d46.1292376!1m5!1m1!1s0x477a4ff4c7df2479:0x1f7cd445ad9b2a26!2m2!1d13.3933096!2d46.1569587!1m5!1m1!1s0x477a48c2e522a62d:0x260709882e6e9861!2m2!1d13.3592542!2d46.1657647!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!3e0?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+    "osm_copyright": "https://www.openstreetmap.org/copyright"
+  },
+  "limitations": "Non si inferiscono punti intermedi, numero di tornanti, quota o strada continua dalle tre posizioni di panorami."
+}
