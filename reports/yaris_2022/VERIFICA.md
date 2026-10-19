@@ -1,6 +1,6 @@
 # Verifica effettivamente eseguita — 19 ottobre 2026
 
-Ambiente: Windows x64, Blender **4.5.3 LTS** (`67807e1800cc`), Godot **4.5.1 stable** (`f62fdbde1`), renderer di progetto GL Compatibility, fisica Jolt. I test del motore sono headless: non misurano qualità del rendering, GPU, driver o FPS. I cinque PNG sono render Cycles del modello, non screenshot del gioco.
+Ambiente: Windows x64, Blender **4.5.3 LTS** (`67807e1800cc`), Godot **4.5.1 stable** (`f62fdbde1`), renderer di progetto GL Compatibility, fisica Jolt. Le prove iniziali del motore sono headless. I cinque PNG originari sono render Cycles del modello; i quattro nuovi `lab_*.png` sono immagini del laboratorio acquisite dal viewport Godot su Radeon RX 6800, OpenGL 3.3, driver 26.8.1.260806. Queste prove non misurano FPS rappresentativi.
 
 | Prova | Esito |
 | --- | --- |
@@ -14,6 +14,7 @@ Ambiente: Windows x64, Blender **4.5.3 LTS** (`67807e1800cc`), Godot **4.5.1 sta
 | `godot/tests/yaris_import_check.gd` | Zero errori: assi/interasse, ruote, sterzo, sospensione, cerniere e assenza di corpi fisici duplicati |
 | `godot/tests/reference_checks.gd` | 1.014 controlli, zero errori |
 | Laboratorio con modello e albero | Avviato per 180 frame a passo fisso di rendering, nessun errore di script; non è una prova dinamica completa |
+| Integrazione interattiva del laboratorio, renderer reale | 28 controlli, zero errori: input, tre camere, aperture, accelerazione, curva breve, frenata e ripristino; `lab_integration.json` e `LABORATORIO.md` |
 | Scena autonoma `yaris_showroom.tscn` | Avviata nel motore per 10 frame, nessun errore di script |
 | Banco statico 120 Hz | Passato, velocità finale circa 0,000117 m/s |
 | Banco statico 240 Hz | Passato, velocità finale circa 0,000067 m/s |
@@ -40,4 +41,4 @@ Nel contesto di esecuzione ristretto, i test Python sono stati lanciati con la d
 
 ## Limiti residui
 
-Non sono verificati: guida prolungata e dinamica in curva, stabilità a 60 Hz, rendering/prestazioni nel gioco completo, build Linux/Windows distribuite, ingombri dei protagonisti, meccanismi per le zampe e ancoraggio strutturale definitivo dell'albero. La somiglianza della carrozzeria e dell'abitacolo è una revisione artistica; il superamento dei test di geometria e importazione non certifica una replica fotorealistica di qualità finale. Le quote secondarie e i materiali restano stime fotografiche documentate.
+Non sono verificati: guida prolungata e dinamica completa in curva, stabilità a 60 Hz, rendering/prestazioni nel gioco completo, build Linux/Windows distribuite, ingombri dei protagonisti, meccanismi per le zampe e ancoraggio strutturale definitivo dell'albero. La prova breve documentata in `LABORATORIO.md` non chiude questi punti. La somiglianza della carrozzeria e dell'abitacolo è una revisione artistica; il superamento dei test di geometria e importazione non certifica una replica fotorealistica di qualità finale. Le quote secondarie e i materiali restano stime fotografiche documentate.

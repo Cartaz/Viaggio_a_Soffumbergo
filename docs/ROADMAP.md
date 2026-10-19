@@ -10,6 +10,7 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 - [x] Aprire porte/portellone e predisporre una scena autonoma per l'ispezione.
 - [x] Creare il foro dell'albero nel tetto e nel rivestimento, con verifica geometrica dell'apertura.
 - [x] Eseguire import, controlli dell'asset e avvio delle scene in Godot 4.5.1.
+- [x] Rendere la Yaris 0.1 provabile nel laboratorio principale con tre camere e comandi per porte/portellone; verificare guida breve, sterzo, frenata e immagini dal renderer reale (28 controlli).
 - [ ] Approvare la fedeltà artistica e rifinire superfici, ottiche, cerchi e plancia alla qualità finale.
 - [ ] Collaudare prestazioni, personaggi e cinematismi nel campione P3.
 

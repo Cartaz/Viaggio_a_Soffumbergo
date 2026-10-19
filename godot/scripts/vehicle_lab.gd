@@ -67,7 +67,9 @@ func _ready() -> void:
 	add_child(nest_collision)
 	if not DirAccess.dir_exists_absolute("user://telemetry"):
 		DirAccess.make_dir_recursive_absolute("user://telemetry")
-	var stamp := str(int(Time.get_unix_time_from_system()))
+	var stamp := (
+		"%d_%d_%d" % [int(Time.get_unix_time_from_system()), OS.get_process_id(), get_instance_id()]
+	)
 	telemetry = FileAccess.open("user://telemetry/lab_" + stamp + ".csv", FileAccess.WRITE)
 	if telemetry:
 		telemetry.store_csv_line(

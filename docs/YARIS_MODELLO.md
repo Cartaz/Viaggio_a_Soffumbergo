@@ -23,6 +23,8 @@ Aprire `project.godot` in Godot 4.5.1, attendere l'importazione, aprire `godot/s
 
 Il laboratorio principale istanzia lo stesso adattatore visivo e muove le ruote usando gli ancoraggi e le lunghezze delle sospensioni già esistenti. La rotazione visiva delle ruote segue la distanza percorsa; non introduce un modello di slittamento rotazionale o modifica la taratura dei pneumatici. Le masse e la collisione di laboratorio rimangono sperimentali.
 
+Per guidare premere F5: frecce/WASD, Spazio per il freno e R per il ripristino con invalidazione della prova. C alterna la vista ravvicinata dell'auto, quella dell'intero albero e la camera sull'ancoraggio `DriverEye` nell'abitacolo. O comanda le quattro porte, H il portellone; si possono aprire sotto 0,2 m/s e chiudere anche in movimento. La prova automatizzata e quattro immagini acquisite nel motore sono in [LABORATORIO.md](../reports/yaris_2022/LABORATORIO.md). Il collegamento al laboratorio conserva la versione artistica 0.1.
+
 La scena standard mantiene l'auto di serie. La scena `yaris_game_visual.tscn` usa il foro del tetto ed è quella collegata al laboratorio con albero. Le prolunghe per le zampe, gli ancoraggi strutturali definitivi e il passaggio degli occupanti restano da progettare insieme ai personaggi: questa consegna non li dichiara collaudati.
 
 ## Coordinate e nodi

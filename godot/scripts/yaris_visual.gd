@@ -23,6 +23,7 @@ func _ready() -> void:
 func update_running_gear(
 	anchors: Array[Vector3], lengths: PackedFloat32Array, steer: float, speed: float, delta: float
 ) -> void:
+	# Forward is -Z. Negative X spin moves the bottom tread backward (+Z).
 	wheel_spin = fmod(wheel_spin - speed * delta / 0.31045, TAU)
 	for i in range(4):
 		steer_nodes[i].position = anchors[i] - Vector3.UP * lengths[i]

@@ -4,7 +4,7 @@
 
 Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
 
-**Stato: laboratorio e prima ricostruzione 3D della Yaris, importati e avviati in Godot 4.5.1.** Il modello è stato generato e renderizzato in Blender 4.5.3 LTS. Passano 28 test preparatori, i controlli dell'asset e il collaudo della scena importata. La qualità artistica finale, la dinamica completa e il giro giocabile restano da verificare; il sopralluogo è parziale e non sono stati misurati FPS rappresentativi.
+**Stato: Yaris 0.1 guidabile nel laboratorio Godot 4.5.1.** Il modello è stato generato e renderizzato in Blender 4.5.3 LTS. Passano 28 test preparatori, i controlli dell'asset e 28 controlli dell'integrazione nel laboratorio con rendering reale su Windows. La qualità artistica finale, la dinamica completa e il giro giocabile restano da verificare; il sopralluogo è parziale e non sono stati misurati FPS rappresentativi.
 
 **Modello Yaris 0.1 — base da scolpire ancora molto.** Questa versione conserva l'idea e l'integrazione tecnica; carrozzeria e abitacolo richiedono una sostanziale lavorazione delle forme prima di avvicinarsi alla fedeltà realistica richiesta. La numerazione riguarda il modello auto, non una release giocabile del gioco.
 
@@ -14,7 +14,7 @@ Il modello ha esterni e abitacolo, quattro portiere e portellone apribili, ruote
 
 | Parte | Consegna | Limite della verifica |
 | --- | --- | --- |
-| Godot | Laboratorio con quattro sospensioni, pneumatici, trazione anteriore, carico alto, camera, HUD e CSV | Import e avvio eseguiti; accettazione dinamica ancora aperta |
+| Godot | Yaris guidabile, quattro sospensioni, pneumatici, trazione anteriore, carico alto, tre camere, HUD e CSV | Accelerazione, curva breve, frenata e comandi provati; accettazione dinamica completa ancora aperta |
 | Calcoli | Masse, baricentro, tensore completo, aderenza combinata | Test Python, non ancora dinamica motore |
 | Regole | Checkpoint ordinati, sosta, visita, ritorno e salvataggio atomico | Modello Python, da collegare alla scena 3D |
 | Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
@@ -23,6 +23,10 @@ Il modello ha esterni e abitacolo, quattro portiere e portellone apribili, ruote
 | Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | L’anello completo e il terreno non sono ancora acquisiti |
 
 Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. La Yaris usa la ricostruzione da fotografie; albero, coffa e occupanti rimangono segnaposto. I render del modello e le prove del motore non approvano automaticamente la fedeltà artistica finale.
+
+## Provare la Yaris nel laboratorio
+
+Aprire `project.godot` con Godot 4.5.1, attendere l'importazione e premere **F5**. Frecce/WASD per guidare, **Spazio** per frenare, **R** per ripristinare la prova. **C** alterna vista esterna, vista dell'albero/coffa e abitacolo; **O** apre/chiude le quattro portiere, **H** il portellone. L'apertura è consentita sotto 0,2 m/s. [Immagini del gioco e verifica riproducibile](reports/yaris_2022/LABORATORIO.md).
 
 ## Verifiche senza editor
 
