@@ -11,6 +11,9 @@
 | `mouse_locomotion.gd`, `companion_follower.gd` | Movimento da istanziare con asset e navmesh |
 | `route_preview.gd` | Superficie provvisoria da dati con quote |
 | `tools/blender` | Generazione di ingombri e guide, non ancora eseguita |
+| `tools/blender/build_yaris*.py` | Generatori eseguiti di auto di serie e variante con foro dell'albero |
+| `art/vehicles/yaris_2022`, `art/source/yaris_2022` | GLB autonomi e sorgente artistico, separato dall'import automatico Godot |
+| `godot/scripts/yaris_visual.gd` | Articolazioni visive, senza massa/collisioni proprie |
 | `reports` | Risultati derivati e inventario, non misure del gioco |
 
 Il progetto Godot è nella radice e legge direttamente `res://data/config`. Il gioco finale è offline; i download geografici sono strumenti di preparazione con opzione esplicita `--download`.

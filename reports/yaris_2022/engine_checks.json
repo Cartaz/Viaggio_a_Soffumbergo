@@ -1,0 +1,41 @@
+{
+  "engine": "Godot 4.5.1.stable.f62fdbde1",
+  "os": "Windows x64",
+  "mode": "headless; rendering performance not measured",
+  "outputs": {
+    "yaris-import-final.log": "Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org\n\nYARIS_IMPORT_CHECK failures=0",
+    "godot-reference-final.log": "Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org\n\nGodot reference checks: 1014; failures: 0",
+    "lab-smoke-final.log": "Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org\n\nLAB ONLY — mass/COM: 1605.0 kg / (-0.011651, 1.481776, -0.018536)\nFull design tensor: [X: (7313.119, -58.9892, -9.17338), Y: (-58.9892, 1828.213, -18.79533), Z: (-9.17338, -18.79533, 6113.082)]; Godot approximation: diagonal\nTelemetry folder: <user-data>/telemetry",
+    "showroom-smoke-final.log": "Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org"
+  },
+  "static_bench": [
+    {
+      "hz": 60,
+      "mean_support_N": 15745.0514750163,
+      "passed": false,
+      "relative_error": 9.36812696965292e-08,
+      "up_dot": 0.999992907047272,
+      "velocity_m_s": 0.0677222162485123,
+      "weight_N": 15745.05
+    },
+    {
+      "hz": 120,
+      "mean_support_N": 15745.0422465007,
+      "passed": true,
+      "relative_error": 4.92440440052973e-07,
+      "up_dot": 0.999992191791534,
+      "velocity_m_s": 0.000117086834507063,
+      "weight_N": 15745.05
+    },
+    {
+      "hz": 240,
+      "mean_support_N": 15745.0548792521,
+      "passed": true,
+      "relative_error": 3.0989117949088e-07,
+      "up_dot": 0.999992191791534,
+      "velocity_m_s": 6.73462345730513e-05,
+      "weight_N": 15745.05
+    }
+  ],
+  "telemetry_note": "Final benches run sequentially; no shared CSV filenames between these three runs."
+}

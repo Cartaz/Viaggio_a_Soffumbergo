@@ -4,21 +4,29 @@
 
 Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
 
-**Stato: preparazione tecnica e sorgenti del laboratorio. Nessuna build giocabile o esecuzione in Godot/Blender ancora verificata.** Sono passati 28 test sui calcoli, sulle regole e sugli strumenti geografici; gli script GDScript superano parsing e lint. Il sopralluogo è parziale e non è stata misurata alcuna prestazione del gioco.
+**Stato: Yaris 0.1 guidabile nel laboratorio Godot 4.5.1.** Il modello è stato generato e renderizzato in Blender 4.5.3 LTS. Passano 28 test preparatori, i controlli dell'asset e 28 controlli dell'integrazione nel laboratorio con rendering reale su Windows. La qualità artistica finale, la dinamica completa e il giro giocabile restano da verificare; il sopralluogo è parziale e non sono stati misurati FPS rappresentativi.
+
+**Modello Yaris 0.1 — base da scolpire ancora molto.** Questa versione conserva l'idea e l'integrazione tecnica; carrozzeria e abitacolo richiedono una sostanziale lavorazione delle forme prima di avvicinarsi alla fedeltà realistica richiesta. La numerazione riguarda il modello auto, non una release giocabile del gioco.
+
+Il modello ha esterni e abitacolo, quattro portiere e portellone apribili, ruote e volante separati, tre livelli di dettaglio e una variante con foro reale per l'albero. [File, ispezione e integrazione](docs/YARIS_MODELLO.md) · [Versione e contenuti](art/vehicles/yaris_2022/MODEL_VERSION.json) · [Riferimenti Toyota e stime](references/yaris_2022/README.md) · [Evidenze del collaudo](reports/yaris_2022/VERIFICA.md).
 
 ## Base tecnica disponibile
 
 | Parte | Consegna | Limite della verifica |
 | --- | --- | --- |
-| Godot | Laboratorio con quattro sospensioni, pneumatici, trazione anteriore, carico alto, camera, HUD e CSV | Sorgenti controllati; esecuzione da collaudare |
+| Godot | Yaris guidabile, quattro sospensioni, pneumatici, trazione anteriore, carico alto, tre camere, HUD e CSV | Accelerazione, curva breve, frenata e comandi provati; accettazione dinamica completa ancora aperta |
 | Calcoli | Masse, baricentro, tensore completo, aderenza combinata | Test Python, non ancora dinamica motore |
 | Regole | Checkpoint ordinati, sosta, visita, ritorno e salvataggio atomico | Modello Python, da collegare alla scena 3D |
 | Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
-| Blender | Generatori delle sagome di prova e delle guide del borgo | Sintassi Python; nessun modello finale già prodotto |
+| Blender | Sorgente Yaris, GLB e render; generatori delle guide del borgo | Yaris eseguita; revisione artistica finale e guide del borgo ancora aperte |
 | Esplorazione | Controller di movimento e seguito della compagna | Richiedono rig, navmesh e integrazione nella scena |
 | Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | L’anello completo e il terreno non sono ancora acquisiti |
 
-Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. I cubi sono segnaposto, non la Yaris fedele e i protagonisti definitivi.
+Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. La Yaris usa la ricostruzione da fotografie; albero, coffa e occupanti rimangono segnaposto. I render del modello e le prove del motore non approvano automaticamente la fedeltà artistica finale.
+
+## Provare la Yaris nel laboratorio
+
+Aprire `project.godot` con Godot 4.5.1, attendere l'importazione e premere **F5**. Frecce/WASD per guidare, **Spazio** per frenare, **R** per ripristinare la prova. **C** alterna vista esterna, vista dell'albero/coffa e abitacolo; **O** apre/chiude le quattro portiere, **H** il portellone. L'apertura è consentita sotto 0,2 m/s. [Immagini del gioco e verifica riproducibile](reports/yaris_2022/LABORATORIO.md).
 
 ## Verifiche senza editor
 
@@ -64,11 +72,11 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 
 ## Stack proposto
 
-Il progetto contiene ora `project.godot`, scene e sorgenti. Base API: **Godot 4.5.1 con Jolt integrato**, scelta riproducibile, non indicata come versione più recente né come compatibilità già provata. Generatori preparati per **Blender 4.5 LTS**. Prima verificheremo le versioni presenti sul PC. QGIS rimane utile per terreno e trasformazioni di datum.
+Il progetto contiene `project.godot`, scene e sorgenti. Base verificata in questa consegna: **Godot 4.5.1 con Jolt integrato** e **Blender 4.5.3 LTS**. Non sono indicati come le versioni più recenti. QGIS rimane utile per terreno e trasformazioni di datum.
 
 ## Primo risultato da costruire
 
-Il prossimo passaggio è importare il laboratorio nel motore, collaudare equilibrio e guida e generare le sagome in Blender. Il primo campione artistico completo rimane l’arrivo a Valle con prato, parcheggio e passaggio all’esplorazione. Fonti e attribuzioni della cartografia sono in [NOTICE.md](NOTICE.md).
+Il prossimo passaggio è collaudare equilibrio e guida, rifinire il modello auto confrontandolo con i riferimenti e integrare i protagonisti. Il primo campione artistico completo rimane l’arrivo a Valle con prato, parcheggio e passaggio all’esplorazione. Fonti e attribuzioni della cartografia sono in [NOTICE.md](NOTICE.md).
 
 ## Provenienza e distribuzione
 

@@ -1,9 +1,17 @@
 extends Node3D
 ## Synthetic test ground, explicitly unrelated to the real Faedis–Valle road.
 
+enum CameraMode { VEHICLE, FULL_RIG, CABIN }
+
+const CAMERA_LABELS := ["Auto", "Albero e coffa", "Abitacolo"]
+
 var vehicle: LaboratoryVehicle
 var camera: Camera3D
 var hud: Label
+var camera_mode := CameraMode.VEHICLE
+var camera_snap := true
+var doors_open := false
+var hatch_open := false
 
 
 func _ready() -> void:
@@ -69,25 +77,20 @@ func _physics_process(_delta: float) -> void:
 func _process(delta: float) -> void:
 	if not is_instance_valid(vehicle):
 		return
-	var heading := -vehicle.global_basis.z
-	heading.y = 0
-	if heading.length_squared() < 0.01:
-		heading = Vector3.FORWARD
-	heading = heading.normalized()
-	var desired := vehicle.global_position - heading * 12 + Vector3(5, 7, 0)
-	camera.global_position = camera.global_position.lerp(desired, 1.0 - exp(-3.0 * delta))
-	camera.look_at(vehicle.global_position + Vector3.UP * 2.8, Vector3.UP)
+	_update_camera(delta)
 	var loads := vehicle.wheel_loads
 	hud.text = (
 		(
-			"VIAGGIO A SOFFUMBERGO — LABORATORIO, NON CIRCUITO REALE\n"
-			+ "Frecce/WASD: guida · Spazio: freno · R: ripristino (prova invalidata)\n"
-			+ "Velocità %.1f km/h · Contatti %d/4 · Passo %d Hz\n"
+			"VIAGGIO A SOFFUMBERGO — LABORATORIO · YARIS 0.1\n"
+			+ "Frecce/WASD: guida · Spazio: freno · R: ripristino\n"
+			+ "C: camera · O: portiere · H: portellone (apertura da fermo)\n"
+			+ "Camera: %s · Velocità %.1f km/h · Contatti %d/4 · Passo %d Hz\n"
 			+ "Carichi FL/FR/RL/RR: %.0f / %.0f / %.0f / %.0f N\n"
-			+ "Proxy geometrici e masse provvisorie; tenere separata la verifica del motore.\n"
-			+ "CSV: user://telemetry · Ripristino usato: %s"
+			+ "Modello da scolpire; albero, occupanti e masse provvisori.\n"
+			+ "CSV: user://telemetry · Prova invalidata: %s"
 		)
 		% [
+			CAMERA_LABELS[camera_mode],
 			vehicle.linear_velocity.length() * 3.6,
 			vehicle.diagnostic_contact_count,
 			Engine.physics_ticks_per_second,
@@ -98,6 +101,54 @@ func _process(delta: float) -> void:
 			str(vehicle.invalidated)
 		]
 	)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("cycle_camera"):
+		camera_mode = (camera_mode + 1) % CameraMode.size()
+		camera_snap = true
+	elif event.is_action_pressed("toggle_lab_doors"):
+		if doors_open or vehicle.linear_velocity.length() < 0.2:
+			doors_open = not doors_open
+			for wheel_id in YarisVisual.WHEEL_IDS:
+				vehicle.yaris_visual.set_door_open(wheel_id, 1.0 if doors_open else 0.0)
+	elif event.is_action_pressed("toggle_lab_hatch"):
+		if hatch_open or vehicle.linear_velocity.length() < 0.2:
+			hatch_open = not hatch_open
+			vehicle.yaris_visual.set_hatch_open(1.0 if hatch_open else 0.0)
+
+
+func _update_camera(delta: float) -> void:
+	if camera_mode == CameraMode.CABIN:
+		var eye := vehicle.yaris_visual.find_child("DriverEye", true, false) as Node3D
+		camera.global_position = eye.global_position
+		camera.fov = 80
+		camera.look_at(
+			eye.global_position - vehicle.global_basis.z * 2.0 - vehicle.global_basis.y * 0.17,
+			vehicle.global_basis.y
+		)
+		camera_snap = false
+		return
+	var heading := -vehicle.global_basis.z
+	heading.y = 0
+	if heading.length_squared() < 0.01:
+		heading = Vector3.FORWARD
+	heading = heading.normalized()
+	var right := heading.cross(Vector3.UP)
+	var wide := camera_mode == CameraMode.FULL_RIG
+	var desired := (
+		vehicle.global_position
+		- heading * (12.0 if wide else 6.5)
+		+ right * (5.0 if wide else 3.0)
+		+ Vector3.UP * (7.0 if wide else 2.7)
+	)
+	camera.fov = 62 if wide else 52
+	if camera_snap:
+		camera.global_position = desired
+	else:
+		camera.global_position = camera.global_position.lerp(desired, 1.0 - exp(-3.0 * delta))
+	camera.look_at(vehicle.global_position + Vector3.UP * (2.8 if wide else 0.8), Vector3.UP)
+	camera_snap = false
 
 
 func _ground(size: Vector3, at: Vector3, color: Color) -> StaticBody3D:
@@ -128,7 +179,10 @@ func _setup_inputs() -> void:
 		"left": [KEY_A, KEY_LEFT],
 		"right": [KEY_D, KEY_RIGHT],
 		"brake": [KEY_SPACE],
-		"reset_lab": [KEY_R]
+		"reset_lab": [KEY_R],
+		"cycle_camera": [KEY_C],
+		"toggle_lab_doors": [KEY_O],
+		"toggle_lab_hatch": [KEY_H]
 	}
 	for action in bindings:
 		if not InputMap.has_action(action):

@@ -5,7 +5,7 @@
     {
       "id": "CAR-YARIS-TREND22",
       "priority": "P1",
-      "status": "envelope_generator_only",
+      "status": "v0.1_early_shape_study_requires_substantial_sculpting",
       "requirements": [
         "3940x1745x1500 mm envelope; verify against MY22 body",
         "16 inch alloy 195/55 R16",
@@ -17,11 +17,25 @@
         "actual roof passage and structural mast anchorage"
       ],
       "missing": [
-        "faithful bodywork",
-        "interior measurements",
-        "UV and final materials",
-        "door hinges and pedal mechanism fit"
-      ]
+        "artist review and refinement of sheet metal, lamps, rims and dashboard",
+        "measured interior dimensions",
+        "final topology and material polish",
+        "character fit, pedal extensions and structural mast anchorage",
+        "representative Linux/Windows rendering and performance acceptance"
+      ],
+      "delivered": [
+        "editable Blender source",
+        "stock and fictional roof-aperture GLB",
+        "three stock detail levels",
+        "PBR materials and original embedded textures",
+        "four door hinges, hatch and running gear",
+        "Godot visual adapter and inspection scene",
+        "official reference dossier and verification reports"
+      ],
+      "sources": [
+        "references/yaris_2022/README.md"
+      ],
+      "version": "0.1"
     },
     {
       "id": "MOUSE-DRIVER",

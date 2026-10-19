@@ -1,0 +1,42 @@
+{
+  "export_checks": "passed",
+  "artistic_fidelity": "requires_human_review",
+  "files": [
+    {
+      "file": "yaris_trend_2022.glb",
+      "bytes": 7195284,
+      "triangles": 233522,
+      "vertices": 181787,
+      "meshes": 113,
+      "materials": 35,
+      "animations": 5
+    },
+    {
+      "file": "yaris_trend_2022_lod1.glb",
+      "bytes": 4299132,
+      "triangles": 106732,
+      "vertices": 107509,
+      "meshes": 113,
+      "materials": 35,
+      "animations": 5
+    },
+    {
+      "file": "yaris_trend_2022_lod2.glb",
+      "bytes": 2065084,
+      "triangles": 44677,
+      "vertices": 49359,
+      "meshes": 113,
+      "materials": 35,
+      "animations": 5
+    },
+    {
+      "file": "yaris_trend_2022_game.glb",
+      "bytes": 7262244,
+      "triangles": 235306,
+      "vertices": 183515,
+      "meshes": 114,
+      "materials": 35,
+      "animations": 5
+    }
+  ]
+}

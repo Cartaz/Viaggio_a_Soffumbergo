@@ -1,6 +1,6 @@
 # Primo collegamento al PC
 
-Obiettivo: rendere il laboratorio realmente verificato. Nessuna prova motore di questa pagina risulta già passata.
+Obiettivo: rendere il laboratorio realmente verificato. Importazione, confronto numerico, avvio delle scene, banco statico a 120/240 Hz e una prova breve della Yaris guidabile con rendering reale sono eseguiti; il banco a 60 Hz non passa la soglia di velocità residua. Evidenze e limiti in `reports/yaris_2022/VERIFICA.md` e `LABORATORIO.md` nella stessa cartella. Le prove dinamiche complete sotto elencate restano da completare.
 
 ## Importazione
 
@@ -26,7 +26,9 @@ Conservare output, commit, impostazioni e CSV. Una prova statica non convalida l
 
 ## Prova visiva
 
-Avviare il progetto. Frecce/WASD per guida, spazio per freno, R per ripristino con invalidazione. La camera comprende il carico alto. I CSV vengono scritti in `user://telemetry`.
+Avviare il progetto con F5. Frecce/WASD per guida, spazio per freno, R per ripristino con invalidazione. C alterna auto, albero/coffa e abitacolo; O e H comandano porte e portellone (apertura sotto 0,2 m/s). I CSV vengono scritti in `user://telemetry`, con identificatori distinti per processo e veicolo per evitare sovrascritture fra test simultanei.
+
+`godot/tests/lab_yaris_check.gd` esercita la scena principale tramite gli input reali, con accelerazione, breve curva a destra, frenata, ripristino, camere e aperture. Aggiungendo `--capture-dir=...` senza `--headless` registra quattro immagini del viewport e il rapporto JSON. Eseguito su Windows/Radeon RX 6800: 28 controlli, zero errori. Il render è una prova d'integrazione; non misura FPS rappresentativi né certifica l'intero banco dinamico.
 
 | Prova | Controllo |
 | --- | --- |

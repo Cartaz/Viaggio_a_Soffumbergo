@@ -1,0 +1,18 @@
+{
+  "captures": [
+    "lab_auto.png",
+    "lab_albero_coffa.png",
+    "lab_abitacolo.png",
+    "lab_portiere.png"
+  ],
+  "checks": 28,
+  "display_driver": "Windows",
+  "engine": "4.5.1-stable (official)",
+  "failures": 0,
+  "forward_distance_m": 1.34312963485718,
+  "forward_speed_m_s": 2.52439618110657,
+  "right_turn_yaw_rad_s": -0.493934094905853,
+  "rolling_delta_rad": -0.27342700958252,
+  "speed_after_braking_m_s": 0.0662526041269302,
+  "speed_before_braking_m_s": 3.66267919540405
+}

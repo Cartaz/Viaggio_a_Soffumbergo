@@ -1,6 +1,20 @@
 # Roadmap verificabile
 
-Stato attuale: preparazione tecnica e sorgenti del laboratorio, non ancora eseguiti negli editor. Una casella completata richiede una consegna o una prova ispezionabile.
+Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricostruzione Yaris eseguita in Blender. Una casella completata richiede una consegna o una prova ispezionabile. Il solo avvio headless non chiude le prove dinamiche o artistiche.
+
+## Incremento veicolo — 19 ottobre 2026
+
+- [x] Raccogliere fonti Toyota MY22 e distinguere le dotazioni italiane dai campioni fotografici di altri allestimenti.
+- [x] Generare e consegnare geometria di esterni/abitacolo, sorgente Blender, GLB, varianti LOD e render.
+- [x] Collegare sterzo, sospensioni e rotazione visiva delle ruote al laboratorio senza aggiungere massa.
+- [x] Aprire porte/portellone e predisporre una scena autonoma per l'ispezione.
+- [x] Creare il foro dell'albero nel tetto e nel rivestimento, con verifica geometrica dell'apertura.
+- [x] Eseguire import, controlli dell'asset e avvio delle scene in Godot 4.5.1.
+- [x] Rendere la Yaris 0.1 provabile nel laboratorio principale con tre camere e comandi per porte/portellone; verificare guida breve, sterzo, frenata e immagini dal renderer reale (28 controlli).
+- [ ] Approvare la fedeltà artistica e rifinire superfici, ottiche, cerchi e plancia alla qualità finale.
+- [ ] Collaudare prestazioni, personaggi e cinematismi nel campione P3.
+
+Evidenze: `reports/yaris_2022/VERIFICA.md`. La casella complessiva P3 resta aperta.
 
 ## Consegna preparatoria senza Godot/Blender
 

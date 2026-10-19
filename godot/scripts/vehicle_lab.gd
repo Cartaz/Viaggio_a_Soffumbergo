@@ -1,7 +1,9 @@
 class_name LaboratoryVehicle
 extends RigidBody3D
 ## Four single-ray contacts, rigid mast and locked passenger proxies.
-## No final Yaris model, wheel angular dynamics, ESC, elastic mast or character rig.
+## Photo-reconstructed Yaris visual; no calibrated wheel dynamics, ESC or character rig.
+
+const YarisScene = preload("res://godot/scenes/yaris_game_visual.tscn")
 
 var config: Dictionary
 var properties: Dictionary
@@ -12,7 +14,7 @@ var steering := 0.0
 var wheel_loads := PackedFloat32Array([0.0, 0.0, 0.0, 0.0])
 var wheel_lengths := PackedFloat32Array([0.31, 0.31, 0.31, 0.31])
 var wheel_anchors: Array[Vector3] = []
-var wheels: Array[Node3D] = []
+var yaris_visual: YarisVisual
 var diagnostic_contact_count := 0
 var reset_requested := false
 var invalidated := false
@@ -65,7 +67,9 @@ func _ready() -> void:
 	add_child(nest_collision)
 	if not DirAccess.dir_exists_absolute("user://telemetry"):
 		DirAccess.make_dir_recursive_absolute("user://telemetry")
-	var stamp := str(int(Time.get_unix_time_from_system()))
+	var stamp := (
+		"%d_%d_%d" % [int(Time.get_unix_time_from_system()), OS.get_process_id(), get_instance_id()]
+	)
 	telemetry = FileAccess.open("user://telemetry/lab_" + stamp + ".csv", FileAccess.WRITE)
 	if telemetry:
 		telemetry.store_csv_line(
@@ -198,10 +202,11 @@ func _solve_wheel(
 	state.apply_force(forward * forces.x + lateral * forces.y, lever)
 
 
-func _process(_delta: float) -> void:
-	for i in range(wheels.size()):
-		wheels[i].position = wheel_anchors[i] - Vector3.UP * wheel_lengths[i]
-		wheels[i].rotation.y = -steering if i < 2 else 0.0
+func _process(delta: float) -> void:
+	if is_instance_valid(yaris_visual):
+		yaris_visual.update_running_gear(
+			wheel_anchors, wheel_lengths, steering, linear_velocity.dot(-global_basis.z), delta
+		)
 
 
 func _sample(state: PhysicsDirectBodyState3D) -> void:
@@ -231,25 +236,11 @@ func _sample(state: PhysicsDirectBodyState3D) -> void:
 
 
 func _build_proxies() -> void:
-	_box(Vector3(1.745, 0.65, 3.94), Vector3(0, 0.72, 0), Color("bb333b"))
-	_box(Vector3(1.45, 0.5, 1.9), Vector3(0, 1.28, 0.1), Color("608c91"))
+	yaris_visual = YarisScene.instantiate() as YarisVisual
+	add_child(yaris_visual)
 	_box(Vector3(0.18, 5.3, 0.18), Vector3(0, 3.9, 0), Color("aa7e46"))
 	_box(Vector3(1.2, 0.3, 1.2), Vector3(0, 5.6, 0), Color("c49c64"))
 	_box(Vector3(0.32, 0.45, 0.6), Vector3(0.1, 6.4, 0), Color("cda5a0"))
-	for anchor in wheel_anchors:
-		var wheel := Node3D.new()
-		add_child(wheel)
-		var mesh := MeshInstance3D.new()
-		var cylinder := CylinderMesh.new()
-		cylinder.top_radius = float(config.tire.radius_m)
-		cylinder.bottom_radius = float(config.tire.radius_m)
-		cylinder.height = 0.195
-		mesh.mesh = cylinder
-		mesh.rotation.z = PI * 0.5
-		mesh.material_override = _material(Color("303c42"))
-		wheel.add_child(mesh)
-		wheel.position = anchor - Vector3.UP * 0.31
-		wheels.append(wheel)
 
 
 func _box(size: Vector3, at: Vector3, color: Color) -> void:

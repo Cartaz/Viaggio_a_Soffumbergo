@@ -1,0 +1,9 @@
+{
+  "opening_m": [
+    0.32,
+    0.32
+  ],
+  "roof_and_headliner_center_rays_clear": true,
+  "roof_and_headliner_adjacent_rays_hit": true,
+  "structural_certification": false
+}

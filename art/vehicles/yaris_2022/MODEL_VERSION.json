@@ -1,0 +1,24 @@
+{
+  "asset_id": "CAR-YARIS-TREND22",
+  "version": "0.1",
+  "date": "2026-10-19",
+  "scope": "Vehicle model only; not a playable game release",
+  "stage": "early_shape_study_requires_substantial_sculpting",
+  "user_feedback": "The idea is visible, but the model still needs much more sculpting.",
+  "artistic_fidelity_approved": false,
+  "source": "art/source/yaris_2022/yaris_trend_2022.blend",
+  "exports": [
+    "yaris_trend_2022.glb",
+    "yaris_trend_2022_lod1.glb",
+    "yaris_trend_2022_lod2.glb",
+    "yaris_trend_2022_game.glb"
+  ],
+  "documentation": "docs/YARIS_MODELLO.md",
+  "verification": "reports/yaris_2022/VERIFICA.md",
+  "next_art_priorities": [
+    "Sculpt the body silhouette, panel volumes and transitions against official references",
+    "Rebuild and refine headlamps, rear lamps, bumper surfaces and wheel geometry",
+    "Sculpt dashboard, door cards, seats and cabin trim",
+    "Review topology, glazing, shading and paint only after the main forms are corrected"
+  ]
+}
