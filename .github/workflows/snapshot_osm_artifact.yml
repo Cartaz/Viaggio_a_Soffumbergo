@@ -1,0 +1,74 @@
+name: Snapshot verified OSM source artifact
+
+# One-shot workflow to preserve the specific tested Overpass extraction
+# on the feature branch, never directly in main and never as a drivable mesh.
+on:
+  push:
+    branches:
+      - feature/gis-source-ingest-20261020
+    paths:
+      - '.github/workflows/snapshot_osm_artifact.yml'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  preserve-osm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Download exact successful source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 39337016363 \
+            --repo Cartaz/Viaggio_a_Soffumbergo \
+            --name soffumbergo-regional-osm-candidates \
+            --dir build/recovered_source
+      - name: Validate and preserve real OSM network and loop review
+        run: |
+          set -euo pipefail
+          source_file="$(find build/recovered_source -name regional_roads.geojson -type f -print -quit)"
+          manifest_file="$(find build/recovered_source -name regional_roads_provenance.json -type f -print -quit)"
+          test -n "$source_file" && test -n "$manifest_file"
+          python - "$source_file" "$manifest_file" <<'PY'
+          import json,sys
+          network=json.load(open(sys.argv[1], encoding='utf-8'))
+          metadata=json.load(open(sys.argv[2], encoding='utf-8'))
+          assert metadata['source_response_sha256']=='95b742820c9ae5013d21ee032ee7796dfa7085f0782c1bc996a8b648dfdf81c3'
+          assert metadata['route_verified'] is False
+          assert metadata['road_surface_height_status']=='absent'
+          assert len(network['features'])==1149
+          assert metadata['possible_motor_road_candidates']==821
+          assert network['route_status']=='network_candidates_no_complete_loop_asserted'
+          PY
+          mkdir -p data/geography
+          cp "$source_file" data/geography/osm_regional_roads_20261020.geojson
+          cp "$manifest_file" data/geography/osm_regional_roads_20261020_provenance.json
+          python tools/reconstruct_loop_candidate.py \
+            --input "$source_file" \
+            --provenance "$manifest_file" \
+            --output data/geography/circuito_osm_candidate_20261020.geojson
+          python - <<'PY'
+          import json
+          p=json.load(open('data/geography/circuito_osm_candidate_20261020.geojson',encoding='utf8'))
+          assert [f['properties']['sector'] for f in p['features']]==list('ABCVDEF')
+          assert 18000 < p['length_2d_total_m_approx'] < 20000
+          assert not p['usable_as_game_road']
+          assert p['vertical_datum'] is None
+          PY
+          python tools/check_project.py
+      - name: Commit reviewed-source snapshot to feature branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/geography/osm_regional_roads_20261020.geojson \
+                  data/geography/osm_regional_roads_20261020_provenance.json \
+                  data/geography/circuito_osm_candidate_20261020.geojson
+          git commit -m 'data(gis): snapshot real OSM regional network and seven review-only circuit sectors'
+          git push origin HEAD:feature/gis-source-ingest-20261020
