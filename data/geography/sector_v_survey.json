@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "sector_id": "V",
+  "created_date": "2026-10-20",
+  "title": "Via Monte Piccat → Piazza don Antonio Clemencig → ritorno al bivio strada per Valle",
+  "status": "complete_planimetric_osm_network_for_selected_out_and_back_visual_survey_incomplete",
+  "original_itinerary_url": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/@46.1487995,13.3345871,13.29z/data=!4m32!4m31!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!1m5!1m1!1s0x477a494d96dac4a9:0x36d43bba7acc9a1a!2m2!1d13.3624124!2d46.1292376!1m5!1m1!1s0x477a4ff4c7df2479:0x1f7cd445ad9b2a26!2m2!1d13.3933096!2d46.1569587!1m5!1m1!1s0x477a48c2e522a62d:0x260709882e6e9861!2m2!1d13.3592542!2d46.1657647!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!3e0?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+  "source_dossier": "CIRCUITO_SOPRALLUOGO.md (file caricato nel progetto ChatGPT; sessione 2026-10-19)",
+  "osm_source_path": "data/geography/osm_survey.geojson",
+  "osm_source_blob_sha": "8a245f3bba6b25a06b2ed0f9fc627d0a4e347718",
+  "osm_source_url": "https://api.openstreetmap.org/api/0.6/map?bbox=13.3900,46.1550,13.3960,46.1590",
+  "osm_acquired_utc": "2026-10-18T22:39:59.323188+00:00",
+  "reference_route_geojson": "data/geography/sector_v_route.geojson",
+  "context_geojson": "data/geography/sector_v_context.geojson",
+  "horizontal_datum": "WGS84 / EPSG:4326",
+  "vertical_datum": null,
+  "terrain_model": null,
+  "road_width_m": null,
+  "road_crossfall": null,
+  "turn_radius_m": null,
+  "measured_clearance_m": null,
+  "public_parking_confirmation": null,
+  "turnaround_feasibility": null,
+  "continuous_streetview_coverage": false,
+  "app_reported_full_loop_km": 18.7,
+  "app_reported_full_loop_min": 36,
+  "app_reported_sector_m": 530,
+  "reference_geometry_outbound_m_approx": 266.83,
+  "reference_geometry_out_and_back_m_approx": 533.66,
+  "osm_route_way_ids": [
+    "way/1041538032",
+    "way/136283440",
+    "way/136494659",
+    "way/1107817252"
+  ],
+  "building_inventory_count_within_60m": 53,
+  "nearby_building_osm_ids": [
+    "way/358101690",
+    "way/36158042",
+    "way/36158047",
+    "way/36158048",
+    "way/36158050",
+    "way/36158051",
+    "way/36158052",
+    "way/36158053",
+    "way/36158054",
+    "way/36158061",
+    "way/36158062",
+    "way/36158063",
+    "way/36158064",
+    "way/36158065",
+    "way/36158066",
+    "way/36158067",
+    "way/36158068",
+    "way/36158069",
+    "way/36158070",
+    "way/36158071",
+    "way/36158072",
+    "way/36158121",
+    "way/36158122",
+    "way/36158125",
+    "way/36158126",
+    "way/36158127",
+    "way/36158128",
+    "way/36427963",
+    "way/36439372",
+    "way/36439373",
+    "way/36572074",
+    "way/36572075",
+    "way/36572080",
+    "way/36572081",
+    "way/36572082",
+    "way/36572086",
+    "way/36572087",
+    "way/36572088",
+    "way/36572089",
+    "way/36572090",
+    "way/36572091",
+    "way/36572092",
+    "way/36572093",
+    "way/36572154",
+    "way/36572155",
+    "way/36572157",
+    "way/36572161",
+    "way/36572163",
+    "way/36572164",
+    "way/36572167",
+    "way/36572168",
+    "way/36659330",
+    "way/36686356"
+  ],
+  "maneuvers": [
+    {
+      "step": 11,
+      "id": "V-11",
+      "instruction": "Destra in via Monte Piccat",
+      "distance_m_app_rounded": 230,
+      "osm_way_ids": [
+        "way/1041538032",
+        "way/136283440"
+      ],
+      "direction": "outbound",
+      "osm_centerline_length_m_approx": 219.585,
+      "verification": "transcribed_Google_steps_matched_to_connected_OSM_ways_topology_approximate_not_road_survey"
+    },
+    {
+      "step": 12,
+      "id": "V-12",
+      "instruction": "Leggermente a destra verso la tappa in piazza",
+      "distance_m_app_rounded": 45,
+      "osm_way_ids": [
+        "way/136494659",
+        "way/1107817252"
+      ],
+      "direction": "outbound",
+      "osm_centerline_length_m_approx": 47.245,
+      "verification": "transcribed_Google_steps_matched_to_connected_OSM_ways_topology_approximate_not_road_survey"
+    },
+    {
+      "step": 13,
+      "id": "V-13",
+      "instruction": "Riparti dalla tappa verso via Monte Piccat",
+      "distance_m_app_rounded": 45,
+      "osm_way_ids": [
+        "way/1107817252",
+        "way/136494659"
+      ],
+      "direction": "return",
+      "osm_centerline_length_m_approx": 47.245,
+      "verification": "transcribed_Google_steps_matched_to_connected_OSM_ways_topology_approximate_not_road_survey"
+    },
+    {
+      "step": 14,
+      "id": "V-14",
+      "instruction": "Leggermente a sinistra in via Monte Piccat",
+      "distance_m_app_rounded": 210,
+      "osm_way_ids": [
+        "way/136283440",
+        "way/1041538032"
+      ],
+      "direction": "return",
+      "osm_centerline_length_m_approx": 219.585,
+      "verification": "transcribed_Google_steps_matched_to_connected_OSM_ways_topology_approximate_not_road_survey"
+    }
+  ],
+  "anchors": {
+    "start_wgs84": [
+      13.3924178,
+      46.1590017
+    ],
+    "via_monte_piccat_piazza_junction_wgs84": [
+      13.3934472,
+      46.1573318
+    ],
+    "piazza_road_wgs84": [
+      13.3933009,
+      46.1569279
+    ],
+    "google_piazza_waypoint_wgs84": [
+      13.3933096,
+      46.1569587
+    ],
+    "candidate_lawn_PV01_wgs84": [
+      13.3918124,
+      46.1568696
+    ]
+  },
+  "visual_observations_from_previous_dossier": [
+    {
+      "id": "CIR-11",
+      "source_type": "previous_survey_diary_not_reobserved_this_session",
+      "step": 11,
+      "image_date": "2026-03",
+      "lat": 46.1588292,
+      "lon": 13.3922833,
+      "pano_id": "VG6N0zxqJ7PLJ6BbJX5OWA",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=VG6N0zxqJ7PLJ6BbJX5OWA&viewpoint=46.1588292%2C13.3922833&heading=2.49&pitch=0",
+      "description": "Bivio di ingresso nel settore; ringhiera su pilastrini a sinistra, muretto a destra, segnaletica.",
+      "coverage": "single_panorama_not_continuous"
+    },
+    {
+      "id": "CIR-VAL-12",
+      "source_type": "previous_survey_diary_not_reobserved_this_session",
+      "step": 12,
+      "image_date": "2023-05",
+      "lat": 46.1574774,
+      "lon": 13.3932969,
+      "pano_id": "vpV1Mx9ExgiJUS-jD1uK2g",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=vpV1Mx9ExgiJUS-jD1uK2g&viewpoint=46.1574774%2C13.3932969&heading=133.71&pitch=0",
+      "description": "Bivio asfaltato, muri di terrazzamento a sinistra, ringhiera metallica a destra, lampione.",
+      "coverage": "single_panorama_not_continuous"
+    },
+    {
+      "id": "CIR-VAL-14",
+      "source_type": "previous_survey_diary_not_reobserved_this_session",
+      "step": 14,
+      "image_date": "2023-05",
+      "lat": 46.1571511,
+      "lon": 13.3934294,
+      "pano_id": "vRTA51C8D5061qUOBsYf0A",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=vRTA51C8D5061qUOBsYf0A&viewpoint=46.1571511%2C13.3934294&heading=359.32&pitch=0",
+      "description": "Muretti, ringhiere, vegetazione e STOP; uscita verso via Monte Piccat.",
+      "coverage": "single_panorama_not_continuous"
+    },
+    {
+      "id": "CIR-VAL-15",
+      "source_type": "previous_survey_diary_not_reobserved_this_session",
+      "step": 15,
+      "image_date": "2023-05",
+      "lat": 46.1588137,
+      "lon": 13.3926044,
+      "pano_id": "KAzz8xQ3_0RkMdu4rPLCNA",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=KAzz8xQ3_0RkMdu4rPLCNA&viewpoint=46.1588137%2C13.3926044&heading=321.61&pitch=0",
+      "description": "Raccordo con il successivo settore D; segnale blu e banchine erbose.",
+      "coverage": "single_panorama_not_continuous"
+    },
+    {
+      "id": "VAL-PIAZZA",
+      "source_type": "previous_survey_diary_not_reobserved_this_session",
+      "lat": 46.1569,
+      "lon": 13.39311,
+      "image_date": "2023-05",
+      "source": "docs/RIFERIMENTI_E_SOPRALLUOGO.md, SV-04",
+      "description": "Terrazza con albero, panchine/tavoli, gradini, ringhiere, pietra e intonaco; arredi non necessariamente permanenti."
+    },
+    {
+      "id": "SV-CH-01",
+      "source_type": "previous_survey_diary_not_reobserved_this_session",
+      "lat": 46.1568367,
+      "lon": 13.3930177,
+      "image_date": "2023-05",
+      "source": "data/geography/survey_points.geojson",
+      "description": "Facciata e campanile osservati parzialmente; footprint ecclesiastico OSM way/36686356 e fotografie Wikimedia Commons 2020."
+    }
+  ],
+  "scope_distinction": {
+    "drivable_reference": "Exact 2D OSM connected way coordinates in main axis; no guarantee that an actual Yaris can enter or turn around.",
+    "pedestrian": "Candidates mapped separately; no continuous path from PV-01 to church/piazza certified.",
+    "buildings": "53 OSM footprints selected within 60 m of driving centerline by centroid criterion, not 53 surveyed facades."
+  },
+  "gaps": [
+    {
+      "id": "V-G01",
+      "scope": "CIR-11 a CIR-VAL-12",
+      "missing": "Visione continua e progressiva di tutti i cambi di direzione, margini, accessi, strettoie e ostacoli alti; confermare il braccio usato dall'itinerario."
+    },
+    {
+      "id": "V-G02",
+      "scope": "CIR-VAL-12 a piazza, passaggi 12-13",
+      "missing": "Rilievo dei 45 m e punto effettivo della manovra. Google waypoint non equivale a luogo dove l'auto può sostare o invertire."
+    },
+    {
+      "id": "V-G03",
+      "scope": "Piazza e borgo",
+      "missing": "Prospetti edificio per edificio, arredi permanenti, gradini, soglie, pavimentazione, campanile e rapporti altimetrici."
+    },
+    {
+      "id": "V-G04",
+      "scope": "Piazza a CIR-VAL-14 e CIR-VAL-15",
+      "missing": "Continuum dei panorami del ritorno, segnaletica e gestione STOP; verifica della sicurezza per la coffa."
+    },
+    {
+      "id": "V-G05",
+      "scope": "PV-01 a piazza/chiesa",
+      "missing": "Confermare con l'utente il prato, l'uso di sosta e un percorso pedonale continuo, accessibile a due topolini quadrupedi."
+    },
+    {
+      "id": "V-G06",
+      "scope": "Intero settore",
+      "missing": "Quote con datum, sezione, pendenze, radius/curve, proprietà di strada, cavi o rami in quota, prova in Godot/Blender."
+    }
+  ],
+  "handoff_to_sector_d": {
+    "point_wgs84": [
+      13.3924178,
+      46.1590017
+    ],
+    "boundary_shared_with_sector_c": true,
+    "next_step": 15,
+    "next_instruction": "Leggermente a sinistra in strada per Valle",
+    "next_step_not_part_of_sector_v": true
+  },
+  "rights": "Geometry and building footprints derived exclusively from © OpenStreetMap contributors (ODbL); Street View only linked/described, never traced or copied. Photos are linked, not embedded.",
+  "sources": [
+    {
+      "name": "OSM edit API extraction, captured 2026-10-18",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=13.3900,46.1550,13.3960,46.1590",
+      "type": "OSM_geometry"
+    },
+    {
+      "name": "Google Maps route, as preserved by uploaded CIRCUITO_SOPRALLUOGO.md",
+      "url": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/@46.1487995,13.3345871,13.29z/data=!4m32!4m31!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!1m5!1m1!1s0x477a494d96dac4a9:0x36d43bba7acc9a1a!2m2!1d13.3624124!2d46.1292376!1m5!1m1!1s0x477a4ff4c7df2479:0x1f7cd445ad9b2a26!2m2!1d13.3933096!2d46.1569587!1m5!1m1!1s0x477a48c2e522a62d:0x260709882e6e9861!2m2!1d13.3592542!2d46.1657647!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!3e0?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+      "type": "user_provided_itinerary"
+    },
+    {
+      "name": "Consorzio Pro Loco Torre Natisone, address Piazza Don A. Clemencig 10",
+      "url": "https://www.consorzioprolocotorrenatisone.it/proloco/pro-loco-valle-di-soffumbergo/",
+      "type": "local_authoritative_context"
+    },
+    {
+      "name": "Wikimedia Commons - church facade, YukioSanjo 2020 (CC BY-SA 4.0)",
+      "url": "https://commons.wikimedia.org/wiki/File:Faedis_-_Valle_-_Chiesa_1.jpg",
+      "type": "exterior_reference_not_included"
+    }
+  ]
+}
