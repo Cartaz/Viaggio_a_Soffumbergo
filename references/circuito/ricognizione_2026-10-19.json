@@ -1,0 +1,307 @@
+{
+  "source_file": "docs/CIRCUITO_SOPRALLUOGO.md",
+  "session_date": "2026-10-19",
+  "original_maps_url": "https://www.google.com/maps/dir/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/Campeglio,+33040+UD/Festa+delle+Castagne+e+del+Miele+di+Castagno,+Piazza+A.Clementig,+1,+33040+Valle+UD/Canal+di+Griv%C3%B2,+33040+UD/Bar+Al+Telefono,+Piazza+I+Maggio,+23,+33040+Faedis+UD/@46.1487995,13.3345871,13.29z/data=!4m32!4m31!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!1m5!1m1!1s0x477a494d96dac4a9:0x36d43bba7acc9a1a!2m2!1d13.3624124!2d46.1292376!1m5!1m1!1s0x477a4ff4c7df2479:0x1f7cd445ad9b2a26!2m2!1d13.3933096!2d46.1569587!1m5!1m1!1s0x477a48c2e522a62d:0x260709882e6e9861!2m2!1d13.3592542!2d46.1657647!1m5!1m1!1s0x477a49196792f853:0xb833870f55d5e180!2m2!1d13.3465502!2d46.1527301!3e0?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+  "app_total": {
+    "km": 18.7,
+    "minutes": 36,
+    "source": "Google Maps in the recorded session, not a survey measurement"
+  },
+  "panoramas": [
+    {
+      "id": "CIR-02",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=4sUygydoDPHoH_dbPJvPwA&viewpoint=46.1524578%2C13.3456331&heading=107.07&pitch=0",
+      "passaggio_originale": 3,
+      "luogo_data_immagini": "Uscita Faedis, SP15 verso via Divisione Julia/SR356 · 2022-07",
+      "osservazione": "Spazio urbano asfaltato, edifici con portici, marciapiedi e imbocco fra case; segnaletica orizzontale visibile.",
+      "limite": "Solo nodo iniziale; collegamento fino a Campeglio non percorso in continuità."
+    },
+    {
+      "id": "CIR-03",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=N239lPyW-lj2m9dKP8b4KQ&viewpoint=46.1285473%2C13.3621382&heading=90.96&pitch=0",
+      "passaggio_originale": 4,
+      "luogo_data_immagini": "Campeglio, SR356 / via Paolo Diacono · 2026-04",
+      "osservazione": "Incrocio urbano, parapetti gialli presso gradini, edifici ai lati e piccola edicola sul lato opposto.",
+      "limite": "Deviazione al segnaposto Campeglio; non assunta come obbligo del circuito. Il link originale mantiene questo passaggio: non è stato eliminato dal riferimento."
+    },
+    {
+      "id": "CIR-04",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=Aqp-T-SmFdMBgTUmA18V7w&viewpoint=46.1294583%2C13.3624209&heading=185.3&pitch=0",
+      "passaggio_originale": 5,
+      "luogo_data_immagini": "Campeglio, via Paolo Diacono verso SR356 · 2026-03",
+      "osservazione": "Strada residenziale senza mezzeria, marciapiedi stretti, muro in pietra e recinzioni.",
+      "limite": "Ritorno sul breve tratto del segnaposto; nessun tornante da dedurre dalla manovra dell'app. Il link originale mantiene questo passaggio: non è stato eliminato dal riferimento."
+    },
+    {
+      "id": "CIR-05",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=b60bpfSwNiN1Bt-U7ulaBw&viewpoint=46.1287162%2C13.3623277&heading=185.99&pitch=0",
+      "passaggio_originale": 6,
+      "luogo_data_immagini": "Campeglio, innesto via Paolo Diacono / via Soffumbergo · 2026-03",
+      "osservazione": "Innesto a T con STOP, parapetti gialli e fabbricati prossimi alla carreggiata.",
+      "limite": "Nessuna misura della sezione o del raggio."
+    },
+    {
+      "id": "CIR-06",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=apdNekWQ0-mRaBBCzONB1A&viewpoint=46.1271692%2C13.3666683&heading=110.04&pitch=0",
+      "passaggio_originale": 7,
+      "luogo_data_immagini": "SR356 / via Monte San Lorenzo · 2026-04",
+      "osservazione": "Svolta a sinistra accanto a casa chiara con balcone; strada principale con mezzeria e marciapiedi.",
+      "limite": "Imbocco verificato; sequenza interna delle curve verso Colloredo da censire."
+    },
+    {
+      "id": "CIR-07",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=N4dZ5v3ba82LlKJo6Fyiog&viewpoint=46.1331275%2C13.3820732&heading=36.16&pitch=0",
+      "passaggio_originale": 8,
+      "luogo_data_immagini": "Via Monte San Lorenzo verso località Colloredo · 2026-03",
+      "osservazione": "Carreggiata senza mezzeria, muro in pietra a destra, margine a monte vegetato a sinistra; abitazioni e vigneto visibili.",
+      "limite": "Curva leggera dell'indicazione stradale; non classificata come tornante."
+    },
+    {
+      "id": "CIR-08",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=sUkLbqb6kVahRI6qFIMwjA&viewpoint=46.1345686%2C13.3838913&heading=6.16&pitch=0",
+      "passaggio_originale": 9,
+      "luogo_data_immagini": "Località Colloredo verso Valle Soffumbergo · 2026-03",
+      "osservazione": "Bivio presso case, muro e bacheca a sinistra; margini erbosi e strada senza mezzeria.",
+      "limite": "Passaggio presso Colloredo riscontrato nell'itinerario candidato, non assunto per vicinanza geografica."
+    },
+    {
+      "id": "CIR-09",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=4JvmsXRN5WUW20jnlf6hnA&viewpoint=46.1369502%2C13.3913328&heading=25.73&pitch=0",
+      "passaggio_originale": 10,
+      "luogo_data_immagini": "Valle Soffumbergo / via Prestento · 2026-03",
+      "osservazione": "Asfalto senza mezzeria, bosco e margine sterrato sul lato destro, andamento curvilineo.",
+      "limite": "Campione iniziale; non copre in continuità i 3,3 km fino al bivio via Monte Piccat."
+    },
+    {
+      "id": "CIR-11",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=VG6N0zxqJ7PLJ6BbJX5OWA&viewpoint=46.1588292%2C13.3922833&heading=2.49&pitch=0",
+      "passaggio_originale": 11,
+      "luogo_data_immagini": "Uscita nord Valle, via Prestento / strada per Valle · 2026-03",
+      "osservazione": "Bivio con svolta a sinistra, ringhiera su pilastrini in cemento sul bordo sinistro, muretto a destra e gruppi di segnali direzionali.",
+      "limite": "Nel link originale, all’andata si svolta a destra in via Monte Piccat per la piazza. Il vecchio candidato proseguiva direttamente a sinistra per la discesa."
+    },
+    {
+      "id": "CIR-VAL-12",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=vpV1Mx9ExgiJUS-jD1uK2g&viewpoint=46.1574774%2C13.3932969&heading=133.71&pitch=0",
+      "passaggio_originale": 12,
+      "luogo_data_immagini": "Via Monte Piccat, accesso al ramo della piazza · 2023-05",
+      "osservazione": "Bivio asfaltato, muri di terrazzamento in pietra a sinistra, ringhiera metallica a destra e lampione; strada in salita visibile sul ramo opposto.",
+      "limite": "Nodo osservato; continuità fra panorami e misure ancora da verificare."
+    },
+    {
+      "id": "CIR-VAL-14",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=vRTA51C8D5061qUOBsYf0A&viewpoint=46.1571511%2C13.3934294&heading=359.32&pitch=0",
+      "passaggio_originale": 14,
+      "luogo_data_immagini": "Uscita della piazza verso via Monte Piccat · 2023-05",
+      "osservazione": "Passaggio asfaltato senza mezzeria fra muretti e ringhiere; vegetazione, curva e STOP al ricongiungimento visibili.",
+      "limite": "Nodo osservato; continuità fra panorami e misure ancora da verificare."
+    },
+    {
+      "id": "CIR-VAL-15",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=KAzz8xQ3_0RkMdu4rPLCNA&viewpoint=46.1588137%2C13.3926044&heading=321.61&pitch=0",
+      "passaggio_originale": 15,
+      "luogo_data_immagini": "Via Monte Piccat verso strada per Valle · 2023-05",
+      "osservazione": "Incrocio asfaltato ai margini del bosco, banchine erbose e segnale blu; apertura verso la strada per Valle.",
+      "limite": "Nodo osservato; continuità fra panorami e misure ancora da verificare."
+    },
+    {
+      "id": "CIR-12",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=PxnOlMmQDxYQPw0_-VBuEg&viewpoint=46.1580732%2C13.379205&heading=295.07&pitch=0",
+      "passaggio_originale": 16,
+      "luogo_data_immagini": "Strada per Valle / strada per Costalunga · 2023-05",
+      "osservazione": "Bivio nel bosco, parete/muro in pietra presso la diramazione, margini erbosi, asfalto senza mezzeria e piccolo contenitore presso l'incrocio.",
+      "limite": "Non attestata permanenza degli oggetti mobili; gli interni dei 4,2 km non sono stati percorsi."
+    },
+    {
+      "id": "CIR-13",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=nKp_t4HfrINTwSQXEBpzvQ&viewpoint=46.1676159%2C13.3623302&heading=287.48&pitch=0",
+      "passaggio_originale": 17,
+      "luogo_data_immagini": "Strada per Costalunga verso via Mont Joanes · 2024-08",
+      "osservazione": "Avvicinamento a nodo con STOP, guardrail a destra, pendio vegetato a sinistra, edifici e protezioni in pietra al nodo.",
+      "limite": "Mini-mappa mostra anche il nome via Juretigh: riconciliare denominazioni con base geografica prima della modellazione."
+    },
+    {
+      "id": "CIR-14",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=zSGMyb-MOznlSdQY-vlV_g&viewpoint=46.1659437%2C13.3596292&heading=225.6&pitch=0",
+      "passaggio_originale": 18,
+      "luogo_data_immagini": "Via Mont Joanes, deviazione al segnaposto Canal di Grivò · 2024-08",
+      "osservazione": "Attraversamento con parapetti metallici su pilastrini e edificio in pietra a sinistra; cavi aerei.",
+      "limite": "La deviazione e la successiva inversione dipendono dal segnaposto; non costituiscono un tornante della discesa. Il link originale mantiene questo passaggio: non è stato eliminato dal riferimento."
+    },
+    {
+      "id": "CIR-17",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=LSR3L4NSfxs4O_60YjAl0w&viewpoint=46.1632064%2C13.3578603&heading=233.93&pitch=0",
+      "passaggio_originale": 21,
+      "luogo_data_immagini": "Via Mont Joanes / Borgo Scubla · 2024-08",
+      "osservazione": "Nodo con STOP e linea trasversale, muretti, giardini e case prossimi alla strada; prosecuzione verso Borgo Scubla.",
+      "limite": "Bivio verificato, non misurata la carreggiata."
+    },
+    {
+      "id": "CIR-18",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=13wcbhtdW3YwbDG8paz2fg&viewpoint=46.1588268%2C13.3528119&heading=225.99&pitch=0",
+      "passaggio_originale": 22,
+      "luogo_data_immagini": "Borgo Scubla verso via dei Castelli · 2024-08",
+      "osservazione": "Asfalto senza mezzeria, abitazioni a bordo strada, muro e recinzione a destra, accesso laterale a sinistra.",
+      "limite": "Collegamento intermedio verso Faedis non verificato in continuità."
+    },
+    {
+      "id": "CIR-19",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=A7-gKW2wYZwHHMCg9VZUfg&viewpoint=46.1527672%2C13.346199&heading=223.84&pitch=0",
+      "passaggio_originale": 23,
+      "luogo_data_immagini": "Rientro Faedis verso SP15 · 2022-07",
+      "osservazione": "Contesto urbano con marciapiedi, edifici ravvicinati, chiesa e spazio aperto visibili nell'orientamento dell'anteprima.",
+      "limite": "Titolo del panorama SR356 e istruzione SP15: denominazione esatta da riconciliare; immagini del 2022."
+    }
+  ],
+  "instructions": [
+    {
+      "passaggio": 1,
+      "settore": "A",
+      "indicazione": "Esci dal parcheggio verso SR356",
+      "distanza_app": "9 m"
+    },
+    {
+      "passaggio": 2,
+      "settore": "A",
+      "indicazione": "Sinistra su SR356",
+      "distanza_app": "44 m"
+    },
+    {
+      "passaggio": 3,
+      "settore": "A",
+      "indicazione": "Sinistra su via Divisione Julia/SR356",
+      "distanza_app": "3,4 km"
+    },
+    {
+      "passaggio": 4,
+      "settore": "A",
+      "indicazione": "Sinistra in via Paolo Diacono",
+      "distanza_app": "78 m"
+    },
+    {
+      "passaggio": 5,
+      "settore": "A",
+      "indicazione": "Riparti da Campeglio verso via Soffumbergo/SR356",
+      "distanza_app": "78 m"
+    },
+    {
+      "passaggio": 6,
+      "settore": "A",
+      "indicazione": "Sinistra su via Soffumbergo/SR356",
+      "distanza_app": "400 m"
+    },
+    {
+      "passaggio": 7,
+      "settore": "B",
+      "indicazione": "Sinistra in via Monte San Lorenzo",
+      "distanza_app": "1,8 km"
+    },
+    {
+      "passaggio": 8,
+      "settore": "B",
+      "indicazione": "Leggera curva a destra, località Colloredo",
+      "distanza_app": "220 m"
+    },
+    {
+      "passaggio": 9,
+      "settore": "C",
+      "indicazione": "Continua su Valle Soffumbergo",
+      "distanza_app": "1,0 km"
+    },
+    {
+      "passaggio": 10,
+      "settore": "C",
+      "indicazione": "Continua su via Prestento",
+      "distanza_app": "3,3 km"
+    },
+    {
+      "passaggio": 11,
+      "settore": "V",
+      "indicazione": "Destra in via Monte Piccat",
+      "distanza_app": "230 m"
+    },
+    {
+      "passaggio": 12,
+      "settore": "V",
+      "indicazione": "Leggermente a destra verso la tappa in piazza",
+      "distanza_app": "45 m"
+    },
+    {
+      "passaggio": 13,
+      "settore": "V",
+      "indicazione": "Riparti dalla tappa verso via Monte Piccat",
+      "distanza_app": "45 m"
+    },
+    {
+      "passaggio": 14,
+      "settore": "V",
+      "indicazione": "Leggermente a sinistra in via Monte Piccat",
+      "distanza_app": "210 m"
+    },
+    {
+      "passaggio": 15,
+      "settore": "D",
+      "indicazione": "Leggermente a sinistra in strada per Valle",
+      "distanza_app": "1,4 km"
+    },
+    {
+      "passaggio": 16,
+      "settore": "E",
+      "indicazione": "Continua su strada per Costalunga",
+      "distanza_app": "4,2 km"
+    },
+    {
+      "passaggio": 17,
+      "settore": "E",
+      "indicazione": "Continua su via Mont Joanes",
+      "distanza_app": "350 m"
+    },
+    {
+      "passaggio": 18,
+      "settore": "E",
+      "indicazione": "Destra verso il segnaposto Canal di Grivò",
+      "distanza_app": "13 m"
+    },
+    {
+      "passaggio": 19,
+      "settore": "F",
+      "indicazione": "Riparti da Canal di Grivò verso via Mont Joanes",
+      "distanza_app": "13 m"
+    },
+    {
+      "passaggio": 20,
+      "settore": "F",
+      "indicazione": "Tutto a destra su via Mont Joanes",
+      "distanza_app": "350 m"
+    },
+    {
+      "passaggio": 21,
+      "settore": "F",
+      "indicazione": "Leggermente a sinistra in Borgo Scubla",
+      "distanza_app": "650 m"
+    },
+    {
+      "passaggio": 22,
+      "settore": "F",
+      "indicazione": "Continua su via dei Castelli",
+      "distanza_app": "850 m"
+    },
+    {
+      "passaggio": 23,
+      "settore": "F",
+      "indicazione": "Sinistra, ingresso Bar Al Telefono",
+      "distanza_app": "9 m"
+    },
+    {
+      "passaggio": 24,
+      "settore": "F",
+      "indicazione": "Arrivo Bar Al Telefono",
+      "distanza_app": "—"
+    }
+  ],
+  "scope_limitations": [
+    "Visual nodes only, without continuous photographed road coverage",
+    "No topographically validated polyline, widths, elevations or curve count"
+  ],
+  "copyright": "No Google images or route geometry copied; references are hyperlinks and textual observations."
+}
