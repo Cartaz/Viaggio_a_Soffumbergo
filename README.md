@@ -56,6 +56,9 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 
 ## Documentazione
 
+**Sopralluogo cartografico (20/10/2026):** [pipeline QGIS + LiDAR FVG](docs/QGIS_LIDAR_SOPRALLUOGO.md). Avvio: `python tools/build_qgis_survey.py`. Genera livelli GIS 2D con provenienza; l'anello continuo e il modello del terreno restano da acquisire e verificare.
+
+
 | Documento | Contenuto |
 | --- | --- |
 | [Preparazione tecnica](docs/PREPARAZIONE_TECNICA.md) | Risultati verificati, approssimazioni e lacune |
