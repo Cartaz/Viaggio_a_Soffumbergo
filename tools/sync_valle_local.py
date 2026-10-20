@@ -17,6 +17,12 @@ FILES = [
     'tools/build_valle_3d.py', 'tools/check_valle_3d.py', 'tools/validate_valle.py',
     'tools/sync_valle_local.py', 'tools/blender/build_valle.py', 'tests/test_terrain.py',
     'docs/VALLE_3D.md', 'reports/VALLE_3D_VERIFICA.json',
+    'tools/catalog_circuit_dtm.py', 'tests/test_circuit_dtm.py',
+    'tools/register_dtm.py',
+    'data/geography/circuit_dtm_catalog_20261020.json',
+    'data/geography/circuito_osm_candidate_20261020.geojson',
+    'data/geography/lidar05_valle_tile_manifest_20261020.json',
+    'docs/DTM_CIRCUITO_COMPLETO.md',
 ]
 
 

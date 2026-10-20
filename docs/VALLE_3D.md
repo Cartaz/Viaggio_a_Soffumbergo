@@ -108,6 +108,7 @@ diverso. Appende una nota a README/roadmap e aggiunge `Avvia Valle 3D.cmd`.
 Non cambia branch, scena iniziale, auto o personaggi; rapporto in
 `build/valle_validation/local_sync.json` nella copia di sviluppo.
 
-Prossimo incremento: estendere il catalogo ai DTM dell'intero anello quando
-disponibili, verificare datum/celle/giunzioni con la stessa disciplina, poi
-costruire superficie stradale e accessi dalle misure e osservazioni documentate.
+**Aggiornamento DTM:** le 41 tessere dell'intero anello sono ora disponibili e
+catalogate; [copertura, differenze nei bordi e procedura](DTM_CIRCUITO_COMPLETO.md).
+Prossimo incremento: gestire le sovrapposizioni con provenienza esplicita,
+estendere il corridoio, poi costruire superficie stradale e accessi dai riscontri.

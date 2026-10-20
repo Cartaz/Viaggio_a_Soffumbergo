@@ -14,7 +14,11 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
   due acquisizioni dal renderer e creazione/verifica del progetto Blender.
 - [ ] Approvare facciate, chiesa, campanile, muri e quote dei passaggi reali.
 - [ ] Costruire una superficie stradale verificata e collegare guida/visita.
-- [ ] Estendere terreno e verifiche all'intero circuito dopo l'acquisizione DTM.
+- [x] Acquisire/catalogare le 41 tessere dell'anello: 123.984.000 celle senza
+  NoData e asse OSM candidato coperto su 9.966 campioni a passo massimo 2 m.
+- [ ] Gestire le differenze nelle sovrapposizioni (9 coppie; 24 campioni
+  del candidato hanno quote ambigue) con politica di mosaico documentata.
+- [ ] Estendere la scena del terreno all'intero corridoio del circuito.
 
 [Procedura e limiti](VALLE_3D.md), [risultati](../reports/VALLE_3D_VERIFICA.json).
 P0, P3 e P4 restano aperte: questa scena è un campione geografico, non una

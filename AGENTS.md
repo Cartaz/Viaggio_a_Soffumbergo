@@ -12,6 +12,13 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **DTM intero anello:** 41 ASC originali locali in
+  `C:\Giochi\Sviluppo\Viaggio a Soffumbergo\DTM Completi`, fuori Git.
+  Catalogo `data/geography/circuit_dtm_catalog_20261020.json`, procedura
+  `tools/catalog_circuit_dtm.py`, limiti in `docs/DTM_CIRCUITO_COMPLETO.md`.
+  Asse OSM candidato coperto a passo massimo 2 m; 9 coppie di sovrapposizioni
+  non identiche, 24 quote ambigue sull'asse. Nessuna media o mosaico implicito.
+
 - **Valle 3D 0.1 (20/10/2026):** `docs/VALLE_3D.md`, scena
   `godot/scenes/valle.tscn`, generatore `tools/build_valle_3d.py`, collaudo
   `tools/validate_valle.py`, evidenze `reports/VALLE_3D_VERIFICA.json`.

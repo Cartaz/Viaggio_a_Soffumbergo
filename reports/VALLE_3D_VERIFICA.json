@@ -6,17 +6,19 @@
   "source_sha256": {
     "data/config/valle_3d.json": "a35b00983c067731b2307f494f2170c574b0e64c4318bf882c242580792ca2ba",
     "godot/scenes/valle.tscn": "9e67f596307adf7d357c61d13700588d7cc1e4def72374b9cfa860ade369a42e",
-    "godot/scripts/valle.gd": "6850304ce7465575674ac06512284b5c7ad92ad0c38450cbc26db8d3ab554c7b",
+    "godot/scripts/valle.gd": "1a2529b24ec63ce950c1fed1f638a7164c668a2f21e707e9f5183953e99e4d27",
     "godot/scripts/valle_sector.gd": "441194f60aa188ea55f6e7b8f40ddc014fea521fb0efa1296444818ed040422c",
-    "godot/tests/valle_check.gd": "9ade86caf69c78d0c42a22165c90dda0b17681e5cd410b4da81f345aacb30444",
+    "godot/tests/valle_check.gd": "7a330a8d617d0af8b718ecba80a3ff3d08b7d91619727ae81116691cc7f18c8a",
     "tools/build_valle_3d.py": "d61ad7260dbc002bd72e5c2686bb2043c06ee315e091a71273d96eb0a85cdfd9",
     "tools/coffa/terrain.py": "15a0b7f46a2761d432fd0c47006200bd06669ae06e83d96d36a93eb0e795c833",
-    "tools/import_valle_lidar05.py": "2b1b866c77ef8e0e788804c117f845c726919ddc9adf20c228ffe6ab7ea603a4",
+    "tools/import_valle_lidar05.py": "e86dd36b40e6b4bf205c89f3fcc3389b2b6d11b7a50d413ea36fe885dd9f8a46",
     "tools/check_valle_3d.py": "35c9ff5d13a97d1452d4b847440f2db625f2916b5bec36239e4dcd3ce48851da",
     "tools/blender/build_valle.py": "5c7cc187767449114ce4cded88125cf2b3397d4085e9f224213a0945c80be058",
     "tools/validate_valle.py": "79bfcfbda1fd0ded9f898594dd376e096a375d23867d7605d70360f61362aa8d",
-    "tools/sync_valle_local.py": "e2a0e8a70cd49bb7c68534683fc811ce1cea23c5d2b6a6c48123cf1efc5090f4",
-    "tests/test_terrain.py": "bdaed80bfefd9a0b27a5f5f1456c8b7c69f5eed5595e727c68ce8232ce45b607"
+    "tools/sync_valle_local.py": "caccdcb4bb87758560b8dc5463eb991a47257c2094ed620e800c83686ba7bf0b",
+    "tests/test_terrain.py": "bdaed80bfefd9a0b27a5f5f1456c8b7c69f5eed5595e727c68ce8232ce45b607",
+    "tools/catalog_circuit_dtm.py": "38b648cc7fc74c97f155932297458094a21d4eb6b0bf241a907d0862a930f86d",
+    "tests/test_circuit_dtm.py": "a7d8b6dacad9922ff78065b07251b4bedaff99af8a0a1ac9c559ce8e1ddbe281"
   },
   "python_tests": 72,
   "gdtoolkit": "4.5.0",
@@ -204,5 +206,31 @@
     "Vertical metadata not independently verified; no datum conversion",
     "No representative FPS claim or full-trip acceptance",
     "Local captures and terrain derivatives pending redistribution rights review"
-  ]
+  ],
+  "verified_windows_checkout_sha256": {
+    "data/config/valle_3d.json": "a35b00983c067731b2307f494f2170c574b0e64c4318bf882c242580792ca2ba",
+    "godot/scenes/valle.tscn": "9e67f596307adf7d357c61d13700588d7cc1e4def72374b9cfa860ade369a42e",
+    "godot/scripts/valle.gd": "6850304ce7465575674ac06512284b5c7ad92ad0c38450cbc26db8d3ab554c7b",
+    "godot/scripts/valle_sector.gd": "441194f60aa188ea55f6e7b8f40ddc014fea521fb0efa1296444818ed040422c",
+    "godot/tests/valle_check.gd": "9ade86caf69c78d0c42a22165c90dda0b17681e5cd410b4da81f345aacb30444",
+    "tools/build_valle_3d.py": "d61ad7260dbc002bd72e5c2686bb2043c06ee315e091a71273d96eb0a85cdfd9",
+    "tools/coffa/terrain.py": "15a0b7f46a2761d432fd0c47006200bd06669ae06e83d96d36a93eb0e795c833",
+    "tools/import_valle_lidar05.py": "2b1b866c77ef8e0e788804c117f845c726919ddc9adf20c228ffe6ab7ea603a4",
+    "tools/check_valle_3d.py": "35c9ff5d13a97d1452d4b847440f2db625f2916b5bec36239e4dcd3ce48851da",
+    "tools/blender/build_valle.py": "5c7cc187767449114ce4cded88125cf2b3397d4085e9f224213a0945c80be058",
+    "tools/validate_valle.py": "79bfcfbda1fd0ded9f898594dd376e096a375d23867d7605d70360f61362aa8d",
+    "tools/sync_valle_local.py": "caccdcb4bb87758560b8dc5463eb991a47257c2094ed620e800c83686ba7bf0b",
+    "tests/test_terrain.py": "bdaed80bfefd9a0b27a5f5f1456c8b7c69f5eed5595e727c68ce8232ce45b607",
+    "tools/catalog_circuit_dtm.py": "38b648cc7fc74c97f155932297458094a21d4eb6b0bf241a907d0862a930f86d",
+    "tests/test_circuit_dtm.py": "a7d8b6dacad9922ff78065b07251b4bedaff99af8a0a1ac9c559ce8e1ddbe281"
+  },
+  "source_hash_encoding": "SHA256 of UTF-8 Git blob bytes, LF line endings; checkout hashes recorded separately",
+  "additional_circuit_acquisition_gate": {
+    "python_tests": 78,
+    "tile_count": 41,
+    "valid_input_cells": 123984000,
+    "nodata_cells": 0,
+    "source_catalog": "data/geography/circuit_dtm_catalog_20261020.json",
+    "engine_scene_unchanged": true
+  }
 }

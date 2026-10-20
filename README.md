@@ -11,6 +11,11 @@ Raster originali e derivati geografici restano locali sotto `build/`, esclusi
 dal repository. F5 mantiene il laboratorio; Valle si apre con F6 dalla scena
 `godot/scenes/valle.tscn`. Il viaggio completo resta da integrare.
 
+**DTM dell'intero circuito ricevuti:** catalogate 41 tessere a 0,5 m, nessun
+NoData; tutti i 9.966 campioni dell'asse OSM candidato sono coperti. Registrate
+le differenze nelle sovrapposizioni, senza mediarle o dichiarare pronta la strada.
+[Rapporto e procedura](docs/DTM_CIRCUITO_COMPLETO.md).
+
 Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
 
 **Stato: Yaris 0.1 guidabile nel laboratorio Godot 4.5.1.** Il modello è stato generato e renderizzato in Blender 4.5.3 LTS. Passano 28 test preparatori, i controlli dell'asset e 28 controlli dell'integrazione nel laboratorio con rendering reale su Windows. La qualità artistica finale, la dinamica completa e il giro giocabile restano da verificare; il sopralluogo è parziale e non sono stati misurati FPS rappresentativi.
