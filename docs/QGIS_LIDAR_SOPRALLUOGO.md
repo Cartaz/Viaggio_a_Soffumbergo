@@ -1,6 +1,6 @@
 # Tracciato di Valle di Soffumbergo — QGIS e LiDAR
 
-Avvio: **20 ottobre 2026**. Stato: **rete e candidato OSM 2D completi topologicamente**, ma da verificare sul percorso reale, **senza DTM acquisito né quote/pendenze verificate**. Il sopralluogo virtuale resta parziale; cfr. `docs/CIRCUITO_SOPRALLUOGO.md`.
+Avvio: **20 ottobre 2026**. Stato: **rete OSM candidata 2D completa topologicamente e primo DTM ufficiale PCR 10 m acquisito, con 2.394 campioni del terreno validi**. Restano da verificare **geometria della strada, quote della carreggiata e datum verticale**, e resta da acquisire il LiDAR 2017–2020 a 0,5 m. [Resoconto e grafico](PROFILO_ALTIMETRICO_DTM10_20261020.md). Il sopralluogo virtuale resta parziale; cfr. `docs/CIRCUITO_SOPRALLUOGO.md`.
 
 ## Fonte e ambito
 
