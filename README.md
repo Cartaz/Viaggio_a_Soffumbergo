@@ -20,7 +20,7 @@ Il modello ha esterni e abitacolo, quattro portiere e portellone apribili, ruote
 | Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
 | Blender | Sorgente Yaris, GLB e render; generatori delle guide del borgo | Yaris eseguita; revisione artistica finale e guide del borgo ancora aperte |
 | Esplorazione | Controller di movimento e seguito della compagna | Richiedono rig, navmesh e integrazione nella scena |
-| Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | L’anello completo e il terreno non sono ancora acquisiti |
+| Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | Il solo DTM 0,5 m di Valle è stato acquisito; asse stradale e terreno dell'intero anello ancora da verificare |
 
 Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. La Yaris usa la ricostruzione da fotografie; albero, coffa e occupanti rimangono segnaposto. I render del modello e le prove del motore non approvano automaticamente la fedeltà artistica finale.
 
