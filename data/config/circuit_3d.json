@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "origin_ENH_m": [375920, 5112728, 720],
+  "sector_size_m": 128,
+  "terrain_step_m": 2,
+  "corridor_half_width_m": 96,
+  "corridor_width_status": "inspection_extent_not_a_road_measurement",
+  "valle_region_local_xz_m": [-384, -384, 384, 384],
+  "valle_primary_tiles": ["Ell_DTM_06701210.asc", "Ell_DTM_06701211.asc", "Ell_DTM_06701214.asc", "Ell_DTM_06701215.asc"],
+  "mosaic_policy": "valle_primary_then_maximum_interior_margin_then_lexical_filename_no_blending_v1",
+  "lod_strides": [1, 2, 4],
+  "lod_distances_m": [180, 360],
+  "load_radius_m": 384,
+  "unload_radius_m": 512,
+  "stream_budget_ms": 8,
+  "route_status": "OSM_candidate_on_DTM_not_verified_asphalt_or_turns"
+}
