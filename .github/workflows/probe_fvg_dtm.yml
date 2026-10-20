@@ -38,7 +38,7 @@ jobs:
             m=re.search(pattern,text,re.I)
             if m: print("HTML_FRAGMENT",pattern,repr(text[max(0,m.start()-260):m.end()+450]))
           print("ALL_HREF_FIRST_80",parsed.links[:80])
-          candidates=[l for l in links if "10M" in l.upper() and ("6708" in l or "RDN2008" in l)]
+          candidates=[l for l in links if "/DTM_PCR/10M/6708/" in l]
           if not candidates:
             print("No appropriate directly linked 10m terrain grid on Faedis page");sys.exit(0)
           download=candidates[0]
@@ -55,8 +55,8 @@ jobs:
           print("ZIP_SHA256",hashlib.sha256(content).hexdigest())
           import pathlib
           pathlib.Path("build/geodata/fvg").mkdir(parents=True,exist_ok=True)
-          pathlib.Path("build/geodata/fvg/faedis_10m_official.zip").write_bytes(content)
-          pathlib.Path("build/geodata/fvg/faedis_10m_source.json").write_text(json.dumps({"source_url":download,"sha256":hashlib.sha256(content).hexdigest(),"archive_member_files":{i.filename:i.file_size for i in archive.infolist()}},indent=2),encoding="utf8")
+          pathlib.Path("build/geodata/fvg/faedis_pcr_10m_official.zip").write_bytes(content)
+          pathlib.Path("build/geodata/fvg/faedis_pcr_10m_source.json").write_text(json.dumps({"source_url":download,"sha256":hashlib.sha256(content).hexdigest(),"archive_member_files":{i.filename:i.file_size for i in archive.infolist()}},indent=2),encoding="utf8")
           PY
       - uses: actions/upload-artifact@v4
         if: always()
