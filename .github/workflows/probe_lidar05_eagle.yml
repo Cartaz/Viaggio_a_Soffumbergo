@@ -58,10 +58,7 @@ jobs:
                 for i in z.infolist()[:5]:
                   if i.file_size<3_000_000:
                     data=z.read(i)
-                    import pathlib
-              pathlib.Path("build/eagle").mkdir(parents=True,exist_ok=True)
-              pathlib.Path("build/eagle",filename).write_bytes(data)
-              text=data.decode("utf-8",errors="replace")
+                          text=data.decode("utf-8",errors="replace")
                     print("ZIP_EXCERPT",i.filename,repr(text[:1600]))
               else:
                 t=buf.decode("utf-8",errors="replace")
