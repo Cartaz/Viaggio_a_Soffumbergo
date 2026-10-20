@@ -45,6 +45,8 @@ Queste consegne non chiudono automaticamente le prove P1–P4. Venti cicli logic
 
 **Incremento GIS del 20/10/2026:** pipeline QGIS e catalogatore DTM; **acquisizione reale di 1.149 ways OSM e realizzazione di un candidato planimetrico chiuso A/B/C/V/D/E/F di 18.867,6 m**, derivato con grafo e test di regressione contro i dati versionati. **Ancora aperti**: conferma della geometria scelta ai bivi, censimento dei tornanti e rilievo continuo, quote e DTM, larghezze e verifica guidabilità. [Rapporto con prove e limiti](TRACCIATO_OSM_CANDIDATO_20261020.md).
 
+**Incremento altimetrico del 20/10/2026:** scaricato e verificato via SHA-256 un DTM ufficiale Protezione Civile FVG 067-NO a 10 m; campionati **2.394/2.394** punti del terreno lungo il candidato OSM con un unico raster. Profilo e grafico conservati e testati, [documentazione](PROFILO_ALTIMETRICO_DTM10_20261020.md). **Non equivale alla verifica della superficie stradale:** datum verticale non accertato, LiDAR a 0,5 m non ancora acquisito, tornanti, larghezze e tracciato effettivo da confermare; le attività P0 rimangono aperte.
+
 Uscita: dossier del percorso e del borgo con copertura esplicita, riferimenti del veicolo e prova di scala dei protagonisti.
 
 ## P1 — Anatomia, abitacolo e laboratorio fisico
