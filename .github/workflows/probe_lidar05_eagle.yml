@@ -58,7 +58,10 @@ jobs:
                 for i in z.infolist()[:5]:
                   if i.file_size<3_000_000:
                     data=z.read(i)
-                    text=data.decode("utf-8",errors="replace")
+                    import pathlib
+              pathlib.Path("build/eagle").mkdir(parents=True,exist_ok=True)
+              pathlib.Path("build/eagle",filename).write_bytes(data)
+              text=data.decode("utf-8",errors="replace")
                     print("ZIP_EXCERPT",i.filename,repr(text[:1600]))
               else:
                 t=buf.decode("utf-8",errors="replace")
@@ -90,3 +93,10 @@ jobs:
               print("RELEVANT_URLS",json.dumps(list(dict.fromkeys(useful))[:95]))
             except Exception as e:print("BUNDLE_ERROR",type(e).__name__,str(e)[:500])
           PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eagle-browser-js-for-offline-analysis
+          path: build/eagle/
+          retention-days: 1
+          if-no-files-found: warn
