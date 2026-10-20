@@ -1,0 +1,60 @@
+name: Sample real official FVG DTM for route review
+on:
+  push:
+    branches: [feature/fvg-dtm-real-terrain-20261020]
+    paths: [.github/workflows/sample_fvg_dtm.yml]
+permissions:
+  contents: read
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Install sole GIS coordinate transformer
+        run: python -m pip install "pyproj==3.7.2"
+      - name: Download exact official FVG DTM10 Protezione Civile
+        run: |
+          python - <<'PY'
+          import hashlib,urllib.request,pathlib
+          url="https://irdat.regione.fvg.it/cartogdownload/DTM_PCR/10M/6708/DTM10_PCR_067_NO_RDN2008_TM33.zip"
+          sha="5e98b18802da5e49ed8fb05f0e114fdc29612907164f934238514b3f9c87d39b"
+          req=urllib.request.Request(url,headers={"User-Agent":"Viaggio-a-Soffumbergo-DTM-survey/0.3"})
+          with urllib.request.urlopen(req,timeout=55) as response:
+            data=response.read(20_000_001)
+          if len(data)>20_000_000: raise ValueError("Raster archive exceeds download cap")
+          digest=hashlib.sha256(data).hexdigest()
+          if digest!=sha:raise ValueError(f"Source archive hash changed: {digest}")
+          path=pathlib.Path("build/geodata/fvg/067_NO_DTM10_PCR.zip")
+          path.parent.mkdir(parents=True,exist_ok=True)
+          path.write_bytes(data)
+          print("Official FVG original archive verified SHA256:",digest)
+          PY
+      - name: Sample real terrain under review-only OSM centerline
+        run: |
+          python tools/profile_dtm_route.py \
+            --ascii build/geodata/fvg/067_NO_DTM10_PCR.zip \
+            --source-url https://irdat.regione.fvg.it/cartogdownload/DTM_PCR/10M/6708/DTM10_PCR_067_NO_RDN2008_TM33.zip \
+            --horizontal-crs EPSG:6708 \
+            --spacing-m 10 \
+            --output build/geodata/fvg/circuito_10m_raw_dtm_terrain_profile.json
+          python - <<'PY'
+          import json
+          p=json.load(open("build/geodata/fvg/circuito_10m_raw_dtm_terrain_profile.json",encoding="utf8"))
+          assert [s["sector"] for s in p["sectors"]]==list("ABCVDEF")
+          assert p["vertical_datum"]=="UNKNOWN_NOT_VERIFIED"
+          assert p["godot_ready"] is False
+          print("TOTAL",p["total_length_projected_m"])
+          print("SECTORS",[(s["sector"],s["valid_count"],s["sample_count"],s["data_min"],s["data_max"]) for s in p["sectors"]])
+          print("ALL_SAMPLES_PRESENT",p["all_samples_present"])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fvg-official-dtm10-route-review
+          path: build/geodata/fvg/circuito_10m_raw_dtm_terrain_profile.json
+          if-no-files-found: warn
+          retention-days: 7
