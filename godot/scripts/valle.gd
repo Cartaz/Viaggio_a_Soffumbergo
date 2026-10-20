@@ -1,6 +1,7 @@
 extends Node3D
 ## Georeferenced survey prototype. Free camera is an inspection tool, not a visitor.
 
+const Content = preload("res://godot/scripts/valle_content.gd")
 const Sector = preload("res://godot/scripts/valle_sector.gd")
 const DEFAULT_DATA := "build/valle/valle_scene.json"
 var data: Dictionary = {}
@@ -152,60 +153,11 @@ func visible_triangles() -> int:
 
 
 func _build_buildings() -> void:
-	var gray := material(Color("c8c4b8"))
-	for building in data.buildings:
-		var ring := PackedVector2Array()
-		for p in building.ring_xz_m:
-			ring.append(Vector2(p[0], p[1]))
-		var faces := PackedVector3Array()
-		var roof := Geometry2D.triangulate_polygon(ring)
-		for i in range(0, roof.size(), 3):
-			var a := Vector3(ring[roof[i]].x, building.roof_y_m, ring[roof[i]].y)
-			var b := Vector3(ring[roof[i + 1]].x, building.roof_y_m, ring[roof[i + 1]].y)
-			var c := Vector3(ring[roof[i + 2]].x, building.roof_y_m, ring[roof[i + 2]].y)
-			if (b - a).cross(c - a).y > 0:
-				faces.append_array(PackedVector3Array([a, c, b]))
-			else:
-				faces.append_array(PackedVector3Array([a, b, c]))
-		for i in range(ring.size()):
-			var p := ring[i]
-			var q := ring[(i + 1) % ring.size()]
-			var a := Vector3(p.x, building.base_y_m, p.y)
-			var b := Vector3(q.x, building.base_y_m, q.y)
-			var c := Vector3(q.x, building.roof_y_m, q.y)
-			var d := Vector3(p.x, building.roof_y_m, p.y)
-			faces.append_array(PackedVector3Array([a, b, c, a, c, d]))
-		var instance := face_mesh(faces, gray)
-		instance.name = "OSM_" + str(building.id).replace("/", "_")
-		instance.set_meta("source_url", building.source_url)
-		instance.set_meta("height_status", building.height_status)
-		building_root.add_child(instance)
-		instance.create_trimesh_collision()
-		var body := instance.get_child(0) as StaticBody3D
-		body.collision_layer = 2
-		body.collision_mask = 0
-		var collision := body.get_child(0) as CollisionShape3D
-		(collision.shape as ConcavePolygonShape3D).backface_collision = true
+	Content.build_buildings(building_root, data.buildings)
 
 
 func _build_roads() -> void:
-	var amber := material(Color("e8a43e"))
-	var magenta := material(Color("cc64c6"))
-	for road in data.roads:
-		var faces := PackedVector3Array()
-		var columns := int(road.columns)
-		for i in range(columns, road.vertices_m.size()):
-			if i % columns == columns - 1:
-				continue
-			var a := vector(road.vertices_m[i - columns])
-			var b := vector(road.vertices_m[i - columns + 1])
-			var c := vector(road.vertices_m[i])
-			var d := vector(road.vertices_m[i + 1])
-			faces.append_array(PackedVector3Array([a, c, b, b, c, d]))
-		var instance := face_mesh(faces, magenta if road.pedestrian else amber)
-		instance.set_meta("source_url", road.source_url)
-		instance.set_meta("status", road.status)
-		road_root.add_child(instance)
+	Content.build_roads(road_root, data.roads)
 
 
 static func face_mesh(faces: PackedVector3Array, mat: Material) -> MeshInstance3D:
