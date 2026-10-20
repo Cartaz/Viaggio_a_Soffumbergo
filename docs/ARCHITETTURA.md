@@ -1,5 +1,23 @@
 # Architettura della preparazione
 
+## Incremento Valle 3D 0.1
+
+`tools/build_valle_3d.py` riusa il lettore/mosaico LiDAR esistente;
+`tools/coffa/terrain.py` verifica campionamento, ritaglio e errore LOD. PROJ
+allinea OSM al sistema nativo EPSG:6708. Frame: X est, Y alto, Z sud,
+origine ENH [375920, 5112728, 720]; nessuna conversione verticale.
+
+`build/valle/valle_scene.json` è un derivato locale fuori Git con settori,
+normali globali, provenienza e segnaposto espliciti. `valle_sector.gd` mantiene
+una mesh visiva attiva per settore con tre LOD e una collisione fissa; le gonne
+non hanno collisioni. `valle.gd` costruisce edifici/linee OSM e la camera libera,
+senza dipendenze sul veicolo o sui personaggi. Terreno sul layer fisico 1,
+edifici sul 2, strade senza corpi.
+
+`tools/validate_valle.py` fallisce anche sugli errori del motore con uscita zero.
+`tools/blender/build_valle.py` converte gli assi con (x, -z, y) e inverte i fronti
+da Godot orari a Blender antiorari. Dettagli e limiti in [VALLE_3D.md](VALLE_3D.md).
+
 | Percorso | Responsabilità |
 | --- | --- |
 | `data/config` | Parametri SI, provvisorietà, rig e coda degli asset |

@@ -1,5 +1,10 @@
 # Primo collegamento al PC
 
+**Valle 3D 0.1 (20/10/2026):** aggiunti ed eseguiti i collaudi della scena
+geografica separata. Comando completo, prove, coordinate e limiti in
+[VALLE_3D.md](VALLE_3D.md); risultati in `reports/VALLE_3D_VERIFICA.json`.
+I collaudi Valle non chiudono le prove dinamiche del veicolo descritte sotto.
+
 Obiettivo: rendere il laboratorio realmente verificato. Importazione, confronto numerico, avvio delle scene, banco statico a 120/240 Hz e una prova breve della Yaris guidabile con rendering reale sono eseguiti; il banco a 60 Hz non passa la soglia di velocità residua. Evidenze e limiti in `reports/yaris_2022/VERIFICA.md` e `LABORATORIO.md` nella stessa cartella. Le prove dinamiche complete sotto elencate restano da completare.
 
 ## Importazione

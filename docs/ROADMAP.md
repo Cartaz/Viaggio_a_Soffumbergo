@@ -2,6 +2,24 @@
 
 Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricostruzione Yaris eseguita in Blender. Una casella completata richiede una consegna o una prova ispezionabile. Il solo avvio headless non chiude le prove dinamiche o artistiche.
 
+## Valle 3D 0.1 — 20 ottobre 2026
+
+- [x] Riutilizzare le quattro tessere reali, centri delle celle e datum espliciti.
+- [x] Generare 768 × 768 m in 36 settori con LOD 2/4/8 m, collisioni a 2 m
+  indipendenti e 60 giunzioni numericamente identiche.
+- [x] Collocare 91 sagome OSM con altezze dichiarate segnaposto.
+- [x] Mostrare strade/accessi OSM provvisori e punto PV-01 candidato, senza
+  dedurre larghezze reali, asfalto o continuità pedonale dalla cartografia.
+- [x] Rigenerazione deterministica, test Python/GDScript, raggi/caduta in Jolt,
+  due acquisizioni dal renderer e creazione/verifica del progetto Blender.
+- [ ] Approvare facciate, chiesa, campanile, muri e quote dei passaggi reali.
+- [ ] Costruire una superficie stradale verificata e collegare guida/visita.
+- [ ] Estendere terreno e verifiche all'intero circuito dopo l'acquisizione DTM.
+
+[Procedura e limiti](VALLE_3D.md), [risultati](../reports/VALLE_3D_VERIFICA.json).
+P0, P3 e P4 restano aperte: questa scena è un campione geografico, non una
+prova del viaggio completo o un'approvazione artistica.
+
 ## Incremento veicolo — 19 ottobre 2026
 
 - [x] Raccogliere fonti Toyota MY22 e distinguere le dotazioni italiane dai campioni fotografici di altri allestimenti.

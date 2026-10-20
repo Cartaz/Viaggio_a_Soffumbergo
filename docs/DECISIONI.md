@@ -1,5 +1,14 @@
 # Decisioni e vincoli
 
+**Incremento del 20 ottobre 2026:** prototipo richiesto “Valle 3D 0.1”, realizzato
+come scena separata con terreno georeferenziato a settori/LOD, collisioni,
+edifici OSM come blockout e accessi provvisori riconoscibili. [Limiti](VALLE_3D.md).
+Raster originali e derivati rimangono locali in attesa della verifica dei termini
+di redistribuzione. Altezze degli edifici e larghezze delle linee sono parametri
+grafici, non misure del luogo. Questo incremento non cambia le scelte locali su
+auto/personaggi e non conferma PV-01. Supera le vecchie note “terreno non importato”
+limitatamente al campione geografico di Valle, non all'anello completo.
+
 Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i dettagli; questo elenco permette di controllare le richieste senza confonderle con ipotesi tecniche.
 
 ## Richieste confermate dall’utente

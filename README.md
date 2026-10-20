@@ -2,6 +2,15 @@
 
 ## Coffa e tornanti
 
+**Valle 3D 0.1:** scena autonoma con terreno LiDAR georeferenziato, 36 settori,
+LOD 2/4/8 m, collisioni a 2 m, 91 sagome OSM e strade provvisorie colorate.
+Verificata in Godot 4.5.1 e Blender 4.5.3; camera libera di ispezione.
+[Rigenerazione, avvio e limiti](docs/VALLE_3D.md) ·
+[Evidenze dei test](reports/VALLE_3D_VERIFICA.json).
+Raster originali e derivati geografici restano locali sotto `build/`, esclusi
+dal repository. F5 mantiene il laboratorio; Valle si apre con F6 dalla scena
+`godot/scenes/valle.tscn`. Il viaggio completo resta da integrare.
+
 Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
 
 **Stato: Yaris 0.1 guidabile nel laboratorio Godot 4.5.1.** Il modello è stato generato e renderizzato in Blender 4.5.3 LTS. Passano 28 test preparatori, i controlli dell'asset e 28 controlli dell'integrazione nel laboratorio con rendering reale su Windows. La qualità artistica finale, la dinamica completa e il giro giocabile restano da verificare; il sopralluogo è parziale e non sono stati misurati FPS rappresentativi.

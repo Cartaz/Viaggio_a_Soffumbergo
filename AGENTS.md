@@ -11,6 +11,14 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 - Non copiare nella repository immagini Disney, screenshot non autorizzati o asset di terzi senza diritti di riuso; non scegliere unilateralmente una licenza o pubblicare release.
 
 ## Mappa dei contenuti (percorsi verificati)
+
+- **Valle 3D 0.1 (20/10/2026):** `docs/VALLE_3D.md`, scena
+  `godot/scenes/valle.tscn`, generatore `tools/build_valle_3d.py`, collaudo
+  `tools/validate_valle.py`, evidenze `reports/VALLE_3D_VERIFICA.json`.
+  Campione 768 × 768 m, 36 settori/LOD, collisioni, 91 sagome OSM e strade
+  provvisorie. Derivati locali sotto `build/`, nessun raster originale pubblico.
+  Non è l'intero anello o la visita integrata. Le note storiche “nessuna prova
+  Godot/Blender” non si applicano ai collaudi documentati di questa scena.
 - **Vincoli e piano:** `docs/DECISIONI.md`, `docs/PROGETTO.md`, `docs/ROADMAP.md`; architettura e coordinate in `docs/ARCHITETTURA.md`.
 - **Personaggi:** `references/README.md`; catalogo di 20 fonti in `references/bianca_bernie/sources.json`, guida in `references/bianca_bernie/README.md` e `SPECIFICA_MODELLAZIONE.md` nella stessa cartella.
 - **Sopralluogo e territorio:** `docs/RIFERIMENTI_E_SOPRALLUOGO.md`; OSM in `data/geography/osm_survey.geojson`, provenienza in `data/geography/provenance.json`; mappa e inventario in `reports/valle_survey_map.svg` e `reports/valle_building_inventory.csv`. Sono dati planimetrici del borgo, non terreno quotato. Dal 20/10/2026 sono presenti anche `data/geography/osm_regional_roads_20261020.geojson` e `data/geography/circuito_osm_candidate_20261020.geojson`: rete e percorso topologicamente collegato **solo come ipotesi OSM 2D**, senza verifica delle svolte né terreno. Vedere `docs/TRACCIATO_OSM_CANDIDATO_20261020.md`. **Aggiornamento LiDAR 20/10/2026:** 4 raster DTM ellissoidici a 0,5 m di Valle ricevuti dall'utente, verificati (12.096.000 celle totali e giunzioni identiche), composizione TIFF e blockout GLB preparati, ma **non inseriti nella repo**; strumenti in `tools/import_valle_lidar05.py`, fonti e limiti in `docs/ACQUISIZIONE_LIDAR05_REALE_20261020.md`. I campioni sono terreno nudo; non convertire automaticamente in superficie stradale pronta.
