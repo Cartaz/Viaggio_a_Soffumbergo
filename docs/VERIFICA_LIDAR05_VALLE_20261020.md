@@ -1,6 +1,6 @@
 # LiDAR RAFVG 2017–2020 a 0,5 m — tentativo di download a Valle
 
-**Ricerca effettuata il 20 ottobre 2026. Esito: le tessere esistono, ma il DTM originale NON è stato scaricato.** Non sostituire il precedente DTM a 10 m con questi metadati. Non registrare quote o pendenze stradali sulla base del solo quadro d'unione.
+**Esito storico della ricerca automatica precedente: non era stato possibile scaricare il DTM senza completare la verifica email di Eagle.fvg. Successivamente, il 20 ottobre 2026, l'utente ha caricato uno ZIP originale con tutte e quattro le tessere a 0,5 m, analizzate e validate. [Rapporto di acquisizione effettiva](ACQUISIZIONE_LIDAR05_REALE_20261020.md).** Non sostituire il precedente DTM a 10 m con questi metadati. Non registrare quote o pendenze stradali sulla base del solo quadro d'unione.
 
 ## Quattro tessere individuate sul borgo
 
@@ -29,7 +29,7 @@ Ho interrogato il **servizio ufficiale WFS** relativo al quadro d'unione DTM LiD
 1. **Portale Eagle.fvg raggiungibile** e codice pubblico del frontend consultato (20/10/2026). L'interfaccia del carrello permette il download a utente autenticato; per utente *guest* passa dalle chiamate `emailcheck`, `emailcheckVerify` e `downloadGuest` e richiede codice di verifica inviato via email. Non è stato usato alcun indirizzo email o codice dell'utente e non è stata effettuata una richiesta di download autorizzata.
 2. **WFS regionale funzionante**: scaricati i metadati dei quattro poligoni, non il raster numerico.
 3. **WCS regionali pubblici verificati**: `irdat-ortofoto.regione.fvg.it/geoserver/ortofoto/ows`, `serviziogc.regione.fvg.it/geoserver/ows`, `irdat.regione.fvg.it/geoserver/ows`. I cataloghi GetCapabilities non elencano il DTM 2017–2020 a 0,5 m come coverage scaricabile. L'hillshade è un'immagine e non contiene le quote utilizzabili come DTM originale.
-4. Nessun URL diretto delle tessere originali è stato verificato. **Stato: 0/4 file LiDAR a 0,5 m acquisiti.**
+4. Nessun URL diretto delle tessere originali è stato verificato. **Stato a quel punto: 0/4. Stato successivo: 4/4 acquisiti via ZIP dell'utente.**
 
 ## Passaggio necessario per ottenere i dati reali
 
