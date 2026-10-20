@@ -45,6 +45,8 @@ Queste consegne non chiudono automaticamente le prove P1–P4. Venti cicli logic
 
 **Incremento GIS del 20/10/2026:** pipeline QGIS e catalogatore DTM; **acquisizione reale di 1.149 ways OSM e realizzazione di un candidato planimetrico chiuso A/B/C/V/D/E/F di 18.867,6 m**, derivato con grafo e test di regressione contro i dati versionati. **Ancora aperti**: conferma della geometria scelta ai bivi, censimento dei tornanti e rilievo continuo, quote e DTM, larghezze e verifica guidabilità. [Rapporto con prove e limiti](TRACCIATO_OSM_CANDIDATO_20261020.md).
 
+**Incremento LiDAR 0,5 m del 20/10/2026:** le 4 tessere del borgo `06701210/11/14/15` sono state realmente fornite dall'utente, analizzate e controllate su **12.096.000 celle**, nessun NoData, overlap 80 m senza differenze. Mosaico GeoTIFF 0,5 m e prototipo terreno GLB ~4 m generati, **non collaudati in Godot/Blender né caricati come asset sul GitHub pubblico**. Procedura locale riproducibile in `tools/import_valle_lidar05.py`; [documentazione](ACQUISIZIONE_LIDAR05_REALE_20261020.md). **P0 rimane aperta** per conferma strade, pendenze dell'asfalto, rilievo del borgo e resto del circuito.
+
 Uscita: dossier del percorso e del borgo con copertura esplicita, riferimenti del veicolo e prova di scala dei protagonisti.
 
 ## P1 — Anatomia, abitacolo e laboratorio fisico
