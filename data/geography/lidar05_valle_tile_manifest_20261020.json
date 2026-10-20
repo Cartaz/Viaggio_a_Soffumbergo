@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "title": "Indice ufficiale tessere DTM LiDAR FVG 0.5 m — Valle di Soffumbergo",
+  "retrieved_date_local": "2026-10-20",
+  "dataset_metadata_url": "https://irdat.regione.fvg.it/consultatore-dati-ambientali-territoriali/detail/irdat/dataset/11826",
+  "tile_index_metadata_url": "https://geodati.gov.it/geoportale/visualizzazione-metadati/scheda-metadati?metadataid=r_friuve%3Am10905-cc-i11769",
+  "source_wfs_url": "https://serviziogc.regione.fvg.it/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GRIGLIEGEO%3AQU_DTM_LIDAR_FVG&bbox=13.39%2C46.155%2C13.395%2C46.159%2CEPSG%3A4326&outputFormat=application%2Fjson&maxFeatures=10",
+  "wfs_bbox_requested_lonlat": [
+    13.39,
+    46.155,
+    13.395,
+    46.159
+  ],
+  "horizontal_crs_native": "EPSG:6708",
+  "native_coordinate_order": "easting,northing in metres",
+  "product": "DTM bare earth (NOT DSM), LIDAR RAFVG 2017-2020",
+  "grid_resolution_m": 0.5,
+  "vertical_datum_requested": null,
+  "raster_downloads_completed": 0,
+  "access_gate": "Eagle.fvg guest cart requires email verification code or authenticated login; a verification code was not available",
+  "direct_raster_url_known": false,
+  "notes": "This is an official WFS tile-footprint index, NOT elevation data or a downloaded DTM. Intersecting queried bbox does not certify NoData-free elevation cells.",
+  "tiles": [
+    {
+      "code": "06701210",
+      "wfs_id": "QU_DTM_LIDAR_FVG.7910",
+      "crtn": "067012",
+      "flight_dates": "20200623",
+      "bounds_native_xy": [
+        375240,
+        5112525,
+        376140,
+        5113365
+      ]
+    },
+    {
+      "code": "06701211",
+      "wfs_id": "QU_DTM_LIDAR_FVG.9822",
+      "crtn": "067012",
+      "flight_dates": "20190214 - 20200623",
+      "bounds_native_xy": [
+        376060,
+        5112525,
+        376960,
+        5113365
+      ]
+    },
+    {
+      "code": "06701214",
+      "wfs_id": "QU_DTM_LIDAR_FVG.11600",
+      "crtn": "067012",
+      "flight_dates": "20200623",
+      "bounds_native_xy": [
+        375240,
+        5111765,
+        376140,
+        5112605
+      ]
+    },
+    {
+      "code": "06701215",
+      "wfs_id": "QU_DTM_LIDAR_FVG.13645",
+      "crtn": "067012",
+      "flight_dates": "20200623",
+      "bounds_native_xy": [
+        376060,
+        5111765,
+        376960,
+        5112605
+      ]
+    }
+  ]
+}
