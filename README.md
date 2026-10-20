@@ -20,7 +20,7 @@ Il modello ha esterni e abitacolo, quattro portiere e portellone apribili, ruote
 | Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
 | Blender | Sorgente Yaris, GLB e render; generatori delle guide del borgo | Yaris eseguita; revisione artistica finale e guide del borgo ancora aperte |
 | Esplorazione | Controller di movimento e seguito della compagna | Richiedono rig, navmesh e integrazione nella scena |
-| Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | L’anello completo e il terreno non sono ancora acquisiti |
+| Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | Il solo DTM 0,5 m di Valle è stato acquisito; asse stradale e terreno dell'intero anello ancora da verificare |
 
 Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. La Yaris usa la ricostruzione da fotografie; albero, coffa e occupanti rimangono segnaposto. I render del modello e le prove del motore non approvano automaticamente la fedeltà artistica finale.
 
@@ -56,7 +56,7 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 
 ## Documentazione
 
-**LiDAR 0,5 m 2017–2020:** individuate le quattro tessere ufficiali di Valle (`06701210`, `06701211`, `06701214`, `06701215`), ma i raster non sono ancora scaricati: Eagle.fvg richiede email verificata o accesso autenticato. [Esito e istruzioni](docs/VERIFICA_LIDAR05_VALLE_20261020.md).
+**LiDAR 0,5 m 2017–2020:** ricevute e verificate **tutte e quattro le tessere ellissoidiche** di Valle (`06701210`, `06701211`, `06701214`, `06701215`), 12.096.000 valori validi, nessuna lacuna, giunzioni identiche. Generati un mosaico GeoTIFF a 0,5 m e un GLB provvisorio a passo ~4 m; file consegnati nella conversazione e non pubblicati su GitHub. [Rapporto di acquisizione](docs/ACQUISIZIONE_LIDAR05_REALE_20261020.md) · [Tool di importazione](tools/import_valle_lidar05.py). La geometria stradale e il collaudo nel motore restano aperti.
 
 **Sopralluogo cartografico (20/10/2026):** [pipeline QGIS + LiDAR FVG](docs/QGIS_LIDAR_SOPRALLUOGO.md), [acquisizione dei dati ufficiali](docs/ACQUISIZIONE_FONTI_GIS.md) e [rapporto sul circuito OSM candidato 2D](docs/TRACCIATO_OSM_CANDIDATO_20261020.md). Estratti 1.149 elementi stradali OSM, ricostruito un candidato planimetrico chiuso di **18.867,6 m** in sette settori, con dati e script versionati. **Non** sono ancora verificate le svolte reali, l'altimetria, la percorribilità o la mesh per il gioco.
 

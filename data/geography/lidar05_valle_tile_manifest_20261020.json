@@ -16,10 +16,10 @@
   "product": "DTM bare earth (NOT DSM), LIDAR RAFVG 2017-2020",
   "grid_resolution_m": 0.5,
   "vertical_datum_requested": null,
-  "raster_downloads_completed": 0,
-  "access_gate": "Eagle.fvg guest cart requires email verification code or authenticated login; a verification code was not available",
+  "raster_downloads_completed": 4,
+  "access_gate": "User completed Eagle guest/email download and uploaded a verified four-ASC ZIP to the conversation; download method not directly available to unattended agent",
   "direct_raster_url_known": false,
-  "notes": "This is an official WFS tile-footprint index, NOT elevation data or a downloaded DTM. Intersecting queried bbox does not certify NoData-free elevation cells.",
+  "notes": "2026-10-20 update: actual 0.5 m ellipsoidal ASC rasters validated from user-provided ZIP; horizontal grid EPSG:6708, no NoData cells, all four seams identical. No road-surface measurements; original binaries NOT committed to public GitHub.",
   "tiles": [
     {
       "code": "06701210",
@@ -31,6 +31,16 @@
         5112525,
         376140,
         5113365
+      ],
+      "acquisition": "verified_user_uploaded_original_ellipsoidal_ASC",
+      "asc_member": "Ell_DTM_06701210.asc",
+      "asc_sha256": "087ac4f775ab56597b56afcbd714c2932f1cba3b22c4679adae6c398cbce5cce",
+      "ncols": 1800,
+      "nrows": 1680,
+      "nodata_cells": 0,
+      "raw_grid_min_max_ellipsoidal_m": [
+        487.89,
+        877.15
       ]
     },
     {
@@ -43,6 +53,16 @@
         5112525,
         376960,
         5113365
+      ],
+      "acquisition": "verified_user_uploaded_original_ellipsoidal_ASC",
+      "asc_member": "Ell_DTM_06701211.asc",
+      "asc_sha256": "a0df530ca24eb8e30a8f6accbd5228a3196deacb5bb3864adea62eb81836c388",
+      "ncols": 1800,
+      "nrows": 1680,
+      "nodata_cells": 0,
+      "raw_grid_min_max_ellipsoidal_m": [
+        626.32,
+        959.61
       ]
     },
     {
@@ -55,6 +75,16 @@
         5111765,
         376140,
         5112605
+      ],
+      "acquisition": "verified_user_uploaded_original_ellipsoidal_ASC",
+      "asc_member": "Ell_DTM_06701214.asc",
+      "asc_sha256": "b9479d08184f0e390bf4ba7bc2779086a45b17d96a8aa3e64b00d5598bbae2b1",
+      "ncols": 1800,
+      "nrows": 1680,
+      "nodata_cells": 0,
+      "raw_grid_min_max_ellipsoidal_m": [
+        408.74,
+        777.08
       ]
     },
     {
@@ -67,7 +97,44 @@
         5111765,
         376960,
         5112605
+      ],
+      "acquisition": "verified_user_uploaded_original_ellipsoidal_ASC",
+      "asc_member": "Ell_DTM_06701215.asc",
+      "asc_sha256": "a907b2106d486eaad64dddc85dc3fa7e02d272ea2ca978743c4ec96d27c41991",
+      "ncols": 1800,
+      "nrows": 1680,
+      "nodata_cells": 0,
+      "raw_grid_min_max_ellipsoidal_m": [
+        413.63,
+        795.36
       ]
     }
-  ]
+  ],
+  "vertical_datum_operator_declared": "ellipsoidal, evidenced by source names Ell_DTM_*.asc; independent geodetic validation pending",
+  "vertical_metadata_verified_independently": false,
+  "user_archive_verification": {
+    "verified_date": "2026-10-20",
+    "original_filename": "download-20261027070111018.zip",
+    "archive_sha256": "bd715cd7c9b3820646f93f9e918cab1159950f47c2df5fc39e0218fc564a6a14",
+    "size_bytes": 26297175,
+    "grid_cellsize_m": 0.5,
+    "grid_shape_per_tile": [
+      1680,
+      1800
+    ],
+    "valid_grid_cells": 12096000,
+    "missing_grid_cells": 0,
+    "unique_mosaic_cells": 11008000,
+    "overlap_duplicate_cells": 1088000,
+    "overlap_max_height_delta_m": 0,
+    "processed_geotiff_bounds_native_EN_m": [
+      375240,
+      5111765,
+      376960,
+      5113365
+    ],
+    "processed_files_in_public_repo": false,
+    "processed_files_downloadable_in_original_chat": true,
+    "ready_as_drivable_surface": false
+  }
 }
