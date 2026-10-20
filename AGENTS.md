@@ -12,6 +12,12 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **Circuito 3D 0.1:** `docs/CIRCUITO_3D.md`, `tools/build_circuit_3d.py`,
+  `tools/validate_circuit.py`, scena `godot/scenes/circuit.tscn`. 352 settori;
+  selezione di fonte per vertice esplicita, senza media, e protezione delle
+  quote di Valle. Dettaglio/collisioni caricati vicino alla camera. Vedere
+  `reports/CIRCUITO_3D_VERIFICA.json`. Non è la guida/visita integrata.
+
 - **DTM intero anello:** 41 ASC originali locali in
   `C:\Giochi\Sviluppo\Viaggio a Soffumbergo\DTM Completi`, fuori Git.
   Catalogo `data/geography/circuit_dtm_catalog_20261020.json`, procedura

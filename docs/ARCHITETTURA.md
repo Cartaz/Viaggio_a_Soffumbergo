@@ -1,5 +1,20 @@
 # Architettura della preparazione
 
+## Corridoio Circuito 3D 0.1
+
+`coffa/dtm_mosaic.py` applica la scelta globale della fonte senza fusione di
+quote. `build_circuit_3d.py` verifica i 41 originali, seleziona i settori e scrive
+una generazione locale completa con impronte e ID di provenienza per vertice.
+`check_circuit_3d.py` confronta bordi, profilo e campioni scalari indipendenti.
+
+`circuit.gd` estende la camera di ispezione di Valle, mostra la veduta generale
+e gestisce la residenza dei chunk. `circuit_sector.gd` mantiene fisica fissa a
+2 m e tre mesh visive; `circuit_mesh.gd` omette i triangoli senza dati. Il modulo
+`valle_content.gd` costruisce gli stessi edifici/linee OSM nelle due scene.
+Le collisioni del terreno vengono eliminate con i chunk lontani; gli edifici
+di Valle restano statici e le linee non hanno massa o superficie stradale.
+Prove e limiti in [CIRCUITO_3D.md](CIRCUITO_3D.md).
+
 ## Incremento Valle 3D 0.1
 
 `tools/build_valle_3d.py` riusa il lettore/mosaico LiDAR esistente;

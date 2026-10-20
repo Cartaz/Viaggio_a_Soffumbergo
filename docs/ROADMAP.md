@@ -16,9 +16,15 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 - [ ] Costruire una superficie stradale verificata e collegare guida/visita.
 - [x] Acquisire/catalogare le 41 tessere dell'anello: 123.984.000 celle senza
   NoData e asse OSM candidato coperto su 9.966 campioni a passo massimo 2 m.
-- [ ] Gestire le differenze nelle sovrapposizioni (9 coppie; 24 campioni
-  del candidato hanno quote ambigue) con politica di mosaico documentata.
-- [ ] Estendere la scena del terreno all'intero corridoio del circuito.
+- [x] Gestire le sovrapposizioni per il prototipo con selezione esplicita della
+  fonte per vertice, senza media; incertezza originaria conservata nei metadati.
+- [x] Estendere il terreno a un corridoio di 352 settori con vista generale,
+  dettaglio/collisioni vicini alla camera e regressioni su tutti i 9.966 punti.
+- [ ] Verificare la superficie stradale e i bivi prima di integrare la guida.
+
+**Circuito 3D 0.1:** [politica, avvio, misure e limiti](CIRCUITO_3D.md),
+risultati in `reports/CIRCUITO_3D_VERIFICA.json`. Le quote a 2 m di Valle
+rimangono identiche; il corridoio è un ambiente di ispezione, non il giro guidabile.
 
 [Procedura e limiti](VALLE_3D.md), [risultati](../reports/VALLE_3D_VERIFICA.json).
 P0, P3 e P4 restano aperte: questa scena è un campione geografico, non una

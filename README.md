@@ -2,6 +2,13 @@
 
 ## Coffa e tornanti
 
+**Circuito 3D 0.1:** il terreno si estende ora lungo l'intero asse OSM candidato,
+con 352 settori e caricamento progressivo di dettaglio e collisioni. Le fonti
+sono conservate per vertice; il campione di Valle mantiene le stesse quote.
+[Avvio e limiti](docs/CIRCUITO_3D.md) · [Collaudi](reports/CIRCUITO_3D_VERIFICA.json).
+Scena autonoma `godot/scenes/circuit.tscn`, camera libera e richiami dei sette
+settori; non è ancora una strada asfaltata o un giro guidabile.
+
 **Valle 3D 0.1:** scena autonoma con terreno LiDAR georeferenziato, 36 settori,
 LOD 2/4/8 m, collisioni a 2 m, 91 sagome OSM e strade provvisorie colorate.
 Verificata in Godot 4.5.1 e Blender 4.5.3; camera libera di ispezione.
@@ -34,7 +41,7 @@ Il modello ha esterni e abitacolo, quattro portiere e portellone apribili, ruote
 | Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
 | Blender | Sorgente Yaris, GLB e render; generatori delle guide del borgo | Yaris eseguita; revisione artistica finale e guide del borgo ancora aperte |
 | Esplorazione | Controller di movimento e seguito della compagna | Richiedono rig, navmesh e integrazione nella scena |
-| Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | Il solo DTM 0,5 m di Valle è stato acquisito; asse stradale e terreno dell'intero anello ancora da verificare |
+| Percorso | 41 DTM verificati, corridoio del candidato con 352 settori, dettaglio e collisioni progressivi | Asfalto, bivi reali, larghezze e guida dell'anello ancora da verificare |
 
 Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. La Yaris usa la ricostruzione da fotografie; albero, coffa e occupanti rimangono segnaposto. I render del modello e le prove del motore non approvano automaticamente la fedeltà artistica finale.
 
