@@ -31,8 +31,13 @@ jobs:
                 if "href" in d:self.links.append(d["href"])
           parsed=Parser();parsed.feed(raw.decode("latin1",errors="replace"))
           links=[urllib.parse.urljoin(url,l) for l in parsed.links if "DTM" in l.upper()]
+          text=raw.decode("latin1",errors="replace")
           print("Available official DTM links:")
           for l in links: print(l)
+          for pattern in ("DTM", "DTM10", "zip", "onclick", "downloadFile", "download("):
+            m=re.search(pattern,text,re.I)
+            if m: print("HTML_FRAGMENT",pattern,repr(text[max(0,m.start()-260):m.end()+450]))
+          print("ALL_HREF_FIRST_80",parsed.links[:80])
           candidates=[l for l in links if "10M" in l.upper() and ("6708" in l or "RDN2008" in l)]
           if not candidates:
             print("No appropriate directly linked 10m terrain grid on Faedis page");sys.exit(0)
