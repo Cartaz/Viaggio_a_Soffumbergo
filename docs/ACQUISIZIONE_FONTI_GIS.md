@@ -8,6 +8,8 @@ Il tracciato dell'utente rimane quello fissato in `docs/CIRCUITO_SOPRALLUOGO.md`
 
 Il job [GitHub Actions](https://github.com/Cartaz/Viaggio_a_Soffumbergo/actions/runs/39337016363) ha acquisito 1.149 ways stradali (821 candidati automobilistici preliminari). Un secondo job ha salvato la rete e la polilinea candidata OSM (18.867,6 m) nella repository; non serve riscaricare l'estratto per aprirla in QGIS. I comandi di download descritti più sotto restano disponibili per futuri aggiornamenti, mantenendo sempre i vecchi dati e la provenienza. **Nessuna quota disponibile.**
 
+**LiDAR nuovo a 0,5 m (2017–2020):** i quattro codici dei raster per il borgo sono stati accertati via WFS ufficiale, ma la procedura Eagle richiede conferma dell'email per l'utente ospite. Nessuno dei quattro raster è stato scaricato. [Dettagli del tentativo](VERIFICA_LIDAR05_VALLE_20261020.md).
+
 ## Dati ufficiali FVG
 
 1. [Catalogo LiDAR 2017–2020 — ID 11826](https://irdat.regione.fvg.it/consultatore-dati-ambientali-territoriali/detail/irdat/dataset/11826). Specifica un **DTM a maglia 0,50 m**, distribuito in grigliati ASCII con quote **ellissoidiche o ortometriche**. Aprire [Eagle.fvg](https://eaglefvg.regione.fvg.it/eagle/main.aspx?configuration=guest), voce «download basi cartografiche», e scegliere le tessere effettivamente comprese nel percorso. Disponibilità delle singole tessere e licenza del download da verificare.
