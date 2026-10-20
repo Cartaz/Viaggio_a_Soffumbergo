@@ -56,7 +56,9 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 
 ## Documentazione
 
-**Sopralluogo cartografico (20/10/2026):** [pipeline QGIS + LiDAR FVG](docs/QGIS_LIDAR_SOPRALLUOGO.md), [acquisizione dei dati ufficiali](docs/ACQUISIZIONE_FONTI_GIS.md) e [rapporto sul circuito OSM candidato 2D](docs/TRACCIATO_OSM_CANDIDATO_20261020.md). Estratti 1.149 elementi stradali OSM, ricostruito un candidato planimetrico chiuso di **18.867,6 m** in sette settori, con dati e script versionati. **Non** sono ancora verificate le svolte reali, l'altimetria, la percorribilità o la mesh per il gioco.
+**Sopralluogo cartografico (20/10/2026):** [primo profilo DTM reale FVG a 10 m](docs/PROFILO_ALTIMETRICO_DTM10_20261020.md), [grafico del terreno](reports/terrain_10m_profile.svg) e campioni georeferenziati per **2.394 punti** lungo il candidato OSM (copertura campioni 100%). Il datum verticale e le quote dell'asfalto non sono ancora verificati; la carreggiata non è pronta per il gioco.
+
+**Tracciato planimetrico precedente:** [pipeline QGIS + LiDAR FVG](docs/QGIS_LIDAR_SOPRALLUOGO.md), [acquisizione dei dati ufficiali](docs/ACQUISIZIONE_FONTI_GIS.md) e [rapporto sul circuito OSM candidato 2D](docs/TRACCIATO_OSM_CANDIDATO_20261020.md). Estratti 1.149 elementi stradali OSM, ricostruito un candidato planimetrico chiuso di **18.867,6 m** in sette settori, con dati e script versionati. **Non** sono ancora verificate le svolte reali, l'altimetria, la percorribilità o la mesh per il gioco.
 
 
 | Documento | Contenuto |
