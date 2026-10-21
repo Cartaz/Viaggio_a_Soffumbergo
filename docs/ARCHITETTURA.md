@@ -1,5 +1,21 @@
 # Architettura della preparazione
 
+## Costruzione del circuito
+
+`coffa/road_construction.py` indicizza i segmenti, prepara il profilo ciclico e
+costruisce l'unione della fascia provvisoria con triangolazione vincolata Shapely.
+`build_circuit_construction.py` scrive una variante locale con scavi/riporti,
+normali globali, LOD ricalcolati e settori stradali separati. Non modifica DTM,
+manifest originale o prove precedenti. `check_circuit_construction.py` verifica
+area, fronti, copertura e giunzioni e prepara i riferimenti indipendenti per Jolt.
+
+`circuit_construction.gd` estende l'ispettore; la strada sul layer 4 condivide la
+residenza del terreno sul layer 1. T elimina i corpi residenti e ricostruisce
+terreno/viste generali dalla variante originale o di progetto. F9 richiama i punti
+critici, senza correggerli automaticamente. Il gate Python/Godot/Blender è
+`validate_circuit_construction.py`; il sincronizzatore separato protegge i file
+privati tramite preflight, backup e ricevuta. [Procedura](COSTRUZIONE_CIRCUITO.md).
+
 ## Guida pilota e prestazioni Yaris
 
 `yaris_powertrain.gd` separa dati Toyota e parametri effettivi alle ruote in

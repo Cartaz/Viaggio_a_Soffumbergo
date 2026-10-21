@@ -4,6 +4,19 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 
 ## Valle 3D 0.1 — 20 ottobre 2026
 
+**Terraforming del 21 ottobre:** [costruzione dell'intero candidato](COSTRUZIONE_CIRCUITO.md).
+
+- [x] Preparare una superficie di progetto sui circa 18,9 km conservando asse,
+  tornanti, rami ripercorsi e quattro inversioni; non inventare piazzali di manovra.
+- [x] Generare scavi/riporti su derivati separati, parametri dichiarati, controllo
+  delle giunzioni, confronto originale/progetto e collisioni stradali progressive.
+- [x] Verificare geometrie, contatti in Jolt, immagini reali e progetto Blender.
+- [ ] Risolvere le inversioni e verificare bivi, larghezze, pendenze e raccordi.
+- [ ] Rifinire scarpate, drenaggi, muri, barriere e superficie stradale documentata.
+- [ ] Collaudare la Yaris lungo tutti i settori e completare un giro fisico.
+
+La superficie di costruzione non chiude la verifica della strada reale o P2/P3.
+
 **Incremento guida pilota e prestazioni:** [prova di 601 m](GUIDA_PILOTA.md),
 [fonti Toyota e modello longitudinale](YARIS_PRESTAZIONI.md).
 

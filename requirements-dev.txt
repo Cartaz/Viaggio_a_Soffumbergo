@@ -1,3 +1,5 @@
 # Parser/linter plus the synthetic vectorized DTM source-selection regressions.
 gdtoolkit==4.5.0
 numpy==2.2.6
+# Polygon union and constrained triangulation for the derived road workbench.
+shapely==2.1.2

@@ -1,5 +1,11 @@
 # Decisioni e vincoli
 
+**Richiesta del 21 ottobre 2026:** passare al terraforming e alla costruzione
+del circuito. Realizzata una variante di progetto dell'intero asse candidato,
+con parametri espliciti e confronto col DTM originale. Nessuna scorciatoia o
+correzione implicita delle quattro inversioni; misure del luogo e guidabilità
+rimangono da verificare. [Perimetro](COSTRUZIONE_CIRCUITO.md).
+
 **Incremento del 20 ottobre 2026:** prototipo richiesto “Valle 3D 0.1”, realizzato
 come scena separata con terreno georeferenziato a settori/LOD, collisioni,
 edifici OSM come blockout e accessi provvisori riconoscibili. [Limiti](VALLE_3D.md).

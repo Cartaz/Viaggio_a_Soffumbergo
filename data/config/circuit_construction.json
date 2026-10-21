@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "engineering_parameters_not_surveyed_dimensions",
+  "width_m": 4.5,
+  "profile_radius_m": 12.0,
+  "surface_offset_m": 0.15,
+  "terrain_clearance_m": 0.5,
+  "shoulder_m": 1.0,
+  "blend_m": 8.0,
+  "mesh_max_edge_m": 3.0,
+  "grade_warning": 0.20,
+  "earthworks_review_m": 6.0,
+  "turn_warning_degrees": 60.0,
+  "crossfall": "zero_design_assumption",
+  "junctions": "union_of_candidate_buffer_not_verified_junction_layout"
+}

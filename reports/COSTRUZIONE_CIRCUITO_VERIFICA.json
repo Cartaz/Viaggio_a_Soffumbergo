@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "status": "passed_construction_workbench_not_approved_circuit",
+  "source_sha256": {
+    "AGENTS.md": "2c02ef40613fa95efc3d0943938f7b05cdc2313abedb09f5e4aba7d64013ad53",
+    "README.md": "d10fb7b937d6acbdda6a69f8f78344dcb4c68fb4008bbc129e95569835812844",
+    "requirements-dev.txt": "95f532bd3da3ff8d2cedd4f4d69c43260b4b9752932bb5003661c2a1ba00cb00",
+    "docs/DECISIONI.md": "4ab2addc92889479fb8c33a167823883318a1724c8dee6030215fcdd6ea1d9c9",
+    "docs/ROADMAP.md": "cf152710ef8ae8109bec9dd42dbff2c3a8759011abe29a66bb648f5a4fb37588",
+    "docs/ARCHITETTURA.md": "29cf88967c5b8fa55c06e95e46f0e1052c29954cffb231adefc7bc24a99eff3b",
+    "docs/COSTRUZIONE_CIRCUITO.md": "bac6f18d1b6f8c7e95e6cbb7155cf476e3c9b41c6a6e4f0ea4117033ca1082ac",
+    "data/config/circuit_construction.json": "bd623fc686e8146b4e1eb0394b2a484b7a24ed4ba3bc7f9e81c08ea1e1ae9d9a",
+    "tools/coffa/road_construction.py": "5835412489ff98847c19a494370bb712472e07aa6699e674f355b3c809643fea",
+    "tools/build_circuit_construction.py": "09837f3b6cbd1e65fc6c8a864dd0a774550a9fbe4820520ada3de4c1caa3d4e6",
+    "tools/check_circuit_construction.py": "c964d7bc770b1e69b28074d003199418292a5d30768456b494df454040ee4b5d",
+    "tools/validate_circuit_construction.py": "365fbf7065e284bba87b97c2693122c6811888a10a3d6d1484b93c3907a5fb68",
+    "tools/sync_circuit_construction_local.py": "4b263897d8bb88cff16bc7b692e0855b11dba7a60763323d08b358a3edd96193",
+    "tools/blender/build_circuit_construction.py": "f52ad71d046c5803e4cc4e9f9dfd94fa6bd435b2146b69caf242e65325cb6c0a",
+    "tests/test_road_construction.py": "d7267731b3425feaa3fe49e59fed02ce256d46aad3d537049b446e45ec04ce62",
+    "godot/scripts/circuit_construction.gd": "3dd4a5d1da8b78a041e4c4ea7f7d7768b6a7e63431e0f2e5c5a2b87ea1d6fd0d",
+    "godot/scripts/circuit_construction.gd.uid": "55d5958ef9fffb2c1fe6bfa14d4046a8fdbbf5193e15cc86a9a41e339d0b2600",
+    "godot/scenes/circuit_construction.tscn": "80d3f3422d261533d4f38640c46f6b93187ba7f075d2d76ccd94fa11eb10b29a",
+    "godot/tests/circuit_construction_check.gd": "7df32b5f92320a55788c62a8cf687925b73101c7377f1a0a5f8b47a1b980fd3b",
+    "godot/tests/circuit_construction_check.gd.uid": "3e80cacd4128d4de1fe6183693d73c773f71dfcf6910403ddc4e21d9da189ac4"
+  },
+  "validation": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "python",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.219
+      },
+      {
+        "name": "gdparse",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.969
+      },
+      {
+        "name": "gdformat",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.484
+      },
+      {
+        "name": "gdlint",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.531
+      },
+      {
+        "name": "generate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 18.625
+      },
+      {
+        "name": "regenerate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 18.937
+      },
+      {
+        "name": "geometry",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 4.375
+      },
+      {
+        "name": "yaris_asset",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.781
+      },
+      {
+        "name": "import",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 3.844
+      },
+      {
+        "name": "jolt",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 46.093
+      },
+      {
+        "name": "render",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 54.485
+      },
+      {
+        "name": "blender",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.937
+      }
+    ],
+    "construction_manifest_sha256": "0be37b4827d714cd3218ad85fc68819c398d412af400bca3011e69b18be780ab",
+    "immutable_inputs": {
+      "build\\circuit\\manifest.json": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
+      "build\\circuit\\pilot_manifest.json": "1b6931ca9807f10975cc074250636161ec73166f2bc70b4be68f9d1c367c0f1a",
+      "build\\circuit\\pilot_road.json": "14708a8f91d165fb9b4dc0c2fc3357aeb7e909ec5b48778ab440f91dfb4fafbb",
+      "build\\circuit\\parking_manifest.json": "4a6a48f6663a6fd5efa3af5f1dbf1b61454600e9d7205d3bd194627b1ff4e600",
+      "build\\circuit\\parking_road.json": "3bf28ad61683af50de4cc4181d7fce71cf25e4e333a84c57553204a147f793af"
+    },
+    "raw_tiles_checked_before_and_after": 41,
+    "deterministic_files": 521,
+    "full_lap_driven": false
+  },
+  "generation": {
+    "schema_version": 1,
+    "status": "engineering_workbench_not_approved_circuit",
+    "build_id": "0876df8fffd29973ee7b",
+    "fingerprints": {
+      "data\\config\\circuit_construction.json": "bd623fc686e8146b4e1eb0394b2a484b7a24ed4ba3bc7f9e81c08ea1e1ae9d9a",
+      "tools\\build_circuit_construction.py": "09837f3b6cbd1e65fc6c8a864dd0a774550a9fbe4820520ada3de4c1caa3d4e6",
+      "tools\\coffa\\road_construction.py": "5835412489ff98847c19a494370bb712472e07aa6699e674f355b3c809643fea",
+      "original_manifest": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
+      "shapely_version": "2.1.2",
+      "geos_version": "3.13.1"
+    },
+    "config": {
+      "schema_version": 1,
+      "status": "engineering_parameters_not_surveyed_dimensions",
+      "width_m": 4.5,
+      "profile_radius_m": 12.0,
+      "surface_offset_m": 0.15,
+      "terrain_clearance_m": 0.5,
+      "shoulder_m": 1.0,
+      "blend_m": 8.0,
+      "mesh_max_edge_m": 3.0,
+      "grade_warning": 0.2,
+      "earthworks_review_m": 6.0,
+      "turn_warning_degrees": 60.0,
+      "crossfall": "zero_design_assumption",
+      "junctions": "union_of_candidate_buffer_not_verified_junction_layout"
+    },
+    "source_manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
+    "route_length_horizontal_m": 18884.86189548234,
+    "route_length_3d_m": 18938.558051330347,
+    "design_area_m2": 83019.99483187497,
+    "graded_sectors": 188,
+    "road_sectors": 167,
+    "road_triangles": 208994,
+    "max_earthworks_delta_m": 8.740539999999953,
+    "approx_cut_m3": 162277.45856400006,
+    "approx_fill_m3": 60869.522955999986,
+    "volume_status": "2m_cell_average_estimate_not_quantity_survey",
+    "modified_cells": 113941,
+    "max_design_grade": 0.19932325672553583,
+    "max_center_delta_from_DTM_m": 2.611581437307734,
+    "exact_reversals": 4,
+    "issues": [
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "A",
+        "station_horizontal_m": 63.63110173636068,
+        "point_m": [
+          -3653.793629543623,
+          -504.9304489337934,
+          415.9955055033788
+        ],
+        "turn_degrees": 65.6096451010959,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "exact_reversal",
+        "sector": "A",
+        "station_horizontal_m": 76.93993959232584,
+        "point_m": [
+          -3666.257660087431,
+          -504.9675468835505,
+          411.3341173073277
+        ],
+        "turn_degrees": 179.99999914622634,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "A",
+        "station_horizontal_m": 3543.048265191796,
+        "point_m": [
+          -2434.2420915302355,
+          -541.5113656855035,
+          3097.4581418354064
+        ],
+        "turn_degrees": 89.32137776203508,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "exact_reversal",
+        "sector": "A",
+        "station_horizontal_m": 3670.846082832557,
+        "point_m": [
+          -2421.998465636745,
+          -534.5489815801913,
+          2970.2492219218984
+        ],
+        "turn_degrees": 180.0,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "A",
+        "station_horizontal_m": 3798.643900473318,
+        "point_m": [
+          -2434.2420915302355,
+          -541.5113656855035,
+          3097.4581418354064
+        ],
+        "turn_degrees": 87.13253460724232,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "B",
+        "station_horizontal_m": 4190.174254789785,
+        "point_m": [
+          -2086.7193593351403,
+          -543.1080571199207,
+          3265.9963692091405
+        ],
+        "turn_degrees": 69.08689022755347,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "C",
+        "station_horizontal_m": 7151.4558161001505,
+        "point_m": [
+          -195.80848440912087,
+          -312.68002419203094,
+          2264.4075990617275
+        ],
+        "turn_degrees": 88.63648313589978,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "C",
+        "station_horizontal_m": 7578.016282413569,
+        "point_m": [
+          81.38498431164771,
+          -265.8443306634942,
+          1994.310437218286
+        ],
+        "turn_degrees": 68.92765699503768,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "C",
+        "station_horizontal_m": 8441.218913650398,
+        "point_m": [
+          -456.5070068143541,
+          -177.64740987978863,
+          1454.5255263103172
+        ],
+        "turn_degrees": 79.74712147283782,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "exact_reversal",
+        "sector": "V",
+        "station_horizontal_m": 10892.019502475068,
+        "point_m": [
+          22.385757097334135,
+          5.288776330706938,
+          -10.201651398092508
+        ],
+        "turn_degrees": 179.99999879258172,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "E",
+        "station_horizontal_m": 17047.981228776185,
+        "point_m": [
+          -2570.3099410880823,
+          -461.7575163098204,
+          -1047.1178184654564
+        ],
+        "turn_degrees": 63.066883109303056,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "exact_reversal",
+        "sector": "F",
+        "station_horizontal_m": 17068.485728696407,
+        "point_m": [
+          -2590.2279857762624,
+          -462.6017901554818,
+          -1051.9867005525157
+        ],
+        "turn_degrees": 180.0,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "sharp_candidate_corner",
+        "sector": "F",
+        "station_horizontal_m": 17088.99022861663,
+        "point_m": [
+          -2570.3099410880823,
+          -461.7575163098204,
+          -1047.1178184654564
+        ],
+        "turn_degrees": 116.6741285169436,
+        "status": "requires_route_review_no_automatic_shortcut"
+      },
+      {
+        "kind": "large_earthworks_delta",
+        "terrain_sector": "-2048_-1408",
+        "point_m": [
+          -1924.0,
+          -397.71804,
+          -1342.0
+        ],
+        "delta_m": -8.740539999999953,
+        "status": "requires_earthworks_and_retaining_structure_review"
+      }
+    ],
+    "repeated_node_count": 225,
+    "max_unified_profile_spread_m": 0.32207105532108926,
+    "real_surface_verified": false,
+    "full_lap_driven": false,
+    "original_rasters_modified": false,
+    "terrain_original_modified": false
+  },
+  "geometry": {
+    "passed": true,
+    "terrain_seams": 562,
+    "terrain_height_and_normal_seam_error": 0,
+    "road_seams": 191,
+    "road_triangles": 208994,
+    "road_plan_area_m2": 83019.99490683679,
+    "max_horizontal_mesh_edge_m": 3.000000868735399,
+    "road_reference_rays": 29877,
+    "min_sampled_road_terrain_clearance_m": 0.10060401566514088,
+    "profile_points": 9959,
+    "all_route_and_cross_section_samples_covered": true,
+    "original_sectors": 352
+  },
+  "godot_headless": {
+    "capture": false,
+    "checks": 60097,
+    "chunks_loaded": 1497,
+    "chunks_unloaded": 1463,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "full_lap_driven": false,
+    "max_ray_error_m": 0.0001220703125,
+    "max_residents": 36,
+    "passed": true,
+    "renderer": "",
+    "road_rays": 29877,
+    "scope": "construction geometry and contacts; not a vehicle lap"
+  },
+  "godot_render": {
+    "capture": true,
+    "checks": 60097,
+    "chunks_loaded": 1497,
+    "chunks_unloaded": 1463,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "full_lap_driven": false,
+    "max_ray_error_m": 0.0001220703125,
+    "max_residents": 36,
+    "passed": true,
+    "renderer": "AMD Radeon RX 6800",
+    "road_rays": 29877,
+    "scope": "construction geometry and contacts; not a vehicle lap"
+  },
+  "blender": {
+    "passed": true,
+    "blender_version": "4.5.3 LTS",
+    "road_sectors": 167,
+    "road_triangles": 208994,
+    "terrain_overview_sectors": 352,
+    "manifest_sha256": "0be37b4827d714cd3218ad85fc68819c398d412af400bca3011e69b18be780ab",
+    "scope": "native mesh and normals, not artistic approval or driven lap"
+  },
+  "captures_inspected": [
+    "construction_project.png",
+    "construction_original.png",
+    "construction_overview.png"
+  ],
+  "scope": "Entire candidate engineering geometry, contacts, streaming and comparison. Not a vehicle lap, surveyed road, finished earthworks or artistic approval. Original raw rasters and local geographic derivatives excluded from Git.",
+  "post_sync_python_check": {
+    "tests": 100,
+    "passed": true,
+    "log": "build/construction_python_final.log"
+  },
+  "windows_render": {
+    "capture": true,
+    "checks": 60097,
+    "chunks_loaded": 1497,
+    "chunks_unloaded": 1463,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "full_lap_driven": false,
+    "max_ray_error_m": 0.0001220703125,
+    "max_residents": 36,
+    "passed": true,
+    "renderer": "AMD Radeon RX 6800",
+    "road_rays": 29877,
+    "scope": "construction geometry and contacts; not a vehicle lap"
+  },
+  "windows_sync": {
+    "launcher": "Avvia costruzione circuito.cmd",
+    "target": "C:\\Giochi\\Sviluppo\\Viaggio a Soffumbergo",
+    "private_assets_changed": false,
+    "default_scene_changed": false,
+    "native_blender_copied": true,
+    "capture_inspected": "build/construction_validation/construction_project.png"
+  }
+}

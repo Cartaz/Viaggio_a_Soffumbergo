@@ -1,0 +1,82 @@
+"""Install only owned construction files; preflight preserves private user changes."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import shutil
+
+ROOT = Path(__file__).resolve().parents[1]
+FILES = ['data/config/circuit_construction.json', 'tools/coffa/road_construction.py',
+         'tools/build_circuit_construction.py', 'tools/check_circuit_construction.py',
+         'tools/validate_circuit_construction.py', 'tools/sync_circuit_construction_local.py',
+         'tools/blender/build_circuit_construction.py', 'tests/test_road_construction.py',
+         'godot/scripts/circuit_construction.gd', 'godot/scripts/circuit_construction.gd.uid',
+         'godot/scenes/circuit_construction.tscn', 'godot/tests/circuit_construction_check.gd',
+         'godot/tests/circuit_construction_check.gd.uid', 'docs/COSTRUZIONE_CIRCUITO.md',
+         'reports/COSTRUZIONE_CIRCUITO_VERIFICA.json', 'build/circuit/construction_manifest.json',
+         'build/circuit/construction_report.json', 'build/construction_validation/probes.json',
+         'build/construction_validation/circuit_construction.blend',
+         'build/construction_validation/blender_report.json']
+
+
+def digest(path):
+    data = path.read_bytes()
+    return hashlib.sha256(data if path.suffix == '.blend' else data.replace(b'\r\n', b'\n')).hexdigest()
+
+
+def sync(target, godot):
+    target, godot = target.resolve(), godot.resolve()
+    if target == ROOT or not (target/'project.godot').is_file() or not godot.is_file():
+        raise ValueError('Distinct existing project and Godot executable required')
+    manifest = json.loads((ROOT/'build/circuit/construction_manifest.json').read_bytes())
+    source = manifest['engineering_construction']['report']['source_manifest_sha256']
+    if hashlib.sha256((target/'build/circuit/manifest.json').read_bytes()).hexdigest() != source:
+        raise ValueError('Local original terrain differs; preserved')
+    receipt = target/'build/construction_sync_receipt.json'
+    owned = json.loads(receipt.read_bytes())['files'] if receipt.exists() else {}
+    paths = list(FILES)
+    for e in manifest['sectors']+manifest['engineering_construction']['road_sectors']:
+        relative = Path(e['path'])
+        if relative.is_absolute() or '..' in relative.parts or relative.parts[0] != 'datasets':
+            raise ValueError('Unsafe derivative path')
+        paths.append(str(Path('build/circuit')/relative))
+    changes = []
+    for p in paths:
+        src, dest = ROOT/p, target/p
+        if not dest.resolve().is_relative_to(target):
+            raise ValueError('Target escape')
+        if dest.exists() and digest(src) != digest(dest):
+            if owned.get(p) != digest(dest):
+                raise ValueError('Existing user change preserved: '+str(dest))
+        if not dest.exists() or src.read_bytes() != dest.read_bytes():
+            changes.append(p)
+    launcher = target/'Avvia costruzione circuito.cmd'
+    command = ('@echo off\r\n"'+str(godot)+'" --path "%~dp0." res://godot/scenes/circuit_construction.tscn\r\n').encode()
+    if launcher.exists() and launcher.read_bytes() != command:
+        raise ValueError('Existing launcher preserved')
+    settings = (target/'project.godot').read_bytes()
+    for p in changes:
+        dest = target/p
+        if dest.exists():
+            backup = target/'build/construction_backups'/digest(dest)/p
+            backup.parent.mkdir(parents=True, exist_ok=True)
+            if not backup.exists():
+                shutil.copyfile(dest, backup)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT/p, dest)
+    launcher.write_bytes(command)
+    (target/'build/.gdignore').touch()
+    receipt.write_text(json.dumps({'files':{p:digest(target/p) for p in paths}}, indent=2)+'\n', encoding='utf-8')
+    assert settings == (target/'project.godot').read_bytes()
+    result = {'target':str(target), 'files_updated':len(changes), 'build_id':manifest['engineering_construction']['report']['build_id'],
+              'default_scene_changed':False, 'private_assets_changed':False}
+    (ROOT/'build/construction_validation/local_sync.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
+    print(json.dumps(result))
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--target', type=Path, required=True)
+    parser.add_argument('--godot', type=Path, required=True)
+    args = parser.parse_args()
+    sync(args.target, args.godot)

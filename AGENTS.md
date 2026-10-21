@@ -12,6 +12,15 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **Terraforming / costruzione circuito:** `docs/COSTRUZIONE_CIRCUITO.md`,
+  `tools/build_circuit_construction.py`, `tools/check_circuit_construction.py`,
+  `tools/validate_circuit_construction.py`, scena `circuit_construction.tscn`.
+  Superficie di progetto dell'intero candidato e terreno derivato separato,
+  confronto T e punti critici F9. Quattro inversioni conservate e da rivedere;
+  nessun giro fisico completo dichiarato. Configurazione in
+  `data/config/circuit_construction.json`, evidenze in
+  `reports/COSTRUZIONE_CIRCUITO_VERIFICA.json`. Raster e derivati fuori Git.
+
 - **Discesa e passeggiata di prova:** `docs/VISITA_PILOTA.md`, scena
   `visit_pilot.tscn`, `tools/validate_visit_pilot.py`, test `visit_mass_check.gd`
   e `visit_pilot_check.gd`. Due corpi indipendenti, forze di sostegno con reazione

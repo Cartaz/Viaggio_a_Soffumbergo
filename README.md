@@ -2,6 +2,12 @@
 
 ## Coffa e tornanti
 
+**Terraforming e costruzione del circuito:** nuova scena di ispezione dell'intero
+candidato di circa 18,9 km, con superficie provvisoria, terreno sistemato a settori,
+collisioni e confronto con il DTM originale. Parametri modificabili e punti critici
+segnalati, comprese quattro inversioni ancora da verificare.
+[Avvio e limiti](docs/COSTRUZIONE_CIRCUITO.md). Non è ancora un giro guidato completo.
+
 **Primo accesso guidabile a Valle:** una prova di 601 m collega la Yaris al
 terreno con caricamento progressivo. Superficie e sistemazione del fondo sono
 ipotesi dichiarate; strada reale e bivi restano da verificare.
