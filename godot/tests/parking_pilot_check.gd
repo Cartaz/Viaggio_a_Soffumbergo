@@ -65,4 +65,8 @@ func _after_drive(scene: Node3D) -> void:
 	car.braking = 1
 	await ticks(2)
 	check(scene.toggle_stop(), "Stable stop can be confirmed again")
-	check("visita ancora da integrare" in scene.hud.text, "HUD does not claim a completed visit")
+	check(_expected_visit_hint() in scene.hud.text, "HUD describes the implemented visit scope")
+
+
+func _expected_visit_hint() -> String:
+	return "visita ancora da integrare"

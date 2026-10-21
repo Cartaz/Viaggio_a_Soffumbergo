@@ -115,16 +115,6 @@ func run() -> void:
 	check(scene.chunks_loaded > scene.residents.size(), "Terrain loaded while driving")
 	check(scene.chunks_unloaded > 0, "Distant terrain released while driving")
 	check(scene.stream_errors.is_empty(), "No missing or changed terrain chunks")
-	await _after_drive(scene)
-	DirAccess.make_dir_recursive_absolute(output_dir)
-	if capture:
-		if physics_only:
-			car.set_process(true)
-			car.set_physics_process(true)
-			await ticks(1)
-		await process_frame
-		await RenderingServer.frame_post_draw
-		root.get_texture().get_image().save_png(output_dir.path_join("arrival.png"))
 	var report := {
 		"checks": checks,
 		"failures": failures,
@@ -147,6 +137,16 @@ func run() -> void:
 		"visual_animation_disabled_during_drive": physics_only,
 		"scope": "Declared 601m engineering trial; no verified real road or full journey"
 	}
+	await _after_drive(scene)
+	DirAccess.make_dir_recursive_absolute(output_dir)
+	if capture:
+		if physics_only:
+			car.set_process(true)
+			car.set_physics_process(true)
+			await ticks(1)
+		await process_frame
+		await RenderingServer.frame_post_draw
+		root.get_texture().get_image().save_png(output_dir.path_join("arrival.png"))
 	await scene.reset_trial("Recovery acceptance test")
 	check(not scene.trial.valid, "Explicit recovery invalidates attempt")
 	check(scene.trial.next_gate == 5, "Recovery retains accepted checkpoints")

@@ -3,6 +3,7 @@ extends SceneTree
 
 const Pilot = preload("res://godot/scripts/drive_pilot.gd")
 const Parking = preload("res://godot/scripts/parking_pilot.gd")
+const Visit = preload("res://godot/scripts/visit_pilot.gd")
 
 
 func _initialize() -> void:
@@ -11,7 +12,7 @@ func _initialize() -> void:
 
 func run() -> void:
 	var all_ok := true
-	for scene: Node3D in [Pilot.new(), Parking.new()]:
+	for scene: Node3D in [Pilot.new(), Parking.new(), Visit.new()]:
 		scene.road_data_path = "build/nonexistent_drive_acceptance_input.json"
 		root.add_child(scene)
 		await physics_frame
@@ -24,7 +25,7 @@ func run() -> void:
 		await physics_frame
 	print(
 		JSON.stringify(
-			{"checks": 6, "passed": all_ok, "scope": "Missing local drive and parking data"}
+			{"checks": 9, "passed": all_ok, "scope": "Missing local drive, parking and visit data"}
 		)
 	)
 	quit(0 if all_ok else 1)

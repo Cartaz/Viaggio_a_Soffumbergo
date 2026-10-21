@@ -30,6 +30,10 @@ creano copie a terra. La modalità di sosta prepara l'interfaccia per la futura
 discesa, ma **non implementa ancora discesa, visita o risalita**. L'HUD lo dichiara.
 Il completamento della visita e quello dell'anello restano distinti dalla sosta.
 
+La nuova variante separata [Visita pilota](VISITA_PILOTA.md) aggiunge il ciclo
+di discesa, camminata nella piazzola e risalita. Questa scena di sola sosta
+mantiene il comportamento precedente.
+
 ## Geometria e provenienza
 
 `tools/build_parking_pilot.py` legge i derivati della prova precedente. Conserva

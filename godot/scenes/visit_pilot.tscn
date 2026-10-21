@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://godot/scripts/visit_pilot.gd" id="1"]
+
+[node name="VisitPilot" type="Node3D"]
+script = ExtResource("1")

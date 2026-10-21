@@ -32,6 +32,22 @@ gli occupanti rimangono sul veicolo. `build_parking_pilot.py` raccorda soltanto
 il derivato tecnico finale; `validate_parking_pilot.py` verifica rigenerazione,
 regressioni precedenti, arresto e copertura della piazzola. Vedere [limiti](SOSTA_PILOTA.md).
 
+## Discesa e passeggiata di prova
+
+La variante `visit_pilot.gd` estende la sosta, senza sostituirla: stati locali
+`aboard`, `descending`, `walking`, `gathering`, `ascending`. `visit_mass.gd`
+separa/riunisce la proprietà della massa e conserva la quantità di moto al
+reinserimento. `visit_actor.gd` usa corpi dinamici, guide a forze uguali/opposte
+e movimento sul terreno; `visit_ik.gd` applica rotazioni degli arti senza
+stiramento. La raccolta avviene in sequenza per evitare conflitti nel passaggio
+posteriore. Sosta e guida rimangono fisiche, senza congelare l'auto.
+
+È il primo adattatore della visita nella scena tecnica: non porta ancora tutti
+i checkpoint, il salvataggio o la visita obbligatoria di `coffa/session.py` nel
+motore. Il solo indicatore `visited_trial` riguarda una passeggiata locale.
+`validate_visit_pilot.py` aggiunge prove dei trasferimenti e del ciclo a 60/120 Hz.
+Vedere [limiti e variante Windows](VISITA_PILOTA.md).
+
 ## Corridoio Circuito 3D 0.1
 
 `coffa/dtm_mosaic.py` applica la scelta globale della fonte senza fusione di
@@ -97,8 +113,8 @@ I triangoli della superficie seguono il fronte orario Godot, controllato da test
 
 Il gestore della gita riceverà eventi da checkpoint direzionali, parcheggio, animazioni con appoggi confermati e ingresso nel borgo. UI e camera non cambiano direttamente massa o progressione.
 
-Durante la guida iniziale c’è un corpo equivalente. Durante la scalata i protagonisti diventano corpi indipendenti nella stessa posa e velocità, con reazioni tramite contatti/vincoli. Nessuna duplicazione o interpolazione di massa fra corpi scollegati. L’adattatore fisico non è ancora implementato.
+Durante la guida iniziale c’è un corpo equivalente. Nella visita pilota i protagonisti diventano corpi indipendenti nella stessa posizione e velocità del baricentro, sostenuti da guide a forze con reazione sul veicolo e poi da contatti col terreno. Nessuna duplicazione o interpolazione di massa fra corpi scollegati. Restano da finalizzare equilibrio anatomico e contatti dettagliati con abitacolo e scalette.
 
 Stati di riferimento: `outbound`, `dismounting`, `exploring`, `mounting`, `returning`, `incident`, `complete`. Gli ingressi sulle pose e sugli appoggi devono derivare dalla scena, non essere sempre veri. Nessun salvataggio a metà transizione; scrittura temporanea e sostituzione atomica nella stessa cartella.
 
-Il futuro porting GDScript deve conservare i casi di test Python. Fino ad allora le regole restano una specifica eseguibile esterna al laboratorio.
+Il futuro porting dell'intera gita deve conservare i casi di test Python. La visita locale del prototipo non sostituisce quella specifica, né certifica già il ritorno dell'anello.

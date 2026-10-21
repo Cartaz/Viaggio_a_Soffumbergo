@@ -12,6 +12,12 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **Discesa e passeggiata di prova:** `docs/VISITA_PILOTA.md`, scena
+  `visit_pilot.tscn`, `tools/validate_visit_pilot.py`, test `visit_mass_check.gd`
+  e `visit_pilot_check.gd`. Due corpi indipendenti, forze di sostegno con reazione
+  all'auto, seguito e risalita; nessuna visita del borgo ancora certificata.
+  Il pubblico usa proxy, Windows riusa i modelli locali senza pubblicarli.
+
 - **Sosta tecnica:** `docs/SOSTA_PILOTA.md`, `parking_pilot.tscn`, generatore
   `tools/build_parking_pilot.py`, gate `tools/validate_parking_pilot.py`.
   Piazzola sintetica distinta da PV-01; E conferma solo dopo arresto stabile.

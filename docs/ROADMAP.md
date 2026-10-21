@@ -21,8 +21,12 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 - [x] Collegare il tratto a una piazzola tecnica separata, con arresto stabile
   dell'intero veicolo, quattro appoggi, freno e conferma della sosta. Mantenere
   la fisica attiva e gli occupanti a bordo. [Procedura](SOSTA_PILOTA.md).
-- [ ] Integrare discesa con appoggi e proprietà unica della massa, locomozione,
-  seguito e risalita; la sosta tecnica non chiude la visita P3.
+- [x] Nella variante di prova, separare le masse degli occupanti, sostenere la
+  discesa con reazione sul veicolo e collegare camminata, seguito e risalita.
+  Provare il ciclo nel motore, il recupero e 20 trasferimenti di rappresentazione.
+- [ ] Approvare fitting/animazione di mani e piedi, equilibrio, contatti con
+  abitacolo e scalette e collegamento pedonale reale al borgo. La prova locale
+  non chiude la visita P3. [Ambito e collaudi](VISITA_PILOTA.md).
 - [ ] Verificare larghezze, asfalto, bivi e sistemazione reale del fondo:
   il test non chiude la superficie stradale verificata o P2/P3.
 - [ ] Modello completo dell'ibrido, ABS/ESC e taratura di sospensioni/pneumatici.

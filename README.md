@@ -19,6 +19,12 @@ piazzola di prova, con arresto stabile, conferma con E e comandi bloccati durant
 la sosta. È distinta da PV-01; i personaggi rimangono a bordo.
 [Avvio, verifiche e limiti](docs/SOSTA_PILOTA.md).
 
+**Prima discesa e passeggiata di prova:** una nuova variante della scena di sosta
+separa fisicamente gli occupanti, consente un breve movimento con la compagna al
+seguito e richiede il ritorno di entrambi prima di guidare. Peso trasferito una
+sola volta e sostegno applicato anche all'auto. [Comandi e limiti](docs/VISITA_PILOTA.md).
+Il percorso pedonale verso il borgo e le animazioni finali restano da completare.
+
 **Circuito 3D 0.1:** il terreno si estende ora lungo l'intero asse OSM candidato,
 con 352 settori e caricamento progressivo di dettaglio e collisioni. Le fonti
 sono conservate per vertice; il campione di Valle mantiene le stesse quote.

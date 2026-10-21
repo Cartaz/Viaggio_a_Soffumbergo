@@ -33,6 +33,13 @@ FILES = ['data/config/yaris_performance.json','tools/build_drive_pilot.py','test
          'godot/tests/parking_pilot_check.gd','godot/tests/parking_pilot_check.gd.uid',
          'godot/tests/parking_state_check.gd','godot/tests/parking_state_check.gd.uid',
          'tests/test_parking_pilot.py','docs/SOSTA_PILOTA.md','reports/SOSTA_PILOTA_VERIFICA.json',
+         'godot/scripts/visit_pilot.gd','godot/scripts/visit_pilot.gd.uid',
+         'godot/scripts/visit_actor.gd','godot/scripts/visit_actor.gd.uid',
+         'godot/scripts/visit_mass.gd','godot/scripts/visit_mass.gd.uid',
+         'godot/scripts/visit_ik.gd','godot/scripts/visit_ik.gd.uid',
+         'godot/scenes/visit_pilot.tscn','godot/tests/visit_pilot_check.gd','godot/tests/visit_pilot_check.gd.uid',
+         'godot/tests/visit_mass_check.gd','godot/tests/visit_mass_check.gd.uid',
+         'docs/VISITA_PILOTA.md','reports/VISITA_PILOTA_VERIFICA.json',
          'docs/GUIDA_PILOTA.md','docs/YARIS_PRESTAZIONI.md']
 
 
@@ -130,7 +137,8 @@ def sync(target,godot):
             raise ValueError('Existing differing file preserved: '+rel)
         if not dst.exists() or dst.read_bytes()!=b:
             updates[rel]=b
-    launchers={'Avvia accesso a Valle.cmd':'drive_pilot','Avvia sosta a Valle.cmd':'parking_pilot'}
+    launchers={'Avvia accesso a Valle.cmd':'drive_pilot','Avvia sosta a Valle.cmd':'parking_pilot',
+               'Avvia visita di prova.cmd':'visit_pilot'}
     for rel,scene in launchers.items():
         b=('@echo off\r\n"'+str(godot)+'" --path "%~dp0." res://godot/scenes/'+scene+'.tscn\r\n').encode()
         if (target/rel).exists() and digest((target/rel).read_bytes())!=digest(b):
