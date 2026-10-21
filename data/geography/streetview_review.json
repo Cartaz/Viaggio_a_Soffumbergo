@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "incremental_visual_review_not_survey",
+  "image_files_copied_to_repository": false,
+  "metric_dimensions_inferred_from_perspective": false,
+  "reviews": [
+    {
+      "id": "SV-A001",
+      "sector": "A",
+      "reviewed_date": "2026-10-21",
+      "candidate_point_lon_lat": [13.3463323, 46.152864],
+      "panorama_point_lon_lat": [13.3462745, 46.1528474],
+      "source": "Google Street View",
+      "panorama_id": "VMjl5KtK80f3hUp1CLfqpA",
+      "displayed_address": "19 SR356, Faedis, Friuli-Venezia Giulia",
+      "displayed_image_date": "lug 2022",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=VMjl5KtK80f3hUp1CLfqpA&viewpoint=46.1528474,13.3462745",
+      "observations": [
+        "Carreggiata asfaltata in curva, senza mezzeria visibile nell'inquadratura iniziale.",
+        "Margine asfaltato affiancato da una fascia chiara e recinzioni di accessi privati.",
+        "Fabbricato in pietra con scuri marroni e cancello curvo vicino alla carreggiata."
+      ],
+      "unknowns": [
+        "Il parcheggio di partenza indicato dal dossier non è identificato da questa sola inquadratura.",
+        "Larghezze, quote e regolarità del fondo attuali non sono misurate.",
+        "Da controllare orientamento di uscita e primi due innesti su SR356 prima di correggere il candidato."
+      ],
+      "terrain_or_route_changes_applied": false,
+      "next_step": "Esaminare uscita dal parcheggio e primi innesti, mantenendo distinti osservazioni e progetto."
+    }
+  ]
+}

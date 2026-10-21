@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "vehicle": "European XP210 1.5 Hybrid 116 DIN hp, MY2022; Italian Trend equipment separately documented",
+  "verified_date": "2026-10-20",
+  "official": {
+    "system_power_w": 85000,
+    "petrol_displacement_cm3": 1490,
+    "petrol_torque_nm": 120,
+    "petrol_torque_rpm_range": [
+      3600,
+      4800
+    ],
+    "electric_motor_power_w": 59000,
+    "electric_motor_torque_nm": 141,
+    "battery_nominal_voltage_v": 177.6,
+    "battery_capacity_ah": 4.3,
+    "acceleration_0_100_s": 9.7,
+    "acceleration_80_120_s": 8.1,
+    "maximum_speed_kmh": 175,
+    "drag_coefficient": 0.31,
+    "kerb_mass_uk_2022_range_kg": [
+      1085,
+      1160
+    ],
+    "gross_vehicle_mass_kg": 1615,
+    "tyre": "195/55 R16",
+    "transmission": "front wheel drive, power split e-CVT, differential 2.834:1"
+  },
+  "sources": [
+    "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220208M-Yaris-Tech-Spec.pdf",
+    "https://www.toyota.it/content/dam/toyota/nmsc/italy/gamma/pdf/scheda-tecnica/YARIS_Scheda_tecnica.pdf",
+    "https://newsroom.toyota.eu/the-all-new-toyota-yaris/"
+  ],
+  "model": {
+    "status": "effective_longitudinal_envelope_not_a_Toyota_control_map",
+    "reference_car_mass_kg": 1150,
+    "reference_driver_mass_kg": 75,
+    "wheel_power_w": 60000,
+    "launch_force_n": 6500,
+    "regularization_m_s": 2.0,
+    "governor_start_kmh": 174,
+    "governor_cutoff_kmh": 177,
+    "reverse_force_n": 1800,
+    "reverse_power_w": 18000,
+    "reverse_governor_start_kmh": 18,
+    "reverse_governor_cutoff_kmh": 22,
+    "stock_drag_area_m2": 0.62,
+    "rig_extra_drag_area_m2": 0.65,
+    "air_density_kg_m3": 1.225,
+    "rolling_coefficient": 0.013,
+    "lift_off_force_n": 160,
+    "parameter_status": "All model values are assumptions/calibration, not measured Toyota maps or mast aerodynamics",
+    "reference_car_com_z_m": -0.256
+  },
+  "limits": "No proprietary torque map, SOC/thermal derating, detailed planetary e-CVT, ABS/ESC or measured modified-rig aerodynamics. Do not add petrol and motor peak torque or peak power. Published performance applies to stock car, not mast/nest load."
+}

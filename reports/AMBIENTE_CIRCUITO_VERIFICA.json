@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "passed_visual_blockout_not_metric_reconstruction",
+  "catalog_build_id": "bbc4c620f961f041c2a2",
+  "catalog_sha256": "aa6177a43b6b1341f74659527b2803bf7ecf339e03f879f108985ec29a6db644",
+  "deterministic_regeneration": true,
+  "python_tests_passed": 121,
+  "gdtoolkit_all_scripts_passed": true,
+  "godot": {
+    "headless": {
+      "approved_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "batches_checked": 511,
+      "catalog_build_id": "bbc4c620f961f041c2a2",
+      "catalog_sha256": "aa6177a43b6b1341f74659527b2803bf7ecf339e03f879f108985ec29a6db644",
+      "checks": 3841,
+      "continuous_lap_tested": false,
+      "failures": [],
+      "max_position_error_m": 0.000244140625,
+      "primitives_checked": 2282,
+      "snapshots": [],
+      "status": "passed",
+      "terrain_or_vehicle_settings_changed": false,
+      "tiles_checked": 169,
+      "unique_objects_checked": 1164
+    },
+    "render": {
+      "approved_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "batches_checked": 511,
+      "catalog_build_id": "bbc4c620f961f041c2a2",
+      "catalog_sha256": "aa6177a43b6b1341f74659527b2803bf7ecf339e03f879f108985ec29a6db644",
+      "checks": 3841,
+      "continuous_lap_tested": false,
+      "failures": [],
+      "max_position_error_m": 0.000244140625,
+      "primitives_checked": 2282,
+      "snapshots": [
+        "valle.png",
+        "faedis.png"
+      ],
+      "status": "passed",
+      "terrain_or_vehicle_settings_changed": false,
+      "tiles_checked": 169,
+      "unique_objects_checked": 1164
+    }
+  },
+  "blender": {
+    "passed": true,
+    "blender_version": "4.5.3 LTS",
+    "catalog_sha256": "aa6177a43b6b1341f74659527b2803bf7ecf339e03f879f108985ec29a6db644",
+    "catalog_build_id": "bbc4c620f961f041c2a2",
+    "objects_checked": 1164,
+    "primitives_checked": 2282,
+    "approved_assembly_present": true,
+    "approved_vehicle_snapshot_sha256": "7cbec1a949ee795497975ea0d9e3f4cd2fb76c0452b55a27df8fbf16162f841b",
+    "construction_manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d",
+    "base_native_sha256": "e62195c5707e976d1cfe95a212581f97177e875fd4069f7c1df869bf91ed5c6c",
+    "native_scene_sha256": "d50c1296d1a4d2750e3794aabe644c4e06249b0bcaf8d68a792f57650319a604",
+    "scope": "coded native visual blockout with private final assembly; not metric or artistic approval"
+  },
+  "coverage": {
+    "review_count": 86,
+    "view_count": 92,
+    "unique_panorama_count": 78,
+    "route_length_horizontal_m": 18884.862,
+    "baseline_count": 82,
+    "baseline_target_spacing_m": 250,
+    "baseline_max_gap_m": 266.882,
+    "all_sectors_have_observed_stations": true,
+    "max_panorama_offset_from_target_m": 18.236,
+    "continuous_visual_coverage_verified": false,
+    "unseen_intervals": "Between stations, around occluded bends, behind buildings and vegetation; not certified as continuously viewed",
+    "individual_objects_exhaustively_surveyed": false,
+    "dates_are_mixed": true
+  },
+  "private_models_and_settings_preserved": true,
+  "terrain_road_and_shoulders_preserved": true,
+  "source_fingerprints": {
+    "godot/scripts/circuit_environment.gd": "d886a3d346cb2861a32dcba99bd22ae48bb0a908a0164ab8fb3670ba975d81c8",
+    "godot/scripts/circuit.gd": "d9747980aed8e1960e9a5b663c5a143e17b9cc7bd1649bda06559cce86fc5275",
+    "godot/tests/circuit_environment_check.gd": "9b350e1a32f28fadacac66da8161ed2b1dae35c3cc547dd84b84fb4309a96f41",
+    "tools/validate_circuit_environment.py": "094dc3824380e50c77398de492102b8e044b50202a0621606ce96ee895274a9f",
+    "tools/blender/build_circuit_environment.py": "5b2c58b42fd7aa0c0cf638a71fd28166a72bac43a5e615c9619ab4539fa8a477"
+  }
+}

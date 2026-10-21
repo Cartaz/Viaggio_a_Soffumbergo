@@ -1,0 +1,384 @@
+{
+  "prototype": "Circuito 3D 0.1",
+  "verified_date_local": "2026-10-20",
+  "platform": "Windows",
+  "python": "3.12.14",
+  "numpy": "2.2.6",
+  "pyproj": "3.7.2",
+  "gdtoolkit": "4.5.0",
+  "source_base_commit": "268f34e8be48c1c1be7f08c488de3bbecded7612",
+  "source_hash_encoding": "UTF-8 Git blob bytes with LF line endings",
+  "source_sha256": {
+    "data/config/circuit_3d.json": "4541f9bee1df3608b9935a3390a6d0ca40dd756b809cbb3ea34e3aeb29581e53",
+    "requirements-dev.txt": "d0078576e65cf6d07e79372a344d907f983a8957012b6588e2ffb44886dec0b2",
+    "requirements-terrain.txt": "c72df7686c4dc1de58fed1615fc613de3e453a710519e1253f239d05183a0149",
+    "tools/coffa/dtm_mosaic.py": "c777c9432a2dc504cfb3bb2e05df9a3f8bc1c31b41ebb875af5129bb3ccf563c",
+    "tools/build_circuit_3d.py": "868c06e5ee809997fd1718cb93ad34037e026fe9a579918fc02f87e0603e7618",
+    "tools/check_circuit_3d.py": "61456e64f4faed3992e3efa7b3ea7856393fef0f443185fd61537e7d963d616f",
+    "tools/validate_circuit.py": "ac4436edab791161fc6ccbdbd5536ad3ad37e8f9df4d547f2a60378e5cabdfeb",
+    "tools/sync_circuit_local.py": "efecc52eac8afd17edb530a4780ef7e35f08c712427db08f27d3dde9fe4b0588",
+    "tools/blender/build_circuit.py": "becb633d51f92510fbdab89d0abdd134c820160a64500a2b907c907d34a47591",
+    "tests/test_dtm_mosaic.py": "527990f81da27e8a8c0d662de0b10470e063b00398eb0f484840cf3279542c08",
+    "godot/scenes/circuit.tscn": "a845a0f504aacc0ebbd45a9ff0a92a0106c17bae2e7ba30c67f35c363b62759a",
+    "godot/scripts/circuit.gd": "a6acae5a603278ff8877be4d40973b5952110a8b73cc4fe27ece57727c70f530",
+    "godot/scripts/circuit_mesh.gd": "327015c7007807f651d122e9da9f87e49a8d740354444003034efa0feba3105c",
+    "godot/scripts/circuit_sector.gd": "f96a9dfc4b20480ba284d32ebb8c8474120bc7576a7fe0a9f5d834b1d0859054",
+    "godot/scripts/valle_content.gd": "46d117dae7df606f69446cff08e760e676c4fc5f75d54b345ac2c1e6762bfd6d",
+    "godot/scripts/valle.gd": "0df6cb0e4d007b453336815430b6aa13afd08a7f9b5a34742676692df9a3a027",
+    "godot/tests/circuit_check.gd": "040f31f9ef8ba73d435dd978c91e0bde47a43e98ec3c96f4109f2afeffbc8da8",
+    "godot/tests/circuit_mesh_check.gd": "dc4271549c40f3c5d469509b7b8a6f414a111fc6c3fc99083156f2761bafb140"
+  },
+  "windows_checkout_sha256": {
+    "data/config/circuit_3d.json": "4541f9bee1df3608b9935a3390a6d0ca40dd756b809cbb3ea34e3aeb29581e53",
+    "requirements-dev.txt": "4416111bfa1992fc4f2dfd4e34bb8587be120f995428cf2ae9c4b752488d32e0",
+    "requirements-terrain.txt": "c72df7686c4dc1de58fed1615fc613de3e453a710519e1253f239d05183a0149",
+    "tools/coffa/dtm_mosaic.py": "c777c9432a2dc504cfb3bb2e05df9a3f8bc1c31b41ebb875af5129bb3ccf563c",
+    "tools/build_circuit_3d.py": "868c06e5ee809997fd1718cb93ad34037e026fe9a579918fc02f87e0603e7618",
+    "tools/check_circuit_3d.py": "61456e64f4faed3992e3efa7b3ea7856393fef0f443185fd61537e7d963d616f",
+    "tools/validate_circuit.py": "ac4436edab791161fc6ccbdbd5536ad3ad37e8f9df4d547f2a60378e5cabdfeb",
+    "tools/sync_circuit_local.py": "efecc52eac8afd17edb530a4780ef7e35f08c712427db08f27d3dde9fe4b0588",
+    "tools/blender/build_circuit.py": "becb633d51f92510fbdab89d0abdd134c820160a64500a2b907c907d34a47591",
+    "tests/test_dtm_mosaic.py": "527990f81da27e8a8c0d662de0b10470e063b00398eb0f484840cf3279542c08",
+    "godot/scenes/circuit.tscn": "a845a0f504aacc0ebbd45a9ff0a92a0106c17bae2e7ba30c67f35c363b62759a",
+    "godot/scripts/circuit.gd": "f6d18e6c20959a25a14cbad96b51e3618d595d5c0acf34841a3b990af2f3577c",
+    "godot/scripts/circuit_mesh.gd": "327015c7007807f651d122e9da9f87e49a8d740354444003034efa0feba3105c",
+    "godot/scripts/circuit_sector.gd": "f96a9dfc4b20480ba284d32ebb8c8474120bc7576a7fe0a9f5d834b1d0859054",
+    "godot/scripts/valle_content.gd": "e90208d2dc8e64318cc3adaa6f9de948d34b501e8c180883d6de16b8a0d9ba93",
+    "godot/scripts/valle.gd": "fb90fa91761067e8681690f0c042c69549f486e1ad9d21b029aaa0eba9184a3b",
+    "godot/tests/circuit_check.gd": "aae3a9f1f790347fe172413c865cca752ded19ccade22b3d5cf64862d1dacf65",
+    "godot/tests/circuit_mesh_check.gd": "dc4271549c40f3c5d469509b7b8a6f414a111fc6c3fc99083156f2761bafb140"
+  },
+  "python_tests": 87,
+  "generation": {
+    "build_id": "a3bd52d588b98c13ca78",
+    "manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
+    "sector_count": 352,
+    "shared_edges_checked": 562,
+    "shared_edge_error_m": 0,
+    "valle_height_max_delta_m": 0.0,
+    "source_tile_count": 41,
+    "sectors_with_missing_vertices": 0,
+    "missing_vertices_including_shared_edges": 0,
+    "lod_max_error_m": [
+      1.1102230246251565e-16,
+      9.066250000000025,
+      13.707500000000039
+    ],
+    "max_sampled_source_spread_m": 0.13000106811523438,
+    "route_samples": 9966,
+    "route_samples_with_multiple_distinct_sources": 24,
+    "mosaic_policy": "valle_primary_then_maximum_interior_margin_then_lexical_filename_no_blending_v1",
+    "road_surface_verified": false
+  },
+  "deterministic_regeneration": true,
+  "independent_source_geometry": {
+    "manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
+    "sector_count": 352,
+    "shared_edges_checked": 562,
+    "route_mesh_samples_checked": 9966,
+    "scalar_real_source_probes": 3168,
+    "max_scalar_source_error_m": 2.4414062494315658e-05,
+    "source_priority_checked_independently": true
+  },
+  "godot_reference_checks": 1014,
+  "valle_regression": {
+    "checks": 642,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "load_ms": 811,
+    "missing_data_mode": false,
+    "render_capture": false,
+    "renderer": "",
+    "scope": "Valle survey prototype, not full journey acceptance or representative FPS",
+    "terrain_ray_max_error_m": 5.14984130859375e-05,
+    "terrain_triangles_overview": 81408
+  },
+  "godot_headless": {
+    "captures": false,
+    "checks": 20179,
+    "chunks_loaded": 382,
+    "chunks_unloaded": 382,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "ground_ray_count": 9966,
+    "initial_load_ms": 440,
+    "max_residents": 31,
+    "max_single_chunk_build_ms": 26,
+    "missing_data_mode": false,
+    "renderer": "",
+    "route_ray_max_error_m": 0.00018310546875,
+    "scope": "Streamed DTM inspection corridor; not a driven journey or representative FPS",
+    "visits": [
+      {
+        "residents": 23,
+        "sector": "A"
+      },
+      {
+        "residents": 21,
+        "sector": "B"
+      },
+      {
+        "residents": 29,
+        "sector": "C"
+      },
+      {
+        "residents": 31,
+        "sector": "V"
+      },
+      {
+        "residents": 18,
+        "sector": "D"
+      },
+      {
+        "residents": 22,
+        "sector": "E"
+      },
+      {
+        "residents": 23,
+        "sector": "F"
+      }
+    ]
+  },
+  "godot_render": {
+    "captures": true,
+    "checks": 20181,
+    "chunks_loaded": 411,
+    "chunks_unloaded": 398,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "ground_ray_count": 9966,
+    "initial_load_ms": 537,
+    "max_residents": 31,
+    "max_single_chunk_build_ms": 28,
+    "missing_data_mode": false,
+    "renderer": "AMD Radeon RX 6800",
+    "route_ray_max_error_m": 0.00018310546875,
+    "scope": "Streamed DTM inspection corridor; not a driven journey or representative FPS",
+    "visits": [
+      {
+        "residents": 23,
+        "sector": "A"
+      },
+      {
+        "residents": 21,
+        "sector": "B"
+      },
+      {
+        "residents": 29,
+        "sector": "C"
+      },
+      {
+        "residents": 31,
+        "sector": "V"
+      },
+      {
+        "residents": 18,
+        "sector": "D"
+      },
+      {
+        "residents": 22,
+        "sector": "E"
+      },
+      {
+        "residents": 23,
+        "sector": "F"
+      }
+    ]
+  },
+  "missing_data": {
+    "checks": 1,
+    "failures": [],
+    "missing_data_mode": true,
+    "scope": "Streamed DTM inspection corridor; not a driven journey or representative FPS"
+  },
+  "blender": {
+    "blender_version": "4.5.3 LTS",
+    "terrain_sectors": 352,
+    "overview_terrain_triangles": 180224,
+    "building_count": 91,
+    "source_manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
+    "axes": "Blender +X east, +Y north, +Z up",
+    "normals_and_mesh_validation_passed": true,
+    "scope": "coarse overview, not streamed 2m physics or artistic approval"
+  },
+  "latest_validation": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "python",
+        "exit_code": 0,
+        "seconds": 0.953,
+        "engine_errors": false
+      },
+      {
+        "name": "yaris_regression",
+        "exit_code": 0,
+        "seconds": 0.859,
+        "engine_errors": false
+      },
+      {
+        "name": "gdparse",
+        "exit_code": 0,
+        "seconds": 0.656,
+        "engine_errors": false
+      },
+      {
+        "name": "gdformat",
+        "exit_code": 0,
+        "seconds": 0.875,
+        "engine_errors": false
+      },
+      {
+        "name": "gdlint",
+        "exit_code": 0,
+        "seconds": 0.922,
+        "engine_errors": false
+      },
+      {
+        "name": "geometry",
+        "exit_code": 0,
+        "seconds": 2.078,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_import",
+        "exit_code": 0,
+        "seconds": 3.672,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_reference",
+        "exit_code": 0,
+        "seconds": 0.172,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_mesh",
+        "exit_code": 0,
+        "seconds": 0.172,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_valle",
+        "exit_code": 0,
+        "seconds": 4.062,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_headless",
+        "exit_code": 0,
+        "seconds": 15.547,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_missing",
+        "exit_code": 0,
+        "seconds": 0.266,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_render",
+        "exit_code": 0,
+        "seconds": 20.391,
+        "engine_errors": false
+      },
+      {
+        "name": "blender",
+        "exit_code": 0,
+        "seconds": 3.546,
+        "engine_errors": false
+      }
+    ],
+    "manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6"
+  },
+  "log_sha256": {
+    "blender.log": "a924c5ac513529583c4ed6ac032cc584a9fe901ba5fa38a32af4d86b3c4d12c9",
+    "gdformat.log": "ee1cf093fb20f50667587e24096c89ad767dcd53f1d6c15df22cb707c2f4cc15",
+    "gdlint.log": "098424cb171ea105b5f32277ddcb3b139ff90d7f943970e0e55a7268d9468b1e",
+    "gdparse.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "generate.log": "a63f3bb5b24783ff240c86417c392177f3a6070e878ef0abaa8be2d515afd644",
+    "geometry.log": "8161985d09a307b54a3b1a2053c05dd5a44aef010b3b04f3103cd470a94b94da",
+    "godot_headless.log": "9ba0d1f5cfbb105c0955e533e29f01e21951556baad9f034bd53e62b2dfd6eec",
+    "godot_import.log": "aa6dc133078fc01eacffc977ebeb7d90b2a5664000696b512573b6715ca70e83",
+    "godot_mesh.log": "40751bce4da67d5e75e8e103e341ed452ba8304cfe3c0f8bbb8c831e4fd24d77",
+    "godot_missing.log": "d5283f72fadc325e9b16e1a2563ccd7ef8594cda11d6d21ca6c12053f6e7e6e7",
+    "godot_reference.log": "8c0a764215ceed26a27c7bbe70ebe8eba2125d8157be5d173a88bd671367fa81",
+    "godot_render.log": "3cdf8626de4618c0daeb42103a05e73949ba29f2d7a3cbba52420c183f0efdef",
+    "godot_valle.log": "071cb1b94c1ccabec33208a38b1fe4903f13c6666654596836022c6602a22c15",
+    "python.log": "9b022ddcc08d79d8c9be29036e98e0a35dd226017efd2845d09fa81bc5427255",
+    "regenerate.log": "a63f3bb5b24783ff240c86417c392177f3a6070e878ef0abaa8be2d515afd644",
+    "yaris_regression.log": "50db369e2c5eef9b501eed39a7925a32d960274a3898d6e2b55d04d9ec244878"
+  },
+  "independent_source_probe_log_sha256": "1aaacebbf91ad58db70ff80cea26d8ee27167448e4a2984c36144efb0a6eb9c1",
+  "capture_sha256": {
+    "circuit_faedis.png": "9d29b45fc0651692d2c9ae9e9271af8c1fb9e213d2ca917a586ea7b5667ed58b",
+    "circuit_overview.png": "caca3f1a745fde1dcd1a3e7085a9f9711b2a20f83c3b2455e47c54405bc50843",
+    "circuit_valle.png": "a76824282f9bc7dfa47ce1cf06cfa098aac098c16ce8d502332e264d77ec86ca"
+  },
+  "raw_rasters_committed": false,
+  "terrain_derivatives_committed": false,
+  "limits": [
+    "Inspection camera and OSM candidate only; no driven journey or visitor integration",
+    "Surface, crossfall, real widths and turns unverified",
+    "Source choice preserves rather than scientifically resolves overlap uncertainty",
+    "LOD errors and single-chunk frame budget overruns documented; no representative FPS promise",
+    "Blender validates coarse 8m overview, Godot validates fixed 2m local physics",
+    "Datum metadata and redistribution rights remain to be verified"
+  ],
+  "windows_sync": {
+    "python_tests": 49,
+    "godot_headless": {
+      "captures": false,
+      "checks": 20179,
+      "chunks_loaded": 382,
+      "chunks_unloaded": 382,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "ground_ray_count": 9966,
+      "initial_load_ms": 438,
+      "max_residents": 31,
+      "max_single_chunk_build_ms": 31,
+      "missing_data_mode": false,
+      "renderer": "",
+      "route_ray_max_error_m": 0.00018310546875,
+      "scope": "Streamed DTM inspection corridor; not a driven journey or representative FPS",
+      "visits": [
+        {
+          "residents": 23,
+          "sector": "A"
+        },
+        {
+          "residents": 21,
+          "sector": "B"
+        },
+        {
+          "residents": 29,
+          "sector": "C"
+        },
+        {
+          "residents": 31,
+          "sector": "V"
+        },
+        {
+          "residents": 18,
+          "sector": "D"
+        },
+        {
+          "residents": 22,
+          "sector": "E"
+        },
+        {
+          "residents": 23,
+          "sector": "F"
+        }
+      ]
+    },
+    "default_scene_changed": false,
+    "original_rasters_changed": false,
+    "launcher": "Avvia circuito 3D.cmd",
+    "log_sha256": {
+      "circuit_local_python.log": "7e5f5965803ff1638e4f105cebfb3622c63008ba9f536df24a0dd879fabec9b0",
+      "circuit_local_godot.log": "6d28777ab9f8b022d17394cfb31f6bae9b0b3e03915a19c5b44b0a32bbe91e1f"
+    }
+  }
+}

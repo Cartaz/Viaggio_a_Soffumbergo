@@ -2,6 +2,80 @@
 
 ## Coffa e tornanti
 
+**Ambiente codificato dell'anello:** primo sopralluogo Street View a 86 postazioni
+in tutti i settori, 25 categorie e 1.238 riferimenti con descrizione e ricetta
+rigenerabile. 1.164 segnaposto visibili; 74 box in conflitto con la strada sono
+segnalati nel catalogo. **F10** mostra le schede vicine.
+[Catalogo offline](reports/CATALOGO_SEGNAPOSTO.html) ·
+[Metodo, comandi e limiti](docs/AMBIENTE_CIRCUITO.md).
+La copertura è puntuale: gli intervalli e le parti nascoste richiedono ulteriori viste.
+
+**Asfalto e raccordi al terreno:** la strada principale ha materiale asfalto e
+una raccordatura di 85 cm; l'asfalto è abbassato a 2 cm dal terreno derivato.
+Tutte le nuove prove usano Yaris finale, pennone/coffa e Bianca/Bernie locali.
+Prove fisiche su entrambi i lati, a 60/120 Hz, renderer e Blender.
+[Procedura e limiti](docs/RACCORDI_E_ASFALTO.md).
+
+**Giro di costruzione:** nuova scena sperimentale con manovre avanti/retro sulle
+superfici esistenti, checkpoint e arresti stabili, senza spostare l'auto tra le
+fasi. [Perimetro e collaudi](docs/GIRO_COSTRUZIONE.md). La gita con visita e la
+verifica delle strade reali rimangono aperte.
+
+**Terraforming e costruzione del circuito:** nuova scena di ispezione dell'intero
+candidato di circa 18,9 km, con superficie provvisoria, terreno sistemato a settori,
+collisioni e confronto con il DTM originale. Parametri modificabili e punti critici
+segnalati, comprese quattro inversioni ancora da verificare.
+[Avvio e limiti](docs/COSTRUZIONE_CIRCUITO.md). L'ispettore è distinto dalla scena di guida.
+
+**Pratica sull'anello:** dieci tratti guidabili sulla superficie di progetto,
+con checkpoint direzionali, arresto e recupero. Le inversioni rimangono separate
+da riposizionamenti espliciti di allenamento. Raccordi allargati di prova nei
+punti critici, senza cambiare il candidato. [Comandi e verifiche](docs/PRATICA_CIRCUITO.md).
+
+**Primo accesso guidabile a Valle:** una prova di 601 m collega la Yaris al
+terreno con caricamento progressivo. Superficie e sistemazione del fondo sono
+ipotesi dichiarate; strada reale e bivi restano da verificare.
+[Avvio e limiti](docs/GUIDA_PILOTA.md). Corrette la velocità mostrata durante
+le cadute e la dinamica longitudinale, con riferimenti Toyota 116 CV:
+[dati e taratura](docs/YARIS_PRESTAZIONI.md).
+
+La prova ora comprende **cinque checkpoint direzionali**, riconoscibili dalle
+strisce ambra che diventano verdi. **R** recupera all'ultimo punto attraversato
+e rende il tentativo un allenamento; **N** avvia una nuova prova dall'inizio.
+L'arrivo richiede tutti i punti in ordine e l'auto ferma, sulle ruote.
+
+**Sosta tecnica provvisoria:** una scena separata collega l'approccio a una
+piazzola di prova, con arresto stabile, conferma con E e comandi bloccati durante
+la sosta. È distinta da PV-01; i personaggi rimangono a bordo.
+[Avvio, verifiche e limiti](docs/SOSTA_PILOTA.md).
+
+**Prima discesa e passeggiata di prova:** una nuova variante della scena di sosta
+separa fisicamente gli occupanti, consente un breve movimento con la compagna al
+seguito e richiede il ritorno di entrambi prima di guidare. Peso trasferito una
+sola volta e sostegno applicato anche all'auto. [Comandi e limiti](docs/VISITA_PILOTA.md).
+Il percorso pedonale verso il borgo e le animazioni finali restano da completare.
+
+**Circuito 3D 0.1:** il terreno si estende ora lungo l'intero asse OSM candidato,
+con 352 settori e caricamento progressivo di dettaglio e collisioni. Le fonti
+sono conservate per vertice; il campione di Valle mantiene le stesse quote.
+[Avvio e limiti](docs/CIRCUITO_3D.md) · [Collaudi](reports/CIRCUITO_3D_VERIFICA.json).
+Scena autonoma `godot/scenes/circuit.tscn`, camera libera e richiami dei sette
+settori; non è ancora una strada asfaltata o un giro guidabile.
+
+**Valle 3D 0.1:** scena autonoma con terreno LiDAR georeferenziato, 36 settori,
+LOD 2/4/8 m, collisioni a 2 m, 91 sagome OSM e strade provvisorie colorate.
+Verificata in Godot 4.5.1 e Blender 4.5.3; camera libera di ispezione.
+[Rigenerazione, avvio e limiti](docs/VALLE_3D.md) ·
+[Evidenze dei test](reports/VALLE_3D_VERIFICA.json).
+Raster originali e derivati geografici restano locali sotto `build/`, esclusi
+dal repository. F5 mantiene il laboratorio; Valle si apre con F6 dalla scena
+`godot/scenes/valle.tscn`. Il viaggio completo resta da integrare.
+
+**DTM dell'intero circuito ricevuti:** catalogate 41 tessere a 0,5 m, nessun
+NoData; tutti i 9.966 campioni dell'asse OSM candidato sono coperti. Registrate
+le differenze nelle sovrapposizioni, senza mediarle o dichiarare pronta la strada.
+[Rapporto e procedura](docs/DTM_CIRCUITO_COMPLETO.md).
+
 Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
 
 **Stato: Yaris 0.1 guidabile nel laboratorio Godot 4.5.1.** Il modello è stato generato e renderizzato in Blender 4.5.3 LTS. Passano 28 test preparatori, i controlli dell'asset e 28 controlli dell'integrazione nel laboratorio con rendering reale su Windows. La qualità artistica finale, la dinamica completa e il giro giocabile restano da verificare; il sopralluogo è parziale e non sono stati misurati FPS rappresentativi.
@@ -20,7 +94,7 @@ Il modello ha esterni e abitacolo, quattro portiere e portellone apribili, ruote
 | Valle | 91 sagome OSM, inventario e mappa del sopralluogo | Dati mappati; quote, facciate e copertura da verificare |
 | Blender | Sorgente Yaris, GLB e render; generatori delle guide del borgo | Yaris eseguita; revisione artistica finale e guide del borgo ancora aperte |
 | Esplorazione | Controller di movimento e seguito della compagna | Richiedono rig, navmesh e integrazione nella scena |
-| Percorso | Pipeline WGS84 → coordinate locali e superficie provvisoria | Il solo DTM 0,5 m di Valle è stato acquisito; asse stradale e terreno dell'intero anello ancora da verificare |
+| Percorso | 41 DTM verificati, corridoio del candidato con 352 settori, dettaglio e collisioni progressivi | Asfalto, bivi reali, larghezze e guida dell'anello ancora da verificare |
 
 Il laboratorio è un piazzale sintetico con rampa e cerchio di riferimento: **non rappresenta Faedis o Valle**. La Yaris usa la ricostruzione da fotografie; albero, coffa e occupanti rimangono segnaposto. I render del modello e le prove del motore non approvano automaticamente la fedeltà artistica finale.
 

@@ -4,8 +4,16 @@ extends RigidBody3D
 ## Photo-reconstructed Yaris visual; no calibrated wheel dynamics, ESC or character rig.
 
 const YarisScene = preload("res://godot/scenes/yaris_game_visual.tscn")
+const Powertrain = preload("res://godot/scripts/yaris_powertrain.gd")
 
 var config: Dictionary
+var configuration_override: Dictionary = {}
+var performance: Dictionary
+var stock_reference := false
+var wheel_collision_mask := 1
+var support_normal := Vector3.UP
+var support_velocity_sum := Vector3.ZERO
+var reset_transform := Transform3D(Basis.IDENTITY, Vector3(0, 0.2, 8))
 var properties: Dictionary
 var throttle := 0.0
 var braking := 0.0
@@ -26,6 +34,14 @@ var physics_frames := 0
 
 func _ready() -> void:
 	config = JSON.parse_string(FileAccess.get_file_as_string("res://data/config/vehicle_lab.json"))
+	if not configuration_override.is_empty():
+		config = configuration_override.duplicate(true)
+	performance = (
+		JSON
+		. parse_string(FileAccess.get_file_as_string("res://data/config/yaris_performance.json"))
+		. model
+	)
+	config.aero.rolling_coefficient = performance.rolling_coefficient
 	properties = MassProperties.calculate(config.components)
 	mass = properties.mass
 	center_of_mass_mode = RigidBody3D.CENTER_OF_MASS_MODE_CUSTOM
@@ -33,6 +49,9 @@ func _ready() -> void:
 	inertia = properties.diagonal
 	linear_damp = 0.0
 	angular_damp = 0.0
+	# Replace world defaults: explicit aero/rolling forces already model dissipation.
+	linear_damp_mode = RigidBody3D.DAMP_MODE_REPLACE
+	angular_damp_mode = RigidBody3D.DAMP_MODE_REPLACE
 	continuous_cd = true
 	contact_monitor = true
 	max_contacts_reported = 16
@@ -97,7 +116,7 @@ func _ready() -> void:
 
 func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	if reset_requested:
-		state.transform = Transform3D(Basis.IDENTITY, Vector3(0, 0.2, 8))
+		state.transform = reset_transform
 		state.linear_velocity = Vector3.ZERO
 		state.angular_velocity = Vector3.ZERO
 		reset_requested = false
@@ -115,30 +134,15 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	var basis := state.transform.basis.orthonormalized()
 	var up := basis.y
 	var speed_forward := state.linear_velocity.dot(-basis.z)
-	var drive_total := (
-		minf(
-			float(config.powertrain.drive_force_limit_n),
-			(
-				float(config.powertrain.power_limit_w)
-				/ maxf(absf(speed_forward), float(config.powertrain.power_regularization_m_s))
-			)
-		)
-		* throttle
-	)
+	var drive_total := Powertrain.drive_force(speed_forward, throttle, performance)
 	diagnostic_contact_count = 0
+	support_normal = Vector3.ZERO
+	support_velocity_sum = Vector3.ZERO
 	for i in range(4):
 		_solve_wheel(state, i, drive_total, up, basis)
-	var velocity := state.linear_velocity
-	var aero: Dictionary = config.aero
-	state.apply_central_force(
-		(
-			-0.5
-			* float(aero.air_density_kg_m3)
-			* float(aero.drag_coefficient_area_m2)
-			* velocity.length()
-			* velocity
-		)
-	)
+	if diagnostic_contact_count:
+		support_normal = support_normal.normalized()
+	state.apply_central_force(Powertrain.drag(state.linear_velocity, performance, stock_reference))
 	sample_clock += dt
 	if sample_clock >= 0.05:
 		sample_clock -= 0.05
@@ -156,7 +160,7 @@ func _solve_wheel(
 	)
 	var query := PhysicsRayQueryParameters3D.create(origin, origin - up * ray_length)
 	query.exclude = [get_rid()]
-	query.collision_mask = 1
+	query.collision_mask = wheel_collision_mask
 	var hit := state.get_space_state().intersect_ray(query)
 	wheel_loads[index] = 0.0
 	wheel_lengths[index] = float(suspension.rest_length_m) + float(suspension.droop_m)
@@ -179,6 +183,8 @@ func _solve_wheel(
 		return
 	wheel_loads[index] = load
 	diagnostic_contact_count += 1
+	support_normal += normal
+	support_velocity_sum += point_velocity.slide(normal)
 	state.apply_force(normal * load, lever)
 	var forward := -basis.z
 	if index < 2:
@@ -190,11 +196,28 @@ func _solve_wheel(
 	var regularization := float(tire.low_speed_regularization_m_s)
 	var slip := atan2(vy, maxf(absf(vx), regularization))
 	var lateral_force := -float(tire.corner_stiffness_n_rad) * slip
+	# Same implicit low-speed contact damping already used by the Windows variant.
+	var angular_lever := (lever - state.center_of_mass).cross(lateral)
+	var inverse_effective_mass := (
+		state.inverse_mass + angular_lever.dot(state.inverse_inertia_tensor * angular_lever)
+	)
+	var corner_damping := float(tire.corner_stiffness_n_rad) / maxf(absf(vx), regularization)
+	lateral_force /= 1.0 + state.step * corner_damping * inverse_effective_mass
 	# Smooth regularization through zero; brake/rolling force oppose contact velocity.
 	var longitudinal_force := drive * 0.5 if index < 2 else 0.0
-	longitudinal_force -= (
-		braking * float(config.powertrain.brake_force_total_n) * 0.25 * clampf(vx / 0.5, -1.0, 1.0)
-	)
+	if absf(throttle) < 0.001 and braking < 0.001:
+		longitudinal_force -= (
+			float(performance.lift_off_force_n) * 0.25 * clampf(vx / 1.0, -1.0, 1.0)
+		)
+	longitudinal_force -= (Powertrain.brake_force(
+		vx,
+		state.total_gravity.dot(forward),
+		mass,
+		state.step,
+		braking,
+		float(config.powertrain.brake_force_total_n),
+		longitudinal_force
+	))
 	longitudinal_force -= (
 		float(config.aero.rolling_coefficient) * load * clampf(vx / 0.5, -1.0, 1.0)
 	)
@@ -207,6 +230,12 @@ func _process(delta: float) -> void:
 		yaris_visual.update_running_gear(
 			wheel_anchors, wheel_lengths, steering, linear_velocity.dot(-global_basis.z), delta
 		)
+
+
+func road_speed_m_s() -> float:
+	if diagnostic_contact_count > 0:
+		return support_velocity_sum.length() / diagnostic_contact_count
+	return Powertrain.road_speed(linear_velocity, support_normal, diagnostic_contact_count)
 
 
 func _sample(state: PhysicsDirectBodyState3D) -> void:

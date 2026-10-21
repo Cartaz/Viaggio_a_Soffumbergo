@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-21",
+  "status": "documentary_review_not_field_verification",
+  "candidate_unchanged": true,
+  "items": [
+    {
+      "id": "REV-FAEDIS",
+      "wgs84": [13.345662, 46.1524543],
+      "classification": "panorama_anchor_backtrack_requires_routing_review",
+      "title": "Faedis: aggancio al panorama CIR-02",
+      "source": "data/geography/sector_a_survey.json",
+      "steps": [1, 2, 3],
+      "evidence": "Le istruzioni riportano uscita e due svolte a sinistra, senza inversione. Il candidato percorre avanti/indietro lo stesso ramo di Piazza Primo Maggio per raggiungere CIR-02.",
+      "resolution": "Conservare il candidato; rivedere aggancio e sequenza del bivio, senza eliminare automaticamente il ramo.",
+      "maneuver_space_verified": false
+    },
+    {
+      "id": "REV-CAMPEGLIO",
+      "wgs84": [13.3624515, 46.1296652],
+      "classification": "documented_stop_out_and_back_geometry_unverified",
+      "title": "Campeglio: tappa in via Paolo Diacono",
+      "source": "data/geography/sector_a_survey.json",
+      "steps": [4, 5, 6],
+      "evidence": "Ingresso e ripartenza da Campeglio sono due passaggi da 78 m arrotondati. Il candidato arriva a un nodo OSM oltre il punto di riferimento e torna sullo stesso ramo.",
+      "resolution": "Conservare la tappa; verificare posizione di arresto e manovra, senza costruire una piazzola fittizia.",
+      "maneuver_space_verified": false
+    },
+    {
+      "id": "REV-VALLE",
+      "wgs84": [13.3933009, 46.1569279],
+      "classification": "documented_stop_out_and_back_geometry_unverified",
+      "title": "Valle: tappa in piazza e ritorno",
+      "source": "data/geography/sector_v_survey.json",
+      "steps": [11, 12, 13, 14],
+      "evidence": "Il settore V conserva andata e ritorno sugli stessi ways; turnaround_feasibility rimane null nel sopralluogo.",
+      "resolution": "Conservare il ramo V e distinguere la tappa in piazza dalla sosta nel prato PV-01 candidato.",
+      "maneuver_space_verified": false
+    },
+    {
+      "id": "REV-CANAL",
+      "wgs84": [13.3591996, 46.1658197],
+      "classification": "documented_stop_out_and_back_geometry_unverified",
+      "title": "Canal di Grivo: deviazione al segnaposto",
+      "source": "docs/CIRCUITO_SOPRALLUOGO.md",
+      "steps": [18, 19, 20],
+      "evidence": "Il dossier distingue deviazione e inversione legate al segnaposto da un tornante della discesa. Il candidato E/F torna sullo stesso ramo di Via Monte Joanes.",
+      "resolution": "Conservare la deviazione; verificare il punto di manovra e il raccordo alla prosecuzione.",
+      "maneuver_space_verified": false
+    }
+  ]
+}

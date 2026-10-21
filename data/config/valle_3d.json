@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "origin_ENH_m": [375920, 5112728, 720],
+  "region_local_xz_m": [-384, -384, 384, 384],
+  "sector_size_m": 128,
+  "terrain_step_m": 2,
+  "lod_strides": [1, 2, 4],
+  "lod_distances_m": [180, 360],
+  "building_placeholder_height_m": 6,
+  "building_height_status": "uniform_blockout_parameter_not_measured_ignore_OSM_height_tags",
+  "road_placeholder_width_m": 4,
+  "footpath_placeholder_width_m": 1.2,
+  "road_width_status": "visualization_parameter_not_surveyed",
+  "road_surface_status": "DTM_drape_only_no_road_collision_or_asphalt_validation"
+}

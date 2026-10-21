@@ -1,5 +1,35 @@
 # Decisioni e vincoli
 
+**Ambiente, 21 ottobre 2026:** l'utente richiede un passaggio Street View
+sull'intero circuito, edifici a box, forme naturali semplici e classificazione.
+Ogni riferimento deve essere codificato e descritto per riprodurlo. Il nuovo
+catalogo conserva fonte, data, ricetta e incertezza; le viste puntuali non sono
+copertura continua. Quote/dimensioni da foto non vengono inventate come misure.
+[Procedura](AMBIENTE_CIRCUITO.md). Gli elementi non verificati restano visivi.
+
+**Direzione esplicita del 21 ottobre 2026:** tutte le prove 3D devono usare la Yaris finale approvata, il pennone/coffa e i due topolini ispirati a Bianca e Bernie. Il proxy pubblico resta storico. Asfalto ribassato e raccordatura larga al massimo metà veicolo: scelta 0,85 m per lato. I controlli geometrici completi sono separati dalla prova visibile per evitare attese poco chiare.
+
+
+**Richiesta del 21 ottobre 2026:** passare al terraforming e alla costruzione
+del circuito. Realizzata una variante di progetto dell'intero asse candidato,
+con parametri espliciti e confronto col DTM originale. Nessuna scorciatoia o
+correzione implicita delle quattro inversioni; misure del luogo e guidabilità
+rimangono da verificare. [Perimetro](COSTRUZIONE_CIRCUITO.md).
+
+**Continuazione autorizzata:** pratica della Yaris su dieci tratti separati,
+con riposizionamenti espliciti e raccordi allargati di progetto. Le inversioni
+sono classificate dal dossier, senza confermarne lo spazio reale o cancellare
+tappe. [Ambito e limiti](PRATICA_CIRCUITO.md).
+
+**Incremento del 20 ottobre 2026:** prototipo richiesto “Valle 3D 0.1”, realizzato
+come scena separata con terreno georeferenziato a settori/LOD, collisioni,
+edifici OSM come blockout e accessi provvisori riconoscibili. [Limiti](VALLE_3D.md).
+Raster originali e derivati rimangono locali in attesa della verifica dei termini
+di redistribuzione. Altezze degli edifici e larghezze delle linee sono parametri
+grafici, non misure del luogo. Questo incremento non cambia le scelte locali su
+auto/personaggi e non conferma PV-01. Supera le vecchie note “terreno non importato”
+limitatamente al campione geografico di Valle, non all'anello completo.
+
 Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i dettagli; questo elenco permette di controllare le richieste senza confonderle con ipotesi tecniche.
 
 ## Richieste confermate dall’utente

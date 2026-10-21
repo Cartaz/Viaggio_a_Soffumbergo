@@ -1,0 +1,236 @@
+{
+  "prototype": "Valle 3D 0.1",
+  "verified_date_local": "2026-10-20",
+  "platform": "Windows",
+  "source_base_commit": "24c316d",
+  "source_sha256": {
+    "data/config/valle_3d.json": "a35b00983c067731b2307f494f2170c574b0e64c4318bf882c242580792ca2ba",
+    "godot/scenes/valle.tscn": "9e67f596307adf7d357c61d13700588d7cc1e4def72374b9cfa860ade369a42e",
+    "godot/scripts/valle.gd": "1a2529b24ec63ce950c1fed1f638a7164c668a2f21e707e9f5183953e99e4d27",
+    "godot/scripts/valle_sector.gd": "441194f60aa188ea55f6e7b8f40ddc014fea521fb0efa1296444818ed040422c",
+    "godot/tests/valle_check.gd": "7a330a8d617d0af8b718ecba80a3ff3d08b7d91619727ae81116691cc7f18c8a",
+    "tools/build_valle_3d.py": "d61ad7260dbc002bd72e5c2686bb2043c06ee315e091a71273d96eb0a85cdfd9",
+    "tools/coffa/terrain.py": "15a0b7f46a2761d432fd0c47006200bd06669ae06e83d96d36a93eb0e795c833",
+    "tools/import_valle_lidar05.py": "e86dd36b40e6b4bf205c89f3fcc3389b2b6d11b7a50d413ea36fe885dd9f8a46",
+    "tools/check_valle_3d.py": "35c9ff5d13a97d1452d4b847440f2db625f2916b5bec36239e4dcd3ce48851da",
+    "tools/blender/build_valle.py": "5c7cc187767449114ce4cded88125cf2b3397d4085e9f224213a0945c80be058",
+    "tools/validate_valle.py": "79bfcfbda1fd0ded9f898594dd376e096a375d23867d7605d70360f61362aa8d",
+    "tools/sync_valle_local.py": "caccdcb4bb87758560b8dc5463eb991a47257c2094ed620e800c83686ba7bf0b",
+    "tests/test_terrain.py": "bdaed80bfefd9a0b27a5f5f1456c8b7c69f5eed5595e727c68ce8232ce45b607",
+    "tools/catalog_circuit_dtm.py": "38b648cc7fc74c97f155932297458094a21d4eb6b0bf241a907d0862a930f86d",
+    "tests/test_circuit_dtm.py": "a7d8b6dacad9922ff78065b07251b4bedaff99af8a0a1ac9c559ce8e1ddbe281"
+  },
+  "python_tests": 72,
+  "gdtoolkit": "4.5.0",
+  "generation": {
+    "source_zip_sha256": "bd715cd7c9b3820646f93f9e918cab1159950f47c2df5fc39e0218fc564a6a14",
+    "scene_sha256": "85fe4362b2e46a1b449a1e78772fc0d42217762566daf30b0130f46ae2f481dc",
+    "sector_count": 36,
+    "building_count": 91,
+    "road_segment_count": 266,
+    "skipped": [],
+    "fixed_collision_triangles": 294912,
+    "lod_max_error_m": [
+      1.1102230246251565e-16,
+      3.8999999999999986,
+      4.991874999999997
+    ]
+  },
+  "deterministic_regeneration": true,
+  "geometry": {
+    "scene_sha256": "85fe4362b2e46a1b449a1e78772fc0d42217762566daf30b0130f46ae2f481dc",
+    "seams_checked": 60,
+    "max_shared_edge_error_m": 0,
+    "building_count": 91,
+    "sector_count": 36,
+    "source_config_checks_passed": true
+  },
+  "godot_reference_checks": 1014,
+  "godot_headless": {
+    "checks": 642,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "load_ms": 804,
+    "missing_data_mode": false,
+    "render_capture": false,
+    "renderer": "",
+    "scope": "Valle survey prototype, not full journey acceptance or representative FPS",
+    "terrain_ray_max_error_m": 5.14984130859375e-05,
+    "terrain_triangles_overview": 81408
+  },
+  "godot_render": {
+    "checks": 642,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "load_ms": 860,
+    "missing_data_mode": false,
+    "render_capture": true,
+    "renderer": "AMD Radeon RX 6800",
+    "scope": "Valle survey prototype, not full journey acceptance or representative FPS",
+    "terrain_ray_max_error_m": 5.14984130859375e-05,
+    "terrain_triangles_overview": 81408
+  },
+  "godot_missing_data": {
+    "checks": 2,
+    "failures": [],
+    "missing_data_mode": true,
+    "scope": "Valle survey prototype, not full journey acceptance or representative FPS"
+  },
+  "blender": {
+    "blender_version": "4.5.3 LTS",
+    "terrain_sectors": 36,
+    "terrain_triangles": 294912,
+    "building_count": 91,
+    "source_scene_sha256": "85fe4362b2e46a1b449a1e78772fc0d42217762566daf30b0130f46ae2f481dc",
+    "axes": "Blender +X east, +Y north, +Z up",
+    "failures": [],
+    "scope": "mesh validation, terrain normals and native project save; no artistic approval"
+  },
+  "validation": {
+    "scene_sha256": "85fe4362b2e46a1b449a1e78772fc0d42217762566daf30b0130f46ae2f481dc",
+    "steps": [
+      {
+        "name": "python",
+        "exit_code": 0,
+        "seconds": 0.796,
+        "engine_errors": false
+      },
+      {
+        "name": "yaris_regression",
+        "exit_code": 0,
+        "seconds": 0.75,
+        "engine_errors": false
+      },
+      {
+        "name": "gdparse",
+        "exit_code": 0,
+        "seconds": 0.547,
+        "engine_errors": false
+      },
+      {
+        "name": "gdformat",
+        "exit_code": 0,
+        "seconds": 0.734,
+        "engine_errors": false
+      },
+      {
+        "name": "gdlint",
+        "exit_code": 0,
+        "seconds": 0.75,
+        "engine_errors": false
+      },
+      {
+        "name": "generate",
+        "exit_code": 0,
+        "seconds": 8.813,
+        "engine_errors": false
+      },
+      {
+        "name": "regenerate",
+        "exit_code": 0,
+        "seconds": 8.859,
+        "engine_errors": false
+      },
+      {
+        "name": "geometry",
+        "exit_code": 0,
+        "seconds": 0.313,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_import",
+        "exit_code": 0,
+        "seconds": 3.656,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_reference",
+        "exit_code": 0,
+        "seconds": 0.172,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_headless",
+        "exit_code": 0,
+        "seconds": 4.062,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_missing",
+        "exit_code": 0,
+        "seconds": 0.172,
+        "engine_errors": false
+      },
+      {
+        "name": "godot_render",
+        "exit_code": 0,
+        "seconds": 5.781,
+        "engine_errors": false
+      },
+      {
+        "name": "blender",
+        "exit_code": 0,
+        "seconds": 1.297,
+        "engine_errors": false
+      }
+    ],
+    "passed": true
+  },
+  "log_sha256": {
+    "blender.log": "cf606837be43c5001b3230559808bc412abb27173aa022853ead13a12df81da0",
+    "gdformat.log": "e06e5a8413ffba5872b52756691e3d68ff677a41fe5b6cf8bfd857018692f841",
+    "gdlint.log": "098424cb171ea105b5f32277ddcb3b139ff90d7f943970e0e55a7268d9468b1e",
+    "gdparse.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "generate.log": "c3a23cc892b830f67f6298c20f7c2a8e9aae2913a28c9c0a6ca697d83528c999",
+    "geometry.log": "3b4554b58b1af51e6808c84d048c1de0289346dbe16a6083c3d21614a2becb7c",
+    "godot_headless.log": "436f698cbd6d87a67c258136d18ccba20679890f331d2895c1beed5fa1aa9bc0",
+    "godot_import.log": "8aef9f32befaca8b8607a436af926a2937beffcc6f8466f01007ec71e923c767",
+    "godot_missing.log": "4d7203f79f16d1ba75638c91fa19f600246761ff2cbf8acedfd12507af96bf14",
+    "godot_reference.log": "8c0a764215ceed26a27c7bbe70ebe8eba2125d8157be5d173a88bd671367fa81",
+    "godot_render.log": "40a71ba0116d30a94b9858d76ebc96b4bc19cd6958b4f4a175aafeebcdbd22ea",
+    "python.log": "884719fb21676a87f9755aad57e6b311a1e0fee66abcda633cfd0120fde618c6",
+    "regenerate.log": "c3a23cc892b830f67f6298c20f7c2a8e9aae2913a28c9c0a6ca697d83528c999",
+    "yaris_regression.log": "50db369e2c5eef9b501eed39a7925a32d960274a3898d6e2b55d04d9ec244878"
+  },
+  "capture_sha256": {
+    "valle_borgo.png": "fa8425a3dca47bcfe9a4f146b3ea902468fb7f268e4fd91c37b918ce6fa4c4bb",
+    "valle_overview.png": "d6d9e94ac6876d62a23227b7f05bcda313a50670852441c05015a08cb0eec522"
+  },
+  "raw_rasters_committed": false,
+  "terrain_derivatives_committed": false,
+  "limits": [
+    "Free inspection camera; no vehicle/character/journey integration",
+    "OSM placeholder building heights and road widths, no measured asphalt",
+    "PV-01 candidate; pedestrian continuity unverified",
+    "768m square around Valle, not whole loop",
+    "Vertical metadata not independently verified; no datum conversion",
+    "No representative FPS claim or full-trip acceptance",
+    "Local captures and terrain derivatives pending redistribution rights review"
+  ],
+  "verified_windows_checkout_sha256": {
+    "data/config/valle_3d.json": "a35b00983c067731b2307f494f2170c574b0e64c4318bf882c242580792ca2ba",
+    "godot/scenes/valle.tscn": "9e67f596307adf7d357c61d13700588d7cc1e4def72374b9cfa860ade369a42e",
+    "godot/scripts/valle.gd": "6850304ce7465575674ac06512284b5c7ad92ad0c38450cbc26db8d3ab554c7b",
+    "godot/scripts/valle_sector.gd": "441194f60aa188ea55f6e7b8f40ddc014fea521fb0efa1296444818ed040422c",
+    "godot/tests/valle_check.gd": "9ade86caf69c78d0c42a22165c90dda0b17681e5cd410b4da81f345aacb30444",
+    "tools/build_valle_3d.py": "d61ad7260dbc002bd72e5c2686bb2043c06ee315e091a71273d96eb0a85cdfd9",
+    "tools/coffa/terrain.py": "15a0b7f46a2761d432fd0c47006200bd06669ae06e83d96d36a93eb0e795c833",
+    "tools/import_valle_lidar05.py": "2b1b866c77ef8e0e788804c117f845c726919ddc9adf20c228ffe6ab7ea603a4",
+    "tools/check_valle_3d.py": "35c9ff5d13a97d1452d4b847440f2db625f2916b5bec36239e4dcd3ce48851da",
+    "tools/blender/build_valle.py": "5c7cc187767449114ce4cded88125cf2b3397d4085e9f224213a0945c80be058",
+    "tools/validate_valle.py": "79bfcfbda1fd0ded9f898594dd376e096a375d23867d7605d70360f61362aa8d",
+    "tools/sync_valle_local.py": "caccdcb4bb87758560b8dc5463eb991a47257c2094ed620e800c83686ba7bf0b",
+    "tests/test_terrain.py": "bdaed80bfefd9a0b27a5f5f1456c8b7c69f5eed5595e727c68ce8232ce45b607",
+    "tools/catalog_circuit_dtm.py": "38b648cc7fc74c97f155932297458094a21d4eb6b0bf241a907d0862a930f86d",
+    "tests/test_circuit_dtm.py": "a7d8b6dacad9922ff78065b07251b4bedaff99af8a0a1ac9c559ce8e1ddbe281"
+  },
+  "source_hash_encoding": "SHA256 of UTF-8 Git blob bytes, LF line endings; checkout hashes recorded separately",
+  "additional_circuit_acquisition_gate": {
+    "python_tests": 78,
+    "tile_count": 41,
+    "valid_input_cells": 123984000,
+    "nodata_cells": 0,
+    "source_catalog": "data/geography/circuit_dtm_catalog_20261020.json",
+    "engine_scene_unchanged": true
+  }
+}

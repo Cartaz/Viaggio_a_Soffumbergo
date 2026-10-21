@@ -1,0 +1,262 @@
+{
+  "prototype": "Independent occupant dismount, local walk/follow and remount at technical stop",
+  "validation_date_local": "2026-10-21",
+  "platform": "Windows",
+  "source_base_commit": "2695555f44442ddc6c91483547740292edddfd96",
+  "source_hash_encoding": "UTF-8 source with LF line endings",
+  "source_sha256": {
+    "godot/scripts/visit_actor.gd": "dbe13b9286621b40fdced134e55cb8c71fe3449bc1ccd7ed112154430e48e240",
+    "godot/scripts/visit_pilot.gd": "124208159dc729346a0ef1c1f4339852362bb853ddfa6f448100952223e79098",
+    "godot/scripts/visit_mass.gd": "5c512878486f6ccd2e7cd9b542f7f177e031be4e8aae8ff81a9b1c032d0a264b",
+    "godot/scripts/visit_ik.gd": "c2f3a7d70aee8b43010d40d728ec0f94c0ef06ff2298364a499bb68bfbf10cd3",
+    "godot/scenes/visit_pilot.tscn": "2d31d1c8a9eec68f768af0c7989cf605d6253226506303974f0bbd608d95a311",
+    "godot/tests/visit_pilot_check.gd": "2a710ae0b1474d84a627e066c71699eb6c28ff41dbdc3ea930e223d40077679b",
+    "godot/tests/visit_mass_check.gd": "4522566ea930cfb34634e5c4ba3ffa29ac72f818aad4175b3e82e04649f0b13b",
+    "godot/tests/drive_pilot_check.gd": "0c8d6202b0ca1717a25b49a24b75fa365cf889a2c88d459193f9ae0538b05163",
+    "godot/tests/drive_missing_check.gd": "197b41507b2746ec6062da63af4270f8d60bea3ce4c7529785abfa0a880e1347",
+    "godot/tests/parking_pilot_check.gd": "8fa2caf1cd8eb4fb18dfe067089cf9b2108787def1f0dc2704c52499169759d9",
+    "tools/validate_visit_pilot.py": "a2c3b6c5f9a2f5f48a6a5ac505131fdd64a60ecd158e057ffadba5aa7d50861f",
+    "tools/sync_drive_local.py": "596d431038a5e1251b44fa7841d73276913179552aac460a19bf34b54ee964a1"
+  },
+  "full_validation": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "parking_regressions",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 184.078
+      },
+      {
+        "name": "mass",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.36
+      },
+      {
+        "name": "visit_60",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 8.782
+      },
+      {
+        "name": "visit_120",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 14.64
+      },
+      {
+        "name": "visit_render",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 67.032
+      }
+    ]
+  },
+  "parking_regressions_passed": true,
+  "driving_regressions_passed": true,
+  "python_tests": 95,
+  "mass_transfer_checks": {
+    "checks": 100,
+    "cycles": 20,
+    "failures": []
+  },
+  "source_60_hz": {
+    "checks": {
+      "capture": false,
+      "checks": 863,
+      "chunks_loaded": 40,
+      "chunks_unloaded": 10,
+      "directional_checkpoints": 5,
+      "elapsed_s": 165.050000000023,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "max_lateral_error_m": 0.839207589626312,
+      "max_residents": 32,
+      "max_speed_kmh": 14.6921848297119,
+      "min_up_dot": 0.987938225269318,
+      "progress_m": 596.763314162289,
+      "recovery_and_incident_checks": 11,
+      "scope": "Declared 601m engineering trial; no verified real road or full journey",
+      "surface_ray_max_error_m": 6.4849853515625e-05,
+      "trial_length_m": 601.414489746094,
+      "trial_resets": 0,
+      "unsupported_frames": 0,
+      "valid_arrival": true,
+      "visual_animation_disabled_during_drive": false
+    },
+    "metrics": {
+      "grounded_wheel_support_n": 14077.7407226563,
+      "max_force_pair_error_n": 0.0,
+      "max_imported_limb_length_error_m": 0.0,
+      "max_mass_error_kg": 0.0,
+      "max_rung_hand_error_m": 0.0,
+      "rung_pose_samples": 0,
+      "split_momentum_error_ns": 4.1106682147074e-06,
+      "suspended_wheel_support_n": 15745.0242431641
+    }
+  },
+  "source_120_hz": {
+    "checks": {
+      "capture": false,
+      "checks": 945,
+      "chunks_loaded": 40,
+      "chunks_unloaded": 10,
+      "directional_checkpoints": 5,
+      "elapsed_s": 164.833333333348,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "max_lateral_error_m": 0.856179893016815,
+      "max_residents": 32,
+      "max_speed_kmh": 14.6898914337158,
+      "min_up_dot": 0.987938642501831,
+      "progress_m": 596.709735172265,
+      "recovery_and_incident_checks": 11,
+      "scope": "Declared 601m engineering trial; no verified real road or full journey",
+      "surface_ray_max_error_m": 6.4849853515625e-05,
+      "trial_length_m": 601.414489746094,
+      "trial_resets": 0,
+      "unsupported_frames": 0,
+      "valid_arrival": true,
+      "visual_animation_disabled_during_drive": false
+    },
+    "metrics": {
+      "grounded_wheel_support_n": 14078.0014648438,
+      "max_force_pair_error_n": 0.0,
+      "max_imported_limb_length_error_m": 0.0,
+      "max_mass_error_kg": 0.0,
+      "max_rung_hand_error_m": 0.0,
+      "rung_pose_samples": 0,
+      "split_momentum_error_ns": 1.98185443878174e-06,
+      "suspended_wheel_support_n": 15744.9782389323
+    }
+  },
+  "source_rendered_120_hz": {
+    "checks": {
+      "capture": true,
+      "checks": 945,
+      "chunks_loaded": 40,
+      "chunks_unloaded": 10,
+      "directional_checkpoints": 5,
+      "elapsed_s": 164.833333333348,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "max_lateral_error_m": 0.856179893016815,
+      "max_residents": 32,
+      "max_speed_kmh": 14.6898914337158,
+      "min_up_dot": 0.987938642501831,
+      "progress_m": 596.709735172265,
+      "recovery_and_incident_checks": 11,
+      "scope": "Declared 601m engineering trial; no verified real road or full journey",
+      "surface_ray_max_error_m": 6.4849853515625e-05,
+      "trial_length_m": 601.414489746094,
+      "trial_resets": 0,
+      "unsupported_frames": 0,
+      "valid_arrival": true,
+      "visual_animation_disabled_during_drive": false
+    },
+    "metrics": {
+      "grounded_wheel_support_n": 14077.3203125,
+      "max_force_pair_error_n": 0.0,
+      "max_imported_limb_length_error_m": 0.0,
+      "max_mass_error_kg": 0.0,
+      "max_rung_hand_error_m": 0.0,
+      "rung_pose_samples": 0,
+      "split_momentum_error_ns": 2.80141830444336e-06,
+      "suspended_wheel_support_n": 15744.9782389323
+    }
+  },
+  "windows_full_animation_rendered_120_hz": {
+    "checks": {
+      "capture": true,
+      "checks": 945,
+      "chunks_loaded": 40,
+      "chunks_unloaded": 10,
+      "directional_checkpoints": 5,
+      "elapsed_s": 164.833333333348,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "max_lateral_error_m": 0.856085479259491,
+      "max_residents": 32,
+      "max_speed_kmh": 14.6890966415405,
+      "min_up_dot": 0.987845301628113,
+      "progress_m": 596.707437861079,
+      "recovery_and_incident_checks": 11,
+      "scope": "Declared 601m engineering trial; no verified real road or full journey",
+      "surface_ray_max_error_m": 6.4849853515625e-05,
+      "trial_length_m": 601.414489746094,
+      "trial_resets": 0,
+      "unsupported_frames": 0,
+      "valid_arrival": true,
+      "visual_animation_disabled_during_drive": false
+    },
+    "metrics": {
+      "grounded_wheel_support_n": 14077.1809082031,
+      "max_force_pair_error_n": 0.0,
+      "max_imported_limb_length_error_m": 1.34110450744629e-07,
+      "max_mass_error_kg": 0.0,
+      "max_rung_hand_error_m": 0.0280998647212982,
+      "rung_pose_samples": 4658,
+      "split_momentum_error_ns": 1.49160553064576e-06,
+      "suspended_wheel_support_n": 15744.9879435221
+    }
+  },
+  "missing_data": {
+    "checks": 9,
+    "passed": true,
+    "scope": "Drive, parking and visit variants remain inactive without generated road data"
+  },
+  "observed_support": {
+    "full_aggregate_mass_kg": 1605,
+    "unoccupied_vehicle_rig_mass_kg": 1435,
+    "independent_actor_masses_kg": [
+      85,
+      85
+    ],
+    "suspended_wheel_weight_n": 15744.9879435221,
+    "grounded_wheel_weight_n": 14077.1809082031,
+    "mass_status": "Inherited experimental laboratory parameters, not surveyed characters or production car payload"
+  },
+  "motion_scope": {
+    "actual_drive_before_visit_has_no_recovery": true,
+    "one_complete_physical_visit_cycle": true,
+    "second_descent_aborted_for_explicit_recovery_test": true,
+    "representation_round_trips": 20,
+    "twenty_animated_visits_claimed": false,
+    "force_based_guide_with_reaction": true,
+    "limb_rest_lengths_unchanged": true,
+    "upright_capsule_controller_is_approximation": true,
+    "full_village_visit_implemented": false
+  },
+  "visual_review": "Source and Windows descent/walking/follow captures inspected. Private Hybrid/pirate rig/characters retained; local walk and rung fitting remain a technical prototype.",
+  "windows_render_scope": "Full original vehicle animation callbacks active during the final drive and visit. Diagnostic 1280x720 window; saved project viewport settings unchanged. Not a representative FPS benchmark.",
+  "blender_scope": "Nested parking gate verifies existing apron terrain meshes in Blender 4.5.3; new movement/IK are tested in Godot, not a new anatomical Blender approval.",
+  "capture_scope": "Descent, walking and companion PNGs show actual intermediate states; arrival.png is the post-visit/recovery snapshot. Report driving metrics are captured BEFORE extension/recovery tests.",
+  "local_log_sha256": {
+    "mass.log": "19028d4e7ce014331e5ca3b2f07142ef60f04f26b02c0bd824d87e2b5c476016",
+    "visit_60.log": "4e0fb42000b8f3295e48158c0dd2b1ffaba036468475d1268da2600f777547f2",
+    "visit_120.log": "9947738d1e213adfefa7c9f30790483530a007d0bda035806043493d49559218",
+    "visit_render.log": "6a23a75bc0f257b33d87a114a828e713cf67aa58523b07ef21b47e0a6b19fde4",
+    "windows_full_render.log": "faf586c420ea8cedb65d03bf548b21d4394179fce63a4c52d165a1605f82b59b"
+  },
+  "local_image_sha256": {
+    "source": {
+      "descent.png": "6d3895eed5dc19542cc887931ac623654d4ffdc95756ba90a6e8e7481598b8f7",
+      "walking.png": "033cbf1c79b980f0aad95579704a42119172ce37ce091b6556245ecbcf9de83e",
+      "companion.png": "ea07aa6ecb68d1a1a0027abfbb89969fcbf5daef4f6414d343381e34285eb4e2",
+      "arrival.png": "622f6516cea7bf3e8e7e3962b0f6007f9bcab47d9c46fd70ca6864182dd9819a"
+    },
+    "windows": {
+      "descent.png": "8fb97150a611d8000796d7c52d3c08413dbb46a04b48cbe0d31ea3d9e72f3e6c",
+      "walking.png": "8c651bec2cff35ac0f07e160763e13135def86c27b2a39a95b396907237ccaeb",
+      "companion.png": "f483baebcae65bce19660eebb689aad47611455e8bae2c35aaafc9d971fbca39",
+      "arrival.png": "733e2a2b6aa7c0098ece8f87cd43425f9f1cd956c8adb30971dd577020cf3890"
+    }
+  },
+  "limits": [
+    "Only a local 12m practice area at the synthetic apron, not a certified pedestrian route to Valle or PV-01.",
+    "Powered force guides and upright capsules approximate support and balance; not muscle/ragdoll physics or final hand/foot/door collision fitting.",
+    "No full Journey state machine, mid-transition save, full-loop completion or new surveyed geography.",
+    "Private models, original rasters, generated meshes, native Blender files and images stay out of the public repository."
+  ]
+}

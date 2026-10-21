@@ -1,0 +1,87 @@
+review_id;description;features
+SV-001;Edificio in pietra con scuri marroni e cancello privato curvo;building:L,gate:L,hedge:L,pole:L,building:R,sign:R
+SV-002;Case intonacate e marciapiedi stretti, nella vista opposta farmacia e cancelli dei cortili;building:L,building:R,lamp:R,building:L@301,building:R@301,gate:R@301,board:R@301
+SV-003;Abitazioni arretrate dietro siepi continue e muretti in pietra;building:L,building:R,hedge:L,hedge:R,wall:L,wall:R,lamp:L,pole:R
+SV-004;Case con giardini recintati a sinistra e filari di vite a destra;building:L,building:R,fence:L,vineyard:R,lamp:L
+SV-005;Abitazioni con giardini e palma a destra, vigneto a sinistra;building:L,building:R,vineyard:L,palm:R,fence:R,pole:R
+SV-006;Curva con vigna a sinistra, case e siepe a destra, accesso laterale;vineyard:L,building:R,hedge:R,access:R,pole:R
+SV-007;Campi aperti a sinistra e vigna a destra davanti a fabbricati rurali;grass:L,vineyard:R,building:R,pole:R
+SV-008;Impianto sportivo a sinistra con recinzioni, fari e guardrail, campo a destra;fence:L,lamp:L,guardrail:L,grass:R
+SV-009;Vigneto sulla scarpata erbosa a sinistra, fascia di latifoglie a destra;vineyard:L,grass:L,woodland:R,sign:L,pole:L
+SV-010;Scarpata erbosa e filari a sinistra, bosco oltre il guardrail a destra;grass:L,vineyard:L,woodland:R,guardrail:R
+SV-011;Tratto aperto tra campi, con boschetto arretrato sul lato sinistro;grass:L,grass:R,woodland:L
+SV-012;Filari ai due lati e casa chiara sullo sfondo, lampione a destra;vineyard:L,vineyard:R,building:L,lamp:R
+SV-013;Ville con balconi, alberi ornamentali rossastri e muretti ai due lati;building:L,building:R,broadleaf:L,broadleaf:R,wall:L,wall:R,access:R
+SV-014;Siepe e alberi a sinistra, campo aperto e case sullo sfondo a destra;hedge:L,broadleaf:L,grass:R,building:R,sign:L
+SV-015;Case con giardini recintati, muretti e illuminazione lungo la strada;building:L,building:R,fence:L,fence:R,wall:L,hedge:R,lamp:R
+SV-016;Case e siepe rossa a sinistra, muro in pietra e campanile sullo sfondo a destra;building:L,building:R,hedge:L,wall:R,tower:R,lamp:L
+SV-017;Uscita dal paese con vigna a destra e accessi ai giardini a sinistra;vineyard:R,building:L,access:L,broadleaf:L,sign:L,pole:L
+SV-018;Case con muretti e ringhiere, conifera nel giardino a destra;building:L,building:R,wall:L,fence:R,conifer:R,lamp:L
+SV-019;Seconda vista del medesimo punto al confine A e B, cortile a destra;building:L,building:R,wall:L,fence:R,access:R
+SV-020;Salita stretta con bosco a sinistra, prato e fabbricato a destra;woodland:L,grass:R,building:R,broadleaf:R,sign:R
+SV-021;Cancello e muro in pietra a sinistra, scarpata boscata a destra;gate:L,wall:L,woodland:R,broadleaf:L,lamp:L
+SV-022;Curva panoramica con vigna a monte e guardrail e ringhiera a valle;vineyard:L,grass:L,guardrail:R,fence:R,woodland:R
+SV-023;Curva nel bosco con scarpata a sinistra e barriera metallica a destra;woodland:L,woodland:R,guardrail:R,sign:R
+SV-024;Versante a monte alberato e apertura sulla pianura oltre ringhiera e muretto;woodland:L,wall:R,fence:R,broadleaf:R
+SV-025;Curva immersa nelle latifoglie con pali in legno a bordo strada;woodland:L,woodland:R,pole:R
+SV-026;Scarpata alberata a sinistra, vigneto e cartelli oltre la barriera a destra;woodland:L,vineyard:R,sign:R,guardrail:R,pole:R
+SV-027;Casa bianca con balcone, prato recintato e, nella vista opposta, alberi potati e muro basso;building:R,fence:L,grass:L,broadleaf:L,broadleaf:L@191,grass:R@191,wall:R@191
+SV-028;Confine B e C sul medesimo punto, casa e prato recintato;building:R,fence:L,grass:L
+SV-029;Strada nel bosco con guardrail a valle e palo in legno a destra;woodland:L,woodland:R,guardrail:R,pole:R
+SV-030;Curva tra latifoglie, barriera metallica e linea su pali a destra;woodland:L,woodland:R,guardrail:R,pole:R
+SV-031;Bosco sui due lati, scarpata a monte e guardrail a valle;woodland:L,woodland:R,guardrail:R
+SV-032;Strada stretta nel bosco con banchina sterrata e termine del guardrail;woodland:L,woodland:R,guardrail:R
+SV-033;Curva su Via Prestento tra latifoglie, fronte di roccia stratificata a sinistra;woodland:L,woodland:R,rock:L
+SV-034;Curva nel bosco con cunetta sul lato a monte e fogliame al suolo;woodland:L,woodland:R
+SV-035;Bosco rado e arbusti sui due lati della strada stretta;woodland:L,woodland:R,shrub:R
+SV-036;Rettilineo tra latifoglie, pali con cavo sul lato sinistro;woodland:L,woodland:R,pole:L
+SV-037;Tornante nel bosco con guardrail a sinistra e scarpata sul lato destro;woodland:L,woodland:R,guardrail:L,grass:R
+SV-038;Bacheca coperta a sinistra del bivio e piccolo riparo sul lato destro;board:L,shelter:R,woodland:L,woodland:R,pole:R
+SV-039;Curva boscata con guardrail a sinistra e scarpata alta a destra;woodland:L,woodland:R,guardrail:L
+SV-040;Tornante con triangolo erboso, muro di sostegno sul ramo alto e guardrail a valle;woodland:L,woodland:R,grass:R,wall:R,guardrail:L
+SV-041;Curva tra latifoglie con guardrail a sinistra e pali su entrambi i lati;woodland:L,woodland:R,guardrail:L,pole:L,pole:R
+SV-042;Tratto nel bosco con pali, barriera a sinistra e scarpata a destra;woodland:L,woodland:R,guardrail:L,pole:L
+SV-043;Curva nel bosco, scarpata rocciosa a destra e cunetta lungo la strada;woodland:L,woodland:R,rock:R
+SV-044;Bosco e arbusti, guardrail e palo a sinistra del rettilineo;woodland:L,woodland:R,shrub:R,guardrail:L,pole:L
+SV-045;Prato e accesso in ghiaia a destra, torretta rossa e conifere a sinistra;grass:R,access:R,tower:R,conifer:L,shrub:L
+SV-046;Diramazione tra boschi con segnale triangolare sul ramo sinistro;woodland:L,woodland:R,sign:L
+SV-047;Stessa diramazione verso il borgo con prato, albero e indicazioni a destra;woodland:L,grass:R,broadleaf:R,sign:R,lamp:L
+SV-048;Piazzetta di Valle: chiesa bianca, case in pietra e intonaco, albero con tavoli, fioriere e ringhiere;building:L,building:R,fence:L,wall:R,hedge:R,lamp:R,broadleaf:R@180,bench:R@180,planter:R@180,conifer:L@270,board:R@180,building:F@180,building:F@270
+SV-049;Vista verso Pedrosa e Faedis con cartelli direzionali blu e conifere a destra;sign:R,conifer:R,woodland:L,fence:L
+SV-050;Stesso bivio verso il ramo occidentale, cartelli, abeti e accesso in terra;sign:R,conifer:R,access:R,pole:L
+SV-051;Guardrail a sinistra e fronte roccioso con vegetazione a destra;woodland:L,woodland:R,guardrail:L,rock:R
+SV-052;Curva ombreggiata tra latifoglie e fitti arbusti ai due lati;woodland:L,woodland:R,shrub:L,shrub:R
+SV-053;Strada stretta con guardrail a sinistra e conifere tra il bosco a destra;woodland:L,woodland:R,guardrail:L,conifer:R
+SV-054;Curva aperta sul panorama con latifoglie e sottobosco ai due lati;woodland:L,woodland:R,shrub:R
+SV-055;Curva in discesa con muro in pietra a monte e contenitori a destra;woodland:L,woodland:R,wall:L,bin:R,pole:L
+SV-056;Stesso punto al confine D e E, muro e fitta vegetazione lungo la curva;woodland:L,woodland:R,wall:L
+SV-057;Discesa nel bosco con scarpata rocciosa e arbusti a bordo strada;woodland:L,woodland:R,rock:L,shrub:R
+SV-058;Curva stretta circondata da latifoglie e arbusti, senza edifici visibili;woodland:L,woodland:R,shrub:R
+SV-059;Tornante con guardrail a valle, arbusti e affioramenti rocciosi sul ramo alto;guardrail:L,woodland:L,woodland:R,rock:R,shrub:R
+SV-060;Rettilineo in discesa tra bosco e scarpata con pietre a sinistra;woodland:L,woodland:R,rock:L
+SV-061;Curva boscata con sottobosco fitto lungo entrambi i margini;woodland:L,woodland:R,shrub:L,shrub:R
+SV-062;Curva nel bosco con margini erbosi e vegetazione estiva fitta;woodland:L,woodland:R,grass:R
+SV-063;Rettilineo stretto in discesa tra latifoglie e sottobosco;woodland:L,woodland:R,shrub:R
+SV-064;Curva nel bosco con scarpata rocciosa sul lato destro;woodland:L,woodland:R,rock:R
+SV-065;Bosco ai due lati con apertura erbosa e accesso laterale a sinistra;woodland:L,woodland:R,grass:L,access:L
+SV-066;Curva con albero isolato a sinistra e margini erbosi tra il bosco;woodland:L,woodland:R,broadleaf:L,grass:R,rock:L
+SV-067;Discesa tra boschi, arbusti e pietre chiare sul lato destro;woodland:L,woodland:R,shrub:L,rock:R
+SV-068;Curva con parete rocciosa coperta di vegetazione a sinistra e bosco a valle;woodland:L,woodland:R,rock:L
+SV-069;Tratto aperto sulla collina boscata, sottobosco fitto ai margini;woodland:L,woodland:R,shrub:R
+SV-070;Curva sulla valle boscata con scarpata ripida e vegetazione a destra;woodland:L,woodland:R,shrub:R
+SV-071;Curva in discesa con scarpata a sinistra e vegetazione più bassa a destra;woodland:L,woodland:R,shrub:R
+SV-072;Rettilineo stretto con guardrail a destra, bosco e cavo su pali;woodland:L,woodland:R,guardrail:R,pole:R
+SV-073;Case in pietra e intonaco, tettoie e garage, nella vista opposta scala esterna e muro in pietra;building:L,building:R,shelter:R,lamp:L,wall:R@58,steps:R@58,hedge:R@58,lamp:R@58,shelter:L@58,guardrail:L@58
+SV-074;Vista laterale di casa chiara oltre muro e vegetazione lungo il corso d'acqua;building:F,wall:F,broadleaf:L,pole:R
+SV-075;Vista opposta dello stesso punto con casa in pietra, rampicante e grande conifera;building:F,hedge:F,conifer:R,bin:R
+SV-076;Prati ai due lati, casa sullo sfondo e piccolo fabbricato agricolo a destra;grass:L,grass:R,building:F,shelter:R,broadleaf:L,pole:L
+SV-077;Bivio con staccionata a sinistra, muro di sostegno e bosco a destra;access:L,fence:L,wall:R,woodland:R,pole:L,sign:L
+SV-078;Campi e case a sinistra, piazzola in ghiaia e collina boscata a destra;grass:L,building:L,access:R,woodland:R,broadleaf:L,pole:L
+SV-079;Vigneto a sinistra, giardino recintato con conifere e cancello a destra;vineyard:L,fence:R,gate:R,conifer:R,pole:L
+SV-080;Case ravvicinate con scuri marroni, cancelli e muri in pietra sui due lati;building:L,building:R,gate:L,gate:R,wall:R,hedge:L
+SV-081;Case e giardini, filari di vite e muretto a sinistra, cancello a destra;building:L,building:R,vineyard:L,wall:L,gate:R,fence:R
+SV-082;Rientro verso la piazza di Faedis con edifici chiari e pensilina della fermata a sinistra;building:L,building:R,shelter:L,lamp:L
+SV-V01;Accesso a Valle tra prati e alberi da frutto, struttura in legno nel prato a destra;grass:L,grass:R,broadleaf:R,board:R,lamp:L
+SV-V02;Case con tetti in coppi e muretto a sinistra, siepe e orto con serra a destra;building:L,building:R,wall:L,fence:L,hedge:R,shelter:R,conifer:R,pole:R
+SV-V03;Case sotto il ciglio a destra, ringhiera e campanile sullo sfondo, siepe e rete a sinistra;building:R,fence:R,tower:R,conifer:R,hedge:L,fence:L,lamp:L,bin:L
+SV-V04;Bivio del borgo con campanile a destra, staccionata, arbusti e scarpata erbosa;tower:R,building:R,fence:R,shrub:R,grass:L,sign:R,lamp:L

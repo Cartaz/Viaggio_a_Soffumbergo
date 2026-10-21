@@ -4,6 +4,12 @@
 *.log
 builds/
 /build/
+*.asc
+*.tif
+*.tiff
+*.las
+*.laz
+download-*.zip
 exports/
 captures/
 .env

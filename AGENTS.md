@@ -1,6 +1,14 @@
 # AGENTS.md — Viaggio a Soffumbergo / Coffa e tornanti
 
 ## Mandato operativo
+
+**Vincolo dell'utente del 21 ottobre 2026:** tutte le prove 3D da questo momento
+devono usare il modello finale locale: Yaris Hybrid rossa approvata, pennone/coffa
+pirata e i due topolini ispirati a Bianca e Bernie. Eseguire Godot nella copia
+`C:\Giochi\Sviluppo\Viaggio a Soffumbergo`, preservandone asset e impostazioni.
+Il proxy pubblico storico non costituisce più un collaudo del prodotto.
+`godot/tests/final_vehicle_guard.gd` blocca le nuove prove se manca l'insieme
+approvato. Non pubblicare i modelli privati per rendere eseguibile il proxy.
 Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere conferme per ogni attività ordinaria. Prima di intervenire leggi `README.md`, `docs/DECISIONI.md`, la fase pertinente di `docs/ROADMAP.md` e questo file; consulta `docs/PROGETTO.md` per le specifiche complete. Lavora per piccoli incrementi verificabili: ispeziona, implementa, prova, correggi, documenta e registra le modifiche. Non dichiarare completato ciò che è soltanto progettato.
 
 ## Vincoli inderogabili
@@ -11,6 +19,84 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 - Non copiare nella repository immagini Disney, screenshot non autorizzati o asset di terzi senza diritti di riuso; non scegliere unilateralmente una licenza o pubblicare release.
 
 ## Mappa dei contenuti (percorsi verificati)
+
+- **Ambiente e Street View:** `docs/AMBIENTE_CIRCUITO.md`,
+  `data/geography/streetview_views.csv`, `streetview_observations.csv` e
+  `circuit_placeholders.json` nella stessa cartella. Catalogo HTML/CSV sotto
+  `reports/`, generatore `tools/build_circuit_environment.py`, gate
+  `tools/validate_circuit_environment.py`. Codici e ricette deterministici,
+  primitive a settori, nessuna collisione di ingombri stimati. 86 postazioni
+  non certificano copertura continua o identificazione di ogni facciata.
+  Conflitti e parti non osservate devono restare espliciti.
+
+- **Asfalto e recupero fuori strada:** `docs/RACCORDI_E_ASFALTO.md`,
+  `tools/build_circuit_shoulders.py`, `tools/validate_circuit_shoulders.py`.
+  Raccordi separati sul layer 8, strada sul 4, terreno sull'1. Originali
+  invariati; le prove di uscita/rientro non certificano il bordo reale.
+- **Giro di costruzione:** `docs/GIRO_COSTRUZIONE.md`, scena
+  `circuit_loop.tscn`, `tools/build_circuit_loop.py` e relativo test Godot.
+  Manovre su superfici esistenti; il corpo rimane attivo ai cambi fase.
+  R invalida tutto, N ricomincia. Non dichiarare completata la visita del borgo
+  sulla base del solo giro su superficie di progetto.
+
+- **Pratica del circuito:** `docs/PRATICA_CIRCUITO.md`, scena
+  `circuit_practice.tscn`, `tools/build_circuit_practice.py`,
+  `godot/scripts/practice_route.gd`, `godot/tests/circuit_practice_check.gd`.
+  Dieci tratti separati, cambi come riposizionamenti di allenamento, margini
+  prima delle inversioni e raccordi ordinari allargati di progetto. Revisione
+  documentale in `data/geography/circuit_maneuver_review.json`; nessuna manovra
+  reale confermata. Gate `validate_circuit_construction.py --practice`.
+  Non confondere le prove separate con il giro continuo o la visita integrata.
+
+- **Terraforming / costruzione circuito:** `docs/COSTRUZIONE_CIRCUITO.md`,
+  `tools/build_circuit_construction.py`, `tools/check_circuit_construction.py`,
+  `tools/validate_circuit_construction.py`, scena `circuit_construction.tscn`.
+  Superficie di progetto dell'intero candidato e terreno derivato separato,
+  confronto T e punti critici F9. Quattro inversioni conservate e da rivedere;
+  nessun giro fisico completo dichiarato. Configurazione in
+  `data/config/circuit_construction.json`, evidenze in
+  `reports/COSTRUZIONE_CIRCUITO_VERIFICA.json`. Raster e derivati fuori Git.
+
+- **Discesa e passeggiata di prova:** `docs/VISITA_PILOTA.md`, scena
+  `visit_pilot.tscn`, `tools/validate_visit_pilot.py`, test `visit_mass_check.gd`
+  e `visit_pilot_check.gd`. Due corpi indipendenti, forze di sostegno con reazione
+  all'auto, seguito e risalita; nessuna visita del borgo ancora certificata.
+  Il pubblico usa proxy, Windows riusa i modelli locali senza pubblicarli.
+
+- **Sosta tecnica:** `docs/SOSTA_PILOTA.md`, `parking_pilot.tscn`, generatore
+  `tools/build_parking_pilot.py`, gate `tools/validate_parking_pilot.py`.
+  Piazzola sintetica distinta da PV-01; E conferma solo dopo arresto stabile.
+  Personaggi a bordo: discesa e visita non implementate da questa scena.
+
+- **Guida pilota / Yaris:** `docs/GUIDA_PILOTA.md`, `docs/YARIS_PRESTAZIONI.md`,
+  `godot/scenes/drive_pilot.tscn`, `tools/validate_drive_pilot.py`. 601 m del
+  candidato C con sistemazione sintetica dichiarata, non asfalto verificato.
+  Dati ufficiali separati dai parametri calibrati; nessun taglio di velocità.
+  La variante Windows conserva i propri asset/rig/personaggi e comandi.
+  Cinque checkpoint direzionali del tratto in `trial_progress.gd`: R recupera
+  invalidando la prova, N ricomincia. Non sono i checkpoint dell'intera gita;
+  `godot/tests/trial_progress_check.gd` funziona anche senza dati locali.
+
+- **Circuito 3D 0.1:** `docs/CIRCUITO_3D.md`, `tools/build_circuit_3d.py`,
+  `tools/validate_circuit.py`, scena `godot/scenes/circuit.tscn`. 352 settori;
+  selezione di fonte per vertice esplicita, senza media, e protezione delle
+  quote di Valle. Dettaglio/collisioni caricati vicino alla camera. Vedere
+  `reports/CIRCUITO_3D_VERIFICA.json`. Non è la guida/visita integrata.
+
+- **DTM intero anello:** 41 ASC originali locali in
+  `C:\Giochi\Sviluppo\Viaggio a Soffumbergo\DTM Completi`, fuori Git.
+  Catalogo `data/geography/circuit_dtm_catalog_20261020.json`, procedura
+  `tools/catalog_circuit_dtm.py`, limiti in `docs/DTM_CIRCUITO_COMPLETO.md`.
+  Asse OSM candidato coperto a passo massimo 2 m; 9 coppie di sovrapposizioni
+  non identiche, 24 quote ambigue sull'asse. Nessuna media o mosaico implicito.
+
+- **Valle 3D 0.1 (20/10/2026):** `docs/VALLE_3D.md`, scena
+  `godot/scenes/valle.tscn`, generatore `tools/build_valle_3d.py`, collaudo
+  `tools/validate_valle.py`, evidenze `reports/VALLE_3D_VERIFICA.json`.
+  Campione 768 × 768 m, 36 settori/LOD, collisioni, 91 sagome OSM e strade
+  provvisorie. Derivati locali sotto `build/`, nessun raster originale pubblico.
+  Non è l'intero anello o la visita integrata. Le note storiche “nessuna prova
+  Godot/Blender” non si applicano ai collaudi documentati di questa scena.
 - **Vincoli e piano:** `docs/DECISIONI.md`, `docs/PROGETTO.md`, `docs/ROADMAP.md`; architettura e coordinate in `docs/ARCHITETTURA.md`.
 - **Personaggi:** `references/README.md`; catalogo di 20 fonti in `references/bianca_bernie/sources.json`, guida in `references/bianca_bernie/README.md` e `SPECIFICA_MODELLAZIONE.md` nella stessa cartella.
 - **Sopralluogo e territorio:** `docs/RIFERIMENTI_E_SOPRALLUOGO.md`; OSM in `data/geography/osm_survey.geojson`, provenienza in `data/geography/provenance.json`; mappa e inventario in `reports/valle_survey_map.svg` e `reports/valle_building_inventory.csv`. Sono dati planimetrici del borgo, non terreno quotato. Dal 20/10/2026 sono presenti anche `data/geography/osm_regional_roads_20261020.geojson` e `data/geography/circuito_osm_candidate_20261020.geojson`: rete e percorso topologicamente collegato **solo come ipotesi OSM 2D**, senza verifica delle svolte né terreno. Vedere `docs/TRACCIATO_OSM_CANDIDATO_20261020.md`. **Aggiornamento LiDAR 20/10/2026:** 4 raster DTM ellissoidici a 0,5 m di Valle ricevuti dall'utente, verificati (12.096.000 celle totali e giunzioni identiche), composizione TIFF e blockout GLB preparati, ma **non inseriti nella repo**; strumenti in `tools/import_valle_lidar05.py`, fonti e limiti in `docs/ACQUISIZIONE_LIDAR05_REALE_20261020.md`. I campioni sono terreno nudo; non convertire automaticamente in superficie stradale pronta.

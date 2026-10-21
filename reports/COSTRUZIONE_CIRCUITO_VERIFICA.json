@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "status": "passed_lowered_asphalt_and_narrow_shoulder_with_approved_final_assembly",
+  "source_sha256": {
+    "AGENTS.md": "f3090162c00d47f7c6dbef0cb45807b72ea83da0e61387583a36e0da534a8bd1",
+    "README.md": "69bb0950a1edb9a265c6dde6ffbe85bf741c10731dc7998c9f59846c73924352",
+    "docs/DECISIONI.md": "ebd127abca3dd8437e60eaa61785145e353af892afa058fbb5ff43913aba5044",
+    "docs/ROADMAP.md": "c85ee72337ea63052cc24a8a3e5d8bb20cbb5f181c6f15bdc9395ffb85c239ec",
+    "docs/ARCHITETTURA.md": "436db4c8c0e1df53e9cd7f2942e8895a85c59c99c8ec729c941cec3669b9943c",
+    "docs/COSTRUZIONE_CIRCUITO.md": "2a107012d21c124dcde2ed39970cc5f1feb96034a8dc701483ed5c1aa0a13173",
+    "docs/RACCORDI_E_ASFALTO.md": "471a0f6266c739e2c92972b8c226d9aacdfd80086b77966d548356c605ab2571",
+    "data/config/circuit_construction.json": "13664d2b30da4582cd8048421bf0f23446f39c05418d1df9494260a344ffc503",
+    "data/config/circuit_shoulders.json": "5634e5d477b52c2b01cd210d12ce746fa1e71c97789035d77bd045c6808cb9eb",
+    "tools/build_circuit_construction.py": "dfc5beed109dcd6ab665c49d3854ba3a46b5c9857753b304c40f1de80cd51abf",
+    "tools/check_circuit_construction.py": "8c7836ac1ad9a4f483b352cdb5c16de1a33d4f2852fb52d48d9ffe626c9fb829",
+    "tools/build_circuit_shoulders.py": "112b70740a17b51fbc7013aae534c3a1fdee353d2bb4674a391b1cccef9171b3",
+    "tools/check_circuit_shoulders.py": "7b6e4a44bd82ae861c4c3b8ff7f4c9728cf93f5e235396b5d771e4907e7c378b",
+    "tools/validate_circuit_shoulders.py": "108c965e20e80c41d28a85ac67d6e35c74723aa27ae42d240dce8d6e55421af3",
+    "tools/validate_circuit_construction.py": "5cdaf99f738b8752ad0ade6bcd14c202c563671033846df23bd06062eaaa42cb",
+    "tools/sync_circuit_construction_local.py": "76f78d411a6142e185dbd38f956e8fd8c4bbb66ef50cfd1ab0a63d0ac5d15035",
+    "tools/coffa/road_shoulders.py": "e83c286b6bddd3573f601d3e92a5e58af21cd083b02a8fb7634ae52569385b34",
+    "tools/coffa/road_construction.py": "131cb3cbf3b04c4645bf8ce148e4edca28f33218e6d12afc71f4c447f1d4ad30",
+    "tools/blender/build_circuit_construction.py": "6ab747edc80344ba4400c89834ef9517150dfb02748b3c5566faa5c46e4984bb",
+    "godot/scripts/circuit_construction.gd": "f3cd5a0edf4948cfc6870ba4723f60b9e28ffc1bb81c0ebb296fedfa67a0f61c",
+    "godot/scripts/circuit_practice.gd": "53f9bf781dac1d517f918a74049924955b3ed8bc3b3aa3c294f6f0b576443d24",
+    "godot/scripts/construction_surface.gd": "91997e19f88abd1a7cb7723626afe6db553e12c0a82142fd418f0c7bab4f36ae",
+    "godot/shaders/circuit_surface.gdshader": "356af288b6f2260290b2d17a6b4ca9a4b129a9738fc9afe8361028436624f4c6",
+    "godot/tests/circuit_shoulders_check.gd": "24f93c1e7daa9ec84fadad09f90aed17472b6d0121e21e83d30ea32059416602",
+    "godot/tests/final_vehicle_guard.gd": "581a03e377c3d54f5de0515a8b5cf8f66d7bc1a0ad03b9f667d5ea67559e950f",
+    "godot/tests/final_vehicle_snapshot.gd": "0944f38b3f23f949077d113e8a0b57410e12775ff487bde0a4a552ebd9af74f2",
+    "tests/test_road_shoulders.py": "693c77921c05afe05e9c5386385668941e252bbec9763a8ba4c8da519c8949d3"
+  },
+  "construction_manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d",
+  "shoulders_manifest_sha256": "a04bd41ee4e29358e4aa1cda6d05b96e5f3ecfcd180fdd67c956fb6f9641f45f",
+  "shoulder_width_each_side_m": 0.85,
+  "loaded_vehicle_nominal_width_m": 1.745,
+  "maximum_requested_shoulder_width_m": 0.8725,
+  "road_ground_clearance_m": 0.02,
+  "source_preservation": {
+    "raw_tiles_verified": 41,
+    "terrain_chunks_unchanged": 352,
+    "lowering_at_axis_points_m": {
+      "min": 0.43161883416172486,
+      "median": 0.4799843402641386,
+      "max": 0.5614486868806718
+    },
+    "original_manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6"
+  },
+  "road_generation_determinism": {
+    "passed": true,
+    "deterministic_files": 521,
+    "construction_manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d"
+  },
+  "geometry": {
+    "passed": true,
+    "terrain_seams": 562,
+    "terrain_height_and_normal_seam_error": 0,
+    "road_seams": 191,
+    "road_triangles": 83905,
+    "road_plan_area_m2": 83141.48245649,
+    "max_horizontal_mesh_edge_m": 2.8284271247461903,
+    "road_reference_rays": 29877,
+    "min_sampled_road_terrain_clearance_m": 0.01999960689300906,
+    "min_mesh_vertex_and_centroid_clearance_m": 0.01999949999992623,
+    "profile_points": 9959,
+    "all_route_and_cross_section_samples_covered": true,
+    "original_sectors": 352,
+    "float32_local_road_fronts_verified": true
+  },
+  "shoulder_geometry": {
+    "passed": true,
+    "sectors": 167,
+    "triangles": 141485,
+    "local_float32_fronts_verified": true,
+    "tile_seams": 191,
+    "minimum_vertex_and_centroid_ground_cover_m": -4.999999987376214e-07,
+    "reference_rays": 4820,
+    "recovery_source_station_range_m": [
+      1000.0,
+      1200.0
+    ]
+  },
+  "gate": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "python",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "generate",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "regenerate",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "road_geometry",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "geometry",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "gdparse",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "gdformat",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "gdlint",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "sync_approved",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "headless120",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "headless60",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "snapshot_approved_model",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "blender",
+        "exit_code": 0,
+        "engine_errors": false
+      }
+    ],
+    "shoulders_manifest_sha256": "a04bd41ee4e29358e4aa1cda6d05b96e5f3ecfcd180fdd67c956fb6f9641f45f",
+    "approved_project_required": true,
+    "immutable_files_verified": 521,
+    "deterministic_files": 168,
+    "full_lap_driven": false,
+    "real_roadside_verified": false
+  },
+  "drives": {
+    "60": {
+      "checks": 69405,
+      "drive_start_wall_msec": 97263,
+      "elapsed_drive_s": 96.6666717082262,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "final_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "fixture": [
+        1000.0,
+        1200.0
+      ],
+      "frozen_or_reset_frames": 0,
+      "full_lap_driven": false,
+      "geometry_scan_skipped_for_visible_drive": false,
+      "max_ray_error_m": 0.0001220703125,
+      "max_residents": 33,
+      "max_signed_offset_m": 4.13105583190918,
+      "min_signed_offset_m": -4.13985538482666,
+      "min_up": 0.997708439826965,
+      "passed": true,
+      "physics_hz": 60,
+      "real_roadside_verified": false,
+      "relocations_during_drive": 0,
+      "renderer": "",
+      "resets_during_drive": 0,
+      "returned_and_stopped": true,
+      "road_rays": 29877,
+      "shoulder_rays": 4820,
+      "shoulder_wheel_hits": 518,
+      "unsupported_frames": 0
+    },
+    "120": {
+      "checks": 69405,
+      "drive_start_wall_msec": 98371,
+      "elapsed_drive_s": 96.3250050237402,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "final_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "fixture": [
+        1000.0,
+        1200.0
+      ],
+      "frozen_or_reset_frames": 0,
+      "full_lap_driven": false,
+      "geometry_scan_skipped_for_visible_drive": false,
+      "max_ray_error_m": 0.0001220703125,
+      "max_residents": 33,
+      "max_signed_offset_m": 4.13351154327393,
+      "min_signed_offset_m": -4.1393723487854,
+      "min_up": 0.997748911380768,
+      "passed": true,
+      "physics_hz": 120,
+      "real_roadside_verified": false,
+      "relocations_during_drive": 0,
+      "renderer": "",
+      "resets_during_drive": 0,
+      "returned_and_stopped": true,
+      "road_rays": 29877,
+      "shoulder_rays": 4820,
+      "shoulder_wheel_hits": 518,
+      "unsupported_frames": 0
+    },
+    "renderer": {
+      "checks": 10,
+      "drive_start_wall_msec": 2996,
+      "elapsed_drive_s": 96.3250050237402,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "final_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "fixture": [
+        1000.0,
+        1200.0
+      ],
+      "frozen_or_reset_frames": 0,
+      "full_lap_driven": false,
+      "geometry_scan_skipped_for_visible_drive": true,
+      "max_ray_error_m": 0.0,
+      "max_residents": 32,
+      "max_signed_offset_m": 4.13351154327393,
+      "min_signed_offset_m": -4.1391282081604,
+      "min_up": 0.997748970985413,
+      "passed": true,
+      "physics_hz": 120,
+      "real_roadside_verified": false,
+      "relocations_during_drive": 0,
+      "renderer": "AMD Radeon RX 6800",
+      "resets_during_drive": 0,
+      "returned_and_stopped": true,
+      "road_rays": 0,
+      "shoulder_rays": 0,
+      "shoulder_wheel_hits": 521,
+      "unsupported_frames": 0
+    }
+  },
+  "approved_model_snapshot": {
+    "approved_assembly_loaded": true,
+    "assets": {
+      "bernie.glb": {
+        "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+        "visible": true
+      },
+      "bianca.glb": {
+        "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+        "visible": true
+      },
+      "pirate_mast_coffa.glb": {
+        "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+        "visible": true
+      },
+      "yaris_hybrid_red_game.glb": {
+        "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+        "visible": true
+      }
+    },
+    "export_error": 0,
+    "passed": true,
+    "visual_physics_process_active": true,
+    "visual_process_active": true
+  },
+  "blender": {
+    "passed": true,
+    "blender_version": "4.5.3 LTS",
+    "road_sectors": 167,
+    "road_triangles": 83905,
+    "terrain_overview_sectors": 352,
+    "shoulder_sectors": 167,
+    "shoulder_triangles": 141485,
+    "approved_vehicle_snapshot_sha256": "7cbec1a949ee795497975ea0d9e3f4cd2fb76c0452b55a27df8fbf16162f841b",
+    "approved_assembly_objects": 448,
+    "manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d",
+    "scope": "native mesh and normals, not artistic approval or driven lap"
+  },
+  "python_tests": 114,
+  "original_rasters_published": false,
+  "private_assets_published": false,
+  "full_lap_driven": false,
+  "journey_including_visit_complete": false,
+  "real_roadside_verified": false,
+  "scope": "Final-model road contacts and two-sided exit/return on a 200 m fixture; whole journey remains open"
+}

@@ -2,6 +2,120 @@
 
 Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricostruzione Yaris eseguita in Blender. Una casella completata richiede una consegna o una prova ispezionabile. Il solo avvio headless non chiude le prove dinamiche o artistiche.
 
+## Valle 3D 0.1 — 20 ottobre 2026
+
+**Ambiente codificato, 21 ottobre:** [catalogo e procedura](AMBIENTE_CIRCUITO.md).
+
+- [x] Primo passaggio Street View a postazioni lungo tutti i settori: 86 punti,
+  92 direzioni, fonti e date; copertura continua non dichiarata.
+- [x] Catalogare 25 categorie con codici stabili, descrizioni e ricette esplicite;
+  distinguere pianta OSM, osservazione, collocazione stimata e misure sconosciute.
+- [x] Integrare 1.164 segnaposto visivi a settori, senza duplicare le sagome di Valle;
+  conservare 74 conflitti come elementi da rivedere, senza spostarli di nascosto.
+- [x] Verificare rigenerazione, coordinate, scaricamento e schede con l'assemblaggio
+  finale in Godot e nel progetto Blender locale.
+- [ ] Infittire le viste negli intervalli ciechi e verificare i singoli ingombri.
+- [ ] Risolvere i conflitti edificio/strada partendo da Valle e sostituire i box
+  con forme documentate prima di attivare le collisioni degli elementi ambientali.
+
+**Terraforming del 21 ottobre:** [costruzione dell'intero candidato](COSTRUZIONE_CIRCUITO.md).
+
+**Raccordi e asfalto, 21 ottobre:** [procedura](RACCORDI_E_ASFALTO.md).
+
+- [x] Sostituire il materiale ambra della superficie principale con asfalto.
+- [x] Collegare i bordi al terreno con mesh e collisioni continue, mantenendo
+  originali, asse e strada invariati.
+- [x] Provare uscite su entrambi i lati e rientro con pedali e sterzo,
+  a 60/120 Hz, con renderer e Blender.
+- [ ] Confrontare i tratti uno per uno con Street View e aggiornare il progetto
+  distinguendo osservazioni, parametri di prova e verifiche mancanti.
+
+**Giro di costruzione:** [scena e perimetro](GIRO_COSTRUZIONE.md).
+
+- [x] Preparare riferimenti delle quattro manovre sulle superfici esistenti,
+  senza aggiungere piazzali e senza modificare la forza motrice.
+- [x] Verificare M1 sulla strada ribassata con l'assemblaggio finale,
+  cinque fasi, arresti stabili, recupero invalidante e nuovo tentativo.
+- [ ] Ricollaudare tutte le manovre sulla strada ribassata, esclusivamente
+  con Yaris finale, pennone/coffa e Bianca/Bernie.
+- [ ] Registrare un giro continuo con tutte le manovre, senza riposizionamenti.
+- [ ] Collegare il giro alla sosta e alla visita del borgo; verificare il fondo reale.
+
+- [x] Preparare una superficie di progetto sui circa 18,9 km conservando asse,
+  tornanti, rami ripercorsi e quattro inversioni; non inventare piazzali di manovra.
+- [x] Generare scavi/riporti su derivati separati, parametri dichiarati, controllo
+  delle giunzioni, confronto originale/progetto e collisioni stradali progressive.
+- [x] Verificare geometrie, contatti in Jolt, immagini reali e progetto Blender.
+- [ ] Risolvere le inversioni e verificare bivi, larghezze, pendenze e raccordi.
+- [ ] Rifinire scarpate, drenaggi, muri, barriere e superficie stradale documentata.
+- [ ] Collaudare la Yaris lungo tutti i settori e completare un giro fisico.
+
+**Pratica del circuito, 21 ottobre:** [perimetro e comandi](PRATICA_CIRCUITO.md).
+
+- [x] Classificare le inversioni rispetto al dossier: tre tappe con ritorno,
+  aggancio al panorama iniziale da rivedere; nessuna manovra reale confermata.
+- [x] Collegare la Yaris alla costruzione, dieci tratti con checkpoint ordinati,
+  arresto, recupero invalidante e cambio tratto dichiarato come riposizionamento.
+- [x] Aggiungere allargamenti di progetto nei raccordi ordinari critici,
+  mantenendo asse, tappe e inversioni irrisolte.
+- [x] Collaudare tutti i tratti per intero separatamente; questo controllo non
+  chiude il giro continuo o la visita obbligatoria.
+
+La superficie di costruzione non chiude la verifica della strada reale o P2/P3.
+
+**Incremento guida pilota e prestazioni:** [prova di 601 m](GUIDA_PILOTA.md),
+[fonti Toyota e modello longitudinale](YARIS_PRESTAZIONI.md).
+
+- [x] Riprodurre l'uscita dal piazzale e distinguere velocità stradale/caduta.
+- [x] Introdurre spinta alle ruote decrescente, resistenza e regolazione della
+  spinta in prossimità della massima, con auto di serie e carico separati.
+- [x] Collaudare 0–100, 80–120, terminale, rilascio/freno/retro a 60/120 Hz.
+- [x] Collegare la Yaris a un accesso di prova del candidato C, mantenendo
+  terreno originale e ricostruzione di prova distinti.
+- [x] Percorrere il tratto applicando soltanto comandi fisici, con arrivo,
+  arresto, controllo dei contatti e caricamento/scaricamento dei settori.
+- [x] Nel solo tratto pilota, attraversare cinque checkpoint in ordine e nel
+  verso corretto; distinguere arrivo valido, incidente, recupero in allenamento
+  e nuova prova. Collaudare ripartenza e disponibilità delle collisioni.
+- [x] Collegare il tratto a una piazzola tecnica separata, con arresto stabile
+  dell'intero veicolo, quattro appoggi, freno e conferma della sosta. Mantenere
+  la fisica attiva e gli occupanti a bordo. [Procedura](SOSTA_PILOTA.md).
+- [x] Nella variante di prova, separare le masse degli occupanti, sostenere la
+  discesa con reazione sul veicolo e collegare camminata, seguito e risalita.
+  Provare il ciclo nel motore, il recupero e 20 trasferimenti di rappresentazione.
+- [ ] Approvare fitting/animazione di mani e piedi, equilibrio, contatti con
+  abitacolo e scalette e collegamento pedonale reale al borgo. La prova locale
+  non chiude la visita P3. [Ambito e collaudi](VISITA_PILOTA.md).
+- [ ] Verificare larghezze, asfalto, bivi e sistemazione reale del fondo:
+  il test non chiude la superficie stradale verificata o P2/P3.
+- [ ] Modello completo dell'ibrido, ABS/ESC e taratura di sospensioni/pneumatici.
+
+- [x] Riutilizzare le quattro tessere reali, centri delle celle e datum espliciti.
+- [x] Generare 768 × 768 m in 36 settori con LOD 2/4/8 m, collisioni a 2 m
+  indipendenti e 60 giunzioni numericamente identiche.
+- [x] Collocare 91 sagome OSM con altezze dichiarate segnaposto.
+- [x] Mostrare strade/accessi OSM provvisori e punto PV-01 candidato, senza
+  dedurre larghezze reali, asfalto o continuità pedonale dalla cartografia.
+- [x] Rigenerazione deterministica, test Python/GDScript, raggi/caduta in Jolt,
+  due acquisizioni dal renderer e creazione/verifica del progetto Blender.
+- [ ] Approvare facciate, chiesa, campanile, muri e quote dei passaggi reali.
+- [ ] Costruire una superficie stradale verificata e collegare guida/visita.
+- [x] Acquisire/catalogare le 41 tessere dell'anello: 123.984.000 celle senza
+  NoData e asse OSM candidato coperto su 9.966 campioni a passo massimo 2 m.
+- [x] Gestire le sovrapposizioni per il prototipo con selezione esplicita della
+  fonte per vertice, senza media; incertezza originaria conservata nei metadati.
+- [x] Estendere il terreno a un corridoio di 352 settori con vista generale,
+  dettaglio/collisioni vicini alla camera e regressioni su tutti i 9.966 punti.
+- [ ] Verificare la superficie stradale e i bivi prima di integrare la guida.
+
+**Circuito 3D 0.1:** [politica, avvio, misure e limiti](CIRCUITO_3D.md),
+risultati in `reports/CIRCUITO_3D_VERIFICA.json`. Le quote a 2 m di Valle
+rimangono identiche; il corridoio è un ambiente di ispezione, non il giro guidabile.
+
+[Procedura e limiti](VALLE_3D.md), [risultati](../reports/VALLE_3D_VERIFICA.json).
+P0, P3 e P4 restano aperte: questa scena è un campione geografico, non una
+prova del viaggio completo o un'approvazione artistica.
+
 ## Incremento veicolo — 19 ottobre 2026
 
 - [x] Raccogliere fonti Toyota MY22 e distinguere le dotazioni italiane dai campioni fotografici di altri allestimenti.
@@ -66,6 +180,8 @@ Uscita: build di laboratorio con telemetria e scenari ripetibili.
 
 - [ ] Rendere l’anello completamente percorribile con geometria semplice.
 - [ ] Implementare checkpoint direzionali, incidenti e ripartenze.
+  Prova isolata implementata sui 601 m del candidato C: manca l'integrazione
+  con l'intero anello, la sosta e la visita; questa voce complessiva resta aperta.
 - [ ] Gestire la tappa di sosta e distinguere arrivo a Valle da conclusione del giro.
 - [ ] Bloccare la partenza di ritorno senza entrambi gli occupanti nelle posizioni previste.
 

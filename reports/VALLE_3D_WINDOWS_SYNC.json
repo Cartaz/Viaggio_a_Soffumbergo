@@ -1,0 +1,24 @@
+{
+  "verified_date_local": "2026-10-20",
+  "target": "C:\\Giochi\\Sviluppo\\Viaggio a Soffumbergo",
+  "scene_sha256": "85fe4362b2e46a1b449a1e78772fc0d42217762566daf30b0130f46ae2f481dc",
+  "python_tests_after_diagnostic_report_regeneration": 34,
+  "preexisting_diagnostic_reports_regenerated": true,
+  "godot": {
+    "checks": 642,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "load_ms": 808,
+    "missing_data_mode": false,
+    "render_capture": false,
+    "renderer": "",
+    "scope": "Valle survey prototype, not full journey acceptance or representative FPS",
+    "terrain_ray_max_error_m": 5.14984130859375e-05,
+    "terrain_triangles_overview": 81408
+  },
+  "osm_source_identical": true,
+  "default_scene_changed": false,
+  "existing_source_replaced": false,
+  "launcher": "Avvia Valle 3D.cmd",
+  "scope": "Additive integration into existing local checkout; unrelated local work not published"
+}

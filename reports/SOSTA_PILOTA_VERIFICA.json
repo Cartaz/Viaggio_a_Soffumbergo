@@ -1,0 +1,360 @@
+{
+  "prototype": "Technical stop at the engineering pilot finish; occupants remain aboard",
+  "validation_date_local": "2026-10-21",
+  "platform": "Windows",
+  "source_base_commit": "12a241cc2bc306d8b626da94cd627a4cdf5c2c6a",
+  "source_hash_encoding": "UTF-8 source with LF line endings",
+  "source_sha256": {
+    "godot/scripts/drive_pilot.gd": "ed689abe1235eb4c0450ba0233906f870cd513d32863cc4d0af1a3435f45f24d",
+    "godot/scripts/parking_pilot.gd": "4bd1d471e8ea980eaa462b9f3d60a8d59e5f64c149f501c4a6985ec799a7b095",
+    "godot/scripts/parking_state.gd": "c411bfbfab063a4ab6fdb7f02fdda1eb263975a426471718a7558e2cb4e39920",
+    "godot/scenes/parking_pilot.tscn": "4d9a8039135d42d33ea067c288f0699a37671fa0e62b752b68609b80ad6e2caa",
+    "godot/tests/drive_pilot_check.gd": "3d7d75151f809c46d25c16351243c67b8cf83f0ceeeaa71098759f25ddecd79a",
+    "godot/tests/drive_missing_check.gd": "39e38a9eedcc9081ec879dc685930fe148dc4f6ee93bcde206f1d4a48f39fdbc",
+    "godot/tests/parking_pilot_check.gd": "029d8850a5b512858d179462a511143af0e4a2f6953e31bfd89e18cb2b3c8106",
+    "godot/tests/parking_state_check.gd": "3f72edd4293870b07bba7fb805d2d797872eef35742c970886b3790c6ebca2f0",
+    "tools/build_parking_pilot.py": "b72b5292f77b5695bb2b452b547f021f01f96dc0274ac684a41d3eabec65c647",
+    "tools/validate_parking_pilot.py": "bc9dd03f04032f86053a49cb624ba65bffbaffe0675fb1905fe34f86a5a1f627",
+    "tools/blender/build_drive_pilot.py": "ac6d695c934105e17dec2ebaff3f75f2f0ba584985a3500369c2d7190ae18f2b",
+    "tools/sync_drive_local.py": "3947b29e87f825e776a728244f26dd6a7a33959c8f4d6f74c2ebdeb42eef3f0b",
+    "tests/test_parking_pilot.py": "a562991b0063ad7f23bec12945e870962e87dfa289e4cf2ae94b0d63f87debc5"
+  },
+  "geometry": {
+    "parking": {
+      "status": "synthetic_technical_stop_not_PV01",
+      "center_m": [
+        -46.04870737166061,
+        7.0619605917112285,
+        -239.5739502714456
+      ],
+      "forward": [
+        0.8967928870007376,
+        0.0,
+        -0.44245058235342205
+      ],
+      "width_m": 4.5,
+      "length_m": 8.0,
+      "level_m": 7.0619605917112285,
+      "design_start_station_m": 550.0,
+      "flat_from_station_m": 582.0,
+      "apron_width_m": 8.0,
+      "hold_s": 1.5,
+      "surveyed_dimensions": false,
+      "pedestrian_connection_verified": false
+    },
+    "changed_chunks": 2,
+    "max_additional_cut_fill_m": 1.9641059199171318,
+    "max_seam_error_m": 0.0,
+    "pilot_inputs_sha256": {
+      "pilot_manifest.json": "1b6931ca9807f10975cc074250636161ec73166f2bc70b4be68f9d1c367c0f1a",
+      "pilot_road.json": "14708a8f91d165fb9b4dc0c2fc3357aeb7e909ec5b48778ab440f91dfb4fafbb"
+    },
+    "max_profile_change_m": 1.8822316321118855
+  },
+  "full_validation": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "drive_regressions",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 119.141
+      },
+      {
+        "name": "generate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.843
+      },
+      {
+        "name": "regenerate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.844
+      },
+      {
+        "name": "parking_rules",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.172
+      },
+      {
+        "name": "parking_headless",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 11.016
+      },
+      {
+        "name": "parking_render",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 47.843
+      },
+      {
+        "name": "parking_blender",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.813
+      }
+    ],
+    "deterministic_files": {
+      "parking_road.json": "3bf28ad61683af50de4cc4181d7fce71cf25e4e333a84c57553204a147f793af",
+      "parking_manifest.json": "4a6a48f6663a6fd5efa3af5f1dbf1b61454600e9d7205d3bd194627b1ff4e600"
+    },
+    "pilot_and_base_inputs_unchanged": true
+  },
+  "previous_drive_regressions": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "python",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.0
+      },
+      {
+        "name": "yaris_asset",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.765
+      },
+      {
+        "name": "gdparse",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.766
+      },
+      {
+        "name": "gdformat",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.14
+      },
+      {
+        "name": "gdlint",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.157
+      },
+      {
+        "name": "generate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 14.843
+      },
+      {
+        "name": "regenerate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 14.859
+      },
+      {
+        "name": "import",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 3.828
+      },
+      {
+        "name": "checkpoints",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.172
+      },
+      {
+        "name": "missing",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.359
+      },
+      {
+        "name": "reference",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.172
+      },
+      {
+        "name": "lab",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.922
+      },
+      {
+        "name": "valle",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.187
+      },
+      {
+        "name": "performance_60",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 6.11
+      },
+      {
+        "name": "performance_120",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 11.843
+      },
+      {
+        "name": "drive_headless",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 12.672
+      },
+      {
+        "name": "drive_render",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 46.391
+      },
+      {
+        "name": "blender",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.812
+      }
+    ],
+    "deterministic_files": {
+      "pilot_manifest.json": "1b6931ca9807f10975cc074250636161ec73166f2bc70b4be68f9d1c367c0f1a",
+      "pilot_road.json": "14708a8f91d165fb9b4dc0c2fc3357aeb7e909ec5b48778ab440f91dfb4fafbb"
+    },
+    "original_circuit_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6"
+  },
+  "parking_rules": {
+    "checks": 14,
+    "failures": []
+  },
+  "missing_data": {
+    "checks": 6,
+    "passed": true,
+    "scope": "Drive and parking scenes stay inactive with instructions"
+  },
+  "source_headless": {
+    "capture": false,
+    "checks": 917,
+    "chunks_loaded": 40,
+    "chunks_unloaded": 10,
+    "directional_checkpoints": 5,
+    "elapsed_s": 164.833333333348,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "max_lateral_error_m": 0.856179893016815,
+    "max_residents": 32,
+    "max_speed_kmh": 14.6898914337158,
+    "min_up_dot": 0.987938642501831,
+    "progress_m": 596.708249701513,
+    "recovery_and_incident_checks": 11,
+    "scope": "Declared 601m engineering trial; no verified real road or full journey",
+    "surface_ray_max_error_m": 6.4849853515625e-05,
+    "trial_length_m": 601.414489746094,
+    "trial_resets": 0,
+    "unsupported_frames": 0,
+    "valid_arrival": true,
+    "visual_animation_disabled_during_drive": false
+  },
+  "source_final_render": {
+    "capture": true,
+    "checks": 917,
+    "chunks_loaded": 40,
+    "chunks_unloaded": 10,
+    "directional_checkpoints": 5,
+    "elapsed_s": 164.833333333348,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "max_lateral_error_m": 0.856179893016815,
+    "max_residents": 32,
+    "max_speed_kmh": 14.6898914337158,
+    "min_up_dot": 0.987938642501831,
+    "progress_m": 596.708242963814,
+    "recovery_and_incident_checks": 11,
+    "scope": "Declared 601m engineering trial; no verified real road or full journey",
+    "surface_ray_max_error_m": 6.4849853515625e-05,
+    "trial_length_m": 601.414489746094,
+    "trial_resets": 0,
+    "unsupported_frames": 0,
+    "valid_arrival": true,
+    "visual_animation_disabled_during_drive": false
+  },
+  "windows_final_render": {
+    "capture": true,
+    "checks": 917,
+    "chunks_loaded": 40,
+    "chunks_unloaded": 10,
+    "directional_checkpoints": 5,
+    "elapsed_s": 164.833333333348,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "max_lateral_error_m": 0.856085479259491,
+    "max_residents": 32,
+    "max_speed_kmh": 14.6890966415405,
+    "min_up_dot": 0.987845301628113,
+    "progress_m": 596.705746733394,
+    "recovery_and_incident_checks": 11,
+    "scope": "Declared 601m engineering trial; no verified real road or full journey",
+    "surface_ray_max_error_m": 6.4849853515625e-05,
+    "trial_length_m": 601.414489746094,
+    "trial_resets": 0,
+    "unsupported_frames": 0,
+    "valid_arrival": true,
+    "visual_animation_disabled_during_drive": true
+  },
+  "blender": {
+    "blender": "4.5.3 LTS",
+    "road_triangles": 620,
+    "modified_2m_terrain_chunks": 7,
+    "mesh_validation_passed": true,
+    "parking_road_sha256": "3bf28ad61683af50de4cc4181d7fce71cf25e4e333a84c57553204a147f793af",
+    "scope": "geometry only; no approval of real road widths, grading or junctions",
+    "parking": {
+      "status": "synthetic_technical_stop_not_PV01",
+      "center_m": [
+        -46.04870737166061,
+        7.0619605917112285,
+        -239.5739502714456
+      ],
+      "forward": [
+        0.8967928870007376,
+        0.0,
+        -0.44245058235342205
+      ],
+      "width_m": 4.5,
+      "length_m": 8.0,
+      "level_m": 7.0619605917112285,
+      "design_start_station_m": 550.0,
+      "flat_from_station_m": 582.0,
+      "apron_width_m": 8.0,
+      "hold_s": 1.5,
+      "surveyed_dimensions": false,
+      "pedestrian_connection_verified": false
+    }
+  },
+  "python_tests": 95,
+  "test_scope": {
+    "marked_stop_collision_rays": 153,
+    "parking_specific_checks": 168,
+    "checks_after_driven_arrival_include_test_relocations": true,
+    "mass_and_COM_unchanged": true,
+    "vehicle_not_frozen": true,
+    "occupants_remain_aboard": true,
+    "full_village_visit_implemented": false
+  },
+  "final_visual_adjustment": "Reduced label size after visual review, then repeated complete physical rendered stop tests in source and Windows; full validation preceded this label-only adjustment.",
+  "windows_animation_scope": "Visual animation callbacks disabled during driven physics test, restored before final capture. Final QA uses a 1280x720 window without changing saved project settings; not an animation/FPS benchmark.",
+  "visual_review": "Both final captures inspected: readable HUD and small provisional-stop marker; Windows Hybrid, pirate rig and Bianca retained.",
+  "local_evidence_sha256": {
+    "parking_rules.log": "90acbcced667cc0e1f9679fb429e4944708f028b85b459ad816141f780e269f9",
+    "parking_headless.log": "a1a4ea2abe8c2bfc2b9600e374aaf51d051085e19ab0363ed373b85442a6447c",
+    "final_render.log": "1dfb08f5a2c667a121ee01caf577418b20becfdece00add08a7021d4622d5982",
+    "windows_final_render.log": "ec5be82da12a271940bb65418fa179f1eeedf4db93a8653d0c2aae4c1a45cb86",
+    "parking_blender.log": "48fe1d419f0c149ae1eb60433cef241653a24949f64fc972831817260f6d1586"
+  },
+  "source_arrival_png_sha256": "2ebfc105bfb43ed2f28561331ee50fe1be648cfa2582ab6af8c618976ae6458d",
+  "windows_arrival_png_sha256": "b3560db320020eace40de2f2e1b722f26610f3c00088c4b28a3a42f849eb15f8",
+  "limits": [
+    "Synthetic technical apron at the pilot finish, not PV-01 or an observed road.",
+    "No dismount, climbing, mass transfer, on-foot visit, remount or full-loop completion implemented.",
+    "No new road measurements, permissions or pedestrian connection claimed.",
+    "Private raster data, generated terrain, screenshots, native Blender files and Windows assets remain local."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "construction_drive_not_verified_real_road_maneuvers",
+  "reverse_beyond_junction_m": 15.0,
+  "endpoint_radius_m": 1.0,
+  "stop_speed_m_s": 0.05,
+  "stop_angular_speed_rad_s": 0.08,
+  "stop_up_dot": 0.9,
+  "stable_stop_s": 0.6,
+  "warning": "Backing out on the existing candidate surface. No turning pads or real road suitability asserted. Village visit remains separate."
+}

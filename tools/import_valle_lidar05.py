@@ -22,12 +22,12 @@ KNOWN_ARCHIVE_SHA256 = "bd715cd7c9b3820646f93f9e918cab1159950f47c2df5fc39e0218fc
 
 
 def read_grids(zip_path):
-    import numpy as np
     source = Path(zip_path)
     with source.open("rb") as fh:
         digest = hashlib.file_digest(fh, "sha256").hexdigest()
     if digest != KNOWN_ARCHIVE_SHA256:
         raise ValueError("Unknown LiDAR source ZIP: checksum changed; review its provenance first")
+    import numpy as np
     grids = {}
     with zipfile.ZipFile(source) as archive:
         wanted = {f"Ell_DTM_{code}.asc" for code in TILES}
@@ -105,14 +105,14 @@ def export_glb(path, terrain):
     cc = np.unique(np.r_[np.arange(0, 3440, 8), 3439])
     col, row = np.meshgrid(cc, rr)
     vertices = np.column_stack((
-        (375240 + .5 * col - 375920).ravel(),
+        (375240.25 + .5 * col - 375920).ravel(),
         (terrain[np.ix_(rr, cc)] - 720).ravel(),
-        (5112728 - (5113365 - .5 * row)).ravel(),
+        (5112728 - (5113364.75 - .5 * row)).ravel(),
     )).astype("float32")
     i = np.arange(vertices.shape[0]).reshape(row.shape)
     nw, ne = i[:-1, :-1].ravel(), i[:-1, 1:].ravel()
     sw, se = i[1:, :-1].ravel(), i[1:, 1:].ravel()
-    # Clockwise when seen from Godot +Y gives upward surface normals.
+    # glTF uses counter-clockwise fronts; trimesh normals point +Y.
     faces = np.vstack((np.column_stack((nw, sw, ne)),
                        np.column_stack((ne, sw, se))))
     trimesh.Trimesh(vertices=vertices, faces=faces, process=False).export(path)
