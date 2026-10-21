@@ -23,6 +23,7 @@ FILES = ['data/config/yaris_performance.json','tools/build_drive_pilot.py','test
          'godot/scripts/drive_pilot.gd','godot/scripts/drive_pilot.gd.uid','godot/scenes/drive_pilot.tscn',
          'godot/tests/yaris_performance_check.gd','godot/tests/yaris_performance_check.gd.uid',
          'godot/tests/drive_pilot_check.gd','godot/tests/drive_pilot_check.gd.uid',
+         'godot/tests/drive_missing_check.gd','godot/tests/drive_missing_check.gd.uid',
          'docs/GUIDA_PILOTA.md','docs/YARIS_PRESTAZIONI.md']
 
 

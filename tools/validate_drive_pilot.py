@@ -55,7 +55,7 @@ def main():
         raise ValueError('Original circuit manifest changed')
     engine=[a.godot.resolve(),'--path',ROOT]
     run('import',engine+['--headless','--editor','--quit'])
-    for name,script in [('reference','reference_checks'),('lab','lab_yaris_check'),('valle','valle_check')]:
+    for name,script in [('missing','drive_missing_check'),('reference','reference_checks'),('lab','lab_yaris_check'),('valle','valle_check')]:
         run(name,engine+['--headless','--fixed-fps','120','--script','godot/tests/'+script+'.gd'])
     for hz in [60,120]:
         run('performance_'+str(hz),engine+['--headless','--fixed-fps',str(hz),'--script',
