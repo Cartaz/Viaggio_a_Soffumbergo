@@ -12,16 +12,17 @@
     "godot/scripts/vehicle_lab.gd": "01149257824c7de8c4c0c15005d90b1332f118d8909d7af2db42d7f0163d4c59",
     "godot/scripts/lab.gd": "a2034b59859cc8dcf5b619bfb50f605779a558ff8539dd303c43886340f2ab3d",
     "godot/scripts/circuit.gd": "529b41471bbed76497c2935ad83199cbf814690c4068a37604d203d758886be7",
-    "godot/scripts/drive_pilot.gd": "3d2d15d684ce0ea0eac607fa732e49e79f2ddd68a0cc89b125dfc6ceea8981c5",
+    "godot/scripts/drive_pilot.gd": "7481c68e43db6b7a9c42760f73d5959a0a71d17eb033030273dfdf1089b91ec4",
     "godot/scenes/drive_pilot.tscn": "2a09363e012c184e17e17f95be2cb2088945c50343bc7505a2b6e5849b02ab27",
     "godot/tests/lab_yaris_check.gd": "8d8bf101d86a0754067274f21fc0905202720cbad8c47a44da0a20cc4b9c6c0a",
     "godot/tests/yaris_performance_check.gd": "ce5fd181d3cf4ecd909fad1354cf7ae47ec2c4f6117f68fee51c1cae79d81278",
     "godot/tests/drive_pilot_check.gd": "4318364c724bfe530fae70465490a0f071d489dda70f56701294782fdf47fbd8",
     "tools/build_drive_pilot.py": "e65c28bc613de7083e2ec5b777928a4e8ed38fd678db616dee2d6120cbe657eb",
     "tests/test_drive_pilot.py": "cddb4c6b20b0497be31e8551bd7c04fe23d20a7af58bba45d787fdd47fe89ac1",
-    "tools/sync_drive_local.py": "fb854e43dfa52b356c354dd26f7263432ede7d1ef4cad7b3f966948a1dc9250c",
-    "tools/validate_drive_pilot.py": "b8828773bd767079941f1905f23b83bf9e9221d5d979f505e7dc17f7f1e53bed",
-    "tools/blender/build_drive_pilot.py": "eff0648c5584492adf5d133afe071a6da888940ba7b7250ce8d97b3af2676064"
+    "tools/sync_drive_local.py": "2222d9fcbd50b2d52cecaaf2223af2946e2bd9b808fdf720947af669630724b6",
+    "tools/validate_drive_pilot.py": "979e496ce1cd6855de92359fadfc77858d6241f5f77996fc16753286186e8925",
+    "tools/blender/build_drive_pilot.py": "eff0648c5584492adf5d133afe071a6da888940ba7b7250ce8d97b3af2676064",
+    "godot/tests/drive_missing_check.gd": "7675b64028994eba2ce54c5509e5413d9ed5024d52864d79893c5a77f7308129"
   },
   "official": {
     "system_power_w": 85000,
@@ -60,97 +61,103 @@
         "name": "python",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.015
+        "seconds": 1.047
       },
       {
         "name": "yaris_asset",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 0.813
+        "seconds": 0.75
       },
       {
         "name": "gdparse",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 0.797
+        "seconds": 0.687
       },
       {
         "name": "gdformat",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.046
+        "seconds": 1.031
       },
       {
         "name": "gdlint",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.11
+        "seconds": 1.016
       },
       {
         "name": "generate",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 16.032
+        "seconds": 15.156
       },
       {
         "name": "regenerate",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 15.563
+        "seconds": 15.125
       },
       {
         "name": "import",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 3.922
+        "seconds": 3.453
+      },
+      {
+        "name": "missing",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.266
       },
       {
         "name": "reference",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 0.172
+        "seconds": 0.187
       },
       {
         "name": "lab",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 0.922
+        "seconds": 0.906
       },
       {
         "name": "valle",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.187
+        "seconds": 1.11
       },
       {
         "name": "performance_60",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 6.094
+        "seconds": 5.718
       },
       {
         "name": "performance_120",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 11.844
+        "seconds": 11.094
       },
       {
         "name": "drive_headless",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 11.093
+        "seconds": 10.547
       },
       {
         "name": "drive_render",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 45.657
+        "seconds": 45.609
       },
       {
         "name": "blender",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 4.765
+        "seconds": 0.86
       }
     ],
     "deterministic_files": {
@@ -278,7 +285,7 @@
     "checks": 642,
     "engine": "4.5.1-stable (official)",
     "failures": [],
-    "load_ms": 839,
+    "load_ms": 795,
     "missing_data_mode": false,
     "render_capture": false,
     "renderer": "",
@@ -434,29 +441,38 @@
       "drive_local_regression.log": "1e09c151bc3c344072c54d67dbd85f29cd9ba97e190c11f282a17f45a23e7003",
       "yaris_local_120.log": "e7afd6c5799a8de9fbd87a6d0ceebc3aeffe5f9391f2d9856327d014aa5cc4aa",
       "drive_local_render.log": "ae52866e8aa530d07504f518acc48113eb0f4d60811a3794e23f435bf04934d1",
+      "drive_local_startup.log": "2bedada3a0d2d26a7fc295376ae404570a9fb388b3c2fc2ef490b48da50f2f99",
+      "drive_local_missing.log": "4087d599a5d15c11e14c367db4627fc4b5be49836567e28fa4a53286ec450a25",
       "vehicle_before_local.log": "faeeed7c6db4291d4c82d7c3dd9ff0dfb67e7a408de798f6a79facc6835c19cf"
     },
-    "capture_sha256": "040d507569207b4084f20c33826957d37f3c0a40db0c7fbb9cc91c7f69541078"
+    "capture_sha256": "040d507569207b4084f20c33826957d37f3c0a40db0c7fbb9cc91c7f69541078",
+    "startup_with_local_data": true,
+    "missing_data": {
+      "checks": 3,
+      "passed": true,
+      "scope": "Missing local road data"
+    }
   },
   "log_sha256": {
     "blender.log": "59a0bca0b9e93ad6f4886c7b1a52b99d45b8a44f22d1052133b413ec5a841171",
     "drive_headless.log": "07713e7fea882a2e050fb313fb943a3255570d2b414c3e2245393cccd2778dfb",
     "drive_render.log": "3beede11ee723bd2eaf0f6d7c06d25fc9b12069fd0dbb7b4433f252284cd2713",
-    "gdformat.log": "224d43cf757523123506cc8b3eca22b2e84ad890f14e5868dba520e682b7fbe4",
+    "gdformat.log": "a9d553340bdb7a3037d0157b32f00c7b033d29be43576bcc6aedd74d5321b176",
     "gdlint.log": "098424cb171ea105b5f32277ddcb3b139ff90d7f943970e0e55a7268d9468b1e",
     "gdparse.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "generate.log": "1aec55f4474ae8f34c82d404714280e7a38d5459f0345df9e152ca6036729561",
-    "import.log": "0eeb5a42ca8fcbfedc8054d97a028e00fed7ef7b5e8985e37c550ceee3cb4fe1",
+    "import.log": "8aef9f32befaca8b8607a436af926a2937beffcc6f8466f01007ec71e923c767",
     "lab.log": "4eff8ab47eee18fa7cc9083c136df2118a29273e6618138e157244f3f35841e4",
+    "missing.log": "4087d599a5d15c11e14c367db4627fc4b5be49836567e28fa4a53286ec450a25",
     "performance_120.log": "795bd547640dc782a6bc500a610d669432e5cb629f9ad7bd33927557e41dc9a8",
     "performance_60.log": "f6df1e130d0e2398c30c0cb415c0caeb800ac95c8a61731846bfff520feb9a20",
-    "python.log": "0487c3e2fbaec36d9726e6ab970bda890f3aea4c005a95bc07b606abf5e2d217",
+    "python.log": "e48188c985d6704503ea386a1e8eaec98c34ee443134033b74cf982771b07725",
     "reference.log": "8c0a764215ceed26a27c7bbe70ebe8eba2125d8157be5d173a88bd671367fa81",
     "regenerate.log": "1aec55f4474ae8f34c82d404714280e7a38d5459f0345df9e152ca6036729561",
-    "valle.log": "4bc492b0d5876690564cc0f4ffd0724d057d0c206d1a398cfeb797f549e584e1",
+    "valle.log": "49b6736dbc6dd35cede2f254af30cf28b6861f28f9be65dbfda7ba35f2477c67",
     "yaris_asset.log": "50db369e2c5eef9b501eed39a7925a32d960274a3898d6e2b55d04d9ec244878"
   },
-  "capture_sha256": "3790938ec39aedf8cddd89558fd82bbbbbd1aaf5970465ff37a313a15c9246ef",
+  "capture_sha256": "3497f1e89172484fb73a73b9515b8c0614ac18a3fa12cf5b38e3ec0bf7cdb983",
   "original_rasters_committed": false,
   "terrain_and_road_derivatives_committed": false,
   "limits": [
@@ -466,5 +482,13 @@
     "601m engineering trial has assumed width/crossfall and up to about 4m terrain grading; real asphalt/junctions unverified",
     "Windows final rendered physics run disables occupant animation during driving, re-enables it before capture; prior full animation run recorded separately",
     "No representative FPS, whole driven loop, definitive parking or walking visit acceptance"
-  ]
+  ],
+  "ci_code_commit": "c9cc60cf883def0e9b25db0410ff1ff66cad4fbe",
+  "ci_workflow_run_url": "https://github.com/Cartaz/Viaggio_a_Soffumbergo/actions/runs/39550805780",
+  "ci_conclusion": "success",
+  "missing_data": {
+    "checks": 3,
+    "passed": true,
+    "scope": "Missing local road data"
+  }
 }
