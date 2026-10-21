@@ -12,6 +12,7 @@ var camera_mode := CameraMode.VEHICLE
 var camera_snap := true
 var doors_open := false
 var hatch_open := false
+var recovery_message := ""
 
 
 func _ready() -> void:
@@ -65,6 +66,9 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if absf(vehicle.position.x) > 85 or absf(vehicle.position.z) > 85 or vehicle.position.y < -4:
+		vehicle.reset_requested = true
+		recovery_message = "Fine del piazzale: prova ripristinata. Prestazioni: banco dedicato."
 	vehicle.throttle = (
 		Input.get_action_strength("accelerate") - Input.get_action_strength("reverse")
 	)
@@ -87,18 +91,19 @@ func _process(delta: float) -> void:
 			+ "Camera: %s · Velocità %.1f km/h · Contatti %d/4 · Passo %d Hz\n"
 			+ "Carichi FL/FR/RL/RR: %.0f / %.0f / %.0f / %.0f N\n"
 			+ "Modello da scolpire; albero, occupanti e masse provvisori.\n"
-			+ "CSV: user://telemetry · Prova invalidata: %s"
+			+ "CSV: user://telemetry · Prova invalidata: %s\n%s"
 		)
 		% [
 			CAMERA_LABELS[camera_mode],
-			vehicle.linear_velocity.length() * 3.6,
+			vehicle.road_speed_m_s() * 3.6,
 			vehicle.diagnostic_contact_count,
 			Engine.physics_ticks_per_second,
 			loads[0],
 			loads[1],
 			loads[2],
 			loads[3],
-			str(vehicle.invalidated)
+			str(vehicle.invalidated),
+			recovery_message
 		]
 	)
 
