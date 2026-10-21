@@ -1,5 +1,7 @@
 # Pratica sul circuito — 21 ottobre 2026
 
+Aggiornamento del 21 ottobre: i collaudi precedenti dei dieci tratti riguardano la superficie rialzata. Dopo il ribassamento sono verificati separatamente asfalto, collisioni e uscita/rientro con il modello finale completo; il nuovo giro continuo resta aperto. Vedere [raccordi e asfalto](RACCORDI_E_ASFALTO.md).
+
 La Yaris può essere guidata sulla superficie di costruzione dell'anello, in
 **dieci tratti di allenamento**. I cambi di tratto sono riposizionamenti espliciti;
 non equivalgono a superare i raccordi, le inversioni o a completare la gita.

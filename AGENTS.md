@@ -1,6 +1,14 @@
 # AGENTS.md — Viaggio a Soffumbergo / Coffa e tornanti
 
 ## Mandato operativo
+
+**Vincolo dell'utente del 21 ottobre 2026:** tutte le prove 3D da questo momento
+devono usare il modello finale locale: Yaris Hybrid rossa approvata, pennone/coffa
+pirata e i due topolini ispirati a Bianca e Bernie. Eseguire Godot nella copia
+`C:\Giochi\Sviluppo\Viaggio a Soffumbergo`, preservandone asset e impostazioni.
+Il proxy pubblico storico non costituisce più un collaudo del prodotto.
+`godot/tests/final_vehicle_guard.gd` blocca le nuove prove se manca l'insieme
+approvato. Non pubblicare i modelli privati per rendere eseguibile il proxy.
 Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere conferme per ogni attività ordinaria. Prima di intervenire leggi `README.md`, `docs/DECISIONI.md`, la fase pertinente di `docs/ROADMAP.md` e questo file; consulta `docs/PROGETTO.md` per le specifiche complete. Lavora per piccoli incrementi verificabili: ispeziona, implementa, prova, correggi, documenta e registra le modifiche. Non dichiarare completato ciò che è soltanto progettato.
 
 ## Vincoli inderogabili
@@ -11,6 +19,16 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 - Non copiare nella repository immagini Disney, screenshot non autorizzati o asset di terzi senza diritti di riuso; non scegliere unilateralmente una licenza o pubblicare release.
 
 ## Mappa dei contenuti (percorsi verificati)
+
+- **Asfalto e recupero fuori strada:** `docs/RACCORDI_E_ASFALTO.md`,
+  `tools/build_circuit_shoulders.py`, `tools/validate_circuit_shoulders.py`.
+  Raccordi separati sul layer 8, strada sul 4, terreno sull'1. Originali
+  invariati; le prove di uscita/rientro non certificano il bordo reale.
+- **Giro di costruzione:** `docs/GIRO_COSTRUZIONE.md`, scena
+  `circuit_loop.tscn`, `tools/build_circuit_loop.py` e relativo test Godot.
+  Manovre su superfici esistenti; il corpo rimane attivo ai cambi fase.
+  R invalida tutto, N ricomincia. Non dichiarare completata la visita del borgo
+  sulla base del solo giro su superficie di progetto.
 
 - **Pratica del circuito:** `docs/PRATICA_CIRCUITO.md`, scena
   `circuit_practice.tscn`, `tools/build_circuit_practice.py`,

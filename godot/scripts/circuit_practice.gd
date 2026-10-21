@@ -46,9 +46,10 @@ func _ready() -> void:
 		stream_error("Construction changed; regenerate practice data")
 		return
 	vehicle = Vehicle.new()
+	vehicle.visible = false
 	vehicle.freeze = true
-	vehicle.wheel_collision_mask = 5
-	vehicle.collision_mask = 7
+	vehicle.wheel_collision_mask = 13
+	vehicle.collision_mask = 15
 	vehicle.braking = 1
 	add_child(vehicle)
 	road_root.visible = false
@@ -125,6 +126,8 @@ func _gate_definitions() -> Array[Dictionary]:
 
 
 func _place_vehicle(distance: float) -> bool:
+	vehicle.visible = false
+	hud.text = "Caricamento della strada e delle collisioni..."
 	vehicle.freeze = true
 	vehicle.throttle = 0
 	vehicle.braking = 1
@@ -153,6 +156,7 @@ func _place_vehicle(distance: float) -> bool:
 	await get_tree().physics_frame
 	route.progress = distance
 	route.sample(vehicle.position, 12)
+	vehicle.visible = true
 	camera.position = vehicle.position + vehicle.basis.z * 8 + Vector3.UP * 5
 	camera.look_at(vehicle.position + Vector3.UP * 1.8)
 	return true

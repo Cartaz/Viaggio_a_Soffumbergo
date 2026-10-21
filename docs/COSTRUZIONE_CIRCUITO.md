@@ -25,7 +25,7 @@ F5 conserva il laboratorio e le impostazioni locali.
 | WASD, Q/E, Maiusc, mouse destro | Muove, alza/abbassa, accelera e orienta la camera |
 | 1, 2, F8 | Asse candidato, sagome OSM, dati del caricamento |
 
-Ambra = superficie progettata provvisoria. Rosso = punto da verificare. Le sagome
+Asfalto = superficie progettata provvisoria. Rosso = punto da verificare. Le sagome
 OSM sono segnaposto. Nessuna modifica ai rig, ai modelli approvati o agli otto
 esercizi della copia Windows. Questa scena non contiene l'auto: prima della guida
 dell'anello servono la revisione delle inversioni e dei raccordi ai bivi.
@@ -38,13 +38,15 @@ Modificare `data/config/circuit_construction.json`, poi eseguire dalla radice:
 python -m pip install -r requirements-dev.txt
 python tools/build_circuit_construction.py
 python tools/check_circuit_construction.py
+python tools/build_circuit_shoulders.py
+python tools/check_circuit_shoulders.py
 ```
 
 Richiede il corridoio già generato in `build/circuit/manifest.json`; la relativa
 procedura è in [CIRCUITO_3D.md](CIRCUITO_3D.md). Per il collaudo completo:
 
 ```powershell
-python tools/validate_circuit_construction.py --godot <Godot.exe> --blender <Blender.exe> --input-dir "C:\Giochi\Sviluppo\Viaggio a Soffumbergo\DTM Completi" --capture
+python tools/validate_circuit_construction.py --godot <Godot.exe> --project "C:\Giochi\Sviluppo\Viaggio a Soffumbergo" --blender <Blender.exe> --input-dir "C:\Giochi\Sviluppo\Viaggio a Soffumbergo\DTM Completi" --capture
 python tools/sync_circuit_construction_local.py --target "C:\Giochi\Sviluppo\Viaggio a Soffumbergo" --godot <Godot.exe>
 ```
 
@@ -56,9 +58,10 @@ Shapely 2.1.2 nell'interprete Python usato: il visualizzatore Godot non lo richi
 
 Parametri iniziali **non misurati sul posto**: larghezza 4,5 m, pendenza trasversale
 nulla, adattamento verticale con regressione locale su 12 m e rialzo 0,15 m,
-terreno 0,5 m sotto la quota di progetto, banchina 1 m e raccordo al DTM su 8 m.
-La sezione attuale non comprende una banchina stradale con collisione separata,
-drenaggi, barriere, muri di sostegno o bilanciamento reale dei materiali.
+terreno derivato 0,5 m sotto il primo profilo, banchina 1 m e raccordo al DTM su 8 m. Nell’incremento successivo l’asfalto è stato abbassato sulle facce di questo terreno, a 2 cm dal suolo; fascia esterna di recupero di 0,85 m per lato.
+Il successivo incremento [raccordi e asfalto](RACCORDI_E_ASFALTO.md) aggiunge una
+fascia con collisione separata che colma il salto fra questo terreno e la strada.
+Non comprende drenaggi, barriere, muri di sostegno o bilanciamento reale dei materiali.
 Nei nove passaggi angolari fra 60° e 150° viene unita una zona di raggio 4,25 m:
 è un allargamento per il prototipo, non la misura di un incrocio. Escluse le
 quattro inversioni; nessun piazzale di manovra viene creato automaticamente.

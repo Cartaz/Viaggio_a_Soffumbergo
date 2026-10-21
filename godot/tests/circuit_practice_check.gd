@@ -49,6 +49,15 @@ func run() -> void:
 		quit(1)
 		return
 	var car: LaboratoryVehicle = scene.vehicle
+	var final_vehicle := preload("res://godot/tests/final_vehicle_guard.gd").inspect(car)
+	check(
+		bool(final_vehicle.approved_assembly_loaded),
+		"Final Yaris, pirate rig, Bernie and Bianca required"
+	)
+	if not failures.is_empty() or physics_only:
+		push_error("Run in the approved local project with all animation callbacks active")
+		quit(1)
+		return
 	if physics_only:
 		car.set_process(false)
 		car.set_physics_process(false)
@@ -217,6 +226,7 @@ func run() -> void:
 		)
 	check(scene.stream_errors.is_empty(), "No missing/changed terrain or road files")
 	var report := {
+		"final_vehicle": final_vehicle,
 		"passed": failures.is_empty(),
 		"checks": checks,
 		"failures": failures,

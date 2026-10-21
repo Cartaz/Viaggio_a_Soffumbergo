@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "design_transition_not_surveyed_roadside",
+  "width_m": 0.85,
+  "vehicle_nominal_width_m": 1.745,
+  "mesh_max_edge_m": 2.83,
+  "geometry_precision_m": 0.0001,
+  "ground_cover_m": 0.001,
+  "warning": "Continuous recoverable road edge on the prototype. Width and shape are design assumptions; real slopes and obstacles require survey."
+}

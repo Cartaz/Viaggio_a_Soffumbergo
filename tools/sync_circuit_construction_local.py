@@ -25,6 +25,23 @@ FILES += ['data/geography/circuit_maneuver_review.json', 'tools/build_circuit_pr
           'godot/tests/practice_route_check.gd', 'godot/tests/practice_route_check.gd.uid',
           'docs/PRATICA_CIRCUITO.md', 'reports/PRATICA_CIRCUITO_VERIFICA.json',
           'build/circuit/practice.json']
+FILES += ['data/config/circuit_loop.json', 'data/config/circuit_shoulders.json',
+          'tools/build_circuit_loop.py', 'tools/coffa/loop_route.py', 'tools/coffa/maneuver_search.py',
+          'tools/build_circuit_shoulders.py', 'tools/check_circuit_shoulders.py',
+          'tools/coffa/road_shoulders.py', 'tools/validate_circuit_shoulders.py',
+          'tests/test_circuit_loop.py', 'tests/test_road_shoulders.py',
+          'godot/scripts/circuit_loop.gd', 'godot/scripts/circuit_loop.gd.uid',
+          'godot/scripts/construction_surface.gd', 'godot/scripts/construction_surface.gd.uid',
+          'godot/scenes/circuit_loop.tscn',
+          'godot/shaders/circuit_surface.gdshader', 'godot/shaders/circuit_surface.gdshader.uid',
+          'godot/tests/circuit_loop_check.gd', 'godot/tests/circuit_loop_check.gd.uid',
+          'godot/tests/circuit_shoulders_check.gd', 'godot/tests/circuit_shoulders_check.gd.uid',
+          'godot/tests/final_vehicle_guard.gd',
+          'godot/tests/final_vehicle_snapshot.gd',
+          'docs/GIRO_COSTRUZIONE.md', 'docs/RACCORDI_E_ASFALTO.md',
+          'reports/GIRO_COSTRUZIONE_VERIFICA.json', 'reports/RACCORDI_ASFALTO_VERIFICA.json',
+          'build/circuit/loop.json', 'build/circuit/shoulders.json',
+          'build/shoulder_validation/probes.json', 'build/shoulder_validation/recovery_route.json']
 
 
 def digest(path):
@@ -48,6 +65,14 @@ def sync(target, godot):
         if relative.is_absolute() or '..' in relative.parts or relative.parts[0] != 'datasets':
             raise ValueError('Unsafe derivative path')
         paths.append(str(Path('build/circuit')/relative))
+    shoulders = json.loads((ROOT/'build/circuit/shoulders.json').read_bytes())
+    if shoulders['construction_manifest_sha256'] != hashlib.sha256((ROOT/'build/circuit/construction_manifest.json').read_bytes()).hexdigest():
+        raise ValueError('Regenerate shoulders before sync')
+    for e in shoulders['sectors']:
+        relative = Path(e['path'])
+        if relative.is_absolute() or '..' in relative.parts or relative.parts[0] != 'datasets':
+            raise ValueError('Unsafe shoulder path')
+        paths.append(str(Path('build/circuit')/relative))
     changes = []
     for p in paths:
         src, dest = ROOT/p, target/p
@@ -60,7 +85,8 @@ def sync(target, godot):
             changes.append(p)
     launchers = {}
     for name, scene in [('Avvia costruzione circuito.cmd', 'circuit_construction'),
-                        ('Avvia pratica circuito.cmd', 'circuit_practice')]:
+                        ('Avvia pratica circuito.cmd', 'circuit_practice'),
+                        ('Avvia giro di costruzione.cmd', 'circuit_loop')]:
         launcher = target/name
         command = ('@echo off\r\n"'+str(godot)+'" --path "%~dp0." res://godot/scenes/'+scene+'.tscn\r\n').encode()
         if launcher.exists() and launcher.read_bytes() != command:

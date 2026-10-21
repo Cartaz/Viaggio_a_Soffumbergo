@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "status": "one_maneuver_verified_on_lowered_surface_other_maneuvers_and_full_lap_pending",
+  "construction_manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d",
+  "loop_manifest_sha256": "40df5d3cd2b9870451e14458fcf98e02189dbde697878901dde317de7f1a8c7a",
+  "source_sha256": {
+    "AGENTS.md": "f3090162c00d47f7c6dbef0cb45807b72ea83da0e61387583a36e0da534a8bd1",
+    "README.md": "69bb0950a1edb9a265c6dde6ffbe85bf741c10731dc7998c9f59846c73924352",
+    "docs/DECISIONI.md": "ebd127abca3dd8437e60eaa61785145e353af892afa058fbb5ff43913aba5044",
+    "docs/ROADMAP.md": "c85ee72337ea63052cc24a8a3e5d8bb20cbb5f181c6f15bdc9395ffb85c239ec",
+    "docs/ARCHITETTURA.md": "436db4c8c0e1df53e9cd7f2942e8895a85c59c99c8ec729c941cec3669b9943c",
+    "docs/COSTRUZIONE_CIRCUITO.md": "2a107012d21c124dcde2ed39970cc5f1feb96034a8dc701483ed5c1aa0a13173",
+    "docs/RACCORDI_E_ASFALTO.md": "471a0f6266c739e2c92972b8c226d9aacdfd80086b77966d548356c605ab2571",
+    "data/config/circuit_construction.json": "13664d2b30da4582cd8048421bf0f23446f39c05418d1df9494260a344ffc503",
+    "data/config/circuit_shoulders.json": "5634e5d477b52c2b01cd210d12ce746fa1e71c97789035d77bd045c6808cb9eb",
+    "tools/build_circuit_construction.py": "dfc5beed109dcd6ab665c49d3854ba3a46b5c9857753b304c40f1de80cd51abf",
+    "tools/check_circuit_construction.py": "8c7836ac1ad9a4f483b352cdb5c16de1a33d4f2852fb52d48d9ffe626c9fb829",
+    "tools/build_circuit_shoulders.py": "112b70740a17b51fbc7013aae534c3a1fdee353d2bb4674a391b1cccef9171b3",
+    "tools/check_circuit_shoulders.py": "7b6e4a44bd82ae861c4c3b8ff7f4c9728cf93f5e235396b5d771e4907e7c378b",
+    "tools/validate_circuit_shoulders.py": "108c965e20e80c41d28a85ac67d6e35c74723aa27ae42d240dce8d6e55421af3",
+    "tools/validate_circuit_construction.py": "5cdaf99f738b8752ad0ade6bcd14c202c563671033846df23bd06062eaaa42cb",
+    "tools/sync_circuit_construction_local.py": "76f78d411a6142e185dbd38f956e8fd8c4bbb66ef50cfd1ab0a63d0ac5d15035",
+    "tools/coffa/road_shoulders.py": "e83c286b6bddd3573f601d3e92a5e58af21cd083b02a8fb7634ae52569385b34",
+    "tools/coffa/road_construction.py": "131cb3cbf3b04c4645bf8ce148e4edca28f33218e6d12afc71f4c447f1d4ad30",
+    "tools/blender/build_circuit_construction.py": "6ab747edc80344ba4400c89834ef9517150dfb02748b3c5566faa5c46e4984bb",
+    "godot/scripts/circuit_construction.gd": "f3cd5a0edf4948cfc6870ba4723f60b9e28ffc1bb81c0ebb296fedfa67a0f61c",
+    "godot/scripts/circuit_practice.gd": "53f9bf781dac1d517f918a74049924955b3ed8bc3b3aa3c294f6f0b576443d24",
+    "godot/scripts/construction_surface.gd": "91997e19f88abd1a7cb7723626afe6db553e12c0a82142fd418f0c7bab4f36ae",
+    "godot/shaders/circuit_surface.gdshader": "356af288b6f2260290b2d17a6b4ca9a4b129a9738fc9afe8361028436624f4c6",
+    "godot/tests/circuit_shoulders_check.gd": "24f93c1e7daa9ec84fadad09f90aed17472b6d0121e21e83d30ea32059416602",
+    "godot/tests/final_vehicle_guard.gd": "581a03e377c3d54f5de0515a8b5cf8f66d7bc1a0ad03b9f667d5ea67559e950f",
+    "godot/tests/final_vehicle_snapshot.gd": "0944f38b3f23f949077d113e8a0b57410e12775ff487bde0a4a552ebd9af74f2",
+    "tests/test_road_shoulders.py": "693c77921c05afe05e9c5386385668941e252bbec9763a8ba4c8da519c8949d3",
+    "godot/scripts/circuit_loop.gd": "e1e12ccdf8b9eadebfde2e42847a815737b5ee416b045a08d304e6e4962ee6a0",
+    "godot/tests/circuit_loop_check.gd": "a22c9a30167d4ca955b93bb9c59f7baa7821de3359c0c838c7c5bb6313b9f399",
+    "tools/build_circuit_loop.py": "6f70d47483d5cf72ae85d0452fd2cebadec656a6d5ea538fa5aa30bec7bec2eb",
+    "tools/coffa/loop_route.py": "d3526e45415fc9b65cdc25bda129d2aabc26f180989fbc1b82cdf66e7d0ee15d",
+    "tools/coffa/maneuver_search.py": "29a3a35766f753bdcce33939e05454e21fa8af7de00eda32b9d95f48d6a41ba6",
+    "data/config/circuit_loop.json": "eb99f393f8a7e4a4bfb9f86ae732c088081a1217a2d1bec30863427db9a30720"
+  },
+  "final_model_m1": {
+    "case": 0,
+    "center_off_road_samples": 0,
+    "checks": 11,
+    "elapsed_s": 114.391672632657,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "final_vehicle": {
+      "approved_assembly_loaded": true,
+      "assets": {
+        "bernie.glb": {
+          "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+          "visible": true
+        },
+        "bianca.glb": {
+          "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+          "visible": true
+        },
+        "pirate_mast_coffa.glb": {
+          "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+          "visible": true
+        },
+        "yaris_hybrid_red_game.glb": {
+          "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+          "visible": true
+        }
+      },
+      "visual_physics_process_active": true,
+      "visual_process_active": true
+    },
+    "frozen_frames": 0,
+    "full_lap_driven": false,
+    "incident": "",
+    "journey_including_visit_complete": false,
+    "max_lateral_m": 1.18052899837494,
+    "max_residents": 32,
+    "min_up": 0.980228424072266,
+    "misses_by_phase": {},
+    "passed": true,
+    "phase": 4,
+    "physics_hz": 120,
+    "progress_m": 48.783378460356,
+    "real_maneuvers_verified": false,
+    "reference_length_m": 133.877125981283,
+    "relocations_during_drive": 0,
+    "renderer": "",
+    "reset_requested_frames": 0,
+    "resets_during_drive": 0,
+    "road_support_samples": 5720,
+    "transitions": [
+      {
+        "angular_speed_rad_s": 0.036560770124197,
+        "contacts": 4,
+        "expected_gates": 2,
+        "gates": 2,
+        "leg": 0,
+        "position": [
+          -3665.90991210938,
+          -505.450042724609,
+          411.486572265625
+        ],
+        "speed_m_s": 0.00197993102483451,
+        "stable_stop_s": 0.6,
+        "up": 0.999725103378296
+      },
+      {
+        "angular_speed_rad_s": 0.0308348070830107,
+        "contacts": 4,
+        "expected_gates": 1,
+        "gates": 1,
+        "leg": 1,
+        "position": [
+          -3643.68774414063,
+          -505.253845214844,
+          405.436309814453
+        ],
+        "speed_m_s": 0.0018287745770067,
+        "stable_stop_s": 0.6,
+        "up": 0.999765753746033
+      },
+      {
+        "angular_speed_rad_s": 0.0377569645643234,
+        "contacts": 4,
+        "expected_gates": 1,
+        "gates": 1,
+        "leg": 2,
+        "position": [
+          -3651.83569335938,
+          -505.428375244141,
+          416.825653076172
+        ],
+        "speed_m_s": 0.00205269153229892,
+        "stable_stop_s": 0.6,
+        "up": 0.999385476112366
+      },
+      {
+        "angular_speed_rad_s": 0.0294540207833052,
+        "contacts": 4,
+        "expected_gates": 1,
+        "gates": 1,
+        "leg": 3,
+        "position": [
+          -3651.08129882813,
+          -505.394287109375,
+          414.629669189453
+        ],
+        "speed_m_s": 0.00135582603979856,
+        "stable_stop_s": 0.6,
+        "up": 0.999008178710938
+      },
+      {
+        "angular_speed_rad_s": 0.0372610799968243,
+        "contacts": 4,
+        "expected_gates": 2,
+        "gates": 2,
+        "leg": 4,
+        "position": [
+          -3607.00390625,
+          -505.626922607422,
+          432.51318359375
+        ],
+        "speed_m_s": 0.00207035220228136,
+        "stable_stop_s": 0.6,
+        "up": 0.999591052532196
+      }
+    ],
+    "unsupported_frames": 0,
+    "wheel_off_road_samples": 0
+  },
+  "pending_maneuvers": [
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "full_lap_driven": false,
+  "journey_including_visit_complete": false,
+  "real_maneuvers_verified": false,
+  "earlier_proxy_tests_are_current_acceptance": false
+}

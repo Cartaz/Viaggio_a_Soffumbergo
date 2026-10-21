@@ -2,11 +2,22 @@
 
 ## Coffa e tornanti
 
+**Asfalto e raccordi al terreno:** la strada principale ha materiale asfalto e
+una raccordatura di 85 cm; l'asfalto è abbassato a 2 cm dal terreno derivato.
+Tutte le nuove prove usano Yaris finale, pennone/coffa e Bianca/Bernie locali.
+Prove fisiche su entrambi i lati, a 60/120 Hz, renderer e Blender.
+[Procedura e limiti](docs/RACCORDI_E_ASFALTO.md).
+
+**Giro di costruzione:** nuova scena sperimentale con manovre avanti/retro sulle
+superfici esistenti, checkpoint e arresti stabili, senza spostare l'auto tra le
+fasi. [Perimetro e collaudi](docs/GIRO_COSTRUZIONE.md). La gita con visita e la
+verifica delle strade reali rimangono aperte.
+
 **Terraforming e costruzione del circuito:** nuova scena di ispezione dell'intero
 candidato di circa 18,9 km, con superficie provvisoria, terreno sistemato a settori,
 collisioni e confronto con il DTM originale. Parametri modificabili e punti critici
 segnalati, comprese quattro inversioni ancora da verificare.
-[Avvio e limiti](docs/COSTRUZIONE_CIRCUITO.md). Non è ancora un giro guidato completo.
+[Avvio e limiti](docs/COSTRUZIONE_CIRCUITO.md). L'ispettore è distinto dalla scena di guida.
 
 **Pratica sull'anello:** dieci tratti guidabili sulla superficie di progetto,
 con checkpoint direzionali, arresto e recupero. Le inversioni rimangono separate

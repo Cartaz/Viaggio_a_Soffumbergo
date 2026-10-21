@@ -6,6 +6,27 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 
 **Terraforming del 21 ottobre:** [costruzione dell'intero candidato](COSTRUZIONE_CIRCUITO.md).
 
+**Raccordi e asfalto, 21 ottobre:** [procedura](RACCORDI_E_ASFALTO.md).
+
+- [x] Sostituire il materiale ambra della superficie principale con asfalto.
+- [x] Collegare i bordi al terreno con mesh e collisioni continue, mantenendo
+  originali, asse e strada invariati.
+- [x] Provare uscite su entrambi i lati e rientro con pedali e sterzo,
+  a 60/120 Hz, con renderer e Blender.
+- [ ] Confrontare i tratti uno per uno con Street View e aggiornare il progetto
+  distinguendo osservazioni, parametri di prova e verifiche mancanti.
+
+**Giro di costruzione:** [scena e perimetro](GIRO_COSTRUZIONE.md).
+
+- [x] Preparare riferimenti delle quattro manovre sulle superfici esistenti,
+  senza aggiungere piazzali e senza modificare la forza motrice.
+- [x] Verificare M1 sulla strada ribassata con l'assemblaggio finale,
+  cinque fasi, arresti stabili, recupero invalidante e nuovo tentativo.
+- [ ] Ricollaudare tutte le manovre sulla strada ribassata, esclusivamente
+  con Yaris finale, pennone/coffa e Bianca/Bernie.
+- [ ] Registrare un giro continuo con tutte le manovre, senza riposizionamenti.
+- [ ] Collegare il giro alla sosta e alla visita del borgo; verificare il fondo reale.
+
 - [x] Preparare una superficie di progetto sui circa 18,9 km conservando asse,
   tornanti, rami ripercorsi e quattro inversioni; non inventare piazzali di manovra.
 - [x] Generare scavi/riporti su derivati separati, parametri dichiarati, controllo

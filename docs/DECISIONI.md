@@ -1,5 +1,8 @@
 # Decisioni e vincoli
 
+**Direzione esplicita del 21 ottobre 2026:** tutte le prove 3D devono usare la Yaris finale approvata, il pennone/coffa e i due topolini ispirati a Bianca e Bernie. Il proxy pubblico resta storico. Asfalto ribassato e raccordatura larga al massimo metà veicolo: scelta 0,85 m per lato. I controlli geometrici completi sono separati dalla prova visibile per evitare attese poco chiare.
+
+
 **Richiesta del 21 ottobre 2026:** passare al terraforming e alla costruzione
 del circuito. Realizzata una variante di progetto dell'intero asse candidato,
 con parametri espliciti e confronto col DTM originale. Nessuna scorciatoia o

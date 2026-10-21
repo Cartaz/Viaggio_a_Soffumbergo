@@ -1,440 +1,366 @@
 {
   "schema_version": 1,
   "date": "2026-10-21",
-  "status": "passed_construction_workbench_not_approved_circuit",
+  "status": "passed_lowered_asphalt_and_narrow_shoulder_with_approved_final_assembly",
   "source_sha256": {
-    "AGENTS.md": "3bf2fa6f0ad67f07d1088d9102c17f2e29b61a71e0091fd091b8f74bea26322a",
-    "README.md": "b1edbae69096aefecf0bb4d47251c265fd5434b5aff3c4b0bd192cac2784924e",
-    "requirements-dev.txt": "95f532bd3da3ff8d2cedd4f4d69c43260b4b9752932bb5003661c2a1ba00cb00",
-    "docs/DECISIONI.md": "b9e29bbf5966f301200597233e99dbf77dd5604c61c96c7b6b5ee0429e4ac14c",
-    "docs/ROADMAP.md": "2ea1b18b858242eeb15da5fda7b2d61974b7fbb01be9cb458b9db950f4ba1eec",
-    "docs/ARCHITETTURA.md": "552fdbc6e0a6e0f0efd761e32f425a3d1c1b7b26d29d08fa21b051eaa4bd8578",
-    "docs/COSTRUZIONE_CIRCUITO.md": "31872cac66765680327807f1ceba7d4c861bb9ebe45a93dcd5d9e05a64a35287",
-    "data/config/circuit_construction.json": "4239c492cd9836f3d630ab747160921139343945555894fddfdf7b826fbcc24c",
+    "AGENTS.md": "f3090162c00d47f7c6dbef0cb45807b72ea83da0e61387583a36e0da534a8bd1",
+    "README.md": "69bb0950a1edb9a265c6dde6ffbe85bf741c10731dc7998c9f59846c73924352",
+    "docs/DECISIONI.md": "ebd127abca3dd8437e60eaa61785145e353af892afa058fbb5ff43913aba5044",
+    "docs/ROADMAP.md": "c85ee72337ea63052cc24a8a3e5d8bb20cbb5f181c6f15bdc9395ffb85c239ec",
+    "docs/ARCHITETTURA.md": "436db4c8c0e1df53e9cd7f2942e8895a85c59c99c8ec729c941cec3669b9943c",
+    "docs/COSTRUZIONE_CIRCUITO.md": "2a107012d21c124dcde2ed39970cc5f1feb96034a8dc701483ed5c1aa0a13173",
+    "docs/RACCORDI_E_ASFALTO.md": "471a0f6266c739e2c92972b8c226d9aacdfd80086b77966d548356c605ab2571",
+    "data/config/circuit_construction.json": "13664d2b30da4582cd8048421bf0f23446f39c05418d1df9494260a344ffc503",
+    "data/config/circuit_shoulders.json": "5634e5d477b52c2b01cd210d12ce746fa1e71c97789035d77bd045c6808cb9eb",
+    "tools/build_circuit_construction.py": "dfc5beed109dcd6ab665c49d3854ba3a46b5c9857753b304c40f1de80cd51abf",
+    "tools/check_circuit_construction.py": "8c7836ac1ad9a4f483b352cdb5c16de1a33d4f2852fb52d48d9ffe626c9fb829",
+    "tools/build_circuit_shoulders.py": "112b70740a17b51fbc7013aae534c3a1fdee353d2bb4674a391b1cccef9171b3",
+    "tools/check_circuit_shoulders.py": "7b6e4a44bd82ae861c4c3b8ff7f4c9728cf93f5e235396b5d771e4907e7c378b",
+    "tools/validate_circuit_shoulders.py": "108c965e20e80c41d28a85ac67d6e35c74723aa27ae42d240dce8d6e55421af3",
+    "tools/validate_circuit_construction.py": "5cdaf99f738b8752ad0ade6bcd14c202c563671033846df23bd06062eaaa42cb",
+    "tools/sync_circuit_construction_local.py": "76f78d411a6142e185dbd38f956e8fd8c4bbb66ef50cfd1ab0a63d0ac5d15035",
+    "tools/coffa/road_shoulders.py": "e83c286b6bddd3573f601d3e92a5e58af21cd083b02a8fb7634ae52569385b34",
     "tools/coffa/road_construction.py": "131cb3cbf3b04c4645bf8ce148e4edca28f33218e6d12afc71f4c447f1d4ad30",
-    "tools/build_circuit_construction.py": "5547c6d084ea3a6f93bec089773e377126eeb2f47e67d2e55d8f1bc97df0bfa2",
-    "tools/check_circuit_construction.py": "083a179d276dcfc26f7ebc6706a1c0df612a093a86eb87710a3506910c3c01af",
-    "tools/validate_circuit_construction.py": "18ec87f7c05c217d9d674dd32c2332be81b49ac3f9589405cc5e40e286ba4093",
-    "tools/sync_circuit_construction_local.py": "ed8fbaaed0131437f61534cea13b72bcb682c831249fb93b79c70da34993956a",
-    "tools/blender/build_circuit_construction.py": "af75287ea0b06feefab5ee3c0238504e0fe3e512a480dd8b783cf26acd126ba1",
-    "tests/test_road_construction.py": "8f744b345116d0542fcb7745fe78d530db847b25f2f3d260e9068c009825fc5f",
-    "godot/scripts/circuit_construction.gd": "70b220cb52d10b334f588452cef0f89906bbae4271ee0c9bb80971af3691ac8a",
-    "godot/scripts/circuit_construction.gd.uid": "55d5958ef9fffb2c1fe6bfa14d4046a8fdbbf5193e15cc86a9a41e339d0b2600",
-    "godot/scenes/circuit_construction.tscn": "80d3f3422d261533d4f38640c46f6b93187ba7f075d2d76ccd94fa11eb10b29a",
-    "godot/tests/circuit_construction_check.gd": "b129bd1ccc9b8d285f9bddac936e655bccc89737477110fa44b0b8124136d154",
-    "godot/tests/circuit_construction_check.gd.uid": "3e80cacd4128d4de1fe6183693d73c773f71dfcf6910403ddc4e21d9da189ac4"
+    "tools/blender/build_circuit_construction.py": "6ab747edc80344ba4400c89834ef9517150dfb02748b3c5566faa5c46e4984bb",
+    "godot/scripts/circuit_construction.gd": "f3cd5a0edf4948cfc6870ba4723f60b9e28ffc1bb81c0ebb296fedfa67a0f61c",
+    "godot/scripts/circuit_practice.gd": "53f9bf781dac1d517f918a74049924955b3ed8bc3b3aa3c294f6f0b576443d24",
+    "godot/scripts/construction_surface.gd": "91997e19f88abd1a7cb7723626afe6db553e12c0a82142fd418f0c7bab4f36ae",
+    "godot/shaders/circuit_surface.gdshader": "356af288b6f2260290b2d17a6b4ca9a4b129a9738fc9afe8361028436624f4c6",
+    "godot/tests/circuit_shoulders_check.gd": "24f93c1e7daa9ec84fadad09f90aed17472b6d0121e21e83d30ea32059416602",
+    "godot/tests/final_vehicle_guard.gd": "581a03e377c3d54f5de0515a8b5cf8f66d7bc1a0ad03b9f667d5ea67559e950f",
+    "godot/tests/final_vehicle_snapshot.gd": "0944f38b3f23f949077d113e8a0b57410e12775ff487bde0a4a552ebd9af74f2",
+    "tests/test_road_shoulders.py": "693c77921c05afe05e9c5386385668941e252bbec9763a8ba4c8da519c8949d3"
   },
-  "validation": {
+  "construction_manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d",
+  "shoulders_manifest_sha256": "a04bd41ee4e29358e4aa1cda6d05b96e5f3ecfcd180fdd67c956fb6f9641f45f",
+  "shoulder_width_each_side_m": 0.85,
+  "loaded_vehicle_nominal_width_m": 1.745,
+  "maximum_requested_shoulder_width_m": 0.8725,
+  "road_ground_clearance_m": 0.02,
+  "source_preservation": {
+    "raw_tiles_verified": 41,
+    "terrain_chunks_unchanged": 352,
+    "lowering_at_axis_points_m": {
+      "min": 0.43161883416172486,
+      "median": 0.4799843402641386,
+      "max": 0.5614486868806718
+    },
+    "original_manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6"
+  },
+  "road_generation_determinism": {
     "passed": true,
-    "steps": [
-      {
-        "name": "python",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 1.282
-      },
-      {
-        "name": "gdparse",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 1.14
-      },
-      {
-        "name": "gdformat",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 1.797
-      },
-      {
-        "name": "gdlint",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 1.828
-      },
-      {
-        "name": "generate",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 26.656
-      },
-      {
-        "name": "regenerate",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 26.141
-      },
-      {
-        "name": "geometry",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 4.532
-      },
-      {
-        "name": "yaris_asset",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 0.843
-      },
-      {
-        "name": "import",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 4.157
-      },
-      {
-        "name": "jolt",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 48.937
-      },
-      {
-        "name": "render",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 50.438
-      },
-      {
-        "name": "blender",
-        "exit_code": 0,
-        "engine_errors": false,
-        "seconds": 1.922
-      }
-    ],
-    "construction_manifest_sha256": "320c288e711111b0b02b721e17fa7836748f8cd90fd575bbdfcd22fc5241ab5e",
-    "immutable_inputs": {
-      "build\\circuit\\manifest.json": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
-      "build\\circuit\\pilot_manifest.json": "1b6931ca9807f10975cc074250636161ec73166f2bc70b4be68f9d1c367c0f1a",
-      "build\\circuit\\pilot_road.json": "14708a8f91d165fb9b4dc0c2fc3357aeb7e909ec5b48778ab440f91dfb4fafbb",
-      "build\\circuit\\parking_manifest.json": "4a6a48f6663a6fd5efa3af5f1dbf1b61454600e9d7205d3bd194627b1ff4e600",
-      "build\\circuit\\parking_road.json": "3bf28ad61683af50de4cc4181d7fce71cf25e4e333a84c57553204a147f793af"
-    },
-    "raw_tiles_checked_before_and_after": 41,
     "deterministic_files": 521,
-    "practice_requested": false,
-    "full_lap_driven": false
-  },
-  "generation": {
-    "schema_version": 1,
-    "status": "engineering_workbench_not_approved_circuit",
-    "build_id": "d6e665ed9dc9aceaf870",
-    "fingerprints": {
-      "data\\config\\circuit_construction.json": "4239c492cd9836f3d630ab747160921139343945555894fddfdf7b826fbcc24c",
-      "tools\\build_circuit_construction.py": "5547c6d084ea3a6f93bec089773e377126eeb2f47e67d2e55d8f1bc97df0bfa2",
-      "tools\\coffa\\road_construction.py": "131cb3cbf3b04c4645bf8ce148e4edca28f33218e6d12afc71f4c447f1d4ad30",
-      "original_manifest": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
-      "shapely_version": "2.1.2",
-      "geos_version": "3.13.1"
-    },
-    "config": {
-      "schema_version": 1,
-      "status": "engineering_parameters_not_surveyed_dimensions",
-      "width_m": 4.5,
-      "profile_radius_m": 12.0,
-      "surface_offset_m": 0.15,
-      "terrain_clearance_m": 0.5,
-      "shoulder_m": 1.0,
-      "blend_m": 8.0,
-      "mesh_max_edge_m": 3.0,
-      "grade_warning": 0.2,
-      "earthworks_review_m": 6.0,
-      "turn_warning_degrees": 60.0,
-      "corner_apron_radius_m": 4.25,
-      "corner_apron_min_degrees": 60.0,
-      "corner_apron_max_degrees": 150.0,
-      "footprint_simplify_m": 0.001,
-      "crossfall": "zero_design_assumption",
-      "junctions": "union_of_candidate_buffer_not_verified_junction_layout"
-    },
-    "source_manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
-    "route_length_horizontal_m": 18884.86189548234,
-    "route_length_3d_m": 18938.558051330347,
-    "design_area_m2": 83141.47510428354,
-    "graded_sectors": 196,
-    "road_sectors": 167,
-    "road_triangles": 152199,
-    "max_earthworks_delta_m": 8.740539999999953,
-    "approx_cut_m3": 162339.35993700003,
-    "approx_fill_m3": 60979.322888999974,
-    "volume_status": "2m_cell_average_estimate_not_quantity_survey",
-    "modified_cells": 114014,
-    "max_design_grade": 0.19932325672553583,
-    "max_center_delta_from_DTM_m": 2.611581437307734,
-    "exact_reversals": 4,
-    "corner_apron_count_in_route": 9,
-    "corner_apron_source_stations_m": [
-      63.63110173636068,
-      3543.048265191796,
-      3798.643900473318,
-      4190.174254789785,
-      7151.4558161001505,
-      7578.016282413569,
-      8441.218913650398,
-      17047.981228776185,
-      17088.99022861663
-    ],
-    "corner_apron_status": "engineering_widening_not_surveyed_geometry_no_reversal_aprons",
-    "issues": [
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "A",
-        "station_horizontal_m": 63.63110173636068,
-        "point_m": [
-          -3653.793629543623,
-          -504.9304489337934,
-          415.9955055033788
-        ],
-        "turn_degrees": 65.6096451010959,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "exact_reversal",
-        "sector": "A",
-        "station_horizontal_m": 76.93993959232584,
-        "point_m": [
-          -3666.257660087431,
-          -504.9675468835505,
-          411.3341173073277
-        ],
-        "turn_degrees": 179.99999914622634,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "A",
-        "station_horizontal_m": 3543.048265191796,
-        "point_m": [
-          -2434.2420915302355,
-          -541.5113656855035,
-          3097.4581418354064
-        ],
-        "turn_degrees": 89.32137776203508,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "exact_reversal",
-        "sector": "A",
-        "station_horizontal_m": 3670.846082832557,
-        "point_m": [
-          -2421.998465636745,
-          -534.5489815801913,
-          2970.2492219218984
-        ],
-        "turn_degrees": 180.0,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "A",
-        "station_horizontal_m": 3798.643900473318,
-        "point_m": [
-          -2434.2420915302355,
-          -541.5113656855035,
-          3097.4581418354064
-        ],
-        "turn_degrees": 87.13253460724232,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "B",
-        "station_horizontal_m": 4190.174254789785,
-        "point_m": [
-          -2086.7193593351403,
-          -543.1080571199207,
-          3265.9963692091405
-        ],
-        "turn_degrees": 69.08689022755347,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "C",
-        "station_horizontal_m": 7151.4558161001505,
-        "point_m": [
-          -195.80848440912087,
-          -312.68002419203094,
-          2264.4075990617275
-        ],
-        "turn_degrees": 88.63648313589978,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "C",
-        "station_horizontal_m": 7578.016282413569,
-        "point_m": [
-          81.38498431164771,
-          -265.8443306634942,
-          1994.310437218286
-        ],
-        "turn_degrees": 68.92765699503768,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "C",
-        "station_horizontal_m": 8441.218913650398,
-        "point_m": [
-          -456.5070068143541,
-          -177.64740987978863,
-          1454.5255263103172
-        ],
-        "turn_degrees": 79.74712147283782,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "exact_reversal",
-        "sector": "V",
-        "station_horizontal_m": 10892.019502475068,
-        "point_m": [
-          22.385757097334135,
-          5.288776330706938,
-          -10.201651398092508
-        ],
-        "turn_degrees": 179.99999879258172,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "E",
-        "station_horizontal_m": 17047.981228776185,
-        "point_m": [
-          -2570.3099410880823,
-          -461.7575163098204,
-          -1047.1178184654564
-        ],
-        "turn_degrees": 63.066883109303056,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "exact_reversal",
-        "sector": "F",
-        "station_horizontal_m": 17068.485728696407,
-        "point_m": [
-          -2590.2279857762624,
-          -462.6017901554818,
-          -1051.9867005525157
-        ],
-        "turn_degrees": 180.0,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "sharp_candidate_corner",
-        "sector": "F",
-        "station_horizontal_m": 17088.99022861663,
-        "point_m": [
-          -2570.3099410880823,
-          -461.7575163098204,
-          -1047.1178184654564
-        ],
-        "turn_degrees": 116.6741285169436,
-        "status": "requires_route_review_no_automatic_shortcut"
-      },
-      {
-        "kind": "large_earthworks_delta",
-        "terrain_sector": "-2048_-1408",
-        "point_m": [
-          -1924.0,
-          -397.71804,
-          -1342.0
-        ],
-        "delta_m": -8.740539999999953,
-        "status": "requires_earthworks_and_retaining_structure_review"
-      }
-    ],
-    "repeated_node_count": 225,
-    "max_unified_profile_spread_m": 0.32207105532108926,
-    "real_surface_verified": false,
-    "full_lap_driven": false,
-    "original_rasters_modified": false,
-    "terrain_original_modified": false
+    "construction_manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d"
   },
   "geometry": {
     "passed": true,
     "terrain_seams": 562,
     "terrain_height_and_normal_seam_error": 0,
     "road_seams": 191,
-    "road_triangles": 152199,
-    "road_plan_area_m2": 83141.47512164415,
-    "max_horizontal_mesh_edge_m": 2.9999877372488313,
+    "road_triangles": 83905,
+    "road_plan_area_m2": 83141.48245649,
+    "max_horizontal_mesh_edge_m": 2.8284271247461903,
     "road_reference_rays": 29877,
-    "min_sampled_road_terrain_clearance_m": 0.1073016068917525,
-    "min_mesh_vertex_and_centroid_clearance_m": 0.042157552315501334,
+    "min_sampled_road_terrain_clearance_m": 0.01999960689300906,
+    "min_mesh_vertex_and_centroid_clearance_m": 0.01999949999992623,
     "profile_points": 9959,
     "all_route_and_cross_section_samples_covered": true,
     "original_sectors": 352,
     "float32_local_road_fronts_verified": true
   },
-  "godot_headless": {
-    "capture": false,
-    "checks": 60097,
-    "chunks_loaded": 1497,
-    "chunks_unloaded": 1463,
-    "engine": "4.5.1-stable (official)",
-    "failures": [],
-    "full_lap_driven": false,
-    "max_ray_error_m": 0.0001220703125,
-    "max_residents": 36,
+  "shoulder_geometry": {
     "passed": true,
-    "renderer": "",
-    "road_rays": 29877,
-    "scope": "construction geometry and contacts; not a vehicle lap"
+    "sectors": 167,
+    "triangles": 141485,
+    "local_float32_fronts_verified": true,
+    "tile_seams": 191,
+    "minimum_vertex_and_centroid_ground_cover_m": -4.999999987376214e-07,
+    "reference_rays": 4820,
+    "recovery_source_station_range_m": [
+      1000.0,
+      1200.0
+    ]
   },
-  "godot_render": {
-    "capture": true,
-    "checks": 60097,
-    "chunks_loaded": 1497,
-    "chunks_unloaded": 1463,
-    "engine": "4.5.1-stable (official)",
-    "failures": [],
-    "full_lap_driven": false,
-    "max_ray_error_m": 0.0001220703125,
-    "max_residents": 36,
+  "gate": {
     "passed": true,
-    "renderer": "AMD Radeon RX 6800",
-    "road_rays": 29877,
-    "scope": "construction geometry and contacts; not a vehicle lap"
+    "steps": [
+      {
+        "name": "python",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "generate",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "regenerate",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "road_geometry",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "geometry",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "gdparse",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "gdformat",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "gdlint",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "sync_approved",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "headless120",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "headless60",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "snapshot_approved_model",
+        "exit_code": 0,
+        "engine_errors": false
+      },
+      {
+        "name": "blender",
+        "exit_code": 0,
+        "engine_errors": false
+      }
+    ],
+    "shoulders_manifest_sha256": "a04bd41ee4e29358e4aa1cda6d05b96e5f3ecfcd180fdd67c956fb6f9641f45f",
+    "approved_project_required": true,
+    "immutable_files_verified": 521,
+    "deterministic_files": 168,
+    "full_lap_driven": false,
+    "real_roadside_verified": false
+  },
+  "drives": {
+    "60": {
+      "checks": 69405,
+      "drive_start_wall_msec": 97263,
+      "elapsed_drive_s": 96.6666717082262,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "final_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "fixture": [
+        1000.0,
+        1200.0
+      ],
+      "frozen_or_reset_frames": 0,
+      "full_lap_driven": false,
+      "geometry_scan_skipped_for_visible_drive": false,
+      "max_ray_error_m": 0.0001220703125,
+      "max_residents": 33,
+      "max_signed_offset_m": 4.13105583190918,
+      "min_signed_offset_m": -4.13985538482666,
+      "min_up": 0.997708439826965,
+      "passed": true,
+      "physics_hz": 60,
+      "real_roadside_verified": false,
+      "relocations_during_drive": 0,
+      "renderer": "",
+      "resets_during_drive": 0,
+      "returned_and_stopped": true,
+      "road_rays": 29877,
+      "shoulder_rays": 4820,
+      "shoulder_wheel_hits": 518,
+      "unsupported_frames": 0
+    },
+    "120": {
+      "checks": 69405,
+      "drive_start_wall_msec": 98371,
+      "elapsed_drive_s": 96.3250050237402,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "final_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "fixture": [
+        1000.0,
+        1200.0
+      ],
+      "frozen_or_reset_frames": 0,
+      "full_lap_driven": false,
+      "geometry_scan_skipped_for_visible_drive": false,
+      "max_ray_error_m": 0.0001220703125,
+      "max_residents": 33,
+      "max_signed_offset_m": 4.13351154327393,
+      "min_signed_offset_m": -4.1393723487854,
+      "min_up": 0.997748911380768,
+      "passed": true,
+      "physics_hz": 120,
+      "real_roadside_verified": false,
+      "relocations_during_drive": 0,
+      "renderer": "",
+      "resets_during_drive": 0,
+      "returned_and_stopped": true,
+      "road_rays": 29877,
+      "shoulder_rays": 4820,
+      "shoulder_wheel_hits": 518,
+      "unsupported_frames": 0
+    },
+    "renderer": {
+      "checks": 10,
+      "drive_start_wall_msec": 2996,
+      "elapsed_drive_s": 96.3250050237402,
+      "engine": "4.5.1-stable (official)",
+      "failures": [],
+      "final_vehicle": {
+        "approved_assembly_loaded": true,
+        "assets": {
+          "bernie.glb": {
+            "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+            "visible": true
+          },
+          "bianca.glb": {
+            "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+            "visible": true
+          },
+          "pirate_mast_coffa.glb": {
+            "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+            "visible": true
+          },
+          "yaris_hybrid_red_game.glb": {
+            "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+            "visible": true
+          }
+        },
+        "visual_physics_process_active": true,
+        "visual_process_active": true
+      },
+      "fixture": [
+        1000.0,
+        1200.0
+      ],
+      "frozen_or_reset_frames": 0,
+      "full_lap_driven": false,
+      "geometry_scan_skipped_for_visible_drive": true,
+      "max_ray_error_m": 0.0,
+      "max_residents": 32,
+      "max_signed_offset_m": 4.13351154327393,
+      "min_signed_offset_m": -4.1391282081604,
+      "min_up": 0.997748970985413,
+      "passed": true,
+      "physics_hz": 120,
+      "real_roadside_verified": false,
+      "relocations_during_drive": 0,
+      "renderer": "AMD Radeon RX 6800",
+      "resets_during_drive": 0,
+      "returned_and_stopped": true,
+      "road_rays": 0,
+      "shoulder_rays": 0,
+      "shoulder_wheel_hits": 521,
+      "unsupported_frames": 0
+    }
+  },
+  "approved_model_snapshot": {
+    "approved_assembly_loaded": true,
+    "assets": {
+      "bernie.glb": {
+        "sha256": "9d34c351df9d1eeedcf5f79ad836f9fe36c489ea361c2a0a740f000894457326",
+        "visible": true
+      },
+      "bianca.glb": {
+        "sha256": "2dbbc7f686e94a02505ce21d61de83997aad671f9eef475d150274ec2e65f353",
+        "visible": true
+      },
+      "pirate_mast_coffa.glb": {
+        "sha256": "0797c89beb45a615785fa9ce196fe806039d7acf24cc06cbb9afdae7b3db9d04",
+        "visible": true
+      },
+      "yaris_hybrid_red_game.glb": {
+        "sha256": "d4a81446ac9920bdbf17c48550985dfe45a9814c07e175328c5971c357b99372",
+        "visible": true
+      }
+    },
+    "export_error": 0,
+    "passed": true,
+    "visual_physics_process_active": true,
+    "visual_process_active": true
   },
   "blender": {
     "passed": true,
     "blender_version": "4.5.3 LTS",
     "road_sectors": 167,
-    "road_triangles": 152199,
+    "road_triangles": 83905,
     "terrain_overview_sectors": 352,
-    "manifest_sha256": "320c288e711111b0b02b721e17fa7836748f8cd90fd575bbdfcd22fc5241ab5e",
+    "shoulder_sectors": 167,
+    "shoulder_triangles": 141485,
+    "approved_vehicle_snapshot_sha256": "7cbec1a949ee795497975ea0d9e3f4cd2fb76c0452b55a27df8fbf16162f841b",
+    "approved_assembly_objects": 448,
+    "manifest_sha256": "8937e2255cd8a1db7f3a8112912c778d0d5f98be49580c529b30a2c395f0231d",
     "scope": "native mesh and normals, not artistic approval or driven lap"
   },
-  "captures_inspected": [
-    "construction_project.png",
-    "construction_original.png",
-    "construction_overview.png"
-  ],
-  "scope": "Entire candidate engineering geometry, contacts, streaming and comparison. Not a vehicle lap, surveyed road, finished earthworks or artistic approval. Original raw rasters and local geographic derivatives excluded from Git.",
-  "post_sync_python_check": {
-    "tests": 105,
-    "passed": true,
-    "log": "build/practice_python_latest.log"
-  },
-  "windows_headless": {
-    "capture": false,
-    "checks": 60097,
-    "chunks_loaded": 1497,
-    "chunks_unloaded": 1463,
-    "engine": "4.5.1-stable (official)",
-    "failures": [],
-    "full_lap_driven": false,
-    "max_ray_error_m": 0.0001220703125,
-    "max_residents": 36,
-    "passed": true,
-    "renderer": "",
-    "road_rays": 29877,
-    "scope": "construction geometry and contacts; not a vehicle lap"
-  },
-  "windows_sync": {
-    "default_scene_changed": false,
-    "private_assets_changed": false,
-    "native_blender_copied": true,
-    "construction_launcher": "Avvia costruzione circuito.cmd",
-    "practice_launcher": "Avvia pratica circuito.cmd"
-  }
+  "python_tests": 114,
+  "original_rasters_published": false,
+  "private_assets_published": false,
+  "full_lap_driven": false,
+  "journey_including_visit_complete": false,
+  "real_roadside_verified": false,
+  "scope": "Final-model road contacts and two-sided exit/return on a 200 m fixture; whole journey remains open"
 }

@@ -2,6 +2,22 @@
 
 ## Costruzione del circuito
 
+`build_circuit_shoulders.py` aggiunge una fascia separata e rigenerabile dal
+bordo 3D delle mesh al terreno derivato. La triangolazione segue ogni faccia
+del terreno per evitare compenetrazioni; gli originali restano intatti.
+`construction_surface.gd` costruisce normali, materiale e collisioni locali:
+asfalto sul layer 4, raccordi sul layer 8. La Yaris della pratica e del giro usa
+la maschera ruote 13; confronto e scaricamento eliminano entrambi i derivati.
+`validate_circuit_shoulders.py` verifica geometria, recupero fisico, renderer e
+Blender. [Procedura](RACCORDI_E_ASFALTO.md).
+
+`build_circuit_loop.py`, `loop_route.py` e `maneuver_search.py` costruiscono un
+riferimento con cambi di verso sulle superfici esistenti. `circuit_loop.gd`
+avanza soltanto dopo arresti stabili e conserva l'invalidazione dell'intero
+tentativo. Il cambio fase non scrive posa, velocità o freeze. Recupero e nuovo
+tentativo sono riposizionamenti dichiarati; la visita non è conteggiata.
+[Ambito](GIRO_COSTRUZIONE.md).
+
 `coffa/road_construction.py` indicizza i segmenti, prepara il profilo ciclico e
 costruisce l'unione della fascia provvisoria con triangolazione vincolata Shapely.
 `build_circuit_construction.py` scrive una variante locale con scavi/riporti,

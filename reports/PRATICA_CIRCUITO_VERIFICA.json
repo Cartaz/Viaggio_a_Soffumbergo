@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-21",
-  "status": "passed_separate_practice_sections_not_a_continuous_lap",
+  "status": "historical_passed_on_previous_raised_surface",
   "source_sha256": {
     "AGENTS.md": "3bf2fa6f0ad67f07d1088d9102c17f2e29b61a71e0091fd091b8f74bea26322a",
     "README.md": "b1edbae69096aefecf0bb4d47251c265fd5434b5aff3c4b0bd192cac2784924e",
@@ -656,5 +656,9 @@
     "default_scene_changed": false,
     "private_assets_changed": false,
     "launcher": "Avvia pratica circuito.cmd"
-  }
+  },
+  "historical_status": "passed_separate_practice_sections_not_a_continuous_lap",
+  "historical_source_commit": "9f093aa7c0c1d7011f2024b0c12c7cf2699209e1",
+  "current_surface_revalidated_by_this_report": false,
+  "current_acceptance_report": "reports/RACCORDI_ASFALTO_VERIFICA.json"
 }

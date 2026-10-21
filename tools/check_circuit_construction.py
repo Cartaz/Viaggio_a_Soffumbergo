@@ -124,7 +124,8 @@ def main():
         ground = np.where(uv.sum(axis=1) <= 1, lo, hi)
         min_clearance = min(min_clearance, float((height-ground).min()))
         probes.append({'id':entry['id'], 'points_m':np.column_stack([q[:, 0], height, q[:, 1]]).tolist()})
-    assert min_clearance > .05, 'Terrain protrudes into design road'
+    threshold = stats['config']['road_ground_clearance_m']-.002 if stats['config'].get('road_fit_to_graded_ground') else .05
+    assert min_clearance > threshold, 'Terrain protrudes into design road'
     result = {'passed':True, 'terrain_seams':edges, 'terrain_height_and_normal_seam_error':0,
               'road_seams':road_seams, 'road_triangles':triangles, 'road_plan_area_m2':area,
               'max_horizontal_mesh_edge_m':max_mesh_edge, 'road_reference_rays':len(query),

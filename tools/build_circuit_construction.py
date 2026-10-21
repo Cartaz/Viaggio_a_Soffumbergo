@@ -15,6 +15,7 @@ from build_circuit_3d import encode, atomic_write
 from coffa.road_construction import (validate_config, design_profile, SegmentIndex,
                                      road_footprint, triangulate_surface)
 from coffa.dtm_mosaic import masked_lod_error
+from coffa.road_shoulders import conforming_triangles, terrain_height
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT/'data/config/circuit_construction.json'
@@ -32,7 +33,7 @@ def main():
     config = json.loads(CONFIG.read_bytes())
     validate_config(config)
     fingerprints = {str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
-                    for p in [CONFIG, Path(__file__), ROOT/'tools/coffa/road_construction.py']}
+                    for p in [CONFIG, Path(__file__), ROOT/'tools/coffa/road_construction.py', ROOT/'tools/coffa/road_shoulders.py']}
     fingerprints['original_manifest'] = digest(source_path)
     fingerprints['shapely_version'] = shapely.__version__
     fingerprints['geos_version'] = shapely.geos_version_string
@@ -149,8 +150,16 @@ def main():
             graded_entries += 1
         part = footprint.intersection(box(ox, oz, ox+128, oz+128))
         if not part.is_empty and part.area > 1e-8:
-            vertices, triangles = triangulate_surface(part, index, config['mesh_max_edge_m'], config['corner_apron_radius_m']+.01)
-            if triangles:
+            if config.get('road_fit_to_graded_ground'):
+                xz, faces = conforming_triangles(part, key, config['road_geometry_precision_m'])
+                height = terrain_height({key:d if entry['path'].startswith('datasets/construction_') else source}, xz[:, 0], xz[:, 1])
+                if not np.isfinite(height).all():
+                    raise ValueError('Road exceeds graded ground')
+                vertices = np.column_stack([xz[:, 0], np.round(height+config['road_ground_clearance_m'], 6), xz[:, 1]]).tolist()
+                triangles = faces.tolist()
+            else:
+                vertices, triangles = triangulate_surface(part, index, config['mesh_max_edge_m'], config['corner_apron_radius_m']+.01)
+            if len(triangles):
                 road = {'id':entry['id'], 'vertices_m':vertices, 'triangles':triangles,
                         'status':'engineering_surface_not_surveyed_asphalt'}
                 data = encode(road)
@@ -161,6 +170,13 @@ def main():
         if number % 35 == 0:
             print(f'Construction: {number+1}/{len(entries)} sectors', flush=True)
     issues = []
+    if config.get('road_fit_to_graded_ground'):
+        terrain = {tuple(e['offset_xz_m']):json.loads((folder/e['path']).read_bytes()) for e in entries.values()}
+        road_profile = profile.copy()
+        road_profile[:, 1] = terrain_height(terrain, profile[:, 0], profile[:, 2])+config['road_ground_clearance_m']
+        if not np.isfinite(road_profile).all():
+            raise ValueError('Uncovered road profile')
+        profile = road_profile
     sector_labels = [f['sector'] for f in manifest['route'] for _ in f['points_m'][:-1]]
     for i in np.where(angles >= config['turn_warning_degrees'])[0]:
         issues.append({'kind':'exact_reversal' if angles[i] > 179.99 else 'sharp_candidate_corner',

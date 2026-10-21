@@ -19,6 +19,7 @@ def sha(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--godot', type=Path, required=True)
+    parser.add_argument('--project', type=Path, required=True, help='Approved final-model local project')
     parser.add_argument('--blender', type=Path, required=True)
     parser.add_argument('--input-dir', type=Path, required=True)
     parser.add_argument('--capture', action='store_true')
@@ -68,31 +69,20 @@ def main():
     run('geometry', [sys.executable, 'tools/check_circuit_construction.py'])
     run('yaris_asset', [sys.executable, 'tools/check_yaris_asset.py'])
     godot = args.godot.resolve()
-    run('import', [godot, '--headless', '--path', ROOT, '--editor', '--import', '--quit'])
-    script = 'godot/tests/circuit_construction_check.gd'
-    run('jolt', [godot, '--headless', '--path', ROOT, '--script', script])
-    shutil.copyfile(output/'godot_report.json', output/'godot_headless_report.json')
+    project = args.project.resolve()
+    run('practice_generate', [sys.executable, 'tools/build_circuit_practice.py'])
+    run('loop_generate', [sys.executable, 'tools/build_circuit_loop.py'])
+    command = [sys.executable, 'tools/validate_circuit_shoulders.py', '--godot', godot,
+               '--project', project, '--blender', args.blender.resolve()]
     if args.capture:
-        run('render', [godot, '--path', ROOT, '--windowed', '--resolution', '1280x720', '--script', script, '--', '--capture'])
-        shutil.copyfile(output/'godot_report.json', output/'godot_render_report.json')
-    run('blender', [args.blender.resolve(), '--background', '--factory-startup', '--python', 'tools/blender/build_circuit_construction.py'])
+        command.append('--capture')
+    run('approved_surface_gate', command)
     if args.practice:
-        run('practice_generate', [sys.executable, 'tools/build_circuit_practice.py'])
-        practice_path = ROOT/'build/circuit/practice.json'
-        practice_digest = sha(practice_path)
-        run('practice_regenerate', [sys.executable, 'tools/build_circuit_practice.py'])
-        assert practice_digest == sha(practice_path), 'Practice generation is not deterministic'
-        run('practice_progress', [godot, '--headless', '--path', ROOT, '--script', 'godot/tests/practice_route_check.gd'])
         script = 'godot/tests/circuit_practice_check.gd'
-        run('practice_spawns', [godot, '--headless', '--path', ROOT, '--script', script, '--',
-                                '--all-sections', '--spawn-only', '--output=build/practice_validation/spawns_final'])
-        run('practice_full', [godot, '--headless', '--path', ROOT, '--script', script, '--',
+        run('practice_full', [godot, '--headless', '--path', project, '--script', script, '--',
                              '--all-sections', '--hz=120', '--output=build/practice_validation/full_final'])
-        run('practice_60', [godot, '--headless', '--path', ROOT, '--script', script, '--',
+        run('practice_60', [godot, '--headless', '--path', project, '--script', script, '--',
                            '--all-sections', '--tail=300', '--hz=60', '--output=build/practice_validation/tails_final_60'])
-        if args.capture:
-            run('practice_render', [godot, '--path', ROOT, '--windowed', '--resolution', '1280x720', '--script', script, '--',
-                                   '--section=4', '--tail=600', '--hz=120', '--capture', '--output=build/practice_validation/render_final'])
     assert before == {str(p.relative_to(ROOT)):sha(p) for p in immutable}, 'Original/pilot derivatives changed'
     for tile in catalog['tiles']:
         assert sha(args.input_dir/tile['filename']) == tile['sha256'], 'Original raster changed'

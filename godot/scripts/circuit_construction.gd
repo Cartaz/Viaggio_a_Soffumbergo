@@ -1,6 +1,11 @@
 extends "res://godot/scripts/circuit.gd"
 ## Engineering inspection scene. T compares immutable DTM with the graded variant.
 
+const Surface = preload("res://godot/scripts/construction_surface.gd")
+var shoulder_entries: Dictionary = {}
+var shoulder_residents: Dictionary = {}
+var asphalt := Surface.make_material(Color("303236"))
+var verge := Surface.make_material(Color("758968"), 20.0)
 var original_entries: Dictionary = {}
 var construction_entries: Dictionary = {}
 var construction: Dictionary = {}
@@ -33,6 +38,18 @@ func _ready() -> void:
 		original_entries[str(item.id)] = item
 	for item in construction.road_sectors:
 		road_entries[str(item.id)] = item
+	var shoulder_path := base_dir.path_join("shoulders.json")
+	if FileAccess.file_exists(shoulder_path):
+		var shoulders: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(shoulder_path))
+		if (
+			shoulders.get("construction_manifest_sha256")
+			!= FileAccess.get_sha256(base_dir.path_join("construction_manifest.json"))
+		):
+			ready_ok = false
+			stream_error("Construction changed: regenerate shoulders")
+			return
+		for item in shoulders.sectors:
+			shoulder_entries[str(item.id)] = item
 	add_child(issue_root)
 	for issue in construction.report.issues:
 		var label := Label3D.new()
@@ -59,61 +76,40 @@ func _ready() -> void:
 func load_next() -> void:
 	var id := "" if pending.is_empty() else pending[0]
 	super.load_next()
-	if original_mode or id.is_empty() or not residents.has(id) or not road_entries.has(id):
-		return
-	var item: Dictionary = road_entries[id]
-	var relative := str(item.path)
-	if not relative.begins_with("datasets/") or relative.contains(".."):
-		stream_error("Unsafe road path")
-		return
-	var path := base_dir.path_join(relative)
-	if not FileAccess.file_exists(path) or FileAccess.get_sha256(path) != str(item.sha256):
-		stream_error("Missing or changed road chunk " + id)
-		return
-	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
-	if not parsed is Dictionary or parsed.get("id") != id:
-		stream_error("Invalid construction road chunk " + id)
+	if original_mode or id.is_empty() or not residents.has(id):
 		return
 	var chunk: Node3D = residents[id]
-	var arrays := []
-	arrays.resize(Mesh.ARRAY_MAX)
-	var vertices := PackedVector3Array()
-	for point in parsed.vertices_m:
-		# Subtract the georeferenced offset while values are still doubles.
-		vertices.append(
-			Vector3(
-				float(point[0]) - chunk.position.x,
-				float(point[1]),
-				float(point[2]) - chunk.position.z
-			)
-		)
-	var indices := PackedInt32Array()
-	for triangle in parsed.triangles:
-		for index in triangle:
-			indices.append(int(index))
-	arrays[Mesh.ARRAY_VERTEX] = vertices
-	arrays[Mesh.ARRAY_INDEX] = indices
-	var mesh := ArrayMesh.new()
-	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
-	var visual := MeshInstance3D.new()
-	visual.mesh = mesh
-	# Amber distinguishes the design from verified pavement; no artistic asphalt claim.
-	var mat := material(Color("a27f45"))
-	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	visual.material_override = mat
-	chunk.add_child(visual)
-	var body := StaticBody3D.new()
-	body.collision_layer = 4
-	body.collision_mask = 0
-	var shape := CollisionShape3D.new()
-	shape.shape = mesh.create_trimesh_shape()
-	body.add_child(shape)
-	chunk.add_child(body)
-	road_residents[id] = body
+	if shoulder_entries.has(id):
+		var body := _load_surface(shoulder_entries[id], chunk, 8, verge)
+		if is_instance_valid(body):
+			shoulder_residents[id] = body
+	if road_entries.has(id):
+		var body := _load_surface(road_entries[id], chunk, 4, asphalt)
+		if is_instance_valid(body):
+			road_residents[id] = body
+
+
+func _load_surface(item: Dictionary, chunk: Node3D, layer: int, mat: Material) -> StaticBody3D:
+	var relative := str(item.path)
+	if not relative.begins_with("datasets/") or relative.contains(".."):
+		stream_error("Unsafe surface path")
+		return null
+	var path := base_dir.path_join(relative)
+	if not FileAccess.file_exists(path) or FileAccess.get_sha256(path) != str(item.sha256):
+		stream_error("Missing or changed surface chunk " + str(item.id))
+		return null
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
+	if not parsed is Dictionary or parsed.get("id") != item.id:
+		stream_error("Invalid construction surface chunk " + str(item.id))
+		return null
+	return Surface.build(parsed, chunk, layer, mat)
 
 
 func refresh_stream() -> void:
 	super.refresh_stream()
+	for id in shoulder_residents.keys():
+		if not residents.has(id):
+			shoulder_residents.erase(id)
 	for id in road_residents.keys():
 		if not residents.has(id):
 			road_residents.erase(id)
@@ -127,6 +123,7 @@ func toggle_original() -> void:
 		chunk.queue_free()
 	residents.clear()
 	road_residents.clear()
+	shoulder_residents.clear()
 	pending.clear()
 	entries = (
 		original_entries.duplicate(true) if original_mode else construction_entries.duplicate(true)
@@ -158,10 +155,10 @@ func _process(delta: float) -> void:
 			"COSTRUZIONE CIRCUITO | %s | %.1f km candidati\n"
 			% [state, float(construction.report.route_length_horizontal_m) / 1000]
 		)
-		+ "T: confronto terreno | F9: punto critico successivo | F1…F7: settori | M: anello\n"
+		+ "T: confronto terreno | F9: punto critico successivo | F1â€¦F7: settori | M: anello\n"
 		+ "WASD + Q/E: camera | Maiusc: veloce | destro: guarda | 1: asse  2: edifici\n"
 		+ (
-			"Ambra: base ipotetica %.1f m + raccordi di prova | Rosso: verifiche aperte"
+			"Asfalto di progetto %.1f m + raccordi al terreno | Rosso: verifiche aperte"
 			% float(construction.report.config.width_m)
 		)
 	)
