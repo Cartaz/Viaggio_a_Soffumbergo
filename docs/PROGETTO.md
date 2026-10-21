@@ -2,7 +2,7 @@
 
 ## Progetto di un’esperienza di guida ed esplorazione 3D fra Faedis e Soffumbergo
 
-Versione 2.0 — 19 ottobre 2026. Documento di progettazione, non prototipo già implementato. Integra la Trend senza optional, anatomia naturale dei topolini con soli occhi ingranditi, prolunghe meccaniche, fedeltà concentrata su Valle, parcheggio nel prato ed esplorazione a piedi.
+Versione 2.1 — 21 ottobre 2026. Documento di progettazione, non prototipo già implementato. Integra il realismo fiabesco confermato dall'utente, mantenendo Trend senza optional, anatomia naturale dei topolini con soli occhi ingranditi, prolunghe meccaniche, fedeltà concentrata su Valle, parcheggio nel prato ed esplorazione a piedi. Definisce il confronto Unreal 5.8 vs Godot, senza migrazione in questa fase.
 
 Un’auto piccola, due topolini grandi e un albero maestro decisamente fuori scala: una gita verso Soffumbergo diventa una prova di guida delicata, fra boschi, borghi e panorami friulani.
 
@@ -12,7 +12,7 @@ Un’auto piccola, due topolini grandi e un albero maestro decisamente fuori sca
 | --- | --- |
 | Piattaforme | Gioco nativo per PC Linux e Windows, offline, giocatore singolo |
 | Territorio | Circuito riconoscibile; Valle di Soffumbergo fedele nelle parti documentate, Faedis e le altre località più generiche |
-| Grafica | 3D dettagliato e cartoonesco, forme morbide, materiali curati, atmosfera accogliente |
+| Grafica | Realismo fiabesco: materiali PBR, ambienti dettagliati, luce cinematografica, pelo e tessuti credibili, atmosfera accogliente |
 | Veicolo | Toyota Yaris Hybrid MY 2022 Trend per il mercato italiano, rossa, senza optional aggiuntivi, proporzioni fedeli |
 | Modifica | Foro nel tetto, albero maestro e coffa occupata dalla passeggera |
 | Personaggi | Proporzioni da topo naturale come IMG_8548.webp; unica deformazione anatomica: occhi grandi ed espressivi come IMG_8549.png; lui guida, lei è sulla coffa in tenuta da picnic |
@@ -23,7 +23,7 @@ Un’auto piccola, due topolini grandi e un albero maestro decisamente fuori sca
 
 Durante la guida il giocatore controlla l’auto e la topolina reagisce autonomamente; non esiste un secondo comando per spostarne il peso. Durante la visita il giocatore controlla il topolino e la compagna lo segue. La visita è libera, senza limite di tempo. La sosta a Valle e il completamento dell’anello sono due traguardi distinti: raggiungere il paese non elimina la parte di ritorno richiesta all’inizio.
 
-**Criterio generale:** l’aspetto è da piccolo mondo illustrato; le conseguenze di sterzata, frenata, pendenza e massa devono essere comprensibili e coerenti. Non si promette una simulazione ingegneristica validata della Yaris modificata: mancano misure reali di quella configurazione immaginaria. Si realizza un modello fisico verificabile e dichiaratamente approssimato.
+**Criterio generale:** il realismo fiabesco unisce superfici e luce credibili a una gita fantastica; le conseguenze di sterzata, frenata, pendenza e massa devono essere comprensibili e coerenti. Non si promette una simulazione ingegneristica validata della Yaris modificata: mancano misure reali di quella configurazione immaginaria. Si realizza un modello fisico verificabile e dichiaratamente approssimato.
 
 ## 2. Perimetro della prima versione completa
 
@@ -80,7 +80,7 @@ La fedeltà è distribuita secondo la priorità esplicita dell’utente:
 
 | Zona | Fedeltà richiesta | Libertà di adattamento |
 | --- | --- | --- |
-| Valle e prato di sosta | Massima sulle parti documentate: esterni, viabilità, quote relative, chiesa, campanile, accessi e viste | Materiali e forme cartooneschi; non sostituire il paese con un borgo generico |
+| Valle e prato di sosta | Massima sulle parti documentate: esterni, viabilità, quote relative, chiesa, campanile, accessi e viste | Realismo fiabesco nella resa di materiali e luce; nessun borgo generico, Cervino o paesaggio alpino inventato |
 | Salita e discesa | Andamento riconoscibile, sequenza dei tornanti e alternanza bosco/aperture | Vegetazione e dettagli secondari semplificabili; correzioni stradali documentate |
 | Faedis, Campeglio e collegamenti | Coerenza geografica generale e atmosfera friulana | Edifici e arredi più generici, costruiti con moduli coerenti |
 
@@ -167,17 +167,19 @@ Prevedere almeno tre punti panoramici e alcune zone di sosta. Fermarsi a guardar
 
 ### 6.1 Linguaggio visivo
 
-Un piccolo mondo illustrato tridimensionale: volumi pieni, spigoli addolciti, vegetazione a masse leggibili, colori naturali semplificati e superfici con variazioni dipinte a mano. Animal Crossing è un riferimento per calore e leggibilità, non un insieme di asset o personaggi da copiare.
+**Realismo fiabesco**, confermato dall'utente e registrato il 21 ottobre 2026, sostituisce il precedente indirizzo cartoonesco. Geometrie e superfici credibili, ambiente dettagliato, pelo e tessuti leggibili convivono con occhi ingranditi, espressioni tenere e albero/coffa sulla Yaris. La coerenza riguarda auto, protagonisti e borgo insieme.
 
 La qualità deve emergere da composizione, luce, animazione e coerenza dei materiali. Una mesh con pochi poligoni non è una scelta stilistica sufficiente. Evitare sia l’aspetto da prototipo con coni e cubi, sia il contrasto fra un’auto fotorealistica e un paesaggio da giocattolo.
 
-Materiali: intonaco morbido, pietra leggibile senza rumore eccessivo, legno con venature larghe, stoffe opache, carrozzeria verniciata con riflessi controllati. La Yaris conserva le proporzioni; è il trattamento delle superfici a integrarla nel mondo.
+Materiali PBR: colore di base, rugosità, normali e metallicità coerenti con il materiale; vernice rossa con riflessi controllati, vetro, gomma, metalli, intonaco, pietra, asfalto e legno distinguibili. Variazioni, usura e dettagli rispettano scala e riferimenti. Pelo corto con volume e risposta alla luce credibili; abiti con trama, cuciture, spessore e pieghe compatibili con la locomozione quadrupede. La tecnica di pelo e tessuti va scelta e ridotta per distanza dopo il profiling, senza imporre simulazioni costose come requisito.
+
+L'immagine dell'utente nella conversazione «Confronto Godot Unreal» guida atmosfera, luce e qualità delle superfici: non è una fonte geografica, un riferimento Toyota sostitutivo o un'autorizzazione a copiare personaggi. Non trasferire il Cervino, lo scenario alpino inventato o le posture bipedi a Soffumbergo. Restano i riferimenti anatomici originali, la Yaris Hybrid Trend italiana MY 2022 rossa senza optional e i design originali ispirati esteticamente a Bianca e Bernie. L'immagine resta fuori dalla repository pubblica.
 
 ### 6.2 Palette e luce
 
 Proposta iniziale: pomeriggio di fine estate, cielo chiaro, sole caldo e ombre morbide. Verdi salvia e bosco, pietra calda, tetti terracotta, tocchi crema. Il rosso dell’auto è il punto focale. La tenuta da picnic usa colori che restano distinguibili sia dal rosso sia dalla vegetazione.
 
-Preferire illuminazione statica precalcolata per gran parte dell’ambiente, con luce e ombre dinamiche per auto, struttura e personaggi. Foschia atmosferica leggera per profondità e leggibilità del panorama. L’illuminazione definitiva si valuta su immagini reali del gioco, non soltanto su un render esterno.
+Luce cinematografica: esposizione controllata, sole e cielo coerenti, ombre morbide, riflessi leggibili e foschia leggera per profondità, senza nascondere strada o riferimenti del borgo. L'illuminazione precalcolata con contributi dinamici resta una possibile soluzione per Godot; nel confronto fra motori documentare e misurare ogni alternativa, senza presumere parità fra preset omonimi. L'illuminazione definitiva si valuta su immagini reali del gioco e in movimento, non soltanto su un render esterno.
 
 ### 6.3 Tre distanze di dettaglio
 
@@ -186,6 +188,10 @@ Preferire illuminazione statica precalcolata per gran parte dell’ambiente, con
 | Vicina alla strada | Muri, vegetazione, portoni, vasi, panchine, segnaletica, canali e giunti | Modellazione, materiali e collisioni accurati |
 | Intermedia | Cortili, pendii, filari e case secondarie | Moduli e istanze con variazioni controllate |
 | Panorama | Colli e pianura lontana | Silhouette, colore e profondità; geometria economica |
+
+### 6.4 Accettazione della vertical slice
+
+P3 deve mostrare arrivo, parcheggio, discesa, breve visita quadrupede con la compagna e rientro sulla coffa, con auto, ambiente, pelo e abiti rappresentativi. Servono viste comparabili dal prato verso il borgo, a tre quarti dell'auto e ravvicinate sui topolini; controllare materiali e luce anche durante guida e transizioni. Distinguere sempre parti osservate, stimate e provvisorie, compreso PV-01 ancora candidato. Criteri visivi, prove comuni ed evidenze richieste sono in [TEST_MOTORI.md](TEST_MOTORI.md). La definizione dei criteri non costituisce approvazione degli asset o completamento di P3.
 
 ## 7. Yaris: riproduzione e modifica piratesca
 
@@ -453,6 +459,10 @@ Godot documenta l’integrazione di Jolt nel motore e le sue differenze rispetto
 
 GDScript tipizzato per logica, UI, strumenti e prima implementazione fisica. Passare a codice nativo tramite GDExtension solo se il profiling dimostra un collo di bottiglia. Non introdurre un’estensione C++ preventivamente per quattro ruote e pochi corpi dinamici.
 
+### 15.1.1 Confronto proposto, nessuna migrazione
+
+Godot 4.5.1/Jolt rimane la base corrente. Unreal Engine 5.8 è il candidato richiesto per un test isolato: verificarne disponibilità e build esatta prima della prova; nessun aggiornamento o ripiego implicito su altre versioni. Usare lo stesso campione e gli stessi vincoli artistici/fisici secondo [TEST_MOTORI.md](TEST_MOTORI.md), annotando conversioni necessarie e limiti. Solo misure, immagini in gioco e costi di produzione possono fondare una successiva decisione sul motore; il realismo fiabesco da solo non decide il cambio. Questo incremento aggiorna la documentazione, senza convertire scene, codice, asset o pipeline.
+
 ### 15.2 Componenti
 
 | Componente | Responsabilità | Interfaccia principale |
@@ -516,7 +526,7 @@ Non si passa a una fase costosa se la precedente non supera il suo controllo. Og
 | 0. Riferimenti e sopralluogo | Fissare la polilinea dell’anello degli allegati; osservare salita e discesa in Street View; raccogliere riferimenti visivi della Trend MY22 confermata | Mappa, diario dei tratti osservati e delle lacune, raccolta riferimenti e scheda decisioni | Sequenza dei tornanti verificata; nessuna lacuna nascosta; riferimenti sufficienti per strada e auto |
 | 1. Laboratorio fisico | Piano, cerchio costante, rampa, dosso, frenata e masse alte primitive | Build con telemetria e parametri modificabili | Ribaltamento e recupero prodotti dalle forze, comportamento ripetibile entro tolleranze |
 | 2. Anello provvisorio | Terreno semplice e circuito interamente percorribile | Giro completo, checkpoint, incidente e ripartenza | Partenza, giro e arrivo funzionano; nessun buco stradale |
-| 3. Settore rappresentativo | Tratto di arrivo a Valle con curva, prato, accesso al borgo, Yaris, prolunghe e protagonisti | Campione con parcheggio e passaggio a piedi | Grafica, camera, anatomia, transizioni e guida convincenti insieme |
+| 3. Settore rappresentativo | Tratto di arrivo a Valle con curva, prato, accesso al borgo, Yaris, prolunghe e protagonisti | Vertical slice in realismo fiabesco con parcheggio e passaggio a quattro zampe | Materiali PBR, luce, pelo/tessuti, fedeltà, camera, anatomia, transizioni e guida verificati insieme; benchmark RX 6800 secondo TEST_MOTORI.md |
 | 4. Borgo ed esplorazione | Ricostruire gli esterni documentati di Valle e collegarli al prato; locomozione, compagna, interazioni e salvataggi | Visita del paese completa | Andata/ritorno a piedi e rientro in auto senza blocchi; fedeltà verificata per elemento |
 | 4b. Produzione circuito | Completare l’anello con priorità di dettaglio e fedeltà per zona | Circuito completo e coerente | Nessuna grande zona in stato di prototipo; Valle rimane il centro artistico |
 | 5. Rifinitura | Audio, tutorial, UI, risultati, accessibilità e comfort | Versione candidata completa | Un nuovo giocatore capisce obiettivo e segnali; nessuna modifica urgente alla meccanica |
@@ -541,6 +551,8 @@ Stima orientativa, non preventivo o promessa. Presuppone una persona già compet
 | Totale iniziale | 125–225 |
 
 Circa 25–45 settimane/persona a cinque giornate; con margine di rischio del 25–35%, ordine di grandezza **8–15 mesi a tempo pieno per una persona**, da ricalcolare dopo il settore campione. La visita a piedi aggiunge controller, animazioni, transizioni e verifiche. Le località più generiche riducono la produzione specifica lontano da Valle, ma non annullano quel lavoro aggiuntivo. È una stima di progetto, non un preventivo o una promessa. Competenze da acquisire e qualità artistica possono allungarla; strumenti IA non sostituiscono i collaudi.
+
+La stima precedente non è stata ricalibrata per il realismo fiabesco né include una migrazione a Unreal: aggiornare costi di asset, pelo/tessuti, illuminazione e ottimizzazione dopo la vertical slice e il test comparativo.
 
 Le voci più incerte sono qualità dei protagonisti, somiglianza dell’auto e stabilità del modello a masse mobili. Una bella schermata si può ottenere prima; non dimostra che un intero circuito sia finito o che la fisica funzioni.
 
@@ -580,6 +592,8 @@ Provare: traguardo anticipato, passaggio inverso, salto di checkpoint, scorciato
 ### 20.4 Prestazioni e piattaforme
 
 Misurare nella build esportata, dopo riscaldamento, su un giro intero e su scene peggiori ripetute. Registrare hardware, OS, driver, risoluzione, preset, versione motore e parametri fisici. Obiettivo iniziale sulla macchina di riferimento: frame time al 95° percentile entro 20 ms, al 99° entro 33,3 ms e media almeno 60 fps a 1080p nel preset concordato; documentare stalli isolati e caricamenti.
+
+Per P3 e il confronto Unreal 5.8 vs Godot applicare [TEST_MOTORI.md](TEST_MOTORI.md) su Ryzen 7 5700X3D, RX 6800 e 32 GB RAM, con materiali PBR, pelo, tessuti e ambiente rappresentativi. Il test del campione non sostituisce quello dell'anello completo. Questi sono obiettivi, non risultati misurati.
 
 Eseguire almeno tre giri consecutivi senza crescita anomala della memoria. Verificare avvio a rete disconnessa, assenza di dipendenze di sviluppo sul PC destinatario, input, audio, cambio risoluzione e salvataggio impostazioni. I test Linux e Windows devono avvenire su sistemi reali o ambienti effettivamente capaci di eseguire e visualizzare la build: esportare un file non equivale a collaudarlo.
 

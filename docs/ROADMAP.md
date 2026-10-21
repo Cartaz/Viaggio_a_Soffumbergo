@@ -2,6 +2,17 @@
 
 Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricostruzione Yaris eseguita in Blender. Una casella completata richiede una consegna o una prova ispezionabile. Il solo avvio headless non chiude le prove dinamiche o artistiche.
 
+## Direzione artistica e confronto motori — 21 ottobre 2026
+
+- [x] Registrare la conferma del realismo fiabesco e aggiornare i criteri P3; il precedente cartoonesco è superato.
+- [x] Definire il protocollo [Unreal 5.8 vs Godot](TEST_MOTORI.md), senza avviare una migrazione.
+- [ ] Verificare disponibilità e build esatta di Unreal 5.8 e fissare la versione Godot di confronto (base corrente 4.5.1/Jolt).
+- [ ] Preparare il campione equivalente nei due motori in una prova isolata, conservando sorgenti e laboratorio Godot.
+- [ ] Raccogliere immagini/video in gioco e misure su RX 6800 a 1080p, target 60 FPS, con preset e limiti dichiarati.
+- [ ] Valutare qualità, prestazioni, fisica, workflow e costi di conversione; un eventuale cambio di motore richiede una decisione separata.
+
+Sono completate soltanto decisione e specifica del test. Nessun benchmark o risultato Unreal è attestato.
+
 ## Incremento veicolo — 19 ottobre 2026
 
 - [x] Raccogliere fonti Toyota MY22 e distinguere le dotazioni italiane dai campioni fotografici di altri allestimenti.
@@ -73,13 +84,15 @@ Uscita: giro valido e incidente dimostrati sulla geometria provvisoria.
 
 ## P3 — Arrivo a Valle come campione completo
 
-- [ ] Modellare Yaris e protagonisti vicini alla qualità finale.
+- [ ] Modellare Yaris Hybrid Trend MY 2022 rossa senza optional, albero/coffa e protagonisti originali vicini alla qualità finale in realismo fiabesco.
+- [ ] Verificare anatomia naturale quadrupede, occhi ingranditi, pelo e tessuti; ispirazione estetica a Bianca e Bernie senza copie non autorizzate.
+- [ ] Validare materiali PBR, ambiente dettagliato e luce cinematografica in gioco alle distanze di guida e visita.
 - [ ] Realizzare albero, coffa, accessi e cinematismi.
-- [ ] Costruire prato, tratto stradale e collegamento al borgo.
+- [ ] Costruire prato candidato PV-01, tratto stradale e collegamento al borgo usando riscontri dichiarati; conservare chiesa, campanile e panorami reali, senza Cervino o scenario alpino inventato.
 - [ ] Mostrare parcheggio, portiera, pedana, discesa e risalita dalla coffa.
-- [ ] Verificare camera e prestazioni con il carico e i materiali rappresentativi.
+- [ ] Verificare camera e prestazioni con carico e materiali rappresentativi su RX 6800 a 1080p/60 FPS secondo [TEST_MOTORI.md](TEST_MOTORI.md); archiviare misure e limiti.
 
-Uscita: campione giocabile che dimostri insieme stile, guida e passaggio a piedi.
+Uscita: campione giocabile che dimostri insieme realismo fiabesco, fedeltà geografica, guida e passaggio a quattro zampe, con immagini/video e benchmark riproducibili. Il test comparativo non chiude P3 né autorizza da solo la migrazione.
 
 ## P4 — Valle esplorabile
 

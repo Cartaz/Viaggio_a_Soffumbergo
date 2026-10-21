@@ -1,12 +1,13 @@
 # Decisioni e vincoli
 
-Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i dettagli; questo elenco permette di controllare le richieste senza confonderle con ipotesi tecniche.
+Aggiornato il 21 ottobre 2026. Il progetto completo rimane il riferimento per i dettagli; questo elenco permette di controllare le richieste senza confonderle con ipotesi tecniche.
 
 ## Richieste confermate dall’utente
 
 | Tema | Decisione |
 | --- | --- |
 | Distribuzione | Nativa per Linux e Windows |
+| Direzione artistica | Realismo fiabesco, confermato dall'utente; supera il cartoonesco iniziale. Materiali PBR, ambienti dettagliati, luce cinematografica, pelo e tessuti credibili |
 | Percorso | Anello degli allegati, riconoscibile e adattabile |
 | Meta | Valle di Soffumbergo |
 | Fedeltà | Massima nel borgo; località secondarie più generiche |
@@ -21,6 +22,14 @@ Aggiornato il 19 ottobre 2026. Il progetto completo rimane il riferimento per i 
 | Comandi | Prolunghe meccaniche e appoggi adatti alle zampe |
 | Obiettivo originario | Completare l’anello senza ribaltarsi |
 | Repository | Repository creata dall’utente: Cartaz/Viaggio_a_Soffumbergo, pubblica; nessuna modifica alla visibilità |
+
+## Decisione artistica registrata il 21 ottobre 2026
+
+Fonte: conferma «realismo fiabesco» nella conversazione [Confronto Godot Unreal](chatgpt-conversation://6ad8f352-df20-83eb-893d-832cede2b84d), ripresa nella richiesta corrente. L'immagine `Gemini_Generated_Image_2whrds2whrds2whr.jpg` è stata osservata: riferimento privato per atmosfera, luce, dettaglio e contrasto fra Yaris rossa, legno della coffa, pelo e abiti. Non viene aggiunta alla repository pubblica né usata come texture.
+
+La decisione riguarda la resa dell'intera scena. Restano vincolanti Valle di Soffumbergo documentata (nessun Cervino o borgo alpino inventato), Yaris Hybrid Trend italiana MY 2022 rossa senza optional con foro, albero e coffa, topolini naturali quadrupedi con soli occhi ingranditi. L'auto illustrata non sostituisce i riferimenti Toyota; i personaggi bipedi dell'immagine non sostituiscono i riferimenti anatomici. Bianca e Bernie restano ispirazione estetica per design originali, senza riproduzioni non autorizzate.
+
+La vertical slice P3 deve dimostrare questa resa insieme a guida e visita. Si prepara il confronto **Unreal Engine 5.8 vs Godot**, senza migrare ora e senza attribuire vantaggi o FPS non misurati. Godot 4.5.1/Jolt resta la base corrente; la build esatta del candidato Unreal va verificata prima del test, senza sostituzioni di versione implicite. Target comune: Ryzen 7 5700X3D, RX 6800, 32 GB RAM, 1080p/60 FPS. Criteri, protocollo ed esiti ancora aperti in [TEST_MOTORI.md](TEST_MOTORI.md).
 
 ## Scelte progettuali proposte
 

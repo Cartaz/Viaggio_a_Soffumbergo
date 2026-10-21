@@ -2,7 +2,7 @@
 
 ## Coffa e tornanti
 
-Una gita 3D cartoonesca a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale e occhi grandi. La nuova direzione artistica si ispira a Bianca e Bernie Disney per colori, volti e accessori, senza antropomorfizzare la struttura corporea.
+Una gita 3D in **realismo fiabesco** a Valle di Soffumbergo: una Toyota Yaris Hybrid Trend MY 2022 rossa, un albero maestro con coffa e due topolini con anatomia naturale quadrupede e occhi grandi. Direzione confermata dall'utente e registrata il 21 ottobre 2026: materiali PBR, ambienti dettagliati, luce cinematografica, pelo e tessuti credibili, atmosfera accogliente. Bianca e Bernie ispirano palette, espressioni e accessori di personaggi originali, senza riproduzioni non autorizzate.
 
 **Stato: Yaris 0.1 guidabile nel laboratorio Godot 4.5.1.** Il modello è stato generato e renderizzato in Blender 4.5.3 LTS. Passano 28 test preparatori, i controlli dell'asset e 28 controlli dell'integrazione nel laboratorio con rendering reale su Windows. La qualità artistica finale, la dinamica completa e il giro giocabile restano da verificare; il sopralluogo è parziale e non sono stati misurati FPS rappresentativi.
 
@@ -47,7 +47,8 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 ## Vincoli confermati
 
 - PC Linux e Windows, gioco nativo offline e singolo giocatore.
-- Stile cartoonesco curato e fisica coerente per guida, carico alto e occupanti.
+- Realismo fiabesco e fisica coerente per guida, carico alto e occupanti; superato il precedente indirizzo cartoonesco.
+- Soffumbergo fedele al borgo vero e ai panorami documentati: nessun Cervino o paesaggio alpino inventato derivato dall'immagine di riferimento.
 - Yaris Hybrid MY 2022 Trend italiana senza optional aggiuntivi; rosso mantenuto come richiesto.
 - Topolini con proporzioni naturali della foto di riferimento: occhi grandi come unica deformazione anatomica.
 - Mai allungare zampe o arti per raggiungere i comandi: seduta, appoggi e prolunghe meccaniche devono adattarsi ai personaggi.
@@ -70,6 +71,7 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 | [Progetto completo](docs/PROGETTO.md) | Direzione artistica, dinamica, animazioni, esplorazione, sviluppo e collaudi |
 | [Roadmap](docs/ROADMAP.md) | Fasi, criteri di accettazione e attività ancora aperte |
 | [Decisioni](docs/DECISIONI.md) | Richieste vincolanti e scelte progettuali da verificare |
+| [Vertical slice e confronto motori](docs/TEST_MOTORI.md) | Criteri di realismo fiabesco e protocollo Unreal 5.8 vs Godot, ancora da eseguire |
 | [Riferimenti e sopralluogo](docs/RIFERIMENTI_E_SOPRALLUOGO.md) | Riscontri del borgo, fonti, date e lacune |
 | [Riferimenti dei topolini](references/README.md) | Anatomia e occhi, con provenienza dei due allegati |
 | [Bianca e Bernie: catalogo](references/bianca_bernie/README.md) | 20 fonti originali/archivistiche e risorse secondarie, con link e priorità |
@@ -78,6 +80,8 @@ Il territorio segue l’anello di circa 20 km mostrato dall’utente. Valle è l
 ## Stack proposto
 
 Il progetto contiene `project.godot`, scene e sorgenti. Base verificata in questa consegna: **Godot 4.5.1 con Jolt integrato** e **Blender 4.5.3 LTS**. Non sono indicati come le versioni più recenti. QGIS rimane utile per terreno e trasformazioni di datum.
+
+Unreal Engine 5.8 è il candidato richiesto per un futuro test isolato contro Godot: disponibilità e build esatta vanno verificate prima della prova. **Nessuna migrazione avviata o decisa.** Il confronto deve misurare il campione P3 su Ryzen 7 5700X3D, RX 6800 e 32 GB RAM, mirando a 1080p/60 FPS; nessun risultato rappresentativo è stato misurato. Protocollo ed evidenze richieste in [TEST_MOTORI.md](docs/TEST_MOTORI.md).
 
 ## Primo risultato da costruire
 
