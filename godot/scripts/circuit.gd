@@ -18,13 +18,14 @@ var chunks_unloaded := 0
 var overview_triangles: Dictionary = {}
 var show_diagnostics := false
 var overview_bounds := AABB()
+var data_path := "build/circuit/manifest.json"
 
 
 func _ready() -> void:
 	var started := Time.get_ticks_msec()
 	_setup_view()
 	camera.far = 20000
-	var path := ProjectSettings.globalize_path("res://").path_join("build/circuit/manifest.json")
+	var path := ProjectSettings.globalize_path("res://").path_join(data_path)
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--circuit-data="):
 			path = arg.trim_prefix("--circuit-data=")
