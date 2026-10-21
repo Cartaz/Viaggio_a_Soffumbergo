@@ -1,5 +1,21 @@
 # Architettura della preparazione
 
+## Guida pilota e prestazioni Yaris
+
+`yaris_powertrain.gd` separa dati Toyota e parametri effettivi alle ruote in
+`yaris_performance.json`. `vehicle_lab.gd` applica le forze tramite i contatti;
+la velocità non viene troncata. Il tachimetro esclude la caduta verticale e il
+laboratorio dichiara il ripristino oltre i propri confini. La variante Windows
+conserva modelli, personaggi ed esercizi propri tramite aggiornamento mirato.
+
+`build_drive_pilot.py` genera un manifest separato e sette chunk modificati
+per una superficie progettata di prova. `drive_pilot.gd` riusa lo streaming
+del circuito, centrato sul veicolo; layer 1 terreno, 2 edifici, 4 superficie.
+`drive_pilot_check.gd` percorre il tratto usando pedali/sterzo, senza guidare
+il corpo tramite trasformazioni. `validate_drive_pilot.py` e il generatore
+Blender raccolgono prove. La modifica del terreno è dichiaratamente sintetica,
+non un nuovo rilievo o una correzione dei raster. Vedere [limiti](GUIDA_PILOTA.md).
+
 ## Corridoio Circuito 3D 0.1
 
 `coffa/dtm_mosaic.py` applica la scelta globale della fonte senza fusione di

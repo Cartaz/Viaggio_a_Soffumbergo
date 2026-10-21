@@ -12,6 +12,12 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **Guida pilota / Yaris:** `docs/GUIDA_PILOTA.md`, `docs/YARIS_PRESTAZIONI.md`,
+  `godot/scenes/drive_pilot.tscn`, `tools/validate_drive_pilot.py`. 601 m del
+  candidato C con sistemazione sintetica dichiarata, non asfalto verificato.
+  Dati ufficiali separati dai parametri calibrati; nessun taglio di velocità.
+  La variante Windows conserva i propri asset/rig/personaggi e comandi.
+
 - **Circuito 3D 0.1:** `docs/CIRCUITO_3D.md`, `tools/build_circuit_3d.py`,
   `tools/validate_circuit.py`, scena `godot/scenes/circuit.tscn`. 352 settori;
   selezione di fonte per vertice esplicita, senza media, e protezione delle

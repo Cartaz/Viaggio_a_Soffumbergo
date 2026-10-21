@@ -4,6 +4,21 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 
 ## Valle 3D 0.1 — 20 ottobre 2026
 
+**Incremento guida pilota e prestazioni:** [prova di 601 m](GUIDA_PILOTA.md),
+[fonti Toyota e modello longitudinale](YARIS_PRESTAZIONI.md).
+
+- [x] Riprodurre l'uscita dal piazzale e distinguere velocità stradale/caduta.
+- [x] Introdurre spinta alle ruote decrescente, resistenza e regolazione della
+  spinta in prossimità della massima, con auto di serie e carico separati.
+- [x] Collaudare 0–100, 80–120, terminale, rilascio/freno/retro a 60/120 Hz.
+- [x] Collegare la Yaris a un accesso di prova del candidato C, mantenendo
+  terreno originale e ricostruzione di prova distinti.
+- [x] Percorrere il tratto applicando soltanto comandi fisici, con arrivo,
+  arresto, controllo dei contatti e caricamento/scaricamento dei settori.
+- [ ] Verificare larghezze, asfalto, bivi e sistemazione reale del fondo:
+  il test non chiude la superficie stradale verificata o P2/P3.
+- [ ] Modello completo dell'ibrido, ABS/ESC e taratura di sospensioni/pneumatici.
+
 - [x] Riutilizzare le quattro tessere reali, centri delle celle e datum espliciti.
 - [x] Generare 768 × 768 m in 36 settori con LOD 2/4/8 m, collisioni a 2 m
   indipendenti e 60 giunzioni numericamente identiche.

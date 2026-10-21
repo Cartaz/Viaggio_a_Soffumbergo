@@ -2,6 +2,13 @@
 
 ## Coffa e tornanti
 
+**Primo accesso guidabile a Valle:** una prova di 601 m collega la Yaris al
+terreno con caricamento progressivo. Superficie e sistemazione del fondo sono
+ipotesi dichiarate; strada reale e bivi restano da verificare.
+[Avvio e limiti](docs/GUIDA_PILOTA.md). Corrette la velocità mostrata durante
+le cadute e la dinamica longitudinale, con riferimenti Toyota 116 CV:
+[dati e taratura](docs/YARIS_PRESTAZIONI.md).
+
 **Circuito 3D 0.1:** il terreno si estende ora lungo l'intero asse OSM candidato,
 con 352 settori e caricamento progressivo di dettaglio e collisioni. Le fonti
 sono conservate per vertice; il campione di Valle mantiene le stesse quote.
