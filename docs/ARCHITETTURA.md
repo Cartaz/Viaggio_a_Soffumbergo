@@ -24,6 +24,14 @@ mantiene il progresso ma invalida il tentativo; soltanto una nuova prova azzera
 tutto. Non scrive salvataggi e non dichiara completata la gita. Le regole di
 discesa/visita/risalita in `coffa/session.py` restano da integrare nel motore.
 
+`parking_pilot.gd` estende la guida con un manifest separato, piazzola e sensori
+dell'intero ingombro. `parking_state.gd` richiede un arresto continuo prima della
+conferma; durante la sosta blocca la spinta attraverso i comandi e mantiene il
+freno fisico. Nessun congelamento, duplicazione o trasferimento della massa:
+gli occupanti rimangono sul veicolo. `build_parking_pilot.py` raccorda soltanto
+il derivato tecnico finale; `validate_parking_pilot.py` verifica rigenerazione,
+regressioni precedenti, arresto e copertura della piazzola. Vedere [limiti](SOSTA_PILOTA.md).
+
 ## Corridoio Circuito 3D 0.1
 
 `coffa/dtm_mosaic.py` applica la scelta globale della fonte senza fusione di

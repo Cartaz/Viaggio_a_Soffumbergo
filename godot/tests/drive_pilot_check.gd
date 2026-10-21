@@ -2,6 +2,8 @@ extends SceneTree
 ## Automatic driver applies ordinary throttle/brake/steering, without moving the body.
 
 const Scene = preload("res://godot/scenes/drive_pilot.tscn")
+var scene_resource: PackedScene = Scene
+var output_dir := "build/drive_validation"
 var failures: Array[String] = []
 var checks := 0
 var capture := false
@@ -21,7 +23,7 @@ func _initialize() -> void:
 
 
 func run() -> void:
-	var scene := Scene.instantiate()
+	var scene := scene_resource.instantiate()
 	scene.automated = true
 	root.add_child(scene)
 	await physics_frame
@@ -113,7 +115,8 @@ func run() -> void:
 	check(scene.chunks_loaded > scene.residents.size(), "Terrain loaded while driving")
 	check(scene.chunks_unloaded > 0, "Distant terrain released while driving")
 	check(scene.stream_errors.is_empty(), "No missing or changed terrain chunks")
-	DirAccess.make_dir_recursive_absolute("build/drive_validation")
+	await _after_drive(scene)
+	DirAccess.make_dir_recursive_absolute(output_dir)
 	if capture:
 		if physics_only:
 			car.set_process(true)
@@ -121,7 +124,7 @@ func run() -> void:
 			await ticks(1)
 		await process_frame
 		await RenderingServer.frame_post_draw
-		root.get_texture().get_image().save_png("build/drive_validation/arrival.png")
+		root.get_texture().get_image().save_png(output_dir.path_join("arrival.png"))
 	var report := {
 		"checks": checks,
 		"failures": failures,
@@ -171,10 +174,10 @@ func run() -> void:
 	)
 	report["checks"] = checks
 	report["recovery_and_incident_checks"] = 11
-	var file := FileAccess.open("build/drive_validation/report.json", FileAccess.WRITE)
+	var file := FileAccess.open(output_dir.path_join("report.json"), FileAccess.WRITE)
 	file.store_string(JSON.stringify(report, "  ") + "\n")
 	file.close()
-	file = FileAccess.open("build/drive_validation/telemetry.json", FileAccess.WRITE)
+	file = FileAccess.open(output_dir.path_join("telemetry.json"), FileAccess.WRITE)
 	file.store_string(JSON.stringify(telemetry) + "\n")
 	file.close()
 	print(JSON.stringify(report))
@@ -182,6 +185,10 @@ func run() -> void:
 	await process_frame
 	await physics_frame
 	quit(0 if failures.is_empty() else 1)
+
+
+func _after_drive(_scene: Node3D) -> void:
+	pass
 
 
 func ticks(seconds: float) -> void:

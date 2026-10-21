@@ -27,6 +27,12 @@ FILES = ['data/config/yaris_performance.json','tools/build_drive_pilot.py','test
          'godot/scripts/trial_progress.gd','godot/scripts/trial_progress.gd.uid',
          'godot/tests/trial_progress_check.gd','godot/tests/trial_progress_check.gd.uid',
          'reports/CHECKPOINT_PILOTA_VERIFICA.json',
+         'godot/scripts/parking_pilot.gd','godot/scripts/parking_pilot.gd.uid',
+         'godot/scripts/parking_state.gd','godot/scripts/parking_state.gd.uid',
+         'godot/scenes/parking_pilot.tscn','tools/build_parking_pilot.py',
+         'godot/tests/parking_pilot_check.gd','godot/tests/parking_pilot_check.gd.uid',
+         'godot/tests/parking_state_check.gd','godot/tests/parking_state_check.gd.uid',
+         'tests/test_parking_pilot.py','docs/SOSTA_PILOTA.md','reports/SOSTA_PILOTA_VERIFICA.json',
          'docs/GUIDA_PILOTA.md','docs/YARIS_PRESTAZIONI.md']
 
 
@@ -111,6 +117,10 @@ def sync(target,godot):
                     'build/circuit/pilot_road.json','build/circuit/pilot_generation_report.json']
     manifest=json.loads((ROOT/'build/circuit/pilot_manifest.json').read_text())
     additions += ['build/circuit/'+e['path'] for e in manifest['sectors'] if '/drive_' in e['path']]
+    parking=json.loads((ROOT/'build/circuit/parking_manifest.json').read_text())
+    additions += ['build/circuit/parking_manifest.json','build/circuit/parking_road.json',
+                  'build/circuit/parking_generation_report.json']
+    additions += ['build/circuit/'+e['path'] for e in parking['sectors'] if '/parking_' in e['path']]
     for rel in additions:
         src,dst=ROOT/rel,target/rel
         if not dst.resolve().is_relative_to(target):
@@ -120,11 +130,12 @@ def sync(target,godot):
             raise ValueError('Existing differing file preserved: '+rel)
         if not dst.exists() or dst.read_bytes()!=b:
             updates[rel]=b
-    rel='Avvia accesso a Valle.cmd'
-    b=('@echo off\r\n"'+str(godot)+'" --path "%~dp0." res://godot/scenes/drive_pilot.tscn\r\n').encode()
-    if (target/rel).exists() and digest((target/rel).read_bytes())!=digest(b):
-        raise ValueError('Existing launcher preserved')
-    updates[rel]=b
+    launchers={'Avvia accesso a Valle.cmd':'drive_pilot','Avvia sosta a Valle.cmd':'parking_pilot'}
+    for rel,scene in launchers.items():
+        b=('@echo off\r\n"'+str(godot)+'" --path "%~dp0." res://godot/scenes/'+scene+'.tscn\r\n').encode()
+        if (target/rel).exists() and digest((target/rel).read_bytes())!=digest(b):
+            raise ValueError('Existing launcher preserved')
+        updates[rel]=b
     updates={p:b for p,b in updates.items() if not (target/p).exists() or (target/p).read_bytes()!=b}
     main=(target/'project.godot').read_bytes()
     for rel,b in updates.items():
@@ -138,7 +149,7 @@ def sync(target,godot):
         dst.write_bytes(b)
     subprocess.run([sys.executable,'tools/design_report.py'],cwd=target,check=True,stdout=subprocess.DEVNULL)
     assert (target/'project.godot').read_bytes()==main
-    installed=set(additions)|set(BASELINES)|{'Avvia accesso a Valle.cmd'}
+    installed=set(additions)|set(BASELINES)|set(launchers)
     receipt.write_text(json.dumps({'files':{p:digest((target/p).read_bytes()) for p in sorted(installed)},'default_scene_changed':False},indent=2)+'\n')
     print(json.dumps({'updated':len(updates),'default_scene_changed':False,'backups':'build/drive_backups'},indent=2))
 

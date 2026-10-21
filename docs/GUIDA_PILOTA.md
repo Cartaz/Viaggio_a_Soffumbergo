@@ -9,6 +9,10 @@ vicino all'aggancio nord del borgo, non conferma prato PV-01 o itinerario
 pedonale. Nessuna svolta reale è dichiarata verificata. È una prova di
 ingegneria riproducibile, non la ricostruzione approvata della strada.
 
+La successiva scena separata di [sosta tecnica](SOSTA_PILOTA.md) raccorda il
+finale a una piazzola sintetica, con conferma e interblocco dei comandi.
+Non modifica questa prova originale e non implementa ancora la visita.
+
 ## Geometria dichiarata
 
 - Asse orizzontale del candidato OSM già versionato, origine e datum del
@@ -106,6 +110,8 @@ variante locale nota, conserva modello Hybrid approvato, struttura pirata,
 personaggi, esercizi, F11/Esc e `project.godot`. Verifica impronte prima di
 scrivere; conserva copie precedenti in `build/drive_backups` e una ricevuta.
 Una variante modificata dall'utente interrompe la sincronizzazione.
+La sincronizzazione corrente comprende anche la scena di sosta: prima di
+eseguirla generare i suoi derivati con `tools/build_parking_pilot.py`.
 
 Il repository pubblico continua a usare i propri asset già versionati: i
 modelli e i riferimenti privati della copia Windows non vengono pubblicati.

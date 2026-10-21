@@ -12,6 +12,11 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **Sosta tecnica:** `docs/SOSTA_PILOTA.md`, `parking_pilot.tscn`, generatore
+  `tools/build_parking_pilot.py`, gate `tools/validate_parking_pilot.py`.
+  Piazzola sintetica distinta da PV-01; E conferma solo dopo arresto stabile.
+  Personaggi a bordo: discesa e visita non implementate da questa scena.
+
 - **Guida pilota / Yaris:** `docs/GUIDA_PILOTA.md`, `docs/YARIS_PRESTAZIONI.md`,
   `godot/scenes/drive_pilot.tscn`, `tools/validate_drive_pilot.py`. 601 m del
   candidato C con sistemazione sintetica dichiarata, non asfalto verificato.

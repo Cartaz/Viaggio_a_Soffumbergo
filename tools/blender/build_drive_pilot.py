@@ -13,11 +13,13 @@ from build_valle import mesh_object
 
 
 def main():
+    parking = '--parking' in sys.argv
     folder=ROOT/'build/circuit'
-    output=ROOT/'build/drive_validation'
+    output=ROOT/('build/parking_validation' if parking else 'build/drive_validation')
     output.mkdir(parents=True,exist_ok=True)
-    road=json.loads((folder/'pilot_road.json').read_text())
-    manifest=json.loads((folder/'pilot_manifest.json').read_text())
+    prefix='parking' if parking else 'pilot'
+    road=json.loads((folder/(prefix+'_road.json')).read_text())
+    manifest=json.loads((folder/(prefix+'_manifest.json')).read_text())
     bpy.ops.wm.read_factory_settings(use_empty=True)
     collection=bpy.data.collections.new('ENGINEERING_TRIAL_NOT_SURVEYED_LOCAL_ONLY')
     bpy.context.scene.collection.children.link(collection)
@@ -29,7 +31,7 @@ def main():
     obj['vertical_status']=road['vertical_status']
     chunks=0
     for e in manifest['sectors']:
-        if '/drive_' not in e['path']:
+        if '/drive_' not in e['path'] and not (parking and '/parking_' in e['path']):
             continue
         b=(folder/e['path']).read_bytes()
         if hashlib.sha256(b).hexdigest()!=e['sha256']:
@@ -42,8 +44,10 @@ def main():
     bpy.ops.wm.save_as_mainfile(filepath=str(output/'engineering_trial.blend'))
     report={'blender':bpy.app.version_string,'road_triangles':len(road['triangles']),
             'modified_2m_terrain_chunks':chunks,'mesh_validation_passed':True,
-            'pilot_road_sha256':hashlib.sha256((folder/'pilot_road.json').read_bytes()).hexdigest(),
+            ('parking_road_sha256' if parking else 'pilot_road_sha256'):hashlib.sha256((folder/(prefix+'_road.json')).read_bytes()).hexdigest(),
             'scope':'geometry only; no approval of real road widths, grading or junctions'}
+    if parking:
+        report['parking'] = road['parking']
     (output/'blender_report.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report))
 

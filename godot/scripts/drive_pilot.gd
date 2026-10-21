@@ -22,10 +22,11 @@ var automated := false
 var trial_message := ""
 var spawn := Transform3D.IDENTITY
 var road_data_path := "build/circuit/pilot_road.json"
+var trial_manifest_path := "build/circuit/pilot_manifest.json"
 
 
 func _ready() -> void:
-	data_path = "build/circuit/pilot_manifest.json"
+	data_path = trial_manifest_path
 	var path := ProjectSettings.globalize_path("res://").path_join(road_data_path)
 	if not FileAccess.file_exists(path):
 		_setup_view()

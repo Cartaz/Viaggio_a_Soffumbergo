@@ -18,6 +18,11 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 - [x] Nel solo tratto pilota, attraversare cinque checkpoint in ordine e nel
   verso corretto; distinguere arrivo valido, incidente, recupero in allenamento
   e nuova prova. Collaudare ripartenza e disponibilità delle collisioni.
+- [x] Collegare il tratto a una piazzola tecnica separata, con arresto stabile
+  dell'intero veicolo, quattro appoggi, freno e conferma della sosta. Mantenere
+  la fisica attiva e gli occupanti a bordo. [Procedura](SOSTA_PILOTA.md).
+- [ ] Integrare discesa con appoggi e proprietà unica della massa, locomozione,
+  seguito e risalita; la sosta tecnica non chiude la visita P3.
 - [ ] Verificare larghezze, asfalto, bivi e sistemazione reale del fondo:
   il test non chiude la superficie stradale verificata o P2/P3.
 - [ ] Modello completo dell'ibrido, ABS/ESC e taratura di sospensioni/pneumatici.

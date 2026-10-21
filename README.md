@@ -14,6 +14,11 @@ strisce ambra che diventano verdi. **R** recupera all'ultimo punto attraversato
 e rende il tentativo un allenamento; **N** avvia una nuova prova dall'inizio.
 L'arrivo richiede tutti i punti in ordine e l'auto ferma, sulle ruote.
 
+**Sosta tecnica provvisoria:** una scena separata collega l'approccio a una
+piazzola di prova, con arresto stabile, conferma con E e comandi bloccati durante
+la sosta. È distinta da PV-01; i personaggi rimangono a bordo.
+[Avvio, verifiche e limiti](docs/SOSTA_PILOTA.md).
+
 **Circuito 3D 0.1:** il terreno si estende ora lungo l'intero asse OSM candidato,
 con 352 settori e caricamento progressivo di dettaglio e collisioni. Le fonti
 sono conservate per vertice; il campione di Valle mantiene le stesse quote.
