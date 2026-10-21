@@ -6,6 +6,10 @@ continua di progetto e un terreno sistemato separato dal DTM originale. La scena
 giro già percorso con la Yaris. Le scene precedenti di guida, sosta e visita
 rimangono disponibili.
 
+**Aggiornamento:** la [pratica del circuito](PRATICA_CIRCUITO.md) collega ora
+la Yaris alla superficie in dieci tratti separati. Sono aggiunti allargamenti
+di progetto nei raccordi critici; le inversioni a 180° restano escluse.
+
 ## Aprire e confrontare
 
 Nella copia Windows usare **Avvia costruzione circuito.cmd**. Nella copia sorgente
@@ -55,6 +59,9 @@ nulla, adattamento verticale con regressione locale su 12 m e rialzo 0,15 m,
 terreno 0,5 m sotto la quota di progetto, banchina 1 m e raccordo al DTM su 8 m.
 La sezione attuale non comprende una banchina stradale con collisione separata,
 drenaggi, barriere, muri di sostegno o bilanciamento reale dei materiali.
+Nei nove passaggi angolari fra 60° e 150° viene unita una zona di raggio 4,25 m:
+è un allargamento per il prototipo, non la misura di un incrocio. Escluse le
+quattro inversioni; nessun piazzale di manovra viene creato automaticamente.
 
 Il profilo usa la distanza lungo l'asse chiuso, conserva tutte le X/Z e unifica
 le quote progettate dei nodi ripercorsi. Il DTM rimane immutato. La ricerca dei
@@ -73,15 +80,15 @@ effettivamente usata, senza cambiare il candidato. Restano 9.959 stazioni distin
 in sequenza, più il punto di chiusura; 225 posizioni vengono ripercorse.
 
 Il terreno completo conserva 352 settori con LOD 2/4/8 m e collisioni a 2 m.
-La variante modifica 188 settori, comprese le normali prossime ai raccordi;
-la strada ha 167 settori e 208.994 triangoli. Le sue collisioni sul layer 4
+La variante modifica 196 settori, comprese le normali prossime ai raccordi;
+la strada ha 167 settori e 152.199 triangoli. Le sue collisioni sul layer 4
 nascono e vengono eliminate insieme al terreno residente. Il confronto T
 ricostruisce anche la vista generale: non è una semplice variazione di colore.
 
 Il profilo arriva a una pendenza progettata del 19,93%, con scarto massimo
 di 2,61 m dall'asse DTM. Scavo/riporto massimo sul terreno **8,74 m**: da rivedere
 prima di rifinire scarpate e muri. Le stime di volume su celle da 2 m sono circa
-162.277 m³ di scavo e 60.870 m³ di riporto; non sono un computo lavori né un
+162.339 m³ di scavo e 60.979 m³ di riporto; non sono un computo lavori né un
 bilancio geotecnico. F9 segnala anche i settori con modifiche oltre 6 m.
 
 Sono conservate **quattro inversioni esatte**, due in A, una in V e una al
@@ -92,11 +99,12 @@ reale, i dislivelli, i muri e il raccordo al prato. PV-01 resta candidato.
 
 ## Prove e file locali
 
-Il gate verifica 100 test Python, tutti i GDScript, due generazioni identiche,
+Il gate verifica 105 test Python, tutti i GDScript, due generazioni identiche,
 impronte dei 41 ASC prima/dopo e invariabilità dei manifest originali/pilota/sosta.
 Controlla 562 giunzioni del terreno, quote e normali, e 191 della strada;
 controlla area, fronti, lunghezza dei lati e copertura dell'asse e delle due
-sezioni laterali su 29.877 punti. Godot/Jolt confronta le collisioni con una
+sezioni laterali su 29.877 punti; ogni vertice e centro di triangolo stradale
+è confrontato anche con il terreno per evitare affioramenti. Godot/Jolt confronta le collisioni con una
 interpolazione indipendente dei triangoli; prova inoltre caricamento/scaricamento,
 confronto T, caduta di un corpo e inquadratura dell'anello. Non è un test di giro
 completo o un benchmark FPS. Blender salva e verifica tutte le superfici stradali
@@ -112,6 +120,7 @@ verticale o il diritto di redistribuzione tramite una lavorazione del terreno.
 Nessuna nuova licenza o release. Le API di unione e triangolazione usate sono
 documentate da [Shapely](https://shapely.readthedocs.io/en/2.1.2/reference/shapely.constrained_delaunay_triangles.html).
 
-Prossima lavorazione: risolvere le quattro inversioni mantenendo l'itinerario
-documentato, quindi rifinire sezioni, tornanti e opere del fondo prima del
-collaudo della Yaris per settori. Restano separati parcheggio e accesso pedonale.
+Prossima lavorazione: verificare le manovre delle tappe e l'aggancio iniziale a
+Faedis mantenendo l'itinerario documentato, quindi rifinire sezioni, tornanti e
+opere del fondo. La pratica consente collaudi separati con la Yaris; rimangono
+aperti giro continuo, parcheggio e accesso pedonale.

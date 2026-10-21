@@ -79,7 +79,14 @@ func load_next() -> void:
 	arrays.resize(Mesh.ARRAY_MAX)
 	var vertices := PackedVector3Array()
 	for point in parsed.vertices_m:
-		vertices.append(vector(point) - chunk.position)
+		# Subtract the georeferenced offset while values are still doubles.
+		vertices.append(
+			Vector3(
+				float(point[0]) - chunk.position.x,
+				float(point[1]),
+				float(point[2]) - chunk.position.z
+			)
+		)
 	var indices := PackedInt32Array()
 	for triangle in parsed.triangles:
 		for index in triangle:
@@ -154,7 +161,7 @@ func _process(delta: float) -> void:
 		+ "T: confronto terreno | F9: punto critico successivo | F1…F7: settori | M: anello\n"
 		+ "WASD + Q/E: camera | Maiusc: veloce | destro: guarda | 1: asse  2: edifici\n"
 		+ (
-			"Ambra: larghezza ipotetica %.1f m | Rosso: verifiche aperte | Nessun giro approvato"
+			"Ambra: base ipotetica %.1f m + raccordi di prova | Rosso: verifiche aperte"
 			% float(construction.report.config.width_m)
 		)
 	)

@@ -26,8 +26,12 @@ def main():
         if sha256_file(path) != item['sha256']:
             raise ValueError('Changed road chunk')
         road = json.loads(path.read_bytes())
-        vertices = [(x, -z, y) for x, y, z in road['vertices_m']]
+        ox, oz = map(float, item['id'].split('_'))
+        # Blender mesh coordinates are float32: keep road vertices tile-local,
+        # subtracting in Python doubles before creating the native mesh.
+        vertices = [(x-ox, -(z-oz), y) for x, y, z in road['vertices_m']]
         obj = mesh_object('Road_'+item['id'], vertices, [tuple(reversed(t)) for t in road['triangles']], roads)
+        obj.location = (ox, -oz, 0)
         if any(p.normal.z <= 0 for p in obj.data.polygons):
             raise ValueError('Folded road face')
         obj['status'] = road['status']

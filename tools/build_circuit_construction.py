@@ -42,7 +42,12 @@ def main():
     index = SegmentIndex(profile)
     width = config['width_m']
     reach = width/2+config['shoulder_m']+config['blend_m']
-    footprint = road_footprint(profile, width)
+    aprons = np.where((angles >= config['corner_apron_min_degrees']) &
+                      (angles <= config['corner_apron_max_degrees']))[0]
+    footprint = road_footprint(profile, width, aprons, config['corner_apron_radius_m'])
+    # Remove micron-scale duplicate/collinear buffer vertices before Jolt's
+    # mesh quantization. The axis is untouched; boundary tolerance is 1 mm.
+    footprint = footprint.simplify(config['footprint_simplify_m'], preserve_topology=True)
     entries = {tuple(e['offset_xz_m']):e for e in manifest['sectors']}
     cache = {}
 
@@ -71,12 +76,16 @@ def main():
     def graded(x, z, base=None):
         if base is None:
             base = base_values(x, z)
-        distance, level, _ = index.query(x, z, reach+1e-6)
-        active = distance < reach
+        axis_distance, level, _ = index.query(x, z, reach+config['corner_apron_radius_m'])
+        # Conservative distance to the ideal rounded union, containing the mesh.
+        distance = np.maximum(axis_distance-width/2, 0)
+        for point in profile[aprons]:
+            distance = np.minimum(distance, np.maximum(np.hypot(x-point[0], z-point[2])-config['corner_apron_radius_m'], 0))
+        active = distance < config['shoulder_m']+config['blend_m']
         if not np.isfinite(base[active]).all():
             raise ValueError('Missing original height inside earthworks corridor')
         result = base.copy()
-        t = np.clip((distance[active]-width/2-config['shoulder_m'])/config['blend_m'], 0, 1)
+        t = np.clip((distance[active]-config['shoulder_m'])/config['blend_m'], 0, 1)
         blend = 1-t*t*(3-2*t)
         result[active] += (level[active]-config['terrain_clearance_m']-base[active])*blend
         return result, active
@@ -87,13 +96,13 @@ def main():
     for number, (key, entry) in enumerate(entries.items()):
         ox, oz = key
         x, z = np.meshgrid(ox+np.arange(65)*2, oz+np.arange(65)*2)
-        distance, _, _ = index.query(x, z, reach+3)
-        if distance.min() > reach+3:
+        distance, _, _ = index.query(x, z, reach+config['corner_apron_radius_m']+3)
+        if distance.min() > reach+config['corner_apron_radius_m']+3:
             continue
         source = chunk(key)
         old = np.asarray(source['heights_m'], dtype=float).reshape(65, 65)
         new, active = graded(x, z, old)
-        if (distance < reach+3).any():
+        if (distance < reach+config['corner_apron_radius_m']+3).any():
             d = json.loads(json.dumps(source))
             new = np.round(new, 6)
             delta = new-old
@@ -110,7 +119,7 @@ def main():
             fill += float(cell[cell > 0].sum()*4)
             modified_cells += int(np.count_nonzero(np.abs(cell) > 1e-6))
             normals = np.asarray(d['normals']).reshape(65, 65, 3)
-            affected = distance < reach+3
+            affected = distance < reach+config['corner_apron_radius_m']+3
             xx, zz = x[affected], z[affected]
             center = new[affected]
             before_x, _ = graded(xx-2, zz)
@@ -140,7 +149,7 @@ def main():
             graded_entries += 1
         part = footprint.intersection(box(ox, oz, ox+128, oz+128))
         if not part.is_empty and part.area > 1e-8:
-            vertices, triangles = triangulate_surface(part, index, config['mesh_max_edge_m'], width/2+.01)
+            vertices, triangles = triangulate_surface(part, index, config['mesh_max_edge_m'], config['corner_apron_radius_m']+.01)
             if triangles:
                 road = {'id':entry['id'], 'vertices_m':vertices, 'triangles':triangles,
                         'status':'engineering_surface_not_surveyed_asphalt'}
@@ -176,6 +185,9 @@ def main():
               'volume_status':'2m_cell_average_estimate_not_quantity_survey', 'modified_cells':modified_cells,
               'max_design_grade':float(grades.max()), 'max_center_delta_from_DTM_m':float(np.abs(profile[:-1, 1]-raw[:, 1]).max()),
               'exact_reversals':sum(i['kind'] == 'exact_reversal' for i in issues),
+              'corner_apron_count_in_route':len(aprons),
+              'corner_apron_source_stations_m':[float(station[i]) for i in aprons],
+              'corner_apron_status':'engineering_widening_not_surveyed_geometry_no_reversal_aprons',
               'issues':issues, **stats, 'real_surface_verified':False, 'full_lap_driven':False,
               'original_rasters_modified':False, 'terrain_original_modified':False}
     manifest['engineering_construction'] = {'report':report, 'road_sectors':road_entries,

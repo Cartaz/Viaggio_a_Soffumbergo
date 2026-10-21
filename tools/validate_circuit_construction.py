@@ -22,6 +22,7 @@ def main():
     parser.add_argument('--blender', type=Path, required=True)
     parser.add_argument('--input-dir', type=Path, required=True)
     parser.add_argument('--capture', action='store_true')
+    parser.add_argument('--practice', action='store_true', help='Also run the separate Yaris practice checks')
     args = parser.parse_args()
     output = ROOT/'build/construction_validation'
     output.mkdir(parents=True, exist_ok=True)
@@ -38,7 +39,7 @@ def main():
     def run(name, command):
         start = time.monotonic()
         result = subprocess.run([str(v) for v in command], cwd=ROOT, capture_output=True,
-                                text=True, encoding='utf-8', errors='replace', timeout=600)
+                                text=True, encoding='utf-8', errors='replace', timeout=1800)
         log = result.stdout+result.stderr
         (output/(name+'.log')).write_text(log, encoding='utf-8')
         errors = bool(re.search(r'(^|\n)(SCRIPT ERROR:|ERROR:|Traceback|WARNING: ObjectDB)', log))
@@ -75,12 +76,29 @@ def main():
         run('render', [godot, '--path', ROOT, '--windowed', '--resolution', '1280x720', '--script', script, '--', '--capture'])
         shutil.copyfile(output/'godot_report.json', output/'godot_render_report.json')
     run('blender', [args.blender.resolve(), '--background', '--factory-startup', '--python', 'tools/blender/build_circuit_construction.py'])
+    if args.practice:
+        run('practice_generate', [sys.executable, 'tools/build_circuit_practice.py'])
+        practice_path = ROOT/'build/circuit/practice.json'
+        practice_digest = sha(practice_path)
+        run('practice_regenerate', [sys.executable, 'tools/build_circuit_practice.py'])
+        assert practice_digest == sha(practice_path), 'Practice generation is not deterministic'
+        run('practice_progress', [godot, '--headless', '--path', ROOT, '--script', 'godot/tests/practice_route_check.gd'])
+        script = 'godot/tests/circuit_practice_check.gd'
+        run('practice_spawns', [godot, '--headless', '--path', ROOT, '--script', script, '--',
+                                '--all-sections', '--spawn-only', '--output=build/practice_validation/spawns_final'])
+        run('practice_full', [godot, '--headless', '--path', ROOT, '--script', script, '--',
+                             '--all-sections', '--hz=120', '--output=build/practice_validation/full_final'])
+        run('practice_60', [godot, '--headless', '--path', ROOT, '--script', script, '--',
+                           '--all-sections', '--tail=300', '--hz=60', '--output=build/practice_validation/tails_final_60'])
+        if args.capture:
+            run('practice_render', [godot, '--path', ROOT, '--windowed', '--resolution', '1280x720', '--script', script, '--',
+                                   '--section=4', '--tail=600', '--hz=120', '--capture', '--output=build/practice_validation/render_final'])
     assert before == {str(p.relative_to(ROOT)):sha(p) for p in immutable}, 'Original/pilot derivatives changed'
     for tile in catalog['tiles']:
         assert sha(args.input_dir/tile['filename']) == tile['sha256'], 'Original raster changed'
     report = {'passed':True, 'steps':steps, 'construction_manifest_sha256':sha(manifest),
               'immutable_inputs':before, 'raw_tiles_checked_before_and_after':len(catalog['tiles']),
-              'deterministic_files':len(first), 'full_lap_driven':False}
+              'deterministic_files':len(first), 'practice_requested':args.practice, 'full_lap_driven':False}
     report_path.write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
 
 

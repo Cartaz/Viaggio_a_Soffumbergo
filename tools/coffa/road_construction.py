@@ -19,6 +19,13 @@ def validate_config(config):
             raise ValueError('Nonnegative finite parameter required: '+key)
     if config['mesh_max_edge_m'] > config['width_m']:
         raise ValueError('Mesh edges must resolve the road width')
+    if 'corner_apron_radius_m' in config:
+        if not config['width_m']/2 < config['corner_apron_radius_m'] <= 6:
+            raise ValueError('Explicit corner apron radius outside prototype bounds')
+        if not 0 < config['corner_apron_min_degrees'] < config['corner_apron_max_degrees'] < 179:
+            raise ValueError('Aprons must exclude exact reversals')
+        if not 0 < config['footprint_simplify_m'] <= .005:
+            raise ValueError('Footprint cleanup must remain below 5 mm')
 
 
 def design_profile(route, radius, offset):
@@ -90,12 +97,17 @@ class SegmentIndex:
         return distance.reshape(x.shape), height.reshape(x.shape), segment.reshape(x.shape)
 
 
-def road_footprint(points, width):
+def road_footprint(points, width, aprons=None, apron_radius=0):
     if not math.isfinite(width) or width <= 0:
         raise ValueError('Invalid design width')
     # Rounded caps expose reversals without adding a fictional turning circle.
     geometry = LineString(np.asarray(points)[:, [0, 2]]).buffer(width/2, quad_segs=4,
                                                              cap_style='round', join_style='round')
+    if aprons is not None and len(aprons):
+        if not math.isfinite(apron_radius) or apron_radius <= width/2:
+            raise ValueError('Explicit wider radius required for corner aprons')
+        additions = shapely.buffer(shapely.points(np.asarray(points)[aprons][:, [0, 2]]), apron_radius, quad_segs=8)
+        geometry = shapely.union_all([geometry, *additions])
     if not geometry.is_valid or geometry.geom_type != 'Polygon':
         raise ValueError('Construction footprint must be one valid connected polygon')
     return geometry

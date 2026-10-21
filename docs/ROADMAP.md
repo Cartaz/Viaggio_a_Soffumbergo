@@ -15,6 +15,17 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 - [ ] Rifinire scarpate, drenaggi, muri, barriere e superficie stradale documentata.
 - [ ] Collaudare la Yaris lungo tutti i settori e completare un giro fisico.
 
+**Pratica del circuito, 21 ottobre:** [perimetro e comandi](PRATICA_CIRCUITO.md).
+
+- [x] Classificare le inversioni rispetto al dossier: tre tappe con ritorno,
+  aggancio al panorama iniziale da rivedere; nessuna manovra reale confermata.
+- [x] Collegare la Yaris alla costruzione, dieci tratti con checkpoint ordinati,
+  arresto, recupero invalidante e cambio tratto dichiarato come riposizionamento.
+- [x] Aggiungere allargamenti di progetto nei raccordi ordinari critici,
+  mantenendo asse, tappe e inversioni irrisolte.
+- [x] Collaudare tutti i tratti per intero separatamente; questo controllo non
+  chiude il giro continuo o la visita obbligatoria.
+
 La superficie di costruzione non chiude la verifica della strada reale o P2/P3.
 
 **Incremento guida pilota e prestazioni:** [prova di 601 m](GUIDA_PILOTA.md),

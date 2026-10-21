@@ -17,6 +17,14 @@ FILES = ['data/config/circuit_construction.json', 'tools/coffa/road_construction
          'build/circuit/construction_report.json', 'build/construction_validation/probes.json',
          'build/construction_validation/circuit_construction.blend',
          'build/construction_validation/blender_report.json']
+FILES += ['data/geography/circuit_maneuver_review.json', 'tools/build_circuit_practice.py',
+          'tests/test_circuit_practice.py', 'godot/scripts/practice_route.gd',
+          'godot/scripts/practice_route.gd.uid', 'godot/scripts/circuit_practice.gd',
+          'godot/scripts/circuit_practice.gd.uid', 'godot/scenes/circuit_practice.tscn',
+          'godot/tests/circuit_practice_check.gd', 'godot/tests/circuit_practice_check.gd.uid',
+          'godot/tests/practice_route_check.gd', 'godot/tests/practice_route_check.gd.uid',
+          'docs/PRATICA_CIRCUITO.md', 'reports/PRATICA_CIRCUITO_VERIFICA.json',
+          'build/circuit/practice.json']
 
 
 def digest(path):
@@ -50,10 +58,14 @@ def sync(target, godot):
                 raise ValueError('Existing user change preserved: '+str(dest))
         if not dest.exists() or src.read_bytes() != dest.read_bytes():
             changes.append(p)
-    launcher = target/'Avvia costruzione circuito.cmd'
-    command = ('@echo off\r\n"'+str(godot)+'" --path "%~dp0." res://godot/scenes/circuit_construction.tscn\r\n').encode()
-    if launcher.exists() and launcher.read_bytes() != command:
-        raise ValueError('Existing launcher preserved')
+    launchers = {}
+    for name, scene in [('Avvia costruzione circuito.cmd', 'circuit_construction'),
+                        ('Avvia pratica circuito.cmd', 'circuit_practice')]:
+        launcher = target/name
+        command = ('@echo off\r\n"'+str(godot)+'" --path "%~dp0." res://godot/scenes/'+scene+'.tscn\r\n').encode()
+        if launcher.exists() and launcher.read_bytes() != command:
+            raise ValueError('Existing launcher preserved')
+        launchers[launcher] = command
     settings = (target/'project.godot').read_bytes()
     for p in changes:
         dest = target/p
@@ -64,7 +76,8 @@ def sync(target, godot):
                 shutil.copyfile(dest, backup)
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT/p, dest)
-    launcher.write_bytes(command)
+    for launcher, command in launchers.items():
+        launcher.write_bytes(command)
     (target/'build/.gdignore').touch()
     receipt.write_text(json.dumps({'files':{p:digest(target/p) for p in paths}}, indent=2)+'\n', encoding='utf-8')
     assert settings == (target/'project.godot').read_bytes()

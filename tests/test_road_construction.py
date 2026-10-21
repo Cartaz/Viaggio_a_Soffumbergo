@@ -12,6 +12,15 @@ from coffa.road_construction import (SegmentIndex, design_profile, road_footprin
 
 
 class ConstructionTest(unittest.TestCase):
+    def test_explicit_corner_apron_enlarges_only_selected_corner(self):
+        p = np.array([[0, 0, 0], [20, 0, 0], [20, 0, 20], [20, 0, 0], [0, 0, 0]])
+        base = road_footprint(p, 4.5)
+        widened = road_footprint(p, 4.5, [1], 4.25)
+        self.assertGreater(widened.area, base.area)
+        self.assertTrue(widened.covers(shapely.Point(22.5, -1)))
+        self.assertFalse(widened.covers(shapely.Point(23, 21)))
+        self.assertTrue(widened.covers(base))
+
     def test_spatial_nearest_matches_exhaustive_and_has_bounded_radius(self):
         # Nearby branches at different heights must not be averaged.
         p = np.array([[0, 0, 0], [40, 4, 0], [40, 10, 6], [0, 10, 6]], dtype=float)

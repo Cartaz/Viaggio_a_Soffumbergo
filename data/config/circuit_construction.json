@@ -11,6 +11,10 @@
   "grade_warning": 0.20,
   "earthworks_review_m": 6.0,
   "turn_warning_degrees": 60.0,
+  "corner_apron_radius_m": 4.25,
+  "corner_apron_min_degrees": 60.0,
+  "corner_apron_max_degrees": 150.0,
+  "footprint_simplify_m": 0.001,
   "crossfall": "zero_design_assumption",
   "junctions": "union_of_candidate_buffer_not_verified_junction_layout"
 }

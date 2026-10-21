@@ -36,7 +36,10 @@ func run_check() -> void:
 			var hit := world.intersect_ray(
 				PhysicsRayQueryParameters3D.create(p + Vector3.UP * 5, p - Vector3.UP * 5, 4)
 			)
-			check(not hit.is_empty(), "Road reference ray")
+			check(
+				not hit.is_empty(),
+				"Road reference ray " + str(p) if hit.is_empty() else "Road reference ray"
+			)
 			if not hit.is_empty():
 				max_ray_error = maxf(max_ray_error, absf(hit.position.y - p.y))
 				check(hit.normal.y > 0, "Upward road contact")

@@ -12,6 +12,15 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **Pratica del circuito:** `docs/PRATICA_CIRCUITO.md`, scena
+  `circuit_practice.tscn`, `tools/build_circuit_practice.py`,
+  `godot/scripts/practice_route.gd`, `godot/tests/circuit_practice_check.gd`.
+  Dieci tratti separati, cambi come riposizionamenti di allenamento, margini
+  prima delle inversioni e raccordi ordinari allargati di progetto. Revisione
+  documentale in `data/geography/circuit_maneuver_review.json`; nessuna manovra
+  reale confermata. Gate `validate_circuit_construction.py --practice`.
+  Non confondere le prove separate con il giro continuo o la visita integrata.
+
 - **Terraforming / costruzione circuito:** `docs/COSTRUZIONE_CIRCUITO.md`,
   `tools/build_circuit_construction.py`, `tools/check_circuit_construction.py`,
   `tools/validate_circuit_construction.py`, scena `circuit_construction.tscn`.

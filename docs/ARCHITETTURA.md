@@ -16,6 +16,16 @@ critici, senza correggerli automaticamente. Il gate Python/Godot/Blender è
 `validate_circuit_construction.py`; il sincronizzatore separato protegge i file
 privati tramite preflight, backup e ricevuta. [Procedura](COSTRUZIONE_CIRCUITO.md).
 
+`build_circuit_practice.py` separa il profilo invariato ai confini geografici e
+alle inversioni, con margini di arresto espliciti e impronta del manifest.
+`circuit_practice.gd` riusa terreno/strada a caricamento progressivo, centrati
+sul veicolo. `practice_route.gd` limita la ricerca a una finestra di progressiva
+per non agganciare un ramo vicino; `trial_progress.gd` conserva l'ordine e il
+verso dei checkpoint. Ogni cambio tratto è un riposizionamento separato.
+Le prove misurano i comandi fisici e le proiezioni delle quattro ruote sul
+pavimento effettivo. `validate_circuit_construction.py --practice` aggiunge
+prove di avanzamento, partenze e guida dei singoli tratti. [Ambito](PRATICA_CIRCUITO.md).
+
 ## Guida pilota e prestazioni Yaris
 
 `yaris_powertrain.gd` separa dati Toyota e parametri effettivi alle ruote in

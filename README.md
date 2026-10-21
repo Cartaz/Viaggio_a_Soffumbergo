@@ -8,6 +8,11 @@ collisioni e confronto con il DTM originale. Parametri modificabili e punti crit
 segnalati, comprese quattro inversioni ancora da verificare.
 [Avvio e limiti](docs/COSTRUZIONE_CIRCUITO.md). Non è ancora un giro guidato completo.
 
+**Pratica sull'anello:** dieci tratti guidabili sulla superficie di progetto,
+con checkpoint direzionali, arresto e recupero. Le inversioni rimangono separate
+da riposizionamenti espliciti di allenamento. Raccordi allargati di prova nei
+punti critici, senza cambiare il candidato. [Comandi e verifiche](docs/PRATICA_CIRCUITO.md).
+
 **Primo accesso guidabile a Valle:** una prova di 601 m collega la Yaris al
 terreno con caricamento progressivo. Superficie e sistemazione del fondo sono
 ipotesi dichiarate; strada reale e bivi restano da verificare.

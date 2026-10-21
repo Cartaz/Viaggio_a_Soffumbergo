@@ -39,6 +39,7 @@ def main():
     road_entries = doc['engineering_construction']['road_sectors']
     roads, meshes = {}, {}
     area, triangles, max_mesh_edge = 0., 0, 0.
+    min_mesh_clearance = float('inf')
     for entry in road_entries:
         data = (folder/entry['path']).read_bytes()
         assert hashlib.sha256(data).hexdigest() == entry['sha256']
@@ -47,14 +48,31 @@ def main():
         faces = v[np.asarray(road['triangles'])]
         cross = np.cross(faces[:, 1]-faces[:, 0], faces[:, 2]-faces[:, 0])[:, 1]
         assert (cross < 0).all(), 'Folded/degenerate road face'
+        ox, oz = map(float, entry['id'].split('_'))
+        local = (v-[ox, 0, oz]).astype(np.float32)[np.asarray(road['triangles'])]
+        assert (np.cross(local[:, 1]-local[:, 0], local[:, 2]-local[:, 0])[:, 1] < 0).all(), 'Float32 local mesh lost a face'
         area += float(-cross.sum()/2)
         triangles += len(faces)
         max_mesh_edge = max(max_mesh_edge, float(np.linalg.norm(faces[:, :, [0, 2]]-np.roll(faces[:, :, [0, 2]], 1, axis=1), axis=2).max()))
         roads[entry['id']] = road
         meshes[entry['id']] = (faces, STRtree(shapely.polygons(faces[:, :, [0, 2]])))
+        # Every road vertex and face centroid must clear the independently
+        # interpolated 2 m terrain, including the wider engineering corner aprons.
+        ground_chunk = next(c for c in chunks.values() if c['id'] == entry['id'])
+        h = np.asarray(ground_chunk['heights_m'], dtype=float).reshape(65, 65)
+        samples = np.vstack([v, faces.mean(axis=1)])
+        local = (samples[:, [0, 2]]-ground_chunk['offset_xz_m'])/2
+        cell = np.clip(np.floor(local).astype(int), 0, 63)
+        uv = local-cell
+        c, r = cell[:, 0], cell[:, 1]
+        lo = h[r, c]+uv[:, 0]*(h[r, c+1]-h[r, c])+uv[:, 1]*(h[r+1, c]-h[r, c])
+        hi = h[r+1, c+1]+(1-uv[:, 0])*(h[r+1, c]-h[r+1, c+1])+(1-uv[:, 1])*(h[r, c+1]-h[r+1, c+1])
+        ground = np.where(uv.sum(axis=1) <= 1, lo, hi)
+        min_mesh_clearance = min(min_mesh_clearance, float((samples[:, 1]-ground).min()))
     stats = doc['engineering_construction']['report']
     assert abs(area-stats['design_area_m2']) < .01, 'Missing/overlapping design area'
     assert max_mesh_edge <= stats['config']['mesh_max_edge_m']+1e-5
+    assert min_mesh_clearance > .01, 'Terrain intrudes into road vertices/face centroids: '+str(min_mesh_clearance)
     # Exact matching vertices on each road tile boundary; no cracks/T-junctions.
     road_seams = 0
     for (x, z), entry in entries.items():
@@ -111,8 +129,10 @@ def main():
               'road_seams':road_seams, 'road_triangles':triangles, 'road_plan_area_m2':area,
               'max_horizontal_mesh_edge_m':max_mesh_edge, 'road_reference_rays':len(query),
               'min_sampled_road_terrain_clearance_m':min_clearance,
+              'min_mesh_vertex_and_centroid_clearance_m':min_mesh_clearance,
               'profile_points':len(profile), 'all_route_and_cross_section_samples_covered':True,
               'original_sectors':len(original['sectors'])}
+    result['float32_local_road_fronts_verified'] = True
     atomic_write(ROOT/'build/construction_validation/probes.json', encode(probes))
     atomic_write(ROOT/'build/construction_validation/geometry_report.json', encode(result))
     print(json.dumps(result, indent=2))

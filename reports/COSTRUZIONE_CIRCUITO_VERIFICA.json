@@ -3,25 +3,25 @@
   "date": "2026-10-21",
   "status": "passed_construction_workbench_not_approved_circuit",
   "source_sha256": {
-    "AGENTS.md": "2c02ef40613fa95efc3d0943938f7b05cdc2313abedb09f5e4aba7d64013ad53",
-    "README.md": "d10fb7b937d6acbdda6a69f8f78344dcb4c68fb4008bbc129e95569835812844",
+    "AGENTS.md": "3bf2fa6f0ad67f07d1088d9102c17f2e29b61a71e0091fd091b8f74bea26322a",
+    "README.md": "b1edbae69096aefecf0bb4d47251c265fd5434b5aff3c4b0bd192cac2784924e",
     "requirements-dev.txt": "95f532bd3da3ff8d2cedd4f4d69c43260b4b9752932bb5003661c2a1ba00cb00",
-    "docs/DECISIONI.md": "4ab2addc92889479fb8c33a167823883318a1724c8dee6030215fcdd6ea1d9c9",
-    "docs/ROADMAP.md": "cf152710ef8ae8109bec9dd42dbff2c3a8759011abe29a66bb648f5a4fb37588",
-    "docs/ARCHITETTURA.md": "29cf88967c5b8fa55c06e95e46f0e1052c29954cffb231adefc7bc24a99eff3b",
-    "docs/COSTRUZIONE_CIRCUITO.md": "bac6f18d1b6f8c7e95e6cbb7155cf476e3c9b41c6a6e4f0ea4117033ca1082ac",
-    "data/config/circuit_construction.json": "bd623fc686e8146b4e1eb0394b2a484b7a24ed4ba3bc7f9e81c08ea1e1ae9d9a",
-    "tools/coffa/road_construction.py": "5835412489ff98847c19a494370bb712472e07aa6699e674f355b3c809643fea",
-    "tools/build_circuit_construction.py": "09837f3b6cbd1e65fc6c8a864dd0a774550a9fbe4820520ada3de4c1caa3d4e6",
-    "tools/check_circuit_construction.py": "c964d7bc770b1e69b28074d003199418292a5d30768456b494df454040ee4b5d",
-    "tools/validate_circuit_construction.py": "365fbf7065e284bba87b97c2693122c6811888a10a3d6d1484b93c3907a5fb68",
-    "tools/sync_circuit_construction_local.py": "4b263897d8bb88cff16bc7b692e0855b11dba7a60763323d08b358a3edd96193",
-    "tools/blender/build_circuit_construction.py": "f52ad71d046c5803e4cc4e9f9dfd94fa6bd435b2146b69caf242e65325cb6c0a",
-    "tests/test_road_construction.py": "d7267731b3425feaa3fe49e59fed02ce256d46aad3d537049b446e45ec04ce62",
-    "godot/scripts/circuit_construction.gd": "3dd4a5d1da8b78a041e4c4ea7f7d7768b6a7e63431e0f2e5c5a2b87ea1d6fd0d",
+    "docs/DECISIONI.md": "b9e29bbf5966f301200597233e99dbf77dd5604c61c96c7b6b5ee0429e4ac14c",
+    "docs/ROADMAP.md": "2ea1b18b858242eeb15da5fda7b2d61974b7fbb01be9cb458b9db950f4ba1eec",
+    "docs/ARCHITETTURA.md": "552fdbc6e0a6e0f0efd761e32f425a3d1c1b7b26d29d08fa21b051eaa4bd8578",
+    "docs/COSTRUZIONE_CIRCUITO.md": "31872cac66765680327807f1ceba7d4c861bb9ebe45a93dcd5d9e05a64a35287",
+    "data/config/circuit_construction.json": "4239c492cd9836f3d630ab747160921139343945555894fddfdf7b826fbcc24c",
+    "tools/coffa/road_construction.py": "131cb3cbf3b04c4645bf8ce148e4edca28f33218e6d12afc71f4c447f1d4ad30",
+    "tools/build_circuit_construction.py": "5547c6d084ea3a6f93bec089773e377126eeb2f47e67d2e55d8f1bc97df0bfa2",
+    "tools/check_circuit_construction.py": "083a179d276dcfc26f7ebc6706a1c0df612a093a86eb87710a3506910c3c01af",
+    "tools/validate_circuit_construction.py": "18ec87f7c05c217d9d674dd32c2332be81b49ac3f9589405cc5e40e286ba4093",
+    "tools/sync_circuit_construction_local.py": "ed8fbaaed0131437f61534cea13b72bcb682c831249fb93b79c70da34993956a",
+    "tools/blender/build_circuit_construction.py": "af75287ea0b06feefab5ee3c0238504e0fe3e512a480dd8b783cf26acd126ba1",
+    "tests/test_road_construction.py": "8f744b345116d0542fcb7745fe78d530db847b25f2f3d260e9068c009825fc5f",
+    "godot/scripts/circuit_construction.gd": "70b220cb52d10b334f588452cef0f89906bbae4271ee0c9bb80971af3691ac8a",
     "godot/scripts/circuit_construction.gd.uid": "55d5958ef9fffb2c1fe6bfa14d4046a8fdbbf5193e15cc86a9a41e339d0b2600",
     "godot/scenes/circuit_construction.tscn": "80d3f3422d261533d4f38640c46f6b93187ba7f075d2d76ccd94fa11eb10b29a",
-    "godot/tests/circuit_construction_check.gd": "7df32b5f92320a55788c62a8cf687925b73101c7377f1a0a5f8b47a1b980fd3b",
+    "godot/tests/circuit_construction_check.gd": "b129bd1ccc9b8d285f9bddac936e655bccc89737477110fa44b0b8124136d154",
     "godot/tests/circuit_construction_check.gd.uid": "3e80cacd4128d4de1fe6183693d73c773f71dfcf6910403ddc4e21d9da189ac4"
   },
   "validation": {
@@ -31,76 +31,76 @@
         "name": "python",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.219
+        "seconds": 1.282
       },
       {
         "name": "gdparse",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 0.969
+        "seconds": 1.14
       },
       {
         "name": "gdformat",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.484
+        "seconds": 1.797
       },
       {
         "name": "gdlint",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.531
+        "seconds": 1.828
       },
       {
         "name": "generate",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 18.625
+        "seconds": 26.656
       },
       {
         "name": "regenerate",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 18.937
+        "seconds": 26.141
       },
       {
         "name": "geometry",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 4.375
+        "seconds": 4.532
       },
       {
         "name": "yaris_asset",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 0.781
+        "seconds": 0.843
       },
       {
         "name": "import",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 3.844
+        "seconds": 4.157
       },
       {
         "name": "jolt",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 46.093
+        "seconds": 48.937
       },
       {
         "name": "render",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 54.485
+        "seconds": 50.438
       },
       {
         "name": "blender",
         "exit_code": 0,
         "engine_errors": false,
-        "seconds": 1.937
+        "seconds": 1.922
       }
     ],
-    "construction_manifest_sha256": "0be37b4827d714cd3218ad85fc68819c398d412af400bca3011e69b18be780ab",
+    "construction_manifest_sha256": "320c288e711111b0b02b721e17fa7836748f8cd90fd575bbdfcd22fc5241ab5e",
     "immutable_inputs": {
       "build\\circuit\\manifest.json": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
       "build\\circuit\\pilot_manifest.json": "1b6931ca9807f10975cc074250636161ec73166f2bc70b4be68f9d1c367c0f1a",
@@ -110,16 +110,17 @@
     },
     "raw_tiles_checked_before_and_after": 41,
     "deterministic_files": 521,
+    "practice_requested": false,
     "full_lap_driven": false
   },
   "generation": {
     "schema_version": 1,
     "status": "engineering_workbench_not_approved_circuit",
-    "build_id": "0876df8fffd29973ee7b",
+    "build_id": "d6e665ed9dc9aceaf870",
     "fingerprints": {
-      "data\\config\\circuit_construction.json": "bd623fc686e8146b4e1eb0394b2a484b7a24ed4ba3bc7f9e81c08ea1e1ae9d9a",
-      "tools\\build_circuit_construction.py": "09837f3b6cbd1e65fc6c8a864dd0a774550a9fbe4820520ada3de4c1caa3d4e6",
-      "tools\\coffa\\road_construction.py": "5835412489ff98847c19a494370bb712472e07aa6699e674f355b3c809643fea",
+      "data\\config\\circuit_construction.json": "4239c492cd9836f3d630ab747160921139343945555894fddfdf7b826fbcc24c",
+      "tools\\build_circuit_construction.py": "5547c6d084ea3a6f93bec089773e377126eeb2f47e67d2e55d8f1bc97df0bfa2",
+      "tools\\coffa\\road_construction.py": "131cb3cbf3b04c4645bf8ce148e4edca28f33218e6d12afc71f4c447f1d4ad30",
       "original_manifest": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
       "shapely_version": "2.1.2",
       "geos_version": "3.13.1"
@@ -137,24 +138,41 @@
       "grade_warning": 0.2,
       "earthworks_review_m": 6.0,
       "turn_warning_degrees": 60.0,
+      "corner_apron_radius_m": 4.25,
+      "corner_apron_min_degrees": 60.0,
+      "corner_apron_max_degrees": 150.0,
+      "footprint_simplify_m": 0.001,
       "crossfall": "zero_design_assumption",
       "junctions": "union_of_candidate_buffer_not_verified_junction_layout"
     },
     "source_manifest_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6",
     "route_length_horizontal_m": 18884.86189548234,
     "route_length_3d_m": 18938.558051330347,
-    "design_area_m2": 83019.99483187497,
-    "graded_sectors": 188,
+    "design_area_m2": 83141.47510428354,
+    "graded_sectors": 196,
     "road_sectors": 167,
-    "road_triangles": 208994,
+    "road_triangles": 152199,
     "max_earthworks_delta_m": 8.740539999999953,
-    "approx_cut_m3": 162277.45856400006,
-    "approx_fill_m3": 60869.522955999986,
+    "approx_cut_m3": 162339.35993700003,
+    "approx_fill_m3": 60979.322888999974,
     "volume_status": "2m_cell_average_estimate_not_quantity_survey",
-    "modified_cells": 113941,
+    "modified_cells": 114014,
     "max_design_grade": 0.19932325672553583,
     "max_center_delta_from_DTM_m": 2.611581437307734,
     "exact_reversals": 4,
+    "corner_apron_count_in_route": 9,
+    "corner_apron_source_stations_m": [
+      63.63110173636068,
+      3543.048265191796,
+      3798.643900473318,
+      4190.174254789785,
+      7151.4558161001505,
+      7578.016282413569,
+      8441.218913650398,
+      17047.981228776185,
+      17088.99022861663
+    ],
+    "corner_apron_status": "engineering_widening_not_surveyed_geometry_no_reversal_aprons",
     "issues": [
       {
         "kind": "sharp_candidate_corner",
@@ -336,14 +354,16 @@
     "terrain_seams": 562,
     "terrain_height_and_normal_seam_error": 0,
     "road_seams": 191,
-    "road_triangles": 208994,
-    "road_plan_area_m2": 83019.99490683679,
-    "max_horizontal_mesh_edge_m": 3.000000868735399,
+    "road_triangles": 152199,
+    "road_plan_area_m2": 83141.47512164415,
+    "max_horizontal_mesh_edge_m": 2.9999877372488313,
     "road_reference_rays": 29877,
-    "min_sampled_road_terrain_clearance_m": 0.10060401566514088,
+    "min_sampled_road_terrain_clearance_m": 0.1073016068917525,
+    "min_mesh_vertex_and_centroid_clearance_m": 0.042157552315501334,
     "profile_points": 9959,
     "all_route_and_cross_section_samples_covered": true,
-    "original_sectors": 352
+    "original_sectors": 352,
+    "float32_local_road_fronts_verified": true
   },
   "godot_headless": {
     "capture": false,
@@ -379,9 +399,9 @@
     "passed": true,
     "blender_version": "4.5.3 LTS",
     "road_sectors": 167,
-    "road_triangles": 208994,
+    "road_triangles": 152199,
     "terrain_overview_sectors": 352,
-    "manifest_sha256": "0be37b4827d714cd3218ad85fc68819c398d412af400bca3011e69b18be780ab",
+    "manifest_sha256": "320c288e711111b0b02b721e17fa7836748f8cd90fd575bbdfcd22fc5241ab5e",
     "scope": "native mesh and normals, not artistic approval or driven lap"
   },
   "captures_inspected": [
@@ -391,12 +411,12 @@
   ],
   "scope": "Entire candidate engineering geometry, contacts, streaming and comparison. Not a vehicle lap, surveyed road, finished earthworks or artistic approval. Original raw rasters and local geographic derivatives excluded from Git.",
   "post_sync_python_check": {
-    "tests": 100,
+    "tests": 105,
     "passed": true,
-    "log": "build/construction_python_final.log"
+    "log": "build/practice_python_latest.log"
   },
-  "windows_render": {
-    "capture": true,
+  "windows_headless": {
+    "capture": false,
     "checks": 60097,
     "chunks_loaded": 1497,
     "chunks_unloaded": 1463,
@@ -406,16 +426,15 @@
     "max_ray_error_m": 0.0001220703125,
     "max_residents": 36,
     "passed": true,
-    "renderer": "AMD Radeon RX 6800",
+    "renderer": "",
     "road_rays": 29877,
     "scope": "construction geometry and contacts; not a vehicle lap"
   },
   "windows_sync": {
-    "launcher": "Avvia costruzione circuito.cmd",
-    "target": "C:\\Giochi\\Sviluppo\\Viaggio a Soffumbergo",
-    "private_assets_changed": false,
     "default_scene_changed": false,
+    "private_assets_changed": false,
     "native_blender_copied": true,
-    "capture_inspected": "build/construction_validation/construction_project.png"
+    "construction_launcher": "Avvia costruzione circuito.cmd",
+    "practice_launcher": "Avvia pratica circuito.cmd"
   }
 }
