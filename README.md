@@ -9,6 +9,11 @@ ipotesi dichiarate; strada reale e bivi restano da verificare.
 le cadute e la dinamica longitudinale, con riferimenti Toyota 116 CV:
 [dati e taratura](docs/YARIS_PRESTAZIONI.md).
 
+La prova ora comprende **cinque checkpoint direzionali**, riconoscibili dalle
+strisce ambra che diventano verdi. **R** recupera all'ultimo punto attraversato
+e rende il tentativo un allenamento; **N** avvia una nuova prova dall'inizio.
+L'arrivo richiede tutti i punti in ordine e l'auto ferma, sulle ruote.
+
 **Circuito 3D 0.1:** il terreno si estende ora lungo l'intero asse OSM candidato,
 con 352 settori e caricamento progressivo di dettaglio e collisioni. Le fonti
 sono conservate per vertice; il campione di Valle mantiene le stesse quote.

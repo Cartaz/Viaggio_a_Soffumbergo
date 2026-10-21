@@ -17,6 +17,9 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
   candidato C con sistemazione sintetica dichiarata, non asfalto verificato.
   Dati ufficiali separati dai parametri calibrati; nessun taglio di velocità.
   La variante Windows conserva i propri asset/rig/personaggi e comandi.
+  Cinque checkpoint direzionali del tratto in `trial_progress.gd`: R recupera
+  invalidando la prova, N ricomincia. Non sono i checkpoint dell'intera gita;
+  `godot/tests/trial_progress_check.gd` funziona anche senza dati locali.
 
 - **Circuito 3D 0.1:** `docs/CIRCUITO_3D.md`, `tools/build_circuit_3d.py`,
   `tools/validate_circuit.py`, scena `godot/scenes/circuit.tscn`. 352 settori;

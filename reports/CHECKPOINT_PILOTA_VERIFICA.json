@@ -1,0 +1,242 @@
+{
+  "prototype": "Directional checkpoints and recovery on the 601m engineering trial",
+  "validation_date_local": "2026-10-21",
+  "source_base_commit": "04727679a07b5960454d7ce3bc9afe836eeac8c3",
+  "source_hash_encoding": "UTF-8 source with LF line endings",
+  "source_sha256": {
+    "godot/scripts/trial_progress.gd": "207efbba1f089bbec26242272e767e2893f9f6acbbe4b817bdb099ddb096a3f7",
+    "godot/scripts/drive_pilot.gd": "a4ead4621e189bfbaec798a0acb93013578002abeea01a3c3e123e338c18952c",
+    "godot/tests/trial_progress_check.gd": "7ebcc7d1f0cc056417d7e3af631432c0ae3ec88632d25a3ac041d2a511ac6a88",
+    "godot/tests/drive_pilot_check.gd": "3028559cac36d367ac8a99555c305784c41373edde6436d613f3d83f38d27a09",
+    "tools/validate_drive_pilot.py": "b9767bf05ed93be0a02222d0a5bc392cd866b5a27b020c83cb803b7ce9d68369",
+    "tools/sync_drive_local.py": "ba60d620441aa4d22f58f5ca47b493499e4f5e0b5b90de2422c0c4f8ef1fe98e"
+  },
+  "checkpoint_stations_3d_m": [
+    25,
+    150,
+    300,
+    450,
+    590
+  ],
+  "checkpoint_status": "Gameplay choices; not surveyed road features",
+  "validation": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "python",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.984
+      },
+      {
+        "name": "yaris_asset",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.782
+      },
+      {
+        "name": "gdparse",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.765
+      },
+      {
+        "name": "gdformat",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.047
+      },
+      {
+        "name": "gdlint",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.063
+      },
+      {
+        "name": "generate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 14.563
+      },
+      {
+        "name": "regenerate",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 14.219
+      },
+      {
+        "name": "import",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 3.641
+      },
+      {
+        "name": "checkpoints",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.172
+      },
+      {
+        "name": "missing",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.359
+      },
+      {
+        "name": "reference",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.188
+      },
+      {
+        "name": "lab",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 0.922
+      },
+      {
+        "name": "valle",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 1.109
+      },
+      {
+        "name": "performance_60",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 5.828
+      },
+      {
+        "name": "performance_120",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 11.375
+      },
+      {
+        "name": "drive_headless",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 12.297
+      },
+      {
+        "name": "drive_render",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 46.875
+      },
+      {
+        "name": "blender",
+        "exit_code": 0,
+        "engine_errors": false,
+        "seconds": 2.609
+      }
+    ],
+    "deterministic_files": {
+      "pilot_manifest.json": "1b6931ca9807f10975cc074250636161ec73166f2bc70b4be68f9d1c367c0f1a",
+      "pilot_road.json": "14708a8f91d165fb9b4dc0c2fc3357aeb7e909ec5b48778ab440f91dfb4fafbb"
+    },
+    "original_circuit_sha256": "d537e603a23036d631ce9dc145dd79a0a31fb6dc6bcee34e157f4101254b4bd6"
+  },
+  "checkpoint_rules": {
+    "checks": 26,
+    "failures": []
+  },
+  "source_headless_drive": {
+    "capture": false,
+    "checks": 751,
+    "chunks_loaded": 40,
+    "chunks_unloaded": 10,
+    "directional_checkpoints": 5,
+    "elapsed_s": 166.058333333347,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "max_lateral_error_m": 0.85640162229538,
+    "max_residents": 32,
+    "max_speed_kmh": 14.5133171081543,
+    "min_up_dot": 0.987937867641449,
+    "progress_m": 596.657755496542,
+    "recovery_and_incident_checks": 11,
+    "scope": "Declared 601m engineering trial; no verified real road or full journey",
+    "surface_ray_max_error_m": 7.05718994140625e-05,
+    "trial_length_m": 601.494506835938,
+    "trial_resets": 0,
+    "unsupported_frames": 0,
+    "valid_arrival": true,
+    "visual_animation_disabled_during_drive": false
+  },
+  "source_rendered_drive": {
+    "capture": true,
+    "checks": 751,
+    "chunks_loaded": 40,
+    "chunks_unloaded": 10,
+    "directional_checkpoints": 5,
+    "elapsed_s": 166.058333333347,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "max_lateral_error_m": 0.85640162229538,
+    "max_residents": 32,
+    "max_speed_kmh": 14.5133171081543,
+    "min_up_dot": 0.987937867641449,
+    "progress_m": 596.657693092797,
+    "recovery_and_incident_checks": 11,
+    "scope": "Declared 601m engineering trial; no verified real road or full journey",
+    "surface_ray_max_error_m": 7.05718994140625e-05,
+    "trial_length_m": 601.494506835938,
+    "trial_resets": 0,
+    "unsupported_frames": 0,
+    "valid_arrival": true,
+    "visual_animation_disabled_during_drive": false
+  },
+  "windows_rendered_drive": {
+    "capture": true,
+    "checks": 751,
+    "chunks_loaded": 40,
+    "chunks_unloaded": 10,
+    "directional_checkpoints": 5,
+    "elapsed_s": 166.058333333347,
+    "engine": "4.5.1-stable (official)",
+    "failures": [],
+    "max_lateral_error_m": 0.85603791475296,
+    "max_residents": 32,
+    "max_speed_kmh": 14.5133411407471,
+    "min_up_dot": 0.987844586372375,
+    "progress_m": 596.654910418048,
+    "recovery_and_incident_checks": 11,
+    "scope": "Declared 601m engineering trial; no verified real road or full journey",
+    "surface_ray_max_error_m": 7.05718994140625e-05,
+    "trial_length_m": 601.494506835938,
+    "trial_resets": 0,
+    "unsupported_frames": 0,
+    "valid_arrival": true,
+    "visual_animation_disabled_during_drive": true
+  },
+  "windows_checkpoint_rules": {
+    "checks": 26,
+    "failures": []
+  },
+  "checks_after_driven_arrival": {
+    "checks": 11,
+    "explicit_resets": 3,
+    "scope": "Recovery at last accepted checkpoint; new attempt at start; deliberate off-route discontinuity and incident recovery. These test relocations occur AFTER the no-reset drive and do not count toward the driven route."
+  },
+  "windows_scope": "Existing Hybrid model, pirate mast, Bianca and controls preserved. Visual animation callbacks disabled during driven physics acceptance, re-enabled before screenshot; not a full animation or FPS acceptance.",
+  "visual_review": "Source and Windows arrival captures inspected for readable HUD, checkpoint 5/5, valid attempt, provisional road and respective vehicle assets.",
+  "local_evidence": {
+    "source_logs": {
+      "checkpoints.log": "5d2a8d17a170a76c920ee7cfdd1d835e3581ede35e54b4a3e978c61676b8c08d",
+      "drive_headless.log": "d203984c3c82ebf48236024dbee509567b5e1cad9fc92a814a8be41f2ebcd0cb",
+      "drive_render.log": "bc7d9abeef6e756c1e8b447e10e1d2ffd1dded19c5d47dcacb1b2e0a939b9d8c",
+      "blender.log": "a1e915baa054b95a62f5357165950dd5e45d714e56b88886df26b002e6944bec",
+      "checkpoint_windows_drive.log": "3e59046ec86e92bd07a6591d7e27f4bf3c26d7c6647c2983699d01633a4121a8"
+    },
+    "source_arrival_png_sha256": "6ccd862edd7e13f3b1cc0e6a18c6207c59ea2144164fb82c825c8320c9aa394a",
+    "windows_arrival_png_sha256": "66a3d7c8e59c6784cecf58623db511e02e22de491a7750c6109c987cb4bd3620"
+  },
+  "limits": [
+    "Only the existing 601.49m trial; not the full loop or visit.",
+    "Real asphalt, widths, junctions, parking and route remain unverified.",
+    "No disk saves, records or full Journey state-machine integration.",
+    "Rollover incident rule observes body orientation; no dynamic rollover acceptance claimed for this increment.",
+    "Private rasters, generated meshes, screenshots and third-party Windows assets remain outside Git."
+  ]
+}

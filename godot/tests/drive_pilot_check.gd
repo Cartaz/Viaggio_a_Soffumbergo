@@ -100,6 +100,8 @@ func run() -> void:
 		"Actual integrator clock matches drive time"
 	)
 	check(scene.arrived, "Reached arrival and stopped through ordinary controls")
+	check(scene.trial.valid, "Continuous physical drive remains eligible")
+	check(scene.trial.next_gate == 5, "All five directional gates crossed in order")
 	car.throttle = 0
 	car.braking = 0.6
 	await ticks(2)
@@ -132,6 +134,8 @@ func run() -> void:
 		"min_up_dot": min_up,
 		"unsupported_frames": unsupported_frames,
 		"trial_resets": scene.trial_resets,
+		"directional_checkpoints": scene.trial.next_gate,
+		"valid_arrival": scene.trial.valid and scene.arrived,
 		"surface_ray_max_error_m": max_ray_error,
 		"chunks_loaded": scene.chunks_loaded,
 		"chunks_unloaded": scene.chunks_unloaded,
@@ -140,6 +144,33 @@ func run() -> void:
 		"visual_animation_disabled_during_drive": physics_only,
 		"scope": "Declared 601m engineering trial; no verified real road or full journey"
 	}
+	await scene.reset_trial("Recovery acceptance test")
+	check(not scene.trial.valid, "Explicit recovery invalidates attempt")
+	check(scene.trial.next_gate == 5, "Recovery retains accepted checkpoints")
+	check(absf(scene.progress_m - 593) < 1, "Recovery uses last accepted checkpoint")
+	check(not car.freeze and not scene.recovering, "Recovery releases car after streaming")
+	await ticks(1)
+	check(car.diagnostic_contact_count > 0, "Recovered car supported by resident collision")
+	await scene.reset_trial("New attempt acceptance test", true)
+	check(scene.trial.valid and scene.trial.next_gate == 0, "New attempt clears old gates")
+	check(not scene.arrived and scene.progress_m < 6, "New attempt returns to initial pose")
+	await ticks(1)
+	check(car.diagnostic_contact_count > 0, "New start supported by resident collision")
+	# Exercise observed incident handling; this intentional discontinuity is not a drive.
+	car.reset_transform = Transform3D(car.basis, car.position + Vector3(30, 0, 0))
+	car.reset_requested = true
+	await ticks(0.2)
+	check(
+		not scene.trial.valid and not scene.trial.incident.is_empty(), "Off-road incident latched"
+	)
+	check(not scene.arrived and car.throttle == 0, "Incident blocks arrival and engine input")
+	await scene.reset_trial("Incident recovery acceptance test")
+	check(
+		not scene.trial.valid and scene.trial.incident.is_empty(),
+		"Incident recovery stays practice"
+	)
+	report["checks"] = checks
+	report["recovery_and_incident_checks"] = 11
 	var file := FileAccess.open("build/drive_validation/report.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(report, "  ") + "\n")
 	file.close()

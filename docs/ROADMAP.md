@@ -15,6 +15,9 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
   terreno originale e ricostruzione di prova distinti.
 - [x] Percorrere il tratto applicando soltanto comandi fisici, con arrivo,
   arresto, controllo dei contatti e caricamento/scaricamento dei settori.
+- [x] Nel solo tratto pilota, attraversare cinque checkpoint in ordine e nel
+  verso corretto; distinguere arrivo valido, incidente, recupero in allenamento
+  e nuova prova. Collaudare ripartenza e disponibilità delle collisioni.
 - [ ] Verificare larghezze, asfalto, bivi e sistemazione reale del fondo:
   il test non chiude la superficie stradale verificata o P2/P3.
 - [ ] Modello completo dell'ibrido, ABS/ESC e taratura di sospensioni/pneumatici.
@@ -109,6 +112,8 @@ Uscita: build di laboratorio con telemetria e scenari ripetibili.
 
 - [ ] Rendere l’anello completamente percorribile con geometria semplice.
 - [ ] Implementare checkpoint direzionali, incidenti e ripartenze.
+  Prova isolata implementata sui 601 m del candidato C: manca l'integrazione
+  con l'intero anello, la sosta e la visita; questa voce complessiva resta aperta.
 - [ ] Gestire la tappa di sosta e distinguere arrivo a Valle da conclusione del giro.
 - [ ] Bloccare la partenza di ritorno senza entrambi gli occupanti nelle posizioni previste.
 

@@ -16,6 +16,14 @@ il corpo tramite trasformazioni. `validate_drive_pilot.py` e il generatore
 Blender raccolgono prove. La modifica del terreno è dichiaratamente sintetica,
 non un nuovo rilievo o una correzione dei raster. Vedere [limiti](GUIDA_PILOTA.md).
 
+`trial_progress.gd` gestisce soltanto i checkpoint della prova: intersezione
+direzionale fra campioni fisici e piano del prossimo punto, sagoma/altezza,
+continuità, idoneità del tentativo e tempo. `drive_pilot.gd` osserva incidenti,
+mostra le strisce e prepara il terreno prima del recupero esplicito. La ripresa
+mantiene il progresso ma invalida il tentativo; soltanto una nuova prova azzera
+tutto. Non scrive salvataggi e non dichiara completata la gita. Le regole di
+discesa/visita/risalita in `coffa/session.py` restano da integrare nel motore.
+
 ## Corridoio Circuito 3D 0.1
 
 `coffa/dtm_mosaic.py` applica la scelta globale della fonte senza fusione di
