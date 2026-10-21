@@ -1,5 +1,16 @@
 # Revisione della strada, un tratto alla volta
 
+**Aggiornamento del 21 ottobre:** il primo passaggio ambientale ora interessa
+tutti i settori, con 86 postazioni e 92 viste. Registro delle viste in
+`data/geography/streetview_views.csv`, descrizioni e classi in
+`data/geography/streetview_observations.csv`. [Catalogo e ricette](AMBIENTE_CIRCUITO.md).
+Le osservazioni generano segnaposto visivi; asfalto, asse, raccordi e quote di
+progetto non sono stati corretti sulla loro base. Restano da coprire gli intervalli
+ciechi e da risolvere i conflitti cartografici prima della terraformazione di dettaglio.
+
+La scheda storica `SV-A001` descritta sotto corrisponde alla nuova postazione
+`SV-001`, vista verso nord. Il codice storico rimane per conservare la provenienza.
+
 Si parte dal settore A del dossier: uscita dal parcheggio, innesto su SR356,
 poi via Divisione Julia. Ogni tratto viene prima osservato, poi confrontato con
 asse candidato e DTM, infine modificato e collaudato con la Yaris finale,

@@ -20,6 +20,15 @@ Sviluppa autonomamente il gioco 3D offline per Linux e Windows, senza attendere 
 
 ## Mappa dei contenuti (percorsi verificati)
 
+- **Ambiente e Street View:** `docs/AMBIENTE_CIRCUITO.md`,
+  `data/geography/streetview_views.csv`, `streetview_observations.csv` e
+  `circuit_placeholders.json` nella stessa cartella. Catalogo HTML/CSV sotto
+  `reports/`, generatore `tools/build_circuit_environment.py`, gate
+  `tools/validate_circuit_environment.py`. Codici e ricette deterministici,
+  primitive a settori, nessuna collisione di ingombri stimati. 86 postazioni
+  non certificano copertura continua o identificazione di ogni facciata.
+  Conflitti e parti non osservate devono restare espliciti.
+
 - **Asfalto e recupero fuori strada:** `docs/RACCORDI_E_ASFALTO.md`,
   `tools/build_circuit_shoulders.py`, `tools/validate_circuit_shoulders.py`.
   Raccordi separati sul layer 8, strada sul 4, terreno sull'1. Originali

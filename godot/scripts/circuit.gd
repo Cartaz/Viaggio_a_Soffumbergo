@@ -3,6 +3,8 @@ extends "res://godot/scripts/valle.gd"
 
 const Grid = preload("res://godot/scripts/circuit_mesh.gd")
 const FineSector = preload("res://godot/scripts/circuit_sector.gd")
+const EnvironmentLayer = preload("res://godot/scripts/circuit_environment.gd")
+var environment_layer: Node3D
 var entries: Dictionary = {}
 var overview: Dictionary = {}
 var residents: Dictionary = {}
@@ -45,6 +47,13 @@ func _ready() -> void:
 	ground.cull_mode = BaseMaterial3D.CULL_BACK
 	_build_overview()
 	data["buildings"] = data.valle_content.buildings
+	environment_layer = EnvironmentLayer.new()
+	add_child(environment_layer)
+	if environment_layer.configure(path, camera):
+		data["buildings"] = data.buildings.filter(
+			func(item: Dictionary) -> bool:
+				return not environment_layer.covered_osm.has(str(item.id))
+		)
 	data["roads"] = data.valle_content.roads
 	_build_buildings()
 	_build_roads()
@@ -168,6 +177,8 @@ func load_next() -> void:
 	var chunk := FineSector.new()
 	add_child(chunk)
 	chunk.build(parsed, ground)
+	if is_instance_valid(environment_layer):
+		environment_layer.attach_tile(chunk, id)
 	residents[id] = chunk
 	(overview[id] as MeshInstance3D).visible = false
 	chunk.update_lod(camera.position, data.config.lod_distances_m)

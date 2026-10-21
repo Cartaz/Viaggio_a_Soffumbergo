@@ -2,6 +2,14 @@
 
 ## Coffa e tornanti
 
+**Ambiente codificato dell'anello:** primo sopralluogo Street View a 86 postazioni
+in tutti i settori, 25 categorie e 1.238 riferimenti con descrizione e ricetta
+rigenerabile. 1.164 segnaposto visibili; 74 box in conflitto con la strada sono
+segnalati nel catalogo. **F10** mostra le schede vicine.
+[Catalogo offline](reports/CATALOGO_SEGNAPOSTO.html) ·
+[Metodo, comandi e limiti](docs/AMBIENTE_CIRCUITO.md).
+La copertura è puntuale: gli intervalli e le parti nascoste richiedono ulteriori viste.
+
 **Asfalto e raccordi al terreno:** la strada principale ha materiale asfalto e
 una raccordatura di 85 cm; l'asfalto è abbassato a 2 cm dal terreno derivato.
 Tutte le nuove prove usano Yaris finale, pennone/coffa e Bianca/Bernie locali.

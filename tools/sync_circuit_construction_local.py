@@ -42,6 +42,22 @@ FILES += ['data/config/circuit_loop.json', 'data/config/circuit_shoulders.json',
           'reports/GIRO_COSTRUZIONE_VERIFICA.json', 'reports/RACCORDI_ASFALTO_VERIFICA.json',
           'build/circuit/loop.json', 'build/circuit/shoulders.json',
           'build/shoulder_validation/probes.json', 'build/shoulder_validation/recovery_route.json']
+FILES += ['data/config/circuit_environment.json', 'data/geography/circuit_placeholders.json',
+          'data/geography/streetview_observations.csv', 'data/geography/streetview_views.csv',
+          'godot/scripts/circuit.gd', 'godot/scripts/circuit_environment.gd',
+          'godot/tests/circuit_environment_check.gd', 'tools/coffa/environment.py',
+          'tools/build_circuit_environment.py', 'tools/fetch_circuit_environment.py',
+          'data/geography/osm_circuit_environment.geojson',
+          'data/geography/osm_circuit_environment_provenance.json',
+          'reports/CATALOGO_SEGNAPOSTO.html', 'reports/CATALOGO_SEGNAPOSTO.csv',
+          'reports/AMBIENTE_CIRCUITO_CATALOGO.json']
+FILES += ['docs/AMBIENTE_CIRCUITO.md', 'docs/REVISIONE_STRADA_STREETVIEW.md',
+          'tools/validate_circuit_environment.py', 'tools/blender/build_circuit_environment.py',
+          'tests/test_circuit_environment.py', 'reports/AMBIENTE_CIRCUITO_VERIFICA.json']
+# First adoption of the shared stream hook: only the previously verified public
+# version may be replaced. Any private divergence still aborts before writes.
+ADOPTION_BASELINES = {'godot/scripts/circuit.gd':
+                      '529b41471bbed76497c2935ad83199cbf814690c4068a37604d203d758886be7'}
 
 
 def digest(path):
@@ -60,6 +76,17 @@ def sync(target, godot):
     receipt = target/'build/construction_sync_receipt.json'
     owned = json.loads(receipt.read_bytes())['files'] if receipt.exists() else {}
     paths = list(FILES)
+    environment_report = ROOT/'build/environment_validation/blender_report.json'
+    if environment_report.is_file():
+        native = ROOT/'build/environment_validation/circuit_environment.blend'
+        evidence = json.loads(environment_report.read_bytes())
+        catalog = ROOT/'data/geography/circuit_placeholders.json'
+        if evidence.get('catalog_sha256') == hashlib.sha256(catalog.read_bytes()).hexdigest():
+            if evidence.get('native_scene_sha256'):
+                if digest(native) != evidence['native_scene_sha256']:
+                    raise ValueError('Native environment changed after validation')
+                paths += ['build/environment_validation/blender_report.json',
+                          'build/environment_validation/circuit_environment.blend']
     for e in manifest['sectors']+manifest['engineering_construction']['road_sectors']:
         relative = Path(e['path'])
         if relative.is_absolute() or '..' in relative.parts or relative.parts[0] != 'datasets':
@@ -79,7 +106,7 @@ def sync(target, godot):
         if not dest.resolve().is_relative_to(target):
             raise ValueError('Target escape')
         if dest.exists() and digest(src) != digest(dest):
-            if owned.get(p) != digest(dest):
+            if owned.get(p, ADOPTION_BASELINES.get(p)) != digest(dest):
                 raise ValueError('Existing user change preserved: '+str(dest))
         if not dest.exists() or src.read_bytes() != dest.read_bytes():
             changes.append(p)

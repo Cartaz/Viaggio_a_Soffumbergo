@@ -1,5 +1,12 @@
 # Decisioni e vincoli
 
+**Ambiente, 21 ottobre 2026:** l'utente richiede un passaggio Street View
+sull'intero circuito, edifici a box, forme naturali semplici e classificazione.
+Ogni riferimento deve essere codificato e descritto per riprodurlo. Il nuovo
+catalogo conserva fonte, data, ricetta e incertezza; le viste puntuali non sono
+copertura continua. Quote/dimensioni da foto non vengono inventate come misure.
+[Procedura](AMBIENTE_CIRCUITO.md). Gli elementi non verificati restano visivi.
+
 **Direzione esplicita del 21 ottobre 2026:** tutte le prove 3D devono usare la Yaris finale approvata, il pennone/coffa e i due topolini ispirati a Bianca e Bernie. Il proxy pubblico resta storico. Asfalto ribassato e raccordatura larga al massimo metà veicolo: scelta 0,85 m per lato. I controlli geometrici completi sono separati dalla prova visibile per evitare attese poco chiare.
 
 

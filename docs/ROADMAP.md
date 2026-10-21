@@ -4,6 +4,20 @@ Stato attuale: preparazione tecnica, laboratorio avviato in Godot e prima ricost
 
 ## Valle 3D 0.1 — 20 ottobre 2026
 
+**Ambiente codificato, 21 ottobre:** [catalogo e procedura](AMBIENTE_CIRCUITO.md).
+
+- [x] Primo passaggio Street View a postazioni lungo tutti i settori: 86 punti,
+  92 direzioni, fonti e date; copertura continua non dichiarata.
+- [x] Catalogare 25 categorie con codici stabili, descrizioni e ricette esplicite;
+  distinguere pianta OSM, osservazione, collocazione stimata e misure sconosciute.
+- [x] Integrare 1.164 segnaposto visivi a settori, senza duplicare le sagome di Valle;
+  conservare 74 conflitti come elementi da rivedere, senza spostarli di nascosto.
+- [x] Verificare rigenerazione, coordinate, scaricamento e schede con l'assemblaggio
+  finale in Godot e nel progetto Blender locale.
+- [ ] Infittire le viste negli intervalli ciechi e verificare i singoli ingombri.
+- [ ] Risolvere i conflitti edificio/strada partendo da Valle e sostituire i box
+  con forme documentate prima di attivare le collisioni degli elementi ambientali.
+
 **Terraforming del 21 ottobre:** [costruzione dell'intero candidato](COSTRUZIONE_CIRCUITO.md).
 
 **Raccordi e asfalto, 21 ottobre:** [procedura](RACCORDI_E_ASFALTO.md).

@@ -1,5 +1,22 @@
 # Architettura della preparazione
 
+## Ambiente codificato
+
+`build_circuit_environment.py` unisce un estratto OSM separato e osservazioni
+Street View manuali, con codici deterministici e primitive esplicite in
+`data/geography/circuit_placeholders.json`. Le quote dei soli punti di appoggio
+provengono dai triangoli del terreno derivato. Non viene distribuita una griglia
+raster né dedotta una misura dalla prospettiva. Conflitti e terreno mancante
+rimangono espliciti, senza spostare le sagome cartografiche.
+
+`circuit_environment.gd` accetta soltanto il manifest di costruzione compatibile,
+mantiene l'identità di ogni elemento nei metadati e raggruppa le primitive per
+tipo/materiale in `MultiMesh`. Il gancio di `circuit.gd` sottrae gli ID sostituiti
+dal vecchio strato edilizio e associa i gruppi ai settori residenti. Le collisioni
+ambientali stimate sono disattivate; strada, raccordi e terreno restano separati.
+F10 espone codici e descrizioni, senza intervenire sui comandi F11 locali.
+[Rigenerazione e collaudi](AMBIENTE_CIRCUITO.md).
+
 ## Costruzione del circuito
 
 `build_circuit_shoulders.py` aggiunge una fascia separata e rigenerabile dal
