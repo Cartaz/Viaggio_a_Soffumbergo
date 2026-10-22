@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.1.0",
+  "sector_id": "D",
+  "sector_name": "Strada per Valle — discesa verso Costalunga",
+  "status": "partial_endpoint_only",
+  "survey_completed": false,
+  "sector_definition": {
+    "source": "CIRCUITO_SOPRALLUOGO.md, sessione 2026-10-19, sezione 'Settori di lavoro' e passaggio 15",
+    "route_step": 15,
+    "direction": "dal bivio via Monte Piccat in uscita da Valle verso strada per Costalunga",
+    "start_label": "Bivio Via Monte Piccat / Strada per Valle",
+    "end_label": "Strada per Valle / Strada per Costalunga",
+    "google_maps_step_instruction": "Leggermente a sinistra in strada per Valle",
+    "google_maps_reported_rounded_length_m": 1400,
+    "reported_length_not_surveyed": true,
+    "previous_sector": "V",
+    "next_sector": "E",
+    "main_route_source": "link originale nella prima sezione di CIRCUITO_SOPRALLUOGO.md"
+  },
+  "coordinate_reference": {
+    "viewpoint_crs": "WGS84 EPSG:4326",
+    "coordinate_order": [
+      "longitude",
+      "latitude"
+    ],
+    "meaning": "coordinate del panorama per ritrovare il punto; NON centerline, rilievo GPS o geometria stradale",
+    "elevation_datum": null
+  },
+  "source_documents": [
+    "CIRCUITO_SOPRALLUOGO.md (allegato al progetto ChatGPT)",
+    "docs/PROGETTO.md",
+    "docs/ARCHITETTURA.md",
+    "docs/RIFERIMENTI_E_SOPRALLUOGO.md"
+  ],
+  "observed_nodes": [
+    {
+      "id": "CIR-11",
+      "role": "junction_context_previsit_and_return",
+      "step": 11,
+      "image_month": "2026-03",
+      "viewpoint_wgs84": [
+        13.3922833,
+        46.1588292
+      ],
+      "heading_deg": 2.49,
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=VG6N0zxqJ7PLJ6BbJX5OWA&viewpoint=46.1588292%2C13.3922833&heading=2.49&pitch=0",
+      "observations_from_source": [
+        "Bivio con svolta a sinistra",
+        "Ringhiera su pilastrini in cemento sul bordo sinistro",
+        "Muretto a destra",
+        "Segnali direzionali"
+      ],
+      "limitation": "Rilievo del nodo nel tratto di avvicinamento, non censimento della strada D; al primo passaggio l'itinerario segue il settore V"
+    },
+    {
+      "id": "CIR-VAL-15",
+      "role": "sector_start",
+      "step": 15,
+      "image_month": "2023-05",
+      "viewpoint_wgs84": [
+        13.3926044,
+        46.1588137
+      ],
+      "heading_deg": 321.61,
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=KAzz8xQ3_0RkMdu4rPLCNA&viewpoint=46.1588137%2C13.3926044&heading=321.61&pitch=0",
+      "observations_from_source": [
+        "Incrocio asfaltato ai margini del bosco",
+        "Banchine erbose",
+        "Segnale blu",
+        "Apertura verso la strada per Valle"
+      ],
+      "limitation": "Solo nodo iniziale; non prova la continuità della copertura, raggi delle curve o quote"
+    },
+    {
+      "id": "CIR-12",
+      "role": "sector_end_next_sector_transition",
+      "step": 16,
+      "image_month": "2023-05",
+      "viewpoint_wgs84": [
+        13.379205,
+        46.1580732
+      ],
+      "heading_deg": 295.07,
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=PxnOlMmQDxYQPw0_-VBuEg&viewpoint=46.1580732%2C13.379205&heading=295.07&pitch=0",
+      "observations_from_source": [
+        "Bivio nel bosco",
+        "Parete/muro in pietra presso la diramazione",
+        "Margini erbosi",
+        "Asfalto senza mezzeria",
+        "Piccolo contenitore mobile presso l'incrocio"
+      ],
+      "limitation": "Solo nodo finale / ingresso E; oggetti mobili non permanenti"
+    }
+  ],
+  "route_geometry": {
+    "wgs84_linestring": null,
+    "source": null,
+    "verified": false,
+    "turn_inventory": [],
+    "known_intermediate_panoramas": 0,
+    "measured_width_m": null,
+    "measured_curve_radii_m": null,
+    "measured_grade_percent": null,
+    "guardrail_sequence": null,
+    "overhead_clearance_m": null,
+    "terrain_dtm_verified": false
+  },
+  "known_gaps": [
+    "Tutti i panorami interni al tratto di 1,4 km fra CIR-VAL-15 e CIR-12 ancora da seguire in sequenza",
+    "Numero, verso e geometria dei tornanti non accertati",
+    "Mancano linea stradale sorgente riutilizzabile e quote DTM verificate",
+    "Non accertati muri, parapetti, larghezze e rami/cavi sopra la coffa lungo il tratto",
+    "Nessun modello di settore D né test reali Godot/Blender"
+  ],
+  "boundary_note": "La chiesa, la piazza e Via Monte Piccat sono nel settore V e non devono essere registrate come punti D; l'interno della strada per Costalunga è E.",
+  "source_provenance": {
+    "image_reference_only": "Google Street View, riferimenti ai panorami e date visibili annotati nel documento sorgente; fotografie non redistribute",
+    "osm": "© OpenStreetMap contributors; dataset limitato al borgo già presente nella repo non copre tutta D",
+    "rights": "Non incorporare screenshot Street View come asset"
+  },
+  "checks": {
+    "endpoint_observations_count": 2,
+    "extra_context_panoramas": 1,
+    "surveyed_intermediate_panoramas": 0,
+    "full_length_coverage": "unknown",
+    "motor_vehicle_clearance_verified": false,
+    "route_mesh_generated": false
+  }
+}
