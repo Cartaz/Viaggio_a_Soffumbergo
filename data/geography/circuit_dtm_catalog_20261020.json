@@ -1,0 +1,1893 @@
+{
+  "schema_version": 1,
+  "dataset_source": "https://irdat.regione.fvg.it/consultatore-dati-ambientali-territoriali/detail/irdat/dataset/11826",
+  "acquisition": "user-supplied DTM Completi, 2026-10-20",
+  "horizontal_crs_operator_declared": "EPSG:6708",
+  "horizontal_metadata_verified_per_tile": false,
+  "georeferencing_basis": "Same named collection; four Valle rasters match prior verified SHA256; ASCII has no embedded CRS",
+  "vertical_reference_operator_declared": "ellipsoidal",
+  "vertical_metadata_verified_independently": false,
+  "datum_conversion_applied": false,
+  "raw_rasters_committed": false,
+  "source_license_for_redistribution": "pending regional metadata rights review",
+  "tile_count": 41,
+  "total_source_bytes": 853275721,
+  "total_input_cells": 123984000,
+  "total_nodata_cells": 0,
+  "tiles": [
+    {
+      "filename": "Ell_DTM_06701201.asc",
+      "sha256": "dd58b292b5c8eaf51bc95696a9244dd3f84c8bc6431fe1355806ce8916b45be8",
+      "bytes": 20812963,
+      "bounds_EN_m": [
+        374420.0,
+        5114045.0,
+        375320.0,
+        5114885.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 306.8699951171875,
+      "maximum_declared_ellipsoidal_height_m": 584.5900268554688
+    },
+    {
+      "filename": "Ell_DTM_06701205.asc",
+      "sha256": "741cc597d1fbbaddd0737b37f669f279b0cf55040b95ac2258277ee347fca355",
+      "bytes": 20811968,
+      "bounds_EN_m": [
+        374420.0,
+        5113285.0,
+        375320.0,
+        5114125.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 392.70001220703125,
+      "maximum_declared_ellipsoidal_height_m": 721.4000244140625
+    },
+    {
+      "filename": "Ell_DTM_06701209.asc",
+      "sha256": "5a454c8a53f180af337b8678b37aaa26b757aff8f674679aa257452fbf8681be",
+      "bytes": 20811475,
+      "bounds_EN_m": [
+        374420.0,
+        5112525.0,
+        375320.0,
+        5113365.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 433.4200134277344,
+      "maximum_declared_ellipsoidal_height_m": 692.3900146484375
+    },
+    {
+      "filename": "Ell_DTM_06701210.asc",
+      "sha256": "087ac4f775ab56597b56afcbd714c2932f1cba3b22c4679adae6c398cbce5cce",
+      "bytes": 20811607,
+      "bounds_EN_m": [
+        375240.0,
+        5112525.0,
+        376140.0,
+        5113365.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 487.8900146484375,
+      "maximum_declared_ellipsoidal_height_m": 877.1500244140625
+    },
+    {
+      "filename": "Ell_DTM_06701211.asc",
+      "sha256": "a0df530ca24eb8e30a8f6accbd5228a3196deacb5bb3864adea62eb81836c388",
+      "bytes": 20807736,
+      "bounds_EN_m": [
+        376060.0,
+        5112525.0,
+        376960.0,
+        5113365.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 626.3200073242188,
+      "maximum_declared_ellipsoidal_height_m": 959.6099853515625
+    },
+    {
+      "filename": "Ell_DTM_06701213.asc",
+      "sha256": "5a94b694d92042d841a5fa97205a8f335662e1e2115fd709b836e0c8ea0ab4a4",
+      "bytes": 20813446,
+      "bounds_EN_m": [
+        374420.0,
+        5111765.0,
+        375320.0,
+        5112605.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 271.760009765625,
+      "maximum_declared_ellipsoidal_height_m": 640.1599731445312
+    },
+    {
+      "filename": "Ell_DTM_06701214.asc",
+      "sha256": "b9479d08184f0e390bf4ba7bc2779086a45b17d96a8aa3e64b00d5598bbae2b1",
+      "bytes": 20813041,
+      "bounds_EN_m": [
+        375240.0,
+        5111765.0,
+        376140.0,
+        5112605.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 408.739990234375,
+      "maximum_declared_ellipsoidal_height_m": 777.0800170898438
+    },
+    {
+      "filename": "Ell_DTM_06701215.asc",
+      "sha256": "a907b2106d486eaad64dddc85dc3fa7e02d272ea2ca978743c4ec96d27c41991",
+      "bytes": 20812509,
+      "bounds_EN_m": [
+        376060.0,
+        5111765.0,
+        376960.0,
+        5112605.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 413.6300048828125,
+      "maximum_declared_ellipsoidal_height_m": 795.3599853515625
+    },
+    {
+      "filename": "Ell_DTM_06701303.asc",
+      "sha256": "fdb691ec43429c270551c63d8375bf5efbd50e74806c1248fb98571266d0d68f",
+      "bytes": 20812748,
+      "bounds_EN_m": [
+        372820.0,
+        5114045.0,
+        373720.0,
+        5114885.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 264.6700134277344,
+      "maximum_declared_ellipsoidal_height_m": 583.3499755859375
+    },
+    {
+      "filename": "Ell_DTM_06701304.asc",
+      "sha256": "af4104d12629de331a47af781e6526ae64c0e80a05912af0df6e1a0bf124cad5",
+      "bytes": 20813220,
+      "bounds_EN_m": [
+        373640.0,
+        5114045.0,
+        374540.0,
+        5114885.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 270.2200012207031,
+      "maximum_declared_ellipsoidal_height_m": 579.1599731445312
+    },
+    {
+      "filename": "Ell_DTM_06701306.asc",
+      "sha256": "db2a10c21de946714934b79f990b24be7b2ba95843fc135966e067b75f04eb1e",
+      "bytes": 20812941,
+      "bounds_EN_m": [
+        372000.0,
+        5113285.0,
+        372900.0,
+        5114125.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 271.1499938964844,
+      "maximum_declared_ellipsoidal_height_m": 626.6599731445312
+    },
+    {
+      "filename": "Ell_DTM_06701307.asc",
+      "sha256": "256b7f7b5acdb66de206523b5d2a6a6748e05a3e528596f619bb5c1f7c7fd434",
+      "bytes": 20809632,
+      "bounds_EN_m": [
+        372820.0,
+        5113285.0,
+        373720.0,
+        5114125.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 238.5,
+      "maximum_declared_ellipsoidal_height_m": 505.8599853515625
+    },
+    {
+      "filename": "Ell_DTM_06701308.asc",
+      "sha256": "4e57ab62448a38318a351c909393d481afe77c43aaa974091b0d1affe9891e33",
+      "bytes": 20808362,
+      "bounds_EN_m": [
+        373640.0,
+        5113285.0,
+        374540.0,
+        5114125.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 266.1300048828125,
+      "maximum_declared_ellipsoidal_height_m": 512.3900146484375
+    },
+    {
+      "filename": "Ell_DTM_06701310.asc",
+      "sha256": "a2d3b42920aa5c3d9cb0640662b928eb81f4e110e7bb97bd4dc39737ff044de3",
+      "bytes": 20812876,
+      "bounds_EN_m": [
+        372000.0,
+        5112525.0,
+        372900.0,
+        5113365.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 219.1999969482422,
+      "maximum_declared_ellipsoidal_height_m": 441.5400085449219
+    },
+    {
+      "filename": "Ell_DTM_06701311.asc",
+      "sha256": "367bab979d51608af516ee5aa8075c687af03470e23411a5901279266a43cfdd",
+      "bytes": 20812786,
+      "bounds_EN_m": [
+        372820.0,
+        5112525.0,
+        373720.0,
+        5113365.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 219.1999969482422,
+      "maximum_declared_ellipsoidal_height_m": 460.2699890136719
+    },
+    {
+      "filename": "Ell_DTM_06701312.asc",
+      "sha256": "e1e11541adcf73d399c910a9e700a7483fe2615809e75a2a32f5fd7c95771695",
+      "bytes": 20811637,
+      "bounds_EN_m": [
+        373640.0,
+        5112525.0,
+        374540.0,
+        5113365.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 294.5199890136719,
+      "maximum_declared_ellipsoidal_height_m": 666.4000244140625
+    },
+    {
+      "filename": "Ell_DTM_06701314.asc",
+      "sha256": "2b90f29d3e076328594afe6548c53f5d24e867dc34646cc1d7682d70720ae2da",
+      "bytes": 20809543,
+      "bounds_EN_m": [
+        372000.0,
+        5111765.0,
+        372900.0,
+        5112605.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 199.60000610351562,
+      "maximum_declared_ellipsoidal_height_m": 334.3800048828125
+    },
+    {
+      "filename": "Ell_DTM_06701315.asc",
+      "sha256": "e197dbabf3d234ed332968cc7462d08500c6d3d087466736f969499baa863775",
+      "bytes": 20812668,
+      "bounds_EN_m": [
+        372820.0,
+        5111765.0,
+        373720.0,
+        5112605.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 218.3300018310547,
+      "maximum_declared_ellipsoidal_height_m": 482.9100036621094
+    },
+    {
+      "filename": "Ell_DTM_06701316.asc",
+      "sha256": "1b2af07d70cf984dcfbde6fe61e694fae5fcd8bf274d34b6719c24282ab2d7df",
+      "bytes": 20811805,
+      "bounds_EN_m": [
+        373640.0,
+        5111765.0,
+        374540.0,
+        5112605.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 270.9200134277344,
+      "maximum_declared_ellipsoidal_height_m": 649.52001953125
+    },
+    {
+      "filename": "Ell_DTM_06705101.asc",
+      "sha256": "6c70b9e4f15f0256e04446cf23704ca2b013bb36da77b215799ac11915feefd2",
+      "bytes": 20812145,
+      "bounds_EN_m": [
+        374310.0,
+        5111225.0,
+        375210.0,
+        5112065.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 247.25999450683594,
+      "maximum_declared_ellipsoidal_height_m": 493.010009765625
+    },
+    {
+      "filename": "Ell_DTM_06705102.asc",
+      "sha256": "b6d53e10d630c5a79c0a68c216d27caed9dae97a94956992dd44cad88ebe362d",
+      "bytes": 20813102,
+      "bounds_EN_m": [
+        375130.0,
+        5111225.0,
+        376030.0,
+        5112065.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 360.8399963378906,
+      "maximum_declared_ellipsoidal_height_m": 720.0
+    },
+    {
+      "filename": "Ell_DTM_06705103.asc",
+      "sha256": "cb857790ce299f8b766962d69ad175841b3edb1a4239796de96ddae565e28dfe",
+      "bytes": 20812937,
+      "bounds_EN_m": [
+        375950.0,
+        5111225.0,
+        376850.0,
+        5112065.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 269.0400085449219,
+      "maximum_declared_ellipsoidal_height_m": 717.8499755859375
+    },
+    {
+      "filename": "Ell_DTM_06705105.asc",
+      "sha256": "8c36af2ffc905f16ab64c40fdf8c7af5af122455937cd470dbf6315fdb27004b",
+      "bytes": 20813339,
+      "bounds_EN_m": [
+        374310.0,
+        5110465.0,
+        375210.0,
+        5111305.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 209.6300048828125,
+      "maximum_declared_ellipsoidal_height_m": 489.3399963378906
+    },
+    {
+      "filename": "Ell_DTM_06705106.asc",
+      "sha256": "a7284e7e202235f58287385d57e13c9109de458132736c7be47880d05522cee1",
+      "bytes": 20812776,
+      "bounds_EN_m": [
+        375130.0,
+        5110465.0,
+        376030.0,
+        5111305.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 262.9100036621094,
+      "maximum_declared_ellipsoidal_height_m": 574.6099853515625
+    },
+    {
+      "filename": "Ell_DTM_06705107.asc",
+      "sha256": "5ec2ebe08a996f9fe7f20bf26ff0af36db3efa57a23a147fa7a250ed34a488ee",
+      "bytes": 20813357,
+      "bounds_EN_m": [
+        375950.0,
+        5110465.0,
+        376850.0,
+        5111305.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 232.61000061035156,
+      "maximum_declared_ellipsoidal_height_m": 527.219970703125
+    },
+    {
+      "filename": "Ell_DTM_06705109.asc",
+      "sha256": "fcf6efa1e4fb906b248eca531882190c39faf1977c00adc2a5845e4765bf46e1",
+      "bytes": 20811166,
+      "bounds_EN_m": [
+        374310.0,
+        5109705.0,
+        375210.0,
+        5110545.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 176.27000427246094,
+      "maximum_declared_ellipsoidal_height_m": 339.57000732421875
+    },
+    {
+      "filename": "Ell_DTM_06705110.asc",
+      "sha256": "78ca8a1715935ec05002b0deab01512adb6e4c62e0a557931cc2cc3cf21e0c56",
+      "bytes": 20811977,
+      "bounds_EN_m": [
+        375130.0,
+        5109705.0,
+        376030.0,
+        5110545.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 192.10000610351562,
+      "maximum_declared_ellipsoidal_height_m": 415.8599853515625
+    },
+    {
+      "filename": "Ell_DTM_06705111.asc",
+      "sha256": "bcd094fb87de395b447fd3ae5a374dab4a924a7947720605d0765cd5e691bad4",
+      "bytes": 20814207,
+      "bounds_EN_m": [
+        375950.0,
+        5109705.0,
+        376850.0,
+        5110545.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 212.92999267578125,
+      "maximum_declared_ellipsoidal_height_m": 415.8599853515625
+    },
+    {
+      "filename": "Ell_DTM_06705113.asc",
+      "sha256": "e8fe9b4cecae803fe2737569e49838082b61a321914a08d8a32d5112187203fc",
+      "bytes": 20810236,
+      "bounds_EN_m": [
+        374310.0,
+        5108945.0,
+        375210.0,
+        5109785.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 165.02000427246094,
+      "maximum_declared_ellipsoidal_height_m": 263.54998779296875
+    },
+    {
+      "filename": "Ell_DTM_06705304.asc",
+      "sha256": "0832e39bc52f7d51df10612d36e05eb2eff0cd4638e9f9493a7c2f812c7f0357",
+      "bytes": 20812014,
+      "bounds_EN_m": [
+        373530.0,
+        5108495.0,
+        374430.0,
+        5109335.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 163.32000732421875,
+      "maximum_declared_ellipsoidal_height_m": 176.6699981689453
+    },
+    {
+      "filename": "Ell_DTM_06705402.asc",
+      "sha256": "90e446ef104b2a2c90c4b9813b07e2c5ddafd802511018f75076f829f1e4b35e",
+      "bytes": 20809892,
+      "bounds_EN_m": [
+        371890.0,
+        5111225.0,
+        372790.0,
+        5112065.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 192.91000366210938,
+      "maximum_declared_ellipsoidal_height_m": 292.760009765625
+    },
+    {
+      "filename": "Ell_DTM_06705403.asc",
+      "sha256": "309a4b82c0e9e6fe423e37decdcfd485808c8103ddddbc9303f52245a61907e3",
+      "bytes": 20811821,
+      "bounds_EN_m": [
+        372710.0,
+        5111225.0,
+        373610.0,
+        5112065.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 195.4600067138672,
+      "maximum_declared_ellipsoidal_height_m": 475.6700134277344
+    },
+    {
+      "filename": "Ell_DTM_06705404.asc",
+      "sha256": "384958f40a1e75b0ba62925e2d3a234e05b184f1ed631c5cddd52d5206467376",
+      "bytes": 20813154,
+      "bounds_EN_m": [
+        373530.0,
+        5111225.0,
+        374430.0,
+        5112065.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 216.00999450683594,
+      "maximum_declared_ellipsoidal_height_m": 481.1700134277344
+    },
+    {
+      "filename": "Ell_DTM_06705406.asc",
+      "sha256": "9a96032247ba44c71d60eaa924f733f92e8104bd14b1fb9255d010947880e37d",
+      "bytes": 20812524,
+      "bounds_EN_m": [
+        371890.0,
+        5110465.0,
+        372790.0,
+        5111305.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 181.4499969482422,
+      "maximum_declared_ellipsoidal_height_m": 224.85000610351562
+    },
+    {
+      "filename": "Ell_DTM_06705407.asc",
+      "sha256": "819fb4b75b1deab230b7b8f927727bf6fafc7cb16f14ecfe21dc35f753be249e",
+      "bytes": 20812373,
+      "bounds_EN_m": [
+        372710.0,
+        5110465.0,
+        373610.0,
+        5111305.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 188.9499969482422,
+      "maximum_declared_ellipsoidal_height_m": 242.5
+    },
+    {
+      "filename": "Ell_DTM_06705408.asc",
+      "sha256": "1d5acf10e2ce1df349357cd1079a6b88c4270710efc01846c68c0f9490f4041e",
+      "bytes": 20813556,
+      "bounds_EN_m": [
+        373530.0,
+        5110465.0,
+        374430.0,
+        5111305.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 194.52999877929688,
+      "maximum_declared_ellipsoidal_height_m": 397.6199951171875
+    },
+    {
+      "filename": "Ell_DTM_06705410.asc",
+      "sha256": "6f804a1074cce08d7973752fb5a83605b33ea697b2d53cc99c213025c3d8023c",
+      "bytes": 20805822,
+      "bounds_EN_m": [
+        371890.0,
+        5109705.0,
+        372790.0,
+        5110545.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 172.64999389648438,
+      "maximum_declared_ellipsoidal_height_m": 224.8800048828125
+    },
+    {
+      "filename": "Ell_DTM_06705411.asc",
+      "sha256": "5eff7a1502a593b458387966dae1508d8735fcc30d6c80a7e560db3a35c62acb",
+      "bytes": 20809758,
+      "bounds_EN_m": [
+        372710.0,
+        5109705.0,
+        373610.0,
+        5110545.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 174.91000366210938,
+      "maximum_declared_ellipsoidal_height_m": 238.36000061035156
+    },
+    {
+      "filename": "Ell_DTM_06705412.asc",
+      "sha256": "eb8f68e5b1315faa0eeeeb8ea1e55aa03b31c7017f6eff6d7be086314459bbff",
+      "bytes": 20810914,
+      "bounds_EN_m": [
+        373530.0,
+        5109705.0,
+        374430.0,
+        5110545.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 176.1699981689453,
+      "maximum_declared_ellipsoidal_height_m": 310.489990234375
+    },
+    {
+      "filename": "Ell_DTM_06705415.asc",
+      "sha256": "4673cbcac2b2ada2f65d92b18cce7a4adcaa36a2e180e78a2bcb12b34a77e492",
+      "bytes": 20805280,
+      "bounds_EN_m": [
+        372710.0,
+        5108945.0,
+        373610.0,
+        5109785.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 166.94000244140625,
+      "maximum_declared_ellipsoidal_height_m": 191.6199951171875
+    },
+    {
+      "filename": "Ell_DTM_06705416.asc",
+      "sha256": "94c77356110e911ac96063d9b5dc4843671fec28a8d3b2261319fb0c8d1036af",
+      "bytes": 20810408,
+      "bounds_EN_m": [
+        373530.0,
+        5108945.0,
+        374430.0,
+        5109785.0
+      ],
+      "ncols": 1800,
+      "nrows": 1680,
+      "resolution_m": 0.5,
+      "valid_cells": 3024000,
+      "nodata_cells": 0,
+      "minimum_declared_ellipsoidal_height_m": 166.11000061035156,
+      "maximum_declared_ellipsoidal_height_m": 217.25
+    }
+  ],
+  "overlaps": [
+    {
+      "a": "Ell_DTM_06701205.asc",
+      "b": "Ell_DTM_06701201.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701209.asc",
+      "b": "Ell_DTM_06701205.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701210.asc",
+      "b": "Ell_DTM_06701205.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701210.asc",
+      "b": "Ell_DTM_06701209.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701211.asc",
+      "b": "Ell_DTM_06701210.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701213.asc",
+      "b": "Ell_DTM_06701209.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701213.asc",
+      "b": "Ell_DTM_06701210.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701214.asc",
+      "b": "Ell_DTM_06701209.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701214.asc",
+      "b": "Ell_DTM_06701210.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701214.asc",
+      "b": "Ell_DTM_06701211.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701214.asc",
+      "b": "Ell_DTM_06701213.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701215.asc",
+      "b": "Ell_DTM_06701210.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701215.asc",
+      "b": "Ell_DTM_06701211.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701215.asc",
+      "b": "Ell_DTM_06701214.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701304.asc",
+      "b": "Ell_DTM_06701201.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701304.asc",
+      "b": "Ell_DTM_06701205.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701304.asc",
+      "b": "Ell_DTM_06701303.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701306.asc",
+      "b": "Ell_DTM_06701303.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.029998779296875,
+      "different_cells": 977
+    },
+    {
+      "a": "Ell_DTM_06701307.asc",
+      "b": "Ell_DTM_06701303.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701307.asc",
+      "b": "Ell_DTM_06701304.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701307.asc",
+      "b": "Ell_DTM_06701306.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.149993896484375,
+      "different_cells": 10364
+    },
+    {
+      "a": "Ell_DTM_06701308.asc",
+      "b": "Ell_DTM_06701201.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701308.asc",
+      "b": "Ell_DTM_06701205.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.08001708984375,
+      "different_cells": 1533
+    },
+    {
+      "a": "Ell_DTM_06701308.asc",
+      "b": "Ell_DTM_06701209.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.08001708984375,
+      "different_cells": 1533
+    },
+    {
+      "a": "Ell_DTM_06701308.asc",
+      "b": "Ell_DTM_06701303.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701308.asc",
+      "b": "Ell_DTM_06701304.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701308.asc",
+      "b": "Ell_DTM_06701307.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701310.asc",
+      "b": "Ell_DTM_06701306.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701310.asc",
+      "b": "Ell_DTM_06701307.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.05999755859375,
+      "different_cells": 946
+    },
+    {
+      "a": "Ell_DTM_06701311.asc",
+      "b": "Ell_DTM_06701306.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701311.asc",
+      "b": "Ell_DTM_06701307.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.6300048828125,
+      "different_cells": 11357
+    },
+    {
+      "a": "Ell_DTM_06701311.asc",
+      "b": "Ell_DTM_06701308.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.420013427734375,
+      "different_cells": 1001
+    },
+    {
+      "a": "Ell_DTM_06701311.asc",
+      "b": "Ell_DTM_06701310.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701312.asc",
+      "b": "Ell_DTM_06701205.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701312.asc",
+      "b": "Ell_DTM_06701209.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701312.asc",
+      "b": "Ell_DTM_06701213.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701312.asc",
+      "b": "Ell_DTM_06701307.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.420013427734375,
+      "different_cells": 1001
+    },
+    {
+      "a": "Ell_DTM_06701312.asc",
+      "b": "Ell_DTM_06701308.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.420013427734375,
+      "different_cells": 11081
+    },
+    {
+      "a": "Ell_DTM_06701312.asc",
+      "b": "Ell_DTM_06701311.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701314.asc",
+      "b": "Ell_DTM_06701310.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701314.asc",
+      "b": "Ell_DTM_06701311.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701315.asc",
+      "b": "Ell_DTM_06701310.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701315.asc",
+      "b": "Ell_DTM_06701311.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701315.asc",
+      "b": "Ell_DTM_06701312.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701315.asc",
+      "b": "Ell_DTM_06701314.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701316.asc",
+      "b": "Ell_DTM_06701209.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701316.asc",
+      "b": "Ell_DTM_06701213.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701316.asc",
+      "b": "Ell_DTM_06701311.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701316.asc",
+      "b": "Ell_DTM_06701312.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06701316.asc",
+      "b": "Ell_DTM_06701315.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705101.asc",
+      "b": "Ell_DTM_06701213.asc",
+      "compared_valid_cells": 948000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705101.asc",
+      "b": "Ell_DTM_06701316.asc",
+      "compared_valid_cells": 276000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705102.asc",
+      "b": "Ell_DTM_06701213.asc",
+      "compared_valid_cells": 228000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705102.asc",
+      "b": "Ell_DTM_06701214.asc",
+      "compared_valid_cells": 948000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705102.asc",
+      "b": "Ell_DTM_06705101.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705103.asc",
+      "b": "Ell_DTM_06701214.asc",
+      "compared_valid_cells": 228000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705103.asc",
+      "b": "Ell_DTM_06701215.asc",
+      "compared_valid_cells": 948000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705103.asc",
+      "b": "Ell_DTM_06705102.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705105.asc",
+      "b": "Ell_DTM_06705101.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705105.asc",
+      "b": "Ell_DTM_06705102.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705106.asc",
+      "b": "Ell_DTM_06705101.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705106.asc",
+      "b": "Ell_DTM_06705102.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705106.asc",
+      "b": "Ell_DTM_06705103.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705106.asc",
+      "b": "Ell_DTM_06705105.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705107.asc",
+      "b": "Ell_DTM_06705102.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705107.asc",
+      "b": "Ell_DTM_06705103.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705107.asc",
+      "b": "Ell_DTM_06705106.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705109.asc",
+      "b": "Ell_DTM_06705105.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705109.asc",
+      "b": "Ell_DTM_06705106.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705110.asc",
+      "b": "Ell_DTM_06705105.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705110.asc",
+      "b": "Ell_DTM_06705106.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705110.asc",
+      "b": "Ell_DTM_06705107.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705110.asc",
+      "b": "Ell_DTM_06705109.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705111.asc",
+      "b": "Ell_DTM_06705106.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705111.asc",
+      "b": "Ell_DTM_06705107.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705111.asc",
+      "b": "Ell_DTM_06705110.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705113.asc",
+      "b": "Ell_DTM_06705109.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705113.asc",
+      "b": "Ell_DTM_06705110.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705304.asc",
+      "b": "Ell_DTM_06705113.asc",
+      "compared_valid_cells": 187200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705402.asc",
+      "b": "Ell_DTM_06701314.asc",
+      "compared_valid_cells": 948000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705403.asc",
+      "b": "Ell_DTM_06701314.asc",
+      "compared_valid_cells": 228000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705403.asc",
+      "b": "Ell_DTM_06701315.asc",
+      "compared_valid_cells": 948000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705403.asc",
+      "b": "Ell_DTM_06705402.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705404.asc",
+      "b": "Ell_DTM_06701213.asc",
+      "compared_valid_cells": 12000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705404.asc",
+      "b": "Ell_DTM_06701315.asc",
+      "compared_valid_cells": 228000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705404.asc",
+      "b": "Ell_DTM_06701316.asc",
+      "compared_valid_cells": 948000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705404.asc",
+      "b": "Ell_DTM_06705101.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705404.asc",
+      "b": "Ell_DTM_06705105.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705404.asc",
+      "b": "Ell_DTM_06705403.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705406.asc",
+      "b": "Ell_DTM_06705402.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705406.asc",
+      "b": "Ell_DTM_06705403.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705407.asc",
+      "b": "Ell_DTM_06705402.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705407.asc",
+      "b": "Ell_DTM_06705403.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705407.asc",
+      "b": "Ell_DTM_06705404.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705407.asc",
+      "b": "Ell_DTM_06705406.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705408.asc",
+      "b": "Ell_DTM_06705101.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705408.asc",
+      "b": "Ell_DTM_06705105.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705408.asc",
+      "b": "Ell_DTM_06705109.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705408.asc",
+      "b": "Ell_DTM_06705403.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705408.asc",
+      "b": "Ell_DTM_06705404.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705408.asc",
+      "b": "Ell_DTM_06705407.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705410.asc",
+      "b": "Ell_DTM_06705406.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705410.asc",
+      "b": "Ell_DTM_06705407.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705411.asc",
+      "b": "Ell_DTM_06705406.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705411.asc",
+      "b": "Ell_DTM_06705407.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705411.asc",
+      "b": "Ell_DTM_06705408.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705411.asc",
+      "b": "Ell_DTM_06705410.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705412.asc",
+      "b": "Ell_DTM_06705105.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705412.asc",
+      "b": "Ell_DTM_06705109.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705412.asc",
+      "b": "Ell_DTM_06705113.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705412.asc",
+      "b": "Ell_DTM_06705407.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705412.asc",
+      "b": "Ell_DTM_06705408.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705412.asc",
+      "b": "Ell_DTM_06705411.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705415.asc",
+      "b": "Ell_DTM_06705304.asc",
+      "compared_valid_cells": 124800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705415.asc",
+      "b": "Ell_DTM_06705410.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705415.asc",
+      "b": "Ell_DTM_06705411.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705415.asc",
+      "b": "Ell_DTM_06705412.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705416.asc",
+      "b": "Ell_DTM_06705109.asc",
+      "compared_valid_cells": 38400,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705416.asc",
+      "b": "Ell_DTM_06705113.asc",
+      "compared_valid_cells": 403200,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705416.asc",
+      "b": "Ell_DTM_06705304.asc",
+      "compared_valid_cells": 1404000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705416.asc",
+      "b": "Ell_DTM_06705411.asc",
+      "compared_valid_cells": 25600,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705416.asc",
+      "b": "Ell_DTM_06705412.asc",
+      "compared_valid_cells": 288000,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    },
+    {
+      "a": "Ell_DTM_06705416.asc",
+      "b": "Ell_DTM_06705415.asc",
+      "compared_valid_cells": 268800,
+      "max_difference_m": 0.0,
+      "different_cells": 0
+    }
+  ],
+  "route_source_sha256": "7dbe0c627f2f6174a3be401b0a5e80526804f61090140e4eed5d21caecc07505",
+  "overlap_pairs_with_differences": 9,
+  "max_overlap_difference_m": 0.6300048828125,
+  "mosaic_merge_performed": false,
+  "conflict_policy": "No first-tile priority or averaging; ambiguous route heights remain null",
+  "route_status": "topologically_connected_candidate_not_a_verified_driving_route",
+  "route_ground_coverage": [
+    {
+      "sector": "A",
+      "samples_at_max_2m_spacing": 2127,
+      "geographically_covered_samples": 2127,
+      "unambiguous_height_samples": 2127,
+      "conflicting_height_samples": 0,
+      "uncovered_samples": 0,
+      "uncovered_EN_m_first_20": [],
+      "conflicting_EN_m_first_20": [],
+      "max_overlap_height_spread_on_route_m": 0,
+      "minimum_ground_height_m": 175.41081263602698,
+      "maximum_ground_height_m": 215.9183436830627
+    },
+    {
+      "sector": "B",
+      "samples_at_max_2m_spacing": 1089,
+      "geographically_covered_samples": 1089,
+      "unambiguous_height_samples": 1089,
+      "conflicting_height_samples": 0,
+      "uncovered_samples": 0,
+      "uncovered_EN_m_first_20": [],
+      "conflicting_EN_m_first_20": [],
+      "max_overlap_height_spread_on_route_m": 0,
+      "minimum_ground_height_m": 175.93713593966095,
+      "maximum_ground_height_m": 312.58233418521735
+    },
+    {
+      "sector": "C",
+      "samples_at_max_2m_spacing": 2306,
+      "geographically_covered_samples": 2306,
+      "unambiguous_height_samples": 2306,
+      "conflicting_height_samples": 0,
+      "uncovered_samples": 0,
+      "uncovered_EN_m_first_20": [],
+      "conflicting_EN_m_first_20": [],
+      "max_overlap_height_spread_on_route_m": 0,
+      "minimum_ground_height_m": 312.3676083371851,
+      "maximum_ground_height_m": 728.7829611086024
+    },
+    {
+      "sector": "V",
+      "samples_at_max_2m_spacing": 285,
+      "geographically_covered_samples": 285,
+      "unambiguous_height_samples": 285,
+      "conflicting_height_samples": 0,
+      "uncovered_samples": 0,
+      "uncovered_EN_m_first_20": [],
+      "conflicting_EN_m_first_20": [],
+      "max_overlap_height_spread_on_route_m": 0,
+      "minimum_ground_height_m": 724.5175972092231,
+      "maximum_ground_height_m": 730.567923619625
+    },
+    {
+      "sector": "D",
+      "samples_at_max_2m_spacing": 734,
+      "geographically_covered_samples": 734,
+      "unambiguous_height_samples": 734,
+      "conflicting_height_samples": 0,
+      "uncovered_samples": 0,
+      "uncovered_EN_m_first_20": [],
+      "conflicting_EN_m_first_20": [],
+      "max_overlap_height_spread_on_route_m": 0,
+      "minimum_ground_height_m": 627.6216097619368,
+      "maximum_ground_height_m": 728.7829611086024
+    },
+    {
+      "sector": "E",
+      "samples_at_max_2m_spacing": 2489,
+      "geographically_covered_samples": 2489,
+      "unambiguous_height_samples": 2472,
+      "conflicting_height_samples": 17,
+      "uncovered_samples": 0,
+      "uncovered_EN_m_first_20": [],
+      "conflicting_EN_m_first_20": [
+        {
+          "EN_m": [
+            374366.611,
+            5113285.869
+          ],
+          "height_spread_m": 0.001718798581464398
+        },
+        {
+          "EN_m": [
+            374339.322,
+            5113301.128
+          ],
+          "height_spread_m": 0.00035265515145965765
+        },
+        {
+          "EN_m": [
+            374311.314,
+            5113314.008
+          ],
+          "height_spread_m": 0.004228222747087784
+        },
+        {
+          "EN_m": [
+            374309.707,
+            5113313.888
+          ],
+          "height_spread_m": 0.0041139617355270275
+        },
+        {
+          "EN_m": [
+            374282.143,
+            5113298.248
+          ],
+          "height_spread_m": 0.002126611765902453
+        },
+        {
+          "EN_m": [
+            374280.646,
+            5113297.044
+          ],
+          "height_spread_m": 0.004661518074044579
+        },
+        {
+          "EN_m": [
+            374276.154,
+            5113293.433
+          ],
+          "height_spread_m": 0.005113095787919519
+        },
+        {
+          "EN_m": [
+            374231.01,
+            5113287.265
+          ],
+          "height_spread_m": 0.00015945636687320075
+        },
+        {
+          "EN_m": [
+            374224.243,
+            5113290.605
+          ],
+          "height_spread_m": 0.0028471003221284263
+        },
+        {
+          "EN_m": [
+            374209.262,
+            5113303.277
+          ],
+          "height_spread_m": 0.0005388619065342937
+        },
+        {
+          "EN_m": [
+            374205.566,
+            5113312.679
+          ],
+          "height_spread_m": 0.003154674350980713
+        },
+        {
+          "EN_m": [
+            374213.222,
+            5113335.113
+          ],
+          "height_spread_m": 0.00015369361085504352
+        },
+        {
+          "EN_m": [
+            374214.454,
+            5113336.589
+          ],
+          "height_spread_m": 0.0018975605180457933
+        },
+        {
+          "EN_m": [
+            374218.133,
+            5113340.164
+          ],
+          "height_spread_m": 0.006335205068637606
+        },
+        {
+          "EN_m": [
+            374231.732,
+            5113349.442
+          ],
+          "height_spread_m": 0.003702766907849764
+        },
+        {
+          "EN_m": [
+            374235.042,
+            5113351.486
+          ],
+          "height_spread_m": 0.0008828704742427362
+        },
+        {
+          "EN_m": [
+            374238.448,
+            5113353.05
+          ],
+          "height_spread_m": 0.002408721458607488
+        }
+      ],
+      "max_overlap_height_spread_on_route_m": 0.006335205068637606,
+      "minimum_ground_height_m": 257.01044913642346,
+      "maximum_ground_height_m": 627.6216097619368
+    },
+    {
+      "sector": "F",
+      "samples_at_max_2m_spacing": 936,
+      "geographically_covered_samples": 936,
+      "unambiguous_height_samples": 929,
+      "conflicting_height_samples": 7,
+      "uncovered_samples": 0,
+      "uncovered_EN_m_first_20": [],
+      "conflicting_EN_m_first_20": [
+        {
+          "EN_m": [
+            373124.376,
+            5113360.966
+          ],
+          "height_spread_m": 0.004251006382276046
+        },
+        {
+          "EN_m": [
+            373109.331,
+            5113339.793
+          ],
+          "height_spread_m": 0.0007268953198718009
+        },
+        {
+          "EN_m": [
+            373105.859,
+            5113334.907
+          ],
+          "height_spread_m": 0.0015008157213856066
+        },
+        {
+          "EN_m": [
+            373101.23,
+            5113328.393
+          ],
+          "height_spread_m": 0.00039355991700062987
+        },
+        {
+          "EN_m": [
+            373095.087,
+            5113320.684
+          ],
+          "height_spread_m": 0.0004309684490806376
+        },
+        {
+          "EN_m": [
+            373082.97,
+            5113311.129
+          ],
+          "height_spread_m": 0.004238352000982104
+        },
+        {
+          "EN_m": [
+            373057.223,
+            5113290.825
+          ],
+          "height_spread_m": 0.008038171784789938
+        }
+      ],
+      "max_overlap_height_spread_on_route_m": 0.008038171784789938,
+      "minimum_ground_height_m": 215.9183436830627,
+      "maximum_ground_height_m": 258.26030305845677
+    }
+  ],
+  "route_ground_fully_covered_at_2m": true,
+  "route_height_unambiguous_at_2m": false,
+  "road_surface_verified": false,
+  "coverage_scope": "Samples of OSM candidate only, not road widths, corridor or verified turns"
+}

@@ -1,16 +1,9 @@
-# Provenienza dei materiali
+# Provenienza, diritti e attribuzioni
 
-Il codice e i documenti di progetto non hanno ancora una licenza di distribuzione scelta dall’autore. Questo avviso non assegna diritti sui marchi o sugli allegati dell’utente.
+Il codice e i documenti non hanno ancora una licenza generale scelta dall'autore. Questo file non attribuisce diritti su marchi, fotografie, immagini, asset Unreal importati o personaggi di terzi.
 
-La base geografica in `data/geography/osm_survey.geojson`, l’inventario che ne deriva e la mappa `reports/valle_survey_map.svg` usano dati **© OpenStreetMap contributors**, disponibili secondo **Open Database License 1.0**. Fonte, ambito e impronta del download sono in `data/geography/provenance.json`.
+Dati geografici, strade, edifici e copertura mappata possono usare **© OpenStreetMap contributors**, sotto **Open Database License 1.0**. Provenienza e risorse sono registrate in `data/geography/`, dossier del sopralluogo e manifesti locali. Vedere [OpenStreetMap copyright](https://www.openstreetmap.org/copyright) e [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/).
 
-- Attribuzione e condizioni OSM: https://www.openstreetmap.org/copyright
-- Testo ODbL: https://opendatacommons.org/licenses/odbl/1-0/
+Il territorio deriva dai DTM LiDAR regionali acquisiti dall'utente. Fonti e riferimenti di datum sono registrati nei dossier; **non** viene attribuita qui alcuna licenza di redistribuzione dei raster. Le tessere grezze, i Landscape Unreal importati, le texture e le build rimangono locali.
 
-La mappa è una rappresentazione planimetrica della base OSM; non contiene immagini Google. I punti di sopralluogo riportano posizioni approssimate dei panorami osservati e collegamenti alla fonte; non sono confini catastali o un’autorizzazione al parcheggio.
-
-Fotografie Wikimedia, viste Google e documenti Toyota sono riferimenti collegati. Non sono distribuiti come texture o asset. Le licenze delle fotografie indicate nel dossier rimangono proprie delle fotografie. I marchi Toyota/Yaris appartengono ai rispettivi titolari; il progetto è indipendente.
-
-Il modello Yaris in `art/vehicles/yaris_2022` è una ricostruzione geometrica realizzata per questo progetto. Tessuto e schermate sono artwork originale; non contengono fotografie Toyota. Le targhe riportano solo il nome del modello, senza replicare la targa di un veicolo reale. Fonti e limiti sono in `references/yaris_2022/README.md`. Questa nota non assegna una licenza ai marchi Toyota/Yaris né sostituisce una licenza di distribuzione del progetto.
-
-I riferimenti ai personaggi Bianca e Bernie (*The Rescuers*, Disney 1977/1990) sono catalogati in `references/bianca_bernie/`: i collegamenti a model sheet, concept, cel, maquette e schede d'asta non costituiscono autorizzazione a ridistribuire immagini o personaggi. In questa repository pubblica si registrano soltanto URL, note di analisi e requisiti originali. Qualsiasi distribuzione futura di personaggi riconoscibili deve essere valutata rispetto ai diritti dei titolari.
+I riferimenti a immagini Street View, Toyota e Disney (Bianca e Bernie) sono collegamenti e note di osservazione, non licenze di riproduzione. Il modello Yaris importato (incluse parti MAH), i protagonisti e gli altri asset non vengono pubblicati per impostazione predefinita. Le mesh procedurali vegetali non sono misure botaniche degli alberi reali. Questa repository è indipendente dai titolari dei marchi.
