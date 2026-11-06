@@ -14,3 +14,12 @@ Conservati: dossier del circuito, geometrie OSM candidati, manifesti e osservazi
 
 ## Attività ancora aperte
 La copia Unreal contiene asset binari non distribuibili; il progetto non ha ancora una procedura pubblica per riacquisirli e non ha superato un collaudo rappresentativo 4K/60 FPS dell'intero giro. Eventuali ulteriori rimozioni locali devono avvenire dopo verifica di riferimenti e dati necessari.
+
+## Consolidamento effettivamente completato sul PC
+Le vecchie cartelle `Viaggio a Soffumbergo` (Godot), `Soffumbergo-Unreal-5-8` (worktree di sperimentazione) e `Backup Viaggio a Soffumbergo` sono state **spostate** dal percorso di lavoro a `C:\Giochi\Archivi\Viaggio_a_Soffumbergo_20261106\` (circa 8,6 GB di contenuti storici). **Non sono state cancellate definitivamente**, perché il worktree storico aveva modifiche non pubblicate e asset locali da preservare. In `C:\Giochi\Sviluppo\` rimane una sola cartella Soffumbergo attiva: `Viaggio a Soffumbergo Unreal`.
+
+La cartella Unreal attiva è stata inizializzata come checkout Git locale del nuovo ramo `main` (269 file tracciati al commit `757b86e` prima di questo aggiornamento). I vecchi file di intestazione locali sono stati conservati nell'archivio prima di allineare `README.md`, `AGENTS.md`, `.gitignore` e `NOTICE.md` alla repository; i contenuti binari Unreal e i dati geospaziali non sono stati sovrascritti. Le vecchie cartelle non sono più necessarie come sorgenti di percorso per gli 11 script corretti.
+
+**Verifica funzionale aggiuntiva:** `tools/inventory_lidar.py` eseguito nell'ambiente Python della cartella Unreal unificata, codice d'uscita **0**. Ha rilevato **41 tessere**, per **853.275.721 byte**, e tutte le impronte dei sette settori del percorso rientrano nelle impronte dei raster, salvo errori numerici trascurabili. Quest'ultimo risultato **non** certifica le celle LiDAR valide, la correttezza altimetrica della strada o le collisioni in Unreal.
+
+Le fonti OSM intermedie e grandi, le risposte GIS e i risultati restano locali e sono esclusi da Git; le fonti/testi di provenienza già condivisibili rimangono tracciati. I file temporanei del consolidamento sono custoditi nell'archivio.

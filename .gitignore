@@ -41,3 +41,11 @@ __pycache__/
 *.bak
 *.tmp
 desktop.ini
+
+# Local caches and bulky intermediate GIS inputs
+data/geography/world_cover_*/cover.geojson
+data/geography/world_cover_*/query.txt
+data/geography/world_cover_*/failure.json
+data/geography/classified_lidar_discovery_20261025/wfs_capabilities.xml
+data/geography/classified_lidar_discovery_20261025/wfs_feature_types.json
+data/geography/circuit_placeholders.json
