@@ -1,0 +1,46 @@
+{
+  "source_reviews": [
+    "results/territory/costalunga_rockfall_review_20261023.json",
+    "results/territory/costalunga_rockfall_extent_review_20261024.json"
+  ],
+  "net_extent_wgs84": [
+    [
+      46.1687603,
+      13.3680345
+    ],
+    [
+      46.1694151,
+      13.3689589
+    ]
+  ],
+  "curb_extent_wgs84": [
+    [
+      46.1690471,
+      13.3683633
+    ],
+    [
+      46.1691941,
+      13.3685478
+    ]
+  ],
+  "maximum_photo_profile_offset_m": 12,
+  "section_step_m": 0.5,
+  "net_start_offset_m": 0.5,
+  "bank_scan_width_m": 9,
+  "net_surface_height_m": 4,
+  "net_vertical_standoff_m": 0.06,
+  "minimum_wire_ground_clearance_m": 0.015,
+  "hex_circumradius_m": 0.1,
+  "maximum_wire_piece_m": 0.15,
+  "wire_diameter_m": 0.003,
+  "curb_center_offset_m": 0.28,
+  "curb_width_m": 0.22,
+  "curb_embed_m": 0.2,
+  "curb_exposure_m": 0.18,
+  "minimum_asphalt_clearance_m": 0.04,
+  "dimensions_status": "All metric dimensions and photo projection placements are explicit engineering choices, not photogrammetric measurements. Confirmed coverage only; neither end is claimed surveyed. Drainage excavation is not part of this increment.",
+  "net_representation": "world_projected_hex_mask",
+  "representation_status": "Metric projected hex mask on the same native bank skin; design dimensions remain unmeasured. Geometry does not model individual flexible wire physics.",
+  "net_projection_uphill_weight": 0.5,
+  "projection_status": "One continuous road-relative tilted metric projection. No per-face normal switches or UV seams. The projection chart and cell dimensions are engineering choices, not measured wire geometry."
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://serviziogc.regione.fvg.it/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GRIGLIEGEO%3AQU_LAS_LIDAR_FVG&bbox=13.3600%2C46.1668%2C13.3613%2C46.1678%2CEPSG%3A4326&srsName=EPSG%3A6708&outputFormat=application%2Fjson&maxFeatures=20",
+  "retrieved_utc": "2026-10-25T09:03:12.769806+00:00",
+  "http_status": 200,
+  "sha256": "0af08e8a17261469092990a084a04ef6ff4e77a5b0ee10687e895d298942e299",
+  "bbox_wgs84_west_south_east_north": [
+    13.36,
+    46.1668,
+    13.3613,
+    46.1678
+  ],
+  "requested_output_crs": "EPSG:6708",
+  "feature_count": 2,
+  "source_file": "C:\\Giochi\\Sviluppo\\Viaggio a Soffumbergo Unreal\\data\\geography\\classified_lidar_discovery_20261025\\canal_las_tile_index.geojson",
+  "new_point_cloud_files_downloaded": false
+}

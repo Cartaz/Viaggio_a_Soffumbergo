@@ -1,0 +1,26 @@
+{
+  "build_id": "6108bf03a38a",
+  "status": "Source-backed road-aligned viewpoints for new draped net and curb. Photo headings are reference only, not moving-car orientations.",
+  "controls": [
+    {
+      "id": "rockfall_wire_forward",
+      "center_UE_xy_m": [
+        -1625.5,
+        -1274.5
+      ],
+      "reverse_itinerary_heading": false,
+      "source_heading_degrees": 90,
+      "source_review": "results/territory/costalunga_rockfall_extent_review_20261024.json"
+    },
+    {
+      "id": "rockfall_wire_reverse",
+      "center_UE_xy_m": [
+        -1625.5,
+        -1274.5
+      ],
+      "reverse_itinerary_heading": true,
+      "source_heading_degrees": 270,
+      "source_review": "results/territory/costalunga_rockfall_extent_review_20261024.json"
+    }
+  ]
+}

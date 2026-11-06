@@ -1,0 +1,30 @@
+{
+  "build_id": "aeb26a81ec49",
+  "status": "Diagnostic viewpoints only; nearest itinerary point is used for the initial spawn. No source position is silently treated as a metric survey of structures.",
+  "controls": [
+    {
+      "id": "costalunga_rockfall_east",
+      "center_UE_xy_m": [-1625.5, -1274.5],
+      "heading_degrees": 90,
+      "source_review": "results/territory/costalunga_rockfall_review_20261023.json"
+    },
+    {
+      "id": "costalunga_rockfall_west",
+      "center_UE_xy_m": [-1625.5, -1274.5],
+      "heading_degrees": 270,
+      "source_review": "results/territory/costalunga_rockfall_review_20261023.json"
+    },
+    {
+      "id": "costalunga_open_cut_west",
+      "center_UE_xy_m": [-1681.5, -1102.5],
+      "heading_degrees": 270,
+      "source_review": "results/territory/costalunga_open_cut_review_20261024.json"
+    },
+    {
+      "id": "costalunga_downhill_run_west",
+      "center_UE_xy_m": [-1910, -1150],
+      "heading_degrees": 270,
+      "source_review": "results/territory/costalunga_downhill_guardrail_review_20261024.json"
+    }
+  ]
+}

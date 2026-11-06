@@ -1,0 +1,11 @@
+{
+  "tile": "T_04_01",
+  "toe_offset_m": 0.85,
+  "outer_offset_m": 3.0,
+  "outer_feather_m": 0.5,
+  "end_fade_m": 5.0,
+  "subgrade_clearance_m": 0.08,
+  "source_review": "results/territory/costalunga_rockfall_extent_review_20261024.json",
+  "scope": "Only uphill of the previously reviewed net corridor. Road support and existing outer terrain remain continuous. No new source terrain measurement or approval of rock/moss/vegetation appearance.",
+  "dimensions_status": "Engineering choices at the native 0.5m grid, not dimensions measured from Street View. Toe uses existing shoulder design width; outer bound is a local 3m work limit, not the surveyed cut extent."
+}

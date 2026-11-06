@@ -1,0 +1,12 @@
+{
+  "source_url": "https://serviziogc.regione.fvg.it/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities",
+  "requested_utc": "2026-10-25T09:02:20.766076+00:00",
+  "read_only": true,
+  "success": true,
+  "http_status": 200,
+  "content_type": "application/xml",
+  "bytes": 597556,
+  "sha256": "4a342e9cc77d4ec7d859805cb04429e550dc34956373a1b88a021d10ca2eb1e6",
+  "feature_types": 1138,
+  "lidar_related_types": 4
+}

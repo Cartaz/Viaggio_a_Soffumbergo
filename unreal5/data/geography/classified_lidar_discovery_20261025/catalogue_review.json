@@ -1,0 +1,47 @@
+{
+  "recorded_unix": 1792918846.8540945,
+  "sources": [
+    {
+      "url": "https://irdat.regione.fvg.it/consultatore-dati-ambientali-territoriali/detail/irdat/dataset/11647",
+      "title": "Nuvole punti rilievo LIDAR RAFVG 2017-2020",
+      "facts": {
+        "format": "LAZ",
+        "classification_building": 6,
+        "classification_ground": 2,
+        "classification_low_medium_high_vegetation": [
+          3,
+          4,
+          5
+        ],
+        "horizontal_reference": "RDN2008-TM33NE",
+        "vertical_options": [
+          "ellipsoidal",
+          "orthometric"
+        ],
+        "catalogue_declared_accuracy_m": 0.15,
+        "catalogue_declared_density_below_1000m_points_per_m2": 16
+      },
+      "caution": "Catalogue specification, not measured properties of any downloaded tile."
+    },
+    {
+      "url": "https://irdat.regione.fvg.it/consultatore-dati-ambientali-territoriali/detail/irdat/dataset/11826",
+      "title": "Modelli altimetrici rilievo LIDAR RAFVG 2017-2020",
+      "facts": {
+        "grid_spacing_m": 0.5,
+        "products": [
+          "DTM",
+          "DSM first return",
+          "DSM last return",
+          "DBM"
+        ]
+      }
+    }
+  ],
+  "official_distribution_portal": "https://eaglefvg.regione.fvg.it/eagle/main.aspx?configuration=guest",
+  "current_dtm_vertical_convention": "Existing Ell_DTM source names; preserve ellipsoidal variant and independently check header/ground consistency. No guessed datum offset.",
+  "legacy_acquisition_note": "Read-only original source manifest records a prior guest/email Eagle download completed by the user; no direct raster URL was known. Current classified/DSM retrieval still to verify.",
+  "new_laz_or_dsm_files_downloaded": false,
+  "tile_coverage_and_headers_validated": false,
+  "native_terrain_or_vegetation_changed": false,
+  "next": "Discover exact public tile index and distribution mechanism; select the affected Canal di Grivo area without guessing height tags or claiming point-cloud properties from catalogue metadata."
+}

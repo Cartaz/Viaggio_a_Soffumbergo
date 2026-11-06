@@ -1,0 +1,50 @@
+{
+  "recorded_unix": 1792919252.6345117,
+  "index_file": "C:\\Giochi\\Sviluppo\\Viaggio a Soffumbergo Unreal\\data\\geography\\classified_lidar_discovery_20261025\\canal_las_tile_index.geojson",
+  "index_sha256": "0af08e8a17261469092990a084a04ef6ff4e77a5b0ee10687e895d298942e299",
+  "priority_buildings": [
+    "way/36158219",
+    "way/36158227"
+  ],
+  "planning_margin_m": 5,
+  "planning_margin_is_not_survey_tolerance": true,
+  "candidate_tiles": [
+    {
+      "index_feature_id": "QU_LAS_LIDAR_FVG.9781",
+      "code": "D4616513360_005005",
+      "properties": {
+        "CODICE_LAS": "D4616513360_005005",
+        "CODICE_DTM": "06701308 - 06701307 - 06701304 - 06701303",
+        "CODICE_CTRN": "067013",
+        "DATE_VOLO": "20190214 - 20200623",
+        "ID": 9781
+      },
+      "contains_entire_priority_buildings_with_5m_planning_margin": [
+        "way/36158219",
+        "way/36158227"
+      ],
+      "index_geometry_z_ignored": true
+    },
+    {
+      "index_feature_id": "QU_LAS_LIDAR_FVG.9779",
+      "code": "D4616513355_005005",
+      "properties": {
+        "CODICE_LAS": "D4616513355_005005",
+        "CODICE_DTM": "06701307 - 06701303",
+        "CODICE_CTRN": "067013",
+        "DATE_VOLO": "20190214 - 20200623",
+        "ID": 9779
+      },
+      "contains_entire_priority_buildings_with_5m_planning_margin": [],
+      "index_geometry_z_ignored": true
+    }
+  ],
+  "selected_laz_tile_code": "D4616513360_005005",
+  "selected_index_feature_id": "QU_LAS_LIDAR_FVG.9781",
+  "vertical_variant_requested": "ellipsoidal",
+  "format_requested": "LAZ classified points",
+  "actual_pointcloud_downloaded": false,
+  "actual_header_crs_vertical_and_classes_validated": false,
+  "direct_data_url_known": false,
+  "scope": "Official tile-index coverage only, not point-cloud completeness, measured heights or terrain changes."
+}

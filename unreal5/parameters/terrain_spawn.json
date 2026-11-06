@@ -1,0 +1,22 @@
+{
+  "position_cm": [
+    14363.47378714319,
+    10303.097144504236,
+    2235.528893620172
+  ],
+  "yaw_deg": -77.35841084744371,
+  "local_ground_slope_deg": 1.8244708258769111,
+  "mapped_highway": {
+    "osm_type": "way",
+    "osm_id": 547054266,
+    "highway": "unclassified"
+  },
+  "origin_ENH_m": [
+    375690.25,
+    5112864.75,
+    689.74
+  ],
+  "status": "diagnostic spawn on bare LiDAR terrain near mapped road centerline",
+  "road_surface_verified": false,
+  "road_width_observed": false
+}

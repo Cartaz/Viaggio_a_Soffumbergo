@@ -1,0 +1,18 @@
+{
+  "tile": "T_04_01",
+  "source_review": "results/territory/costalunga_drainage_review_20261025.json",
+  "margin_audit": "results/drainage_margin/e37_costalunga_20261025_v1/report.json",
+  "pixel_size_m": 0.02,
+  "texture_border_m": 0.5,
+  "mask_inset_m": 0.03,
+  "mask_feather_m": 0.02,
+  "stone_dark_linear": [0.09, 0.085, 0.07],
+  "stone_light_linear": [0.30, 0.28, 0.22],
+  "moss_dark_linear": [0.018, 0.035, 0.008],
+  "moss_light_linear": [0.075, 0.11, 0.018],
+  "scope": "Local procedural color and mask on existing shoulder triangles between asphalt and foot curb. No new surface, excavation, normal displacement or collision change.",
+  "dimensions_status": "Texture resolution, artistic inset, feather and palette are authoring choices. Existing margin derives from the engineered parent meshes, not metric photo measurement.",
+  "opacity_policy": "Keep the source opacity expression outside the local mask; union local mask inside it to expose only the existing shoulder triangles selected for the drainage finish.",
+  "native_imported": false,
+  "visually_accepted": false
+}

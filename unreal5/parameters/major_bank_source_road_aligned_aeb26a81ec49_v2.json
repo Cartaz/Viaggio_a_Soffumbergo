@@ -1,0 +1,34 @@
+{
+  "build_id": "aeb26a81ec49",
+  "status": "Diagnostic viewpoints. Initial car orientation follows the itinerary tangent in either direction, rather than a photograph's viewing angle. No terrain or physics change.",
+  "controls": [
+    {
+      "id": "rockfall_route_forward",
+      "center_UE_xy_m": [-1625.5, -1274.5],
+      "reverse_itinerary_heading": false,
+      "source_heading_degrees": 90,
+      "source_review": "results/territory/costalunga_rockfall_review_20261023.json"
+    },
+    {
+      "id": "rockfall_route_reverse",
+      "center_UE_xy_m": [-1625.5, -1274.5],
+      "reverse_itinerary_heading": true,
+      "source_heading_degrees": 270,
+      "source_review": "results/territory/costalunga_rockfall_review_20261023.json"
+    },
+    {
+      "id": "open_cut_route_forward",
+      "center_UE_xy_m": [-1681.5, -1102.5],
+      "reverse_itinerary_heading": false,
+      "source_heading_degrees": 270,
+      "source_review": "results/territory/costalunga_open_cut_review_20261024.json"
+    },
+    {
+      "id": "downhill_run_route_forward",
+      "center_UE_xy_m": [-1910, -1150],
+      "reverse_itinerary_heading": false,
+      "source_heading_degrees": 270,
+      "source_review": "results/territory/costalunga_downhill_guardrail_review_20261024.json"
+    }
+  ]
+}

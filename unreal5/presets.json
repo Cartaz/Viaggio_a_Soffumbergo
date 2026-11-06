@@ -1,0 +1,7 @@
+{
+ "status":"proposed_not_benchmarked",
+ "common":{"resolution":[1920,1080],"screen_percentage":100,"dynamic_resolution":false,"vsync":false,"frame_generation":false},
+ "A":{"description":"Performance candidate; visual equivalence still to review","unreal_console":["sg.ViewDistanceQuality 1","sg.ShadowQuality 1","sg.PostProcessQuality 1","r.DynamicGlobalIlluminationMethod 0","r.ReflectionMethod 0"],"godot":"existing GL Compatibility; no claim of equivalent appearance"},
+ "B":{"description":"Quality candidate on RX6800; no hardware ray tracing assumption","unreal_console":["sg.ViewDistanceQuality 3","sg.ShadowQuality 3","sg.PostProcessQuality 3","r.DynamicGlobalIlluminationMethod 1","r.ReflectionMethod 1","r.RayTracing 0"],"godot":"Forward+ candidate in isolated copy only; not yet executed"},
+ "measurement":"60s warmup, 3x120s real frames, exported builds, identical inventory/camera; diagnostic harness alone does not satisfy this"
+}
