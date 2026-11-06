@@ -1,0 +1,38 @@
+name: Unreal source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify Unreal layout and Python syntax
+        run: |
+          test -f Unreal/SoffumbergoLab.uproject
+          test -f Unreal/Source/SoffumbergoLab/LabVehicle.cpp
+          test ! -f project.godot
+          test ! -d godot
+          python -m compileall -q tools
+      - name: Validate JSON and portable tool paths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          for base in ("parameters", "data/geography"):
+              for path in Path(base).rglob("*.json"):
+                  json.loads(path.read_text(encoding="utf-8-sig"))
+          json.loads(Path("Unreal/SoffumbergoLab.uproject").read_text(encoding="utf-8-sig"))
+          bad = ("C:/Giochi/Sviluppo/Viaggio a Soffumbergo/", "C:/Giochi/Sviluppo/Soffumbergo-Unreal-5-8/")
+          for path in Path("tools").rglob("*.py"):
+              source = path.read_text(encoding="utf-8")
+              for fragment in bad:
+                  assert fragment not in source, f"{path}: obsolete absolute path"
+          print("Checks OK (source-only; no Unreal runtime test)")
+          PY

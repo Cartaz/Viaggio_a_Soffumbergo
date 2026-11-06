@@ -1,0 +1,14 @@
+{
+  "source_url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:60];(\n way[building](46.125,13.342,46.172,13.398);\n way[natural](46.125,13.342,46.172,13.398);\n way[landuse](46.125,13.342,46.172,13.398);\n way[barrier](46.125,13.342,46.172,13.398);\n node[natural=tree](46.125,13.342,46.172,13.398);\n node[highway=street_lamp](46.125,13.342,46.172,13.398);\n node[power=pole](46.125,13.342,46.172,13.398);\n);out tags geom;",
+  "downloaded_utc": "2026-10-21T16:05:08.258059+00:00",
+  "source_response_sha256": "05b41504e0950eeea1b175e24e372dda11984ca9dfcd87e2d56a1ddf9e05df31",
+  "osm_base_timestamp": "2026-10-21T16:03:33Z",
+  "feature_count": 3091,
+  "license": "ODbL-1.0",
+  "limitations": [
+    "OSM plan geometry only; not a survey",
+    "No imagery, facades or measured heights",
+    "Regional extract; runtime uses only the terrain corridor"
+  ]
+}
