@@ -39,3 +39,7 @@ Per recuperare lo stato Godot antecedente senza reintrodurlo nel progetto attivo
 ## Audit CPU del percorso — 6 novembre 2026
 
 È disponibile un nuovo [controllo delle sovrapposizioni tra telaio della Yaris ed edifici mappati](docs/AUDIT_INGOMBRI_EDIFICI_20261106.md). Analizza anche gli intervalli fra due pose fisiche registrate dalla candidata Unreal `f4373a62b482`, con un inviluppo planimetrico prudente. Sono stati controllati **105.214 intervalli**, nessuno escluso; rimangono **tre impronte OSM da confrontare con le fonti**, senza nuovi edifici segnalati. I cinque test sintetici Python sono superati. Non è una verifica 3D di collisione né un collaudo grafico; la geometria del circuito e il pacchetto attivo sono rimasti invariati.
+
+## Via Mont Joanes — tavole di revisione (6 novembre 2026)
+
+È disponibile la [revisione planimetrica dei due edifici critici](docs/REVISIONE_CANAL_MONT_JOANES_20261106.md), con [tavola 36158227](docs/figure_mont_joanes/plan_36158227.svg), [tavola 36158219](docs/figure_mont_joanes/plan_36158219.svg) e confronto HTML. Usando le mesh asfaltate della candidata f437 e le impronte OSM archiviate, l'audit trova rispettivamente **14,677 m²** e **12,378 m²** di intersezione *sulla mappa* entro 64×64 m. L'identità delle facciate rispetto ai poligoni e la loro posizione reale restano da verificare: non sono state applicate correzioni arbitrarie o collisioni edilizie. Il tool riproducibile è `tools/review_mont_joanes_clearance.py`, con quattro nuovi test sintetici.
