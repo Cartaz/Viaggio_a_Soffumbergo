@@ -1,0 +1,26 @@
+{
+  "build_id": "9cf583d2e7f1",
+  "status": "Road-aligned diagnostic views near the two engineering terminal placements. Source establishes observed end/access/open verge; these metric viewpoint offsets are not measurements. Car physics and scenery are unchanged.",
+  "controls": [
+    {
+      "id": "cianal_northeast_terminal",
+      "center_UE_xy_m": [
+        -1865.47434349686,
+        -1182.1017853834976
+      ],
+      "reverse_itinerary_heading": true,
+      "source_heading_degrees": 50,
+      "source_review": "results/territory/costalunga_cianal_guardrail_extent_review_20261024.json"
+    },
+    {
+      "id": "cianal_southwest_terminal",
+      "center_UE_xy_m": [
+        -1917.1101467870674,
+        -1141.5148384147192
+      ],
+      "reverse_itinerary_heading": false,
+      "source_heading_degrees": 270,
+      "source_review": "results/territory/costalunga_cianal_guardrail_extent_review_20261024.json"
+    }
+  ]
+}

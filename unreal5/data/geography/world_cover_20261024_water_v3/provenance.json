@@ -1,0 +1,25 @@
+{
+  "source_url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:40];(\nway[waterway](46.116245366,13.339961889,46.176809475,13.414053572);\nrelation[waterway](46.116245366,13.339961889,46.176809475,13.414053572);\nway[natural=water](46.116245366,13.339961889,46.176809475,13.414053572);\nrelation[natural=water](46.116245366,13.339961889,46.176809475,13.414053572);\nway[power~\"^(line|minor_line)$\"](46.116245366,13.339961889,46.176809475,13.414053572);\nrelation[power~\"^(line|minor_line)$\"](46.116245366,13.339961889,46.176809475,13.414053572);\n);out body geom;",
+  "group": "water",
+  "bbox_south_west_north_east": [
+    46.11624536579705,
+    13.33996188940369,
+    46.17680947512106,
+    13.414053571744727
+  ],
+  "retrieved_utc": "2026-10-24T13:15:04.656886+00:00",
+  "osm_base_timestamp": "2026-10-24T13:13:49Z",
+  "response_sha256": "b2343c68ab52d996464e399810822bd3210118d64088a3b2bd9905ceb1a90484",
+  "geojson_sha256": "3781ccfc3189a94c771b1327f0935fdfd773149aafe98e5b5393aebeea730fe8",
+  "elements": 249,
+  "features": 249,
+  "incomplete_relations": [],
+  "license": "ODbL-1.0",
+  "attribution": "OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "limitations": [
+    "Mapped plan geometry, not surveyed species or individual plant positions.",
+    "Coverage and setbacks need scene/source review; missing map features are not evidence of absence."
+  ]
+}

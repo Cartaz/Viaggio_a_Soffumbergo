@@ -1,0 +1,25 @@
+{
+  "source_url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:40];(\nway[landuse](46.116245366,13.339961889,46.176809475,13.414053572);\nrelation[landuse](46.116245366,13.339961889,46.176809475,13.414053572);\nway[natural~\"^(wood|scrub|grassland)$\"](46.116245366,13.339961889,46.176809475,13.414053572);\nrelation[natural~\"^(wood|scrub|grassland)$\"](46.116245366,13.339961889,46.176809475,13.414053572);\n);out body geom;",
+  "group": "cover",
+  "bbox_south_west_north_east": [
+    46.11624536579705,
+    13.33996188940369,
+    46.17680947512106,
+    13.414053571744727
+  ],
+  "retrieved_utc": "2026-10-24T13:12:38.560142+00:00",
+  "osm_base_timestamp": "2026-10-24T13:10:48Z",
+  "response_sha256": "ead1fdcf604fd32fa21e948183d5afd89bf108b7f033f8156f5d188041ae1781",
+  "geojson_sha256": "94ec4dbc352e5ea803c6e28401e901b144db2737a529657e2335569bd9f47b64",
+  "elements": 761,
+  "features": 705,
+  "incomplete_relations": [],
+  "license": "ODbL-1.0",
+  "attribution": "OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "limitations": [
+    "Mapped plan geometry, not surveyed species or individual plant positions.",
+    "Coverage and setbacks need scene/source review; missing map features are not evidence of absence."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.8",
+  "Category": "Viaggio a Soffumbergo",
+  "Description": "Base Unreal 5.8: migrazione dal laboratorio, terreno LiDAR e vegetazione PCG.",
+  "Modules": [
+    {
+      "Name": "SoffumbergoLab",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "SoffumbergoTerrainEditor",
+      "Type": "Editor",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "ChaosVehiclesPlugin",
+      "Enabled": true
+    },
+    {
+      "Name": "PythonScriptPlugin",
+      "Enabled": true
+    },
+    {
+      "Name": "EditorScriptingUtilities",
+      "Enabled": true
+    },
+    {
+      "Name": "AndroidFileServer",
+      "Enabled": false
+    },
+    {
+      "Name": "PCG",
+      "Enabled": true
+    }
+  ],
+  "TargetPlatforms": [
+    "Windows"
+  ]
+}

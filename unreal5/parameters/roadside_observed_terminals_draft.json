@@ -1,0 +1,100 @@
+{
+  "status": "Street View authoritative for anthropic elements, including different imagery dates; engineering dimensions and local extents remain explicit",
+  "source_reviews": [
+    "results/territory/steep_bank_review_20261023.json",
+    "results/territory/additional_bank_review_20261023.json",
+    "results/territory/retaining_context_review_20261023.json",
+    "results/territory/valle_guardrail_terminal_review_20261024.json"
+  ],
+  "minimum_asphalt_clearance_m": 0.04,
+  "maximum_segment_m": 1,
+  "edge_offset_m": 0.25,
+  "guardrail_beam_center_m": 0.72,
+  "guardrail_beam_height_m": 0.24,
+  "guardrail_beam_width_m": 0.12,
+  "guardrail_post_width_m": 0.12,
+  "guardrail_post_height_m": 0.95,
+  "guardrail_post_spacing_m": 2.5,
+  "wall_foundation_embed_m": 0.3,
+  "wall_thickness_m": 0.3,
+  "wall_minimum_height_m": 0.45,
+  "uphill_wall_maximum_height_m": 1.2,
+  "controls": [
+    {
+      "id": "costalunga_rock_bank",
+      "center_UE_xy_m": [
+        -1732.77487736823,
+        -1189.8036102691356
+      ],
+      "review_radius_m": 20,
+      "observed": "Narrow paved hillside road, rock face uphill and guardrail downhill."
+    },
+    {
+      "id": "prestento_steep_bank",
+      "center_UE_xy_m": [
+        -182.99022869861895,
+        1604.141083422207
+      ],
+      "review_radius_m": 20,
+      "observed": "Paved hillside road, steep partly rocky bank and guardrail."
+    },
+    {
+      "id": "costalunga_stream_bank",
+      "center_UE_xy_m": [
+        -2118.085066711763,
+        -1111.424511008151
+      ],
+      "review_radius_m": 20,
+      "observed": "Narrow paved road beside an open rocky stream and guardrail."
+    },
+    {
+      "id": "valle_uphill_bank",
+      "center_UE_xy_m": [
+        -81.34191533999983,
+        -230.99791609607638
+      ],
+      "review_radius_m": 60,
+      "observed": "Narrow paved road between steep uphill bank and downhill guardrail.",
+      "guardrail_extent": {
+        "frame_origin_UE_xy_m": [
+          -78.26593159156619,
+          -229.49051123764366
+        ],
+        "forward_UE_xy_unit": [
+          0.9396926207859084,
+          0.3420201433256687
+        ],
+        "minimum_forward_m": 6.0,
+        "maximum_forward_m": null,
+        "terminal_nose_length_m": 0.45,
+        "terminal_nose_segments": 6,
+        "reference": "results/territory/valle_guardrail_terminal_review_20261024.json",
+        "status": "Street View establishes a near terminal toward heading 110 and an open opposite rock cutting. The 6 m terminal station, 0.45 m rounded nose and remote continuation boundary are engineering placements, not measurements from the image. The 60 m local construction radius provides continuation along the visible forward run; its far boundary is not a claimed surveyed terminal."
+      }
+    },
+    {
+      "id": "prestento_retained_edge",
+      "center_UE_xy_m": [
+        28.006923378396706,
+        2265.463573196282
+      ],
+      "review_radius_m": 20,
+      "observed": "Curved paved road with drainage edge, guardrail and retained outside bank.",
+      "wall": "downhill"
+    },
+    {
+      "id": "valle_33_retaining_bank",
+      "center_UE_xy_m": [
+        -255.5,
+        2356.5
+      ],
+      "review_radius_m": 15,
+      "wall": "uphill",
+      "observed": "Street View confirms an uphill concrete retaining wall and downhill guardrail; these are distinct elements."
+    }
+  ],
+  "continuous_joints": true,
+  "uphill_wall_minimum_exposure_m": 0.45,
+  "joint_dimensions_status": "Shared miter cross-sections and a minimum 0.45 m uphill wall exposure are engineering choices; Street View establishes the observed element, not metric dimensions. The wall center is offset 0.40 m from the asphalt boundary to preserve clearance around the sampled curve; the guardrail offset remains 0.25 m.",
+  "wall_edge_offset_m": 0.4
+}

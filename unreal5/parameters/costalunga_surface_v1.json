@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "tile": "T_04_01",
+  "footprint_mesh": "rockfall_net_T_04_01",
+  "feather_m": 0.75,
+  "texture_size": 1024,
+  "source_review": "results/territory/costalunga_rockfall_extent_review_20261024.json",
+  "scope": "Local procedural rock, soil and moss treatment of the observed net bank. Footprint, palette and noise scales are artistic engineering choices, not surveyed geology or measured moss coverage. No displacement or terrain edits.",
+  "rock_dark_linear": [0.085, 0.08, 0.065],
+  "rock_light_linear": [0.26, 0.25, 0.21],
+  "soil_linear": [0.105, 0.068, 0.036],
+  "moss_dark_linear": [0.035, 0.057, 0.012],
+  "moss_light_linear": [0.095, 0.13, 0.027]
+}

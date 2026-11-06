@@ -1,0 +1,15 @@
+{
+  "status": "engineering_alignment_on_observed_road_benches_not_a_pavement_survey",
+  "source_review": "results/territory/steep_bank_review_20261023.json",
+  "maximum_lateral_shift_m": 2.0,
+  "shift_search_step_m": 0.025,
+  "central_review_radius_m": 10.0,
+  "transition_radius_m": 100.0,
+  "maximum_shift_gradient": 0.055,
+  "carriageway_width_m": 4.5,
+  "controls": [
+    {"id": "COSTALUNGA-ROCK-BANK", "axis_UE_xy_m": [-1732.7748773682298, -1189.8036102691355], "tile": "T_04_01", "observed": "Narrow paved hillside road, rock face uphill and guardrail downhill."},
+    {"id": "PRESTENTO-STEEP-BANK", "axis_UE_xy_m": [-182.99022869861896, 1604.141083422207], "tile": "T_07_07", "observed": "Paved hillside road, steep partly rocky bank and guardrail."},
+    {"id": "COSTALUNGA-STREAM-BANK", "axis_UE_xy_m": [-2118.085066711763, -1111.424511008151], "tile": "T_03_01", "observed": "Narrow paved road beside an open rocky stream and guardrail."}
+  ]
+}

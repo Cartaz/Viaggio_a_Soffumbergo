@@ -1,0 +1,26 @@
+{
+  "build_id": "fd61ea1aa8c4",
+  "status": "Same two source-backed road-aligned viewpoints, local bank transition candidate. Geometry fidelity and whole-route stability remain unproven.",
+  "controls": [
+    {
+      "id": "rockfall_wire_forward",
+      "center_UE_xy_m": [
+        -1625.5,
+        -1274.5
+      ],
+      "reverse_itinerary_heading": false,
+      "source_heading_degrees": 90,
+      "source_review": "results/territory/costalunga_rockfall_extent_review_20261024.json"
+    },
+    {
+      "id": "rockfall_wire_reverse",
+      "center_UE_xy_m": [
+        -1625.5,
+        -1274.5
+      ],
+      "reverse_itinerary_heading": true,
+      "source_heading_degrees": 270,
+      "source_review": "results/territory/costalunga_rockfall_extent_review_20261024.json"
+    }
+  ]
+}

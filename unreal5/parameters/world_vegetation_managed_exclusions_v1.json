@@ -1,0 +1,4 @@
+{
+  "landuse": ["farmland", "vineyard", "orchard", "construction", "quarry", "cemetery", "farmyard", "industrial", "brownfield", "allotments"],
+  "policy": "Conservative exclusion of mapped managed land from wild PCG plants, including overlapping forest polygons. This does not assert that managed land has no real trees; specific planting there needs separate source review."
+}

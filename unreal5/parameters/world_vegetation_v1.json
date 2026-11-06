@@ -1,0 +1,25 @@
+{
+  "seed": 20261024,
+  "sources": [
+    "data/geography/world_cover_20261024_cover_v3",
+    "data/geography/world_cover_20261024_water_v3",
+    "data/geography/world_cover_20261024_buildings_v4",
+    "data/geography/world_cover_20261024_roads_v4"
+  ],
+  "mapped_road_half_width_m": 3.0,
+  "mapped_path_half_width_m": 1.0,
+  "building_extra_clearance_m": 2.0,
+  "stream_half_width_m": 5.0,
+  "water_extra_clearance_m": 2.0,
+  "power_corridor_half_width_m": 4.0,
+  "sampling_guard_m": 0.1,
+  "branches": [
+    {"id":"trees","cover_classes":[1],"plant_radius_m":10.0,"density_m2":0.012,"point_extent_cm":250,"max_slope_degrees":40,"min_scale":0.8,"max_scale":1.15,"cull_cm":42000,"meshes":["Tree_A","Tree_B","Tree_C"],"collision":true},
+    {"id":"shrubs","cover_classes":[1,3],"plant_radius_m":3.0,"density_m2":0.025,"point_extent_cm":80,"max_slope_degrees":48,"min_scale":0.65,"max_scale":1.15,"cull_cm":13000,"meshes":["Shrub_A","Shrub_B"],"collision":false},
+    {"id":"grass","cover_classes":[2],"plant_radius_m":1.0,"density_m2":0.14,"point_extent_cm":25,"max_slope_degrees":35,"min_scale":0.7,"max_scale":1.2,"cull_cm":9000,"meshes":["Grass"],"collision":false}
+  ],
+  "dimensions_status":"Plant distributions, asset dimensions, densities, slope limits and setbacks are design choices, not surveyed plants or species. Cover comes from attributed OSM geometry; heights are sampled by native PCG from the LiDAR-derived Landscape.",
+  "unknown_cover_policy":"no_spawn",
+  "ownership_policy":"Each mask's final row and column are zero; neighboring tiles own the corresponding first edge. Half-cell seam margin is explicit, avoiding duplicate instances.",
+  "cover_priority":"forest first, scrub second, meadow last: explicit clearings override overlapping forest polygons"
+}

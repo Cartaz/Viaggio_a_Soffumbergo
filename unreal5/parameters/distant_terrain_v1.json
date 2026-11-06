@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "candidate_sample_strides": [16, 8, 4, 2, 1],
+  "max_native_vertex_error_m": 2.0,
+  "boundary_sample_stride": 1,
+  "collision_enabled": false,
+  "cast_shadow": false,
+  "scope": "CPU preparation of a far-only representation of every available native terrain tile. All generated vertices use existing R16 samples. Native 0.5 m boundary samples are retained; cells touching NoData are omitted. The 2 m approximation threshold is an engineering choice for distant display, not source survey uncertainty. No extrapolation beyond source coverage and no alteration of near Landscape or driving physics."
+}

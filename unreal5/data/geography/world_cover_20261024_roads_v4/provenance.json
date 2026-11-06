@@ -1,0 +1,25 @@
+{
+  "source_url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:40];(\nway[highway](46.116245366,13.339961889,46.176809475,13.414053572);\nrelation[highway](46.116245366,13.339961889,46.176809475,13.414053572);\n);out body geom;",
+  "group": "roads",
+  "bbox_south_west_north_east": [
+    46.11624536579705,
+    13.33996188940369,
+    46.17680947512106,
+    13.414053571744727
+  ],
+  "retrieved_utc": "2026-10-24T13:22:56.332046+00:00",
+  "osm_base_timestamp": "2026-10-24T13:20:51Z",
+  "response_sha256": "25eb600904574e802eb878edd89613011a026af1a1525cfc32f85036a166f9fb",
+  "geojson_sha256": "395a2f73ba7e54bd1516dbf642836872b40e19fcfa3e0107ac6c15a909f3781b",
+  "elements": 916,
+  "features": 916,
+  "incomplete_relations": [],
+  "license": "ODbL-1.0",
+  "attribution": "OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "limitations": [
+    "Mapped plan geometry, not surveyed species or individual plant positions.",
+    "Coverage and setbacks need scene/source review; missing map features are not evidence of absence."
+  ]
+}

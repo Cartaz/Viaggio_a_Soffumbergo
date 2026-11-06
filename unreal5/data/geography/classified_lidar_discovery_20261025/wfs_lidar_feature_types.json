@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "GRIGLIEGEO:QU_DTM_LIDAR_FVG",
+    "Title": "QU_DTM_LIDAR_FVG",
+    "Abstract": "Suddivisione del territorio regionale per la produzione dei file DTM, DSM e ascii grid derivati dal nuovo rilievo lidar della Regione autonoma Friuli Venezia Giulia.",
+    "SRS": "EPSG:6708"
+  },
+  {
+    "Name": "GRIGLIEGEO:QU_LAS_LIDAR_FVG",
+    "Title": "QU_LAS_LIDAR_FVG",
+    "Abstract": "Suddivisione del territorio regionale per la produzione dei file LAS/LAZ relativi alle nuvole di punti del nuovo rilievo lidar della Regione autonoma Friuli Venezia Giulia.",
+    "SRS": "EPSG:6708"
+  },
+  {
+    "Name": "GRIGLIEGEO:QU_LAS_NSCDR",
+    "Title": "QU_LAS_NSCDR",
+    "Abstract": "Suddivisione del territorio regionale per la produzione dei file Laz relativi alle nuvole di punti del nuovo rilievo lidar della Regione autonoma Friuli Venezia Giulia.",
+    "SRS": "EPSG:6708"
+  },
+  {
+    "Name": "PPR:v_laghi_battigia",
+    "Title": "v_laghi_battigia",
+    "Abstract": "Ricognizione e delimitazione dei Beni Paesaggistici Laghi ai sensi del D.lgs 42/2004, Art. 142, Comma 1, b. I criteri di ricognizione e delimitazione sono basati sul documento - La pianificazione paesaggistica: la cooperazione istituzionale Attivit\u00e0 1 Relazione finale, pp.27-32, MIBAC (Scala A., 2011). Per informazioni piu approfondite, si consulti la relazione illustrativa - Delimitazione e ricognizione dei laghi ai fini paesaggistici (Bincoletto, L., 2016). Strato informativo complessivamente derivato dalla integrazione delle seguenti fonti: CTRN FVG, Ortofoto AgEA 2011, DTM Lidar FVG, Curva di livello da DTM Lidar FVG 2007-2008 coincidente con la quota alla massima regolazione, Ortofoto AgEA 2014, Catasto Cave FVG. Servizio WMS-WFS disponibile tramite client (ad esempio Qgis, GVsig, Udig, Geomedia, ArcGIS) all'indirizzo http://webgis.simfvg.it/wms_ppr/bozza-ppr?",
+    "SRS": "EPSG:6708"
+  }
+]
