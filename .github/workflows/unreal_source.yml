@@ -13,13 +13,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
       - name: Verify Unreal layout and Python syntax
         run: |
           test -f Unreal/SoffumbergoLab.uproject
           test -f Unreal/Source/SoffumbergoLab/LabVehicle.cpp
           test ! -f project.godot
           test ! -d godot
-          python -m compileall -q tools
+          python -m compileall -q tools tests
       - name: Validate JSON and portable tool paths
         run: |
           python - <<'PY'
@@ -36,3 +37,7 @@ jobs:
                   assert fragment not in source, f"{path}: obsolete absolute path"
           print("Checks OK (source-only; no Unreal runtime test)")
           PY
+      - name: Install geometry test dependencies
+        run: python -m pip install -r requirements-tools.txt
+      - name: Test CPU-only planar envelope geometry
+        run: python -m unittest discover -s tests -p 'test_*.py' -v

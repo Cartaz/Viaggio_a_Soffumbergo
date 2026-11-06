@@ -34,3 +34,8 @@ La cartella `Unreal/Content/` locale occupa circa **6,1 GB** e include mappe, as
 Per recuperare lo stato Godot antecedente senza reintrodurlo nel progetto attivo, usare la cronologia Git o il ramo di archivio. I dati geografici originati nello sviluppo precedente sono stati **conservati**, perché ancora necessari ad alcuni strumenti Unreal.
 
 **Licenze:** nessuna licenza generale del gioco è stata ancora scelta. Vedere [NOTICE.md](NOTICE.md).
+
+
+## Audit CPU del percorso — 6 novembre 2026
+
+È disponibile un nuovo [controllo delle sovrapposizioni tra telaio della Yaris ed edifici mappati](docs/AUDIT_INGOMBRI_EDIFICI_20261106.md). Analizza anche gli intervalli fra due pose fisiche registrate dalla candidata Unreal `f4373a62b482`, con un inviluppo planimetrico prudente. Sono stati controllati **105.214 intervalli**, nessuno escluso; rimangono **tre impronte OSM da confrontare con le fonti**, senza nuovi edifici segnalati. I cinque test sintetici Python sono superati. Non è una verifica 3D di collisione né un collaudo grafico; la geometria del circuito e il pacchetto attivo sono rimasti invariati.
