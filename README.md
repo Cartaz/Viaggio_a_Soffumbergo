@@ -43,3 +43,9 @@ Per recuperare lo stato Godot antecedente senza reintrodurlo nel progetto attivo
 ## Via Mont Joanes — tavole di revisione (6 novembre 2026)
 
 È disponibile la [revisione planimetrica dei due edifici critici](docs/REVISIONE_CANAL_MONT_JOANES_20261106.md), con [tavola 36158227](docs/figure_mont_joanes/plan_36158227.svg), [tavola 36158219](docs/figure_mont_joanes/plan_36158219.svg) e confronto HTML. Usando le mesh asfaltate della candidata f437 e le impronte OSM archiviate, l'audit trova rispettivamente **14,677 m²** e **12,378 m²** di intersezione *sulla mappa* entro 64×64 m. L'identità delle facciate rispetto ai poligoni e la loro posizione reale restano da verificare: non sono state applicate correzioni arbitrarie o collisioni edilizie. Il tool riproducibile è `tools/review_mont_joanes_clearance.py`, con quattro nuovi test sintetici.
+
+## Confronto FVG: edifici regionali e circuito (7 novembre 2026)
+
+L'audit [DBTsped/CTRN/OSM sulla candidata f437](docs/CONFRONTO_FVG_EDIFICI_MONT_JOANES_20261107.md) ha acquisito tre livelli WFS regionali nel riquadro di 240 × 240 m attorno a Via Mont Joanes (62, 64 e 76 poligoni), mantenendo in locale i GeoJSON e la provenienza SHA-256. Sono stati confrontati **105.214 intervalli** della telemetria fisica: il DBTsped segnala **5 impronte e 184 intervalli** potenzialmente sovrapposti al telaio 2D, la CTRN **2 impronte e 50 intervalli** in ciascuna edizione.
+
+[Mappa SVG con i cinque punti](docs/figure_fvg_mont_joanes/overview.svg) · [Confronto HTML consultabile](docs/figure_fvg_mont_joanes/overview.html). Non sono collisioni reali dimostrate, né un sopralluogo di tutte le case del circuito; le carte sono di epoche differenti e non equivalgono a un rilievo dei muri al piano strada. Nessuna modifica agli asset o al pacchetto attivo è stata effettuata.
