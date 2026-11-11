@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 from typing import NamedTuple
 
@@ -140,6 +141,11 @@ def inspect_optional_manifest(manifest_path: Path | None):
         if (not file.name.lower().startswith("ell_")
                 or ("dbm" if role=="DBM" else "dsm") not in file.name.lower()):
             raise ValueError("Expected an original Ell_* raster with the correct product type")
+        if role.startswith("DSM_"):
+            label = re.search(r"dsm[_-]?(first|primo|last|ultimo)",file.name.lower())
+            expected = {"DSM_FIRST":{"first","primo"},"DSM_LAST":{"last","ultimo"}}[role]
+            if label is None or label.group(1) not in expected:
+                raise ValueError("DSM return type does not match manifest role")
         if file_hash(file) != entry["sha256"]:
             raise ValueError("Raster SHA-256 mismatch; do not use unverified source")
         grid = parse_ascii_header(file)

@@ -97,6 +97,30 @@ class HeightSourceTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 inspect_optional_manifest(manifest_file)
 
+    def test_dsm_return_name_must_match_source_role(self):
+        with tempfile.TemporaryDirectory() as folder:
+            directory=Path(folder)
+            file=directory/"Ell_DSMlast_1234.asc"
+            make_grid(file)
+            role="DSM_FIRST"
+            manifest={
+                "horizontal_crs":"EPSG:6708",
+                "vertical_datum":"ellipsoidal",
+                "source_catalog_url":REGIONAL_SOURCE,
+                "products":{
+                    role:{
+                        "product":role,"path":str(file),
+                        "sha256":file_hash(file),
+                        "source_download_url":"https://eaglefvg.regione.fvg.it",
+                        "original_basename":file.name
+                    }
+                }
+            }
+            m=directory/"wrong_role.json"
+            m.write_text(json.dumps(manifest),encoding="utf-8")
+            with self.assertRaisesRegex(ValueError,"return type"):
+                inspect_optional_manifest(m)
+
     def test_source_hotspots_are_distinct_and_build_locked(self):
         regional = {
             "complete":True,"native_build_id":"f4373a62b482",
