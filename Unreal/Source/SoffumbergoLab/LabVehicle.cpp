@@ -1,4 +1,6 @@
 #include "LabVehicle.h"
+#include "SoffumbergoFootMouse.h"
+#include "SoffumbergoCompanionMouse.h"
 #include "CircuitTerrainWorld.h"
 #include "CircuitDrivePilot.h"
 #include "EngineUtils.h"
@@ -14,6 +16,7 @@
 #include "Engine/GameViewportClient.h"
 #include "Engine/PostProcessVolume.h"
 #include "GameFramework/PlayerController.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerStart.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/GameUserSettings.h"
@@ -161,6 +164,7 @@ void ALabVehicle::BeginPlay() {
  if(auto* Limit=IConsoleManager::Get().FindConsoleVariable(TEXT("t.MaxFPS")))Limit->Set(FrameLimit,ECVF_SetByCode);
  if(GEngine)if(auto* Settings=GEngine->GetGameUserSettings())Settings->SetFrameRateLimit(FrameLimit);
  bInputCheck=FParse::Param(FCommandLine::Get(),TEXT("LabInputCheck"));
+ bOnFootSmokeTest=FParse::Param(FCommandLine::Get(),TEXT("LabOnFootSmokeTest"));
  bGeographicScene=GetWorld()->GetMapName().Contains(TEXT("ValleLiDAR"))||GetWorld()->GetMapName().Contains(TEXT("CircuitoSoffumbergo"))||GetWorld()->GetMapName().Contains(TEXT("CircuitoGuidabile"));
  for(TActorIterator<ACircuitTerrainWorld> It(GetWorld());It;++It){CircuitWorld=*It;AddTickPrerequisiteActor(CircuitWorld);break;}
  UPhysicsSettings::Get()->bSubstepping=false;
@@ -319,6 +323,230 @@ void ALabVehicle::ResetVehiclePose() {
  PreviousVelocity=FVector::ZeroVector;++ResetCount;
 }
 void ALabVehicle::QuitGame() {if(bInputCheck)bInputQuitObserved=true;if(auto* PC=GetWorld()->GetFirstPlayerController()) PC->ConsoleCommand(TEXT("quit"));}
+void ALabVehicle::TryExitOnFoot() {
+ // The on-foot prototype is a manual, geographic-gameplay action. It must
+ // never hijack automated native driving tests, benchmark runs or test inputs.
+ if(!bGeographicScene||!bReadyForSimulation||bExploringOnFoot||
+    bInputCheck||CircuitPilot||InputKeys.Num()||BenchmarkSeconds>0||
+    bHoldingForTerrain) return;
+ auto* PC=Cast<APlayerController>(GetController());
+ if(!PC||GetMesh()->GetPhysicsLinearVelocity().Size()>25.f||
+    GetMesh()->GetPhysicsAngularVelocityInRadians().Size()>0.25f) {
+  UE_LOG(LogTemp,Display,TEXT("SOFFUMBERGO_ON_FOOT_REJECT car moving or unpossessed"));
+  return;
+ }
+ FCollisionQueryParams Query(SCENE_QUERY_STAT(SoffumbergoSafeExit),true);
+ Query.AddIgnoredActor(this);
+ // Driver's side first, passenger side fallback. Require a real walkable
+ // ground hit plus space for the complete mouse capsule; never teleport the car.
+ for(const float Side:{-1.f,1.f}) {
+  const FVector SideCenter=GetActorLocation()+GetActorRightVector()*Side*175.f;
+  FHitResult Floor;
+  if(!GetWorld()->LineTraceSingleByChannel(Floor,SideCenter+FVector(0,0,180),
+       SideCenter-FVector(0,0,360),ECC_Visibility,Query)||
+       Floor.ImpactNormal.Z<0.72f||
+       FMath::Abs(Floor.ImpactPoint.Z-GetActorLocation().Z)>180.f) continue;
+  const FVector SpawnPoint=Floor.ImpactPoint+FVector(0,0,12.f);
+  if(GetWorld()->OverlapBlockingTestByChannel(SpawnPoint,FQuat::Identity,
+       ECC_Pawn,FCollisionShape::MakeCapsule(5.f,11.f),Query)) continue;
+  FActorSpawnParameters Spawn;
+  Spawn.Owner=this;
+  Spawn.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::DontSpawnIfColliding;
+  auto* Explorer=GetWorld()->SpawnActor<ASoffumbergoFootMouse>(
+       SpawnPoint,FRotator(0,GetActorRotation().Yaw,0),Spawn);
+  if(!Explorer) continue;
+  Explorer->SetParkedVehicle(this);
+  // Find a second authentic surface position for Bianca. A failed candidate
+  // never becomes a hidden or teleporting NPC.
+  ASoffumbergoCompanionMouse* Bianca=nullptr;
+  for(const float Rearward:{-95.f,95.f,-145.f}) {
+   const FVector Candidate=SideCenter+GetActorForwardVector()*Rearward;
+   FHitResult CompanionFloor;
+   if(!GetWorld()->LineTraceSingleByChannel(CompanionFloor,Candidate+FVector(0,0,180),
+       Candidate-FVector(0,0,360),ECC_Visibility,Query)||
+       CompanionFloor.ImpactNormal.Z<0.72f||
+       FMath::Abs(CompanionFloor.ImpactPoint.Z-GetActorLocation().Z)>180.f)continue;
+   const FVector CompanionSpawn=CompanionFloor.ImpactPoint+FVector(0,0,12.f);
+   if(FVector::Dist2D(CompanionSpawn,SpawnPoint)<35.f||
+      GetWorld()->OverlapBlockingTestByChannel(CompanionSpawn,FQuat::Identity,
+         ECC_Pawn,FCollisionShape::MakeCapsule(5.f,11.f),Query))continue;
+   FActorSpawnParameters FriendSpawn;
+   FriendSpawn.Owner=this;
+   FriendSpawn.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::DontSpawnIfColliding;
+   Bianca=GetWorld()->SpawnActor<ASoffumbergoCompanionMouse>(
+      CompanionSpawn,FRotator(0,GetActorRotation().Yaw,0),FriendSpawn);
+   if(Bianca)break;
+  }
+  if(!Bianca) {
+   Explorer->Destroy();
+   UE_LOG(LogTemp,Warning,TEXT("SOFFUMBERGO_ON_FOOT_REJECT no safe ground for companion Bianca"));
+   continue;
+  }
+  Bianca->Follow(Explorer);
+  WalkingCompanion=Bianca;
+  Gas=0;Braking=1;Steering=0;
+  auto* M=CastChecked<UChaosWheeledVehicleMovementComponent>(GetVehicleMovement());
+  M->SetThrottleInput(0);M->SetSteeringInput(0);M->SetBrakeInput(1);
+  for(int32 Wheel=0;Wheel<M->GetNumWheels();++Wheel) {
+   M->SetDriveTorque(0,Wheel);
+   M->SetBrakeTorque(5000,Wheel);
+  }
+  bExploringOnFoot=true;
+  for(const auto& MouseInCar:Occupants)if(MouseInCar)MouseInCar->SetVisibility(false,true);
+  PC->Possess(Explorer);
+  if(PC->GetPawn()!=Explorer) {
+   bExploringOnFoot=false;
+   for(const auto& MouseInCar:Occupants)if(MouseInCar)MouseInCar->SetVisibility(true,true);
+   if(auto* Friend=WalkingCompanion.Get())Friend->Destroy();
+   WalkingCompanion.Reset();
+   Explorer->Destroy();
+   return;
+  }
+  PC->SetControlRotation(FRotator(-12.f,GetActorRotation().Yaw,0));
+  UE_LOG(LogTemp,Display,TEXT("SOFFUMBERGO_ON_FOOT_EXIT safe_ground=%s side=%g"),*Floor.ImpactPoint.ToString(),Side);
+  return;
+ }
+ UE_LOG(LogTemp,Warning,TEXT("SOFFUMBERGO_ON_FOOT_REJECT no collision-free walkable ground next to parked Yaris"));
+}
+
+void ALabVehicle::CompleteOnFootReturn(ASoffumbergoFootMouse* Explorer) {
+ if(!bExploringOnFoot||!IsValid(Explorer)||!Explorer->IsAssociatedWith(this))return;
+ auto* PC=Cast<APlayerController>(Explorer->GetController());
+ if(!PC||PC->GetPawn()!=Explorer)return;
+ // Reentry is local; never teleport the pawn or the physics-driven Yaris.
+ const auto* Bianca=WalkingCompanion.Get();
+ if(!IsValid(Bianca)||!Bianca->HasLeader(Explorer)||
+    FVector::Dist(Bianca->GetActorLocation(),GetActorLocation())>320.f||
+    !Bianca->GetCharacterMovement()->IsMovingOnGround()||
+    FVector::Dist(Explorer->GetActorLocation(),GetActorLocation())>300.f||
+    GetMesh()->GetPhysicsLinearVelocity().Size()>50.f) {
+  UE_LOG(LogTemp,Display,TEXT("SOFFUMBERGO_ON_FOOT_REENTER_REJECT mouse or Bianca too far, airborne, or car moving"));
+  return;
+ }
+ PC->Possess(this);
+ if(PC->GetPawn()!=this)return;
+ bExploringOnFoot=false;
+ Gas=0;Braking=1;Steering=0;
+ for(const auto& MouseInCar:Occupants)if(MouseInCar)MouseInCar->SetVisibility(true,true);
+ if(auto* Friend=WalkingCompanion.Get())Friend->Destroy();
+ WalkingCompanion.Reset();
+ UE_LOG(LogTemp,Display,TEXT("SOFFUMBERGO_ON_FOOT_REENTER successful with companion Bianca"));
+ Explorer->Destroy();
+}
+
+void ALabVehicle::TickOnFootSmoke(float Delta) {
+ if(!bOnFootSmokeTest||bFootSmokeReported||Delta<=0)return;
+ FootSmokeTime+=Delta;
+ auto* PC=GetWorld()->GetFirstPlayerController();
+ if(FootSmokeTime>=4.f&&!bFootSmokeExited&&
+    FootSmokeTime-FootSmokeLastAttempt>=1.0f&&bReadyForSimulation) {
+  FootSmokeLastAttempt=FootSmokeTime;
+  TryExitOnFoot();
+  if(PC)if(auto* Mouse=Cast<ASoffumbergoFootMouse>(PC->GetPawn())) {
+   FootSmokeMouse=Mouse;
+   FootSmokeStart=Mouse->GetActorLocation();
+   if(auto* Friend=WalkingCompanion.Get()) {
+    bFootSmokeCompanionSpawned=Friend->HasLeader(Mouse);
+    FootSmokeCompanionStart=Friend->GetActorLocation();
+   }
+   FootSmokeVehicleStart=GetActorLocation();
+   FootSmokeStartDistance=FVector::Dist(FootSmokeStart,FootSmokeVehicleStart);
+   FootSmokeExitAt=FootSmokeTime;
+   bFootSmokeExited=true;
+  }
+ }
+ if(auto* Mouse=FootSmokeMouse.Get()) {
+  const double WalkSeconds=FootSmokeTime-FootSmokeExitAt;
+  if(WalkSeconds<1.5) {
+   Mouse->AddMovementInput(GetActorForwardVector(),1.f);
+   if(!bFootSmokeScreenshotRequested&&WalkSeconds>=0.65&&
+      !FParse::Param(FCommandLine::Get(),TEXT("nullrhi"))) {
+    FString ScreenshotFolder=FPaths::ProjectSavedDir();
+    FParse::Value(FCommandLine::Get(),TEXT("LabOutput="),ScreenshotFolder);
+    IFileManager::Get().MakeDirectory(*ScreenshotFolder,true);
+    const FString Screenshot=ScreenshotFolder/TEXT("on_foot_midwalk.png");
+    FScreenshotRequest::RequestScreenshot(Screenshot,false,false);
+    bFootSmokeScreenshotRequested=true;
+    UE_LOG(LogTemp,Display,TEXT("SOFFUMBERGO_ON_FOOT_SCREENSHOT requested=%s"),*Screenshot);
+   }
+   // Diagnostic second view: expose the following Bianca behind Bernie.
+   // This changes no regular user camera and is disabled for NullRHI.
+   const bool Rendering=!FParse::Param(FCommandLine::Get(),TEXT("nullrhi"));
+   if(Rendering&&PC&&WalkSeconds>=0.82&&!bFootSmokeReviewViewSet) {
+    FootSmokePreviousView=PC->GetControlRotation();
+    PC->SetControlRotation(FRotator(-17.f,FootSmokePreviousView.Yaw+145.f,0.f));
+    bFootSmokeReviewViewSet=true;
+   }
+   if(Rendering&&PC&&WalkSeconds>=1.00&&bFootSmokeReviewViewSet&&
+      !bFootSmokeReviewShotRequested) {
+    FString Folder=FPaths::ProjectSavedDir();
+    FParse::Value(FCommandLine::Get(),TEXT("LabOutput="),Folder);
+    IFileManager::Get().MakeDirectory(*Folder,true);
+    FScreenshotRequest::RequestScreenshot(Folder/TEXT("on_foot_companion_review.png"),false,false);
+    bFootSmokeReviewShotRequested=true;
+   }
+   if(Rendering&&PC&&WalkSeconds>=1.28&&bFootSmokeReviewViewSet&&
+      !bFootSmokeViewRestored) {
+    PC->SetControlRotation(FootSmokePreviousView);
+    bFootSmokeViewRestored=true;
+   }
+  } else if(!bFootSmokeReentered) {
+   FootSmokeWalkDistance=FVector::Dist(FootSmokeStart,Mouse->GetActorLocation());
+   bFootSmokeMoved=FootSmokeWalkDistance>10.f;
+   bFootSmokeGrounded=Mouse->GetCharacterMovement()->IsMovingOnGround();
+   if(auto* Friend=WalkingCompanion.Get()) {
+    FootSmokeCompanionTravel=FVector::Dist(FootSmokeCompanionStart,Friend->GetActorLocation());
+    bFootSmokeCompanionMoved=FootSmokeCompanionTravel>10.f;
+    bFootSmokeCompanionGrounded=Friend->GetCharacterMovement()->IsMovingOnGround();
+    bFootSmokeCompanionNearCar=FVector::Dist(Friend->GetActorLocation(),GetActorLocation())<320.f;
+   }
+   CompleteOnFootReturn(Mouse);
+   bFootSmokeReentered=PC&&PC->GetPawn()==this;
+  }
+ }
+ const bool Timeout=FootSmokeTime>=24.f;
+ if(bFootSmokeReentered||Timeout) {
+  bFootSmokeReported=true;
+  auto Result=MakeShared<FJsonObject>();
+  const bool Headless=FParse::Param(FCommandLine::Get(),TEXT("nullrhi"));
+  Result->SetStringField(TEXT("scope"),Headless?TEXT("Native NullRHI on-foot transfer, movement and reentry; no rendering evidence"):TEXT("Native rendered on-foot transfer, movement and reentry; not a full game or 4K benchmark"));
+  Result->SetBoolField(TEXT("nullrhi"),Headless);
+  Result->SetBoolField(TEXT("screenshot_requested"),bFootSmokeScreenshotRequested);
+  Result->SetBoolField(TEXT("bianca_review_screenshot_requested"),bFootSmokeReviewShotRequested);
+  Result->SetBoolField(TEXT("diagnostic_view_restored"),Headless||bFootSmokeViewRestored);
+  Result->SetStringField(TEXT("rhi"),GDynamicRHI?GDynamicRHI->GetName():TEXT("unavailable"));
+  if(GetWorld()->GetGameViewport()&&GetWorld()->GetGameViewport()->Viewport) {
+   const FIntPoint Size=GetWorld()->GetGameViewport()->Viewport->GetSizeXY();
+   Result->SetNumberField(TEXT("viewport_width"),Size.X);
+   Result->SetNumberField(TEXT("viewport_height"),Size.Y);
+  }
+  Result->SetBoolField(TEXT("entered"),bFootSmokeExited);
+  Result->SetBoolField(TEXT("moved_more_than_10_cm"),bFootSmokeMoved);
+  Result->SetBoolField(TEXT("reentered"),bFootSmokeReentered);
+  Result->SetBoolField(TEXT("walking_on_ground"),bFootSmokeGrounded);
+  Result->SetBoolField(TEXT("bianca_spawned"),bFootSmokeCompanionSpawned);
+  Result->SetBoolField(TEXT("bianca_followed_more_than_10_cm"),bFootSmokeCompanionMoved);
+  Result->SetBoolField(TEXT("bianca_walking_on_ground"),bFootSmokeCompanionGrounded);
+  Result->SetBoolField(TEXT("bianca_near_parked_car"),bFootSmokeCompanionNearCar);
+  Result->SetNumberField(TEXT("bianca_travel_cm"),FootSmokeCompanionTravel);
+  Result->SetNumberField(TEXT("mouse_travel_cm"),FootSmokeWalkDistance);
+  Result->SetNumberField(TEXT("parked_vehicle_displacement_cm"),bFootSmokeExited?FVector::Dist(FootSmokeVehicleStart,GetActorLocation()):-1.0);
+  Result->SetBoolField(TEXT("passed"),bFootSmokeExited&&bFootSmokeMoved&&bFootSmokeGrounded&&
+      bFootSmokeCompanionSpawned&&bFootSmokeCompanionMoved&&bFootSmokeCompanionGrounded&&
+      bFootSmokeCompanionNearCar&&bFootSmokeReentered&&
+      FVector::Dist(FootSmokeVehicleStart,GetActorLocation())<50.0);
+  Result->SetNumberField(TEXT("mouse_egress_distance_cm"),FootSmokeStartDistance);
+  Result->SetNumberField(TEXT("elapsed_s"),FootSmokeTime);
+  FString Folder=FPaths::ProjectSavedDir();
+  FParse::Value(FCommandLine::Get(),TEXT("LabOutput="),Folder);
+  IFileManager::Get().MakeDirectory(*Folder,true);
+  FString Json;FJsonSerializer::Serialize(Result,TJsonWriterFactory<>::Create(&Json));
+  FFileHelper::SaveStringToFile(Json,*(Folder/TEXT("on_foot_smoke.json")));
+  UE_LOG(LogTemp,Display,TEXT("SOFFUMBERGO_ON_FOOT_SMOKE %s"),*Json);
+  if(PC)PC->ConsoleCommand(TEXT("quit"));
+ }
+}
+
 void ALabVehicle::SetupPlayerInputComponent(UInputComponent* Input) {
  Super::SetupPlayerInputComponent(Input);
  Input->BindAxis("Throttle",this,&ALabVehicle::Throttle);
@@ -326,10 +554,24 @@ void ALabVehicle::SetupPlayerInputComponent(UInputComponent* Input) {
  Input->BindAxis("Steering",this,&ALabVehicle::Steer);
  Input->BindAction("Camera",IE_Pressed,this,&ALabVehicle::CameraNext);
  Input->BindAction("Reset",IE_Pressed,this,&ALabVehicle::ResetVehiclePose);
+ Input->BindAction("Interact",IE_Pressed,this,&ALabVehicle::TryExitOnFoot);
  Input->BindAction("Quit",IE_Pressed,this,&ALabVehicle::QuitGame);
 }
 void ALabVehicle::Tick(float Delta) {
  Super::Tick(Delta);
+ TickOnFootSmoke(Delta);
+ if(bExploringOnFoot) {
+  // Preserve the parked Chaos chassis while its driver walks: no throttle,
+  // no scripted pilot and no displacement/teleport shortcuts.
+  auto* M=CastChecked<UChaosWheeledVehicleMovementComponent>(GetVehicleMovement());
+  Gas=0;Braking=1;Steering=0;
+  M->SetThrottleInput(0);M->SetSteeringInput(0);M->SetBrakeInput(1);
+  for(int32 Wheel=0;Wheel<M->GetNumWheels();++Wheel){
+   M->SetDriveTorque(0,Wheel);
+   M->SetBrakeTorque(5000,Wheel);
+  }
+  return;
+ }
  if (!bReadyForSimulation || Delta<=0) return;
  if(CircuitWorld&&BenchmarkSeconds<=0) {
   if(!CircuitWorld->IsAreaReady(GetActorLocation())) {
@@ -498,9 +740,10 @@ void ALidarDrivingHUD::DrawHUD() {
  const float Scale=FMath::Clamp(Canvas->SizeX/1920.f,0.8f,2.f);
  const bool Terrain=GetWorld()->GetMapName().Contains(TEXT("ValleLiDAR"))||GetWorld()->GetMapName().Contains(TEXT("CircuitoSoffumbergo"))||GetWorld()->GetMapName().Contains(TEXT("CircuitoGuidabile"));
  const bool Driving=GetWorld()->GetMapName().Contains(TEXT("CircuitoGuidabile"));
- DrawText(Driving?TEXT("Viaggio a Soffumbergo - percorso in collaudo"):Terrain?TEXT("Valle di Soffumbergo - terreno di prova"):TEXT("Laboratorio di guida"),FLinearColor::White,24*Scale,20*Scale,GEngine->GetMediumFont(),Scale);
- DrawText(TEXT("W/S: avanti/indietro   A/D: sterzo   Spazio: freno   C: vista   R: riparti   Esc: esci"),FLinearColor::White,24*Scale,53*Scale,GEngine->GetSmallFont(),1.2f*Scale);
- if(const auto* Pawn=GetOwningPawn()) DrawText(FString::Printf(TEXT("%.0f km/h"),Pawn->GetVelocity().Size()*0.036),FLinearColor::White,24*Scale,82*Scale,GEngine->GetMediumFont(),Scale);
+ const bool Walking=Cast<ASoffumbergoFootMouse>(GetOwningPawn())!=nullptr;
+ DrawText(Walking?TEXT("Esplorazione a piedi - prototipo"):Driving?TEXT("Viaggio a Soffumbergo - percorso in collaudo"):Terrain?TEXT("Valle di Soffumbergo - terreno di prova"):TEXT("Laboratorio di guida"),FLinearColor::White,24*Scale,20*Scale,GEngine->GetMediumFont(),Scale);
+ DrawText(Walking?TEXT("WASD: cammina   Mouse: guarda   E: rientra vicino alla Yaris   Esc: esci"):TEXT("W/S: avanti/indietro   A/D: sterzo   Spazio: freno   C: vista   E: scendi da fermo   R: riparti   Esc: esci"),FLinearColor::White,24*Scale,53*Scale,GEngine->GetSmallFont(),1.2f*Scale);
+ if(!Walking) if(const auto* Pawn=GetOwningPawn()) DrawText(FString::Printf(TEXT("%.0f km/h"),Pawn->GetVelocity().Size()*0.036),FLinearColor::White,24*Scale,82*Scale,GEngine->GetMediumFont(),Scale);
  if(Terrain) DrawText(Driving?TEXT("Percorso in collaudo. Ambiente ancora in costruzione."):TEXT("Strada e borgo in costruzione. Stai guidando sul terreno rilevato."),FLinearColor(1,0.82f,0.45f),24*Scale,Canvas->SizeY-48*Scale,GEngine->GetSmallFont(),1.2f*Scale);
  if(const auto* Pawn=GetOwningPawn())for(TActorIterator<ACircuitTerrainWorld> It(GetWorld());It;++It) {
   if(!It->IsAreaReady(Pawn->GetActorLocation()))DrawText(TEXT("Caricamento del terreno..."),FLinearColor::White,24*Scale,115*Scale,GEngine->GetMediumFont(),Scale);

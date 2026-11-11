@@ -2,6 +2,10 @@
 
 Gioco 3D in **realismo fiabesco**: una Toyota Yaris Hybrid rossa con albero maestro e coffa porta due topolini da Faedis a Valle di Soffumbergo. La gita prevede guida sull'anello, sosta nel prato sotto il borgo, visita a piedi e ritorno senza ribaltarsi. Valle richiede fedeltà ai riscontri reali; terreno LiDAR e osservazioni stradali hanno fonti e limiti separati.
 
+## Aggiornamento verificato dell'11 novembre 2026
+
+La versione Unreal dispone ora di un primo sistema **guida → discesa → esplorazione a piedi → rientro** con modello Bernie proporzionato uniformemente e controlli WASD/mouse/E. I test nativi in editor con fisica Chaos sono superati a **Valle, Campeglio e Canal di Grivò**; anche un primo inseguimento fisico di Bianca è verificato nelle tre fermate. Una prova breve D3D12 con viewport effettivo 1280×720 supera il ciclo senza crash e produce un'immagine QA, non approvata come resa finale. Si tratta di **sorgente compilato**, non di una build Windows distribuita né di un borgo finito. Vedi [Esplorazione a piedi](docs/ESPLORAZIONE_A_PIEDI_UNREAL_20261111.md) e [Revisione tecnica per priorità](docs/REVISIONE_TECNICA_UNREAL_20261111.md). In particolare i muri reali, la compagna Bianca e il target 4K/60 restano aperti.
+
 ## Un solo progetto attivo
 
 Il motore scelto il **22 ottobre 2026** è **Unreal Engine 5.8** (installazione locale rilevata: 5.8.4). Il vecchio laboratorio Godot non fa più parte del ramo `main`; una copia integrale dello stato precedente alla pulizia è recuperabile dal ramo [archive/pre-unreal-cleanup-2026-11-06](https://github.com/Cartaz/Viaggio_a_Soffumbergo/tree/archive/pre-unreal-cleanup-2026-11-06).
@@ -50,12 +54,16 @@ L'audit [DBTsped/CTRN/OSM sulla candidata f437](docs/CONFRONTO_FVG_EDIFICI_MONT_
 
 [Mappa SVG con i cinque punti](docs/figure_fvg_mont_joanes/overview.svg) · [Confronto HTML consultabile](docs/figure_fvg_mont_joanes/overview.html). Non sono collisioni reali dimostrate, né un sopralluogo di tutte le case del circuito; le carte sono di epoche differenti e non equivalgono a un rilievo dei muri al piano strada. Nessuna modifica agli asset o al pacchetto attivo è stata effettuata.
 
-## Quote LiDAR di Via Mont Joanes (7 novembre 2026)
+## Archivio storico: prima verifica solo DTM (7 novembre 2026; superata dall'acquisizione dell'11 novembre)
 
 Verificato il [DTM ellissoidico originale a 0,5 m dei sette hotspot](docs/AUDIT_ALTIMETRICO_CANAL_MONT_JOANES_20261107.md) con lo strumento riproducibile tools/audit_mont_joanes_height_sources.py: tutti i punti sono coperti dalla tessera Ell_DTM_06701307.asc, con quote del suolo nudo comprese fra **261,894 m e 265,249 m**. Il rapporto SHA-256 rimane soltanto in locale. I **DSM e DBM ufficiali** sono documentati dalla Regione e acquistabili/scaricabili via Eagle.fvg, ma non sono ancora stati acquisiti qui; lo strumento accetta soltanto originali con provenienza, datum ellissoidico, griglia 0,5 m e hash dichiarati. Nessuna altezza di muro o collisione è stata dedotta dal solo DTM.
 
-## Preparazione acquisizione archivio Eagle.fvg
+## Archivio storico: preparazione download Eagle.fvg (ora completato)
 Il nuovo tools/inspect_eagle_bundle.py consente di inventariare in sicurezza l'archivio ZIP Eagle.fvg quando il download è concluso: cataloga i file e identifica candidati DTM/DSM/DBM/LiDAR e può estrarre la tessera 06701307 con controllo CRC e SHA-256 dei file estratti. Rifiuta file .zip.part temporanei e non modifica la geometria Unreal. Vedi docs/PREPARAZIONE_ARCHIVIO_EAGLE_20261107.md per comandi e limiti. Il carrello richiesto conteneva 1.034 risorse; la presenza di DSM/DBM nello ZIP rimane da verificare.
 
 ## Nuove superfici LiDAR ufficiali (11 novembre 2026)
 Il [rapporto sull'acquisizione Eagle.fvg](docs/EAGLE_LIDAR_VERIFICATO_20261111.md) documenta il completamento dei dati altimetrici ellissoidici: **41 DTM originali verificati contro lo ZIP, 123 nuovi raster DBM/DSM primo/ultimo ritorno**, tutti con risoluzione 0,5 m e SHA-256/CRC verificati. Il giro fisico nativo f437 (105.215 pose) è coperto al 100% da celle valide di tutti e quattro i prodotti. La [nuova analisi altimetrica delle interferenze](tools/audit_eagle_surface_clearance.py) pesa le celle LiDAR nelle vere intersezioni 2D telaio/edifici, senza scambiare tetti e muri. Il programma di [estrazione verificata](tools/extract_eagle_route_surfaces.py) e il [controllo di copertura](tools/audit_eagle_route_coverage.py) sono riproducibili. Dati regionali originali e risultati completi restano esclusivamente locali; non sono state modificate mesh o collisioni Unreal.
+
+## Bianca e Bernie a piedi — collaudi nativi completati
+
+[Rapporto dell'esplorazione in coppia](docs/BIANCA_ACCOMPAGNATRICE_UNREAL_20261111.md): due personaggi scheletrici realmente renderizzati e appoggiati al suolo, con uscita dalla Yaris, inseguimento fisico locale senza teletrasporto e rientro di entrambi. Collaudi `NullRHI` superati a Valle, Campeglio e Canal; seconda prova D3D12 1280×720 con entrambi i modelli visibili. Restano asset artistici/animazioni, navigazione tra vicoli, edifici fedeli e benchmark 4K/60; pacchetto stabile Windows non sostituito.
