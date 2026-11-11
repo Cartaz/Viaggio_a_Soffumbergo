@@ -67,3 +67,11 @@ Il [rapporto sull'acquisizione Eagle.fvg](docs/EAGLE_LIDAR_VERIFICATO_20261111.m
 ## Bianca e Bernie a piedi — collaudi nativi completati
 
 [Rapporto dell'esplorazione in coppia](docs/BIANCA_ACCOMPAGNATRICE_UNREAL_20261111.md): due personaggi scheletrici realmente renderizzati e appoggiati al suolo, con uscita dalla Yaris, inseguimento fisico locale senza teletrasporto e rientro di entrambi. Collaudi `NullRHI` superati a Valle, Campeglio e Canal; seconda prova D3D12 1280×720 con entrambi i modelli visibili. Restano asset artistici/animazioni, navigazione tra vicoli, edifici fedeli e benchmark 4K/60; pacchetto stabile Windows non sostituito.
+
+## Pacchetto Windows on-foot in candidata separata (11 novembre 2026)
+
+La build [onfoot_20261111_v1](docs/PACCHETTO_ONFOOT_UNREAL_20261111.md) e stata compilata/cucinata in Windows con Unreal 5.8 e **non sostituisce la distribuzione stabile**. La nuova versione conserva la fisica della Yaris e aggiunge Bernie e Bianca a piedi: **quattro verifiche sul vero eseguibile** sono riuscite (Valle, Campeglio, Canal in NullRHI e Valle in D3D12 con viewport effettivo 1280x720). Si aggiungono gli strumenti per la preparazione e verifica indipendente della candidata, che proteggono gli hash della baseline. Il giro fisico completo Editor ha superato 18.857,99 m, 31 fasi e tre manovre; i risultati del giro con l'eseguibile candidato vanno verificati nel proprio rapporto, senza trasferire automaticamente quello Editor. Nessuna certificazione del giro renderizzato 4K/60 FPS.
+
+## Qualifica completa della candidata Windows on-foot (11 novembre 2026)
+
+La [candidata Windows](docs/PACCHETTO_ONFOOT_UNREAL_20261111.md) ha superato **un giro fisico completo con il vero .exe**, non soltanto in Editor: **18.857,99 m, 31 fasi e tre manovre, senza ripristini né uscite dalla superficie guidabile**. Le quattro prove del gameplay Bernie/Bianca (3 × NullRHI e 1 × D3D12 1280×720) sono state ripetute contro l'eseguibile e superate. Il [gate di qualificazione](tools/attest_on_foot_candidate.py) confronta manifesti, hash, giro completo e verifiche del binario: **19/19 controlli superati**. La distribuzione Windows stabile rimane intatta. La qualifica è funzionale e non certifica il giro grafico a 4K/60 FPS, la fedeltà artistica di Soffumbergo, le animazioni finali né la navigazione avanzata dei personaggi.
